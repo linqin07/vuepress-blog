@@ -1,0 +1,31 @@
+module.exports = [{
+	text: 'Home',
+	link: '/'
+}, {
+	text: 'Java学习',
+	link: '/Java学习/'
+}, {
+	text: 'Linux',
+	link: '/Linux/'
+}, {
+	text: 'Markdown入门到放弃',
+	link: '/Markdown入门到放弃/'
+}, {
+	text: 'mysql',
+	link: '/mysql/'
+}, {
+	text: 'Spring',
+	link: '/Spring/'
+}, {
+	text: 'Spring-boot',
+	link: '/Spring-boot/'
+}, {
+	text: '复习题',
+	link: '/复习题/'
+}, {
+	text: '设计模式',
+	link: '/设计模式/'
+}, {
+	text: 'External',
+	link: 'https://google.com'
+}]
