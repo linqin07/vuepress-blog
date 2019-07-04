@@ -20,10 +20,9 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # ssh推送，如果你想要部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:woshilinqin/document.git master:gh-pages
+#git push -f git@github.com:woshilinqin/document.git master:gh-pages
 
 # http推送，如果你想要部署到 https://<USERNAME>.github.io/<REPO>
-# git push -f "https://${access_token}@github.com:woshilinqin/document.git" master:gh-pages
-
+git push -f https://${access_token}@github.com/woshilinqin/document.git master:gh-pages
 
 cd -

@@ -8,14 +8,11 @@ install: npm install -g vuepress
 before_script: chmod a+x deploy.sh
 script:
 - bash ./deploy.sh
-deploy:
-  provider: pages
-  skip-cleanup: true
-  local_dir: docs/.vuepress/dist
-  github-token: "${access_token}"
-  keep-history: true
-  on:
-    branch: gh-pages
-env:
-  global:
-  - secure: MzWcyIqC7FuRx45mLT7pt+B2Zt4Iz0tYhOWD4Ja6LzLGclGB9ZznWoapIgIx8wcPhZ/6XYSCdSlEJUJOGT2J/LxNfVAnm5kFeCfFb6XZ31c7ysGologPXlGqDJJjiqx8eiV8WAkJUlGlZyh3qW/pdXNf9EfjB6dK88StlNB+p+pkEgq9v0ZfQTxyF5YL7PQK5ZxEQFjTb/dm2ZoFo1L+lOb92S8JTYpiB7K8JmQeCrGlnc/3kmJnewMWwfMEBrO07cj09k1DsxlCtZHq1GSqGXDjPft+sdWKUOaqo+EoI8LJw7QDG1EuQeKy5yF/gjVCv4v/tlwqAiRsWVL9PhKh/zElb/B2p/MaG73SLYI0seMmH0xKlRbix2u8iU3S90l3lh9xNLvBKLnwLfsSJeG185uCU9YqcUHeXFsqSdBHDhRoX/Moirx9vPw1xi68hgLaUUSU4OWV/Pv65dEeWRFLTcknx+AKma5n6BUbtN44FnppFWD07ZvPl5rQ/Oe6ByaKMeEVSXdsI7dSW4NHj9MVqDyLGQGR9VmMo8n3ec4HCibmkMrYZ48f38gYJ5E0iTdZxggbpsTEnFVNYA38vHIQShy+OiJmk6BdkfcSLFQNxuQcbgvxqlii3L9E0ctB0YO8ceCzNcyZMyBbPQQ95LuMf6boVC70Ofwc3N0SC5XOwrg=
+#deploy:
+#  provider: pages
+#  skip-cleanup: true
+#  local_dir: docs/.vuepress/dist
+#  github-token: "${access_token}"
+#  keep-history: true
+#  on:
+#    branch: gh-pages
