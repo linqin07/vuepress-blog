@@ -3,7 +3,7 @@ const navConf = require('../../config/navConf.js');
 const sidebarConf = require('../../config/sidebarConf.js');
 
 module.exports = {
-	base: '/document',
+	base: '/document/',
 	themeConfig: {
 		title: '个人主页',
 		description: 'Lin的博客',
