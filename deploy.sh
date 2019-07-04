@@ -20,12 +20,13 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # ssh推送，如果你想要部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:woshilinqin/vuepress-blog.git master:gh-pages
+# git push -f git@github.com:woshilinqin/vuepress-blog.git master:gh-pages
 
 # http推送
 # git push -f https://github.com/woshilinqin/document.git master:gh-pages
 
 # http推送,travis-ci自动化,
-# git push -f https://${access_token}@github.com/woshilinqin/document.git master:gh-pages
+# git push -f https://${access_token}@github.com/woshilinqin/document.git master:gh-pages  # document仓库
+  git push -f https://${access_token}@github.com/woshilinqin/vuepress-blog.git master:gh-pages  # vuepress-blog分支
 
 cd -
