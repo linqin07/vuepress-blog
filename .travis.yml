@@ -1,18 +1,23 @@
 language: node_js
 node_js:
 - lts/*
+
+# 缓存目录，加速编译
 cache:
   directories:
   - node_modules
+
+# 初始化环境
 install: npm install -g vuepress
-before_script: chmod a+x deploy.sh
-script:
-- bash ./deploy.sh
-#deploy:
-#  provider: pages
-#  skip-cleanup: true
-#  local_dir: docs/.vuepress/dist
-#  github-token: "${access_token}"
-#  keep-history: true
-#  on:
-#    branch: gh-pages
+#before_script: chmod a+x deploy.sh
+#script:
+#- bash ./deploy.sh
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: docs/.vuepress/dist
+  github-token: "${access_token}"
+  keep-history: true
+  on:
+    branch: gh-pages
