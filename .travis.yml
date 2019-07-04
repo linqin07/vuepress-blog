@@ -1,21 +1,21 @@
 language: node_js
 node_js:
-  - lts/*
+- lts/*
 cache:
   directories:
-    - node_modules
-install:
-   npm install -g vuepress
-   
-before_script:
-   chmod a+x deploy.sh
+  - node_modules
+install: npm install -g vuepress
+before_script: chmod a+x deploy.sh
 script:
-  - bash ./deploy.sh
+- bash ./deploy.sh
 deploy:
   provider: pages
   skip-cleanup: true
   local_dir: docs/.vuepress/dist
-  github-token: ${GITHUB-TOKEN}
+  github-token: "${access_token}"
   keep-history: true
   on:
     branch: gh-pages
+env:
+  global:
+    secure: j5JTrGu966F/tAg18yV/jGNoJ/2vY0+7G4rCqpK5Dq1aaGcDdnDHlgOgV1OX/l5kqRB+bsqBn4HmLysVdAU4ZovuOdIUQpQKcVXRazNYZqlToY/woBMxpYCB9nOKc3TONG46wMdInXPByAo1cdpWdZqPXCtdppCRbY5Ohp7pvwROybXXqbmfdFN4Hn5WPnI9czw2NySVjCj8HvRe09yPvR3o6XuQGiYHGSYs4/7ZpDhHN/lKgEYhuojSGYMqHGtoIkjJrsy1o0o3YpzS0nCmpdEsNfQ72iTqRJraywkAv1mEUpG/uFKjqABcoNZhQbR4jb9romjuCtHoXAckm0Md2mYc93kNxBHCOAdpNUzIe61WSNM2uJ28piwctKQlZeNRsUoul7//GXENLcMRY4hcss2BcTQ2k7W7WhHXmFJLX46T3BG6n9ImCcEBedPo+tvZulfxFEEJBIt4Ke2uCBubVm96WMhbH58UKFQVQcPWsduN/bPvRlrpnql8fnGHz3tFryGKwGmQslL8QN7UY3u/bdKnusFldM4e5/oiwEUK/Al/qKD9P1lmx0ZYYNryJicZX7ERhfwhIcx55l67yc2A3+RfTJEt73d/e2fgVG5y422ZR/n1A/hTN/83UDxSJ7fix+oxToxmfoyCsDmo1NA3VUfchrQSqibz3Qry3SPUeUo=
