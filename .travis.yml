@@ -10,12 +10,12 @@ install:
 before_script:
    chmod a+x deploy.sh
 script:
-  - ./deploy.sh
+  - bash ./deploy.sh
 deploy:
   provider: pages
   skip-cleanup: true
   local_dir: docs/.vuepress/dist
-  github-token: $GITHUB-TOKEN
+  github-token: ${GITHUB-TOKEN}
   keep-history: true
   on:
     branch: gh-pages
