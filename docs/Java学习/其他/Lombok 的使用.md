@@ -22,7 +22,7 @@ idea 选择离线安装即可。快捷键 ctrl + F12 查看生成的方法。
 
   @Data 注解就可以有下面几个注解的功能： @ToString、@Getter、@Setter、@EqualsAndHashCode、@NoArgsConstructor 。
 
-  PS：同时使用@Data 和 @AllArgsConstructor 后 ，默认的无参构造函数失效，如果需要它，要重新设置 @NoArgsConstructor
+  PS：同时使用 @Data 和 @AllArgsConstructor 后 ，默认的无参构造函数失效，如果需要它，要重新设置 @NoArgsConstructor
 
 - `@Getter`
 
