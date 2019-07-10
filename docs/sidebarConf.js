@@ -1,21 +1,9 @@
 module.exports = {
    "/Java学习/": [
-      [
-         "/Java学习/",
-         "README"
-      ],
-      [
-         "/Java学习/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "git的使用",
          "collapsable": true,
          "children": [
-            [
-               "/Java学习/git的使用/",
-               "README"
-            ],
             [
                "/Java学习/git的使用/git命令.md",
                "git命令"
@@ -43,6 +31,10 @@ module.exports = {
                ]
             },
             [
+               "/Java学习/git的使用/",
+               "README"
+            ],
+            [
                "/Java学习/git的使用/取消右键的菜单.md",
                "取消右键的菜单"
             ],
@@ -51,12 +43,12 @@ module.exports = {
                "collapsable": true,
                "children": [
                   [
-                     "/Java学习/git的使用/安装gitlab/",
-                     "README"
-                  ],
-                  [
                      "/Java学习/git的使用/安装gitlab/CentOS7安装维护Gitlab.md",
                      "CentOS7安装维护Gitlab"
+                  ],
+                  [
+                     "/Java学习/git的使用/安装gitlab/",
+                     "README"
                   ]
                ]
             }
@@ -81,10 +73,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/IDEA学习/",
-               "README"
-            ],
-            [
                "/Java学习/IDEA学习/IDEA中使用 Debug .md",
                "IDEA中使用 Debug "
             ],
@@ -97,6 +85,10 @@ module.exports = {
                "IDEA远程debug-jar"
             ],
             [
+               "/Java学习/IDEA学习/",
+               "README"
+            ],
+            [
                "/Java学习/IDEA学习/发布应用到 tomcat.md",
                "发布应用到 tomcat"
             ]
@@ -107,16 +99,16 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/JDK8/",
-               "README"
-            ],
-            [
                "/Java学习/JDK8/collect.md",
                "collect"
             ],
             [
                "/Java学习/JDK8/Java8 时间日期.md",
                "Java8 时间日期"
+            ],
+            [
+               "/Java学习/JDK8/",
+               "README"
             ],
             [
                "/Java学习/JDK8/Stream流.md",
@@ -129,12 +121,12 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/JVM/",
-               "README"
-            ],
-            [
                "/Java学习/JVM/JVM 参数.md",
                "JVM 参数"
+            ],
+            [
+               "/Java学习/JVM/",
+               "README"
             ],
             [
                "/Java学习/JVM/系统缓慢JVM排查.md",
@@ -142,14 +134,18 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Java学习/",
+         "README"
+      ],
+      [
+         "/Java学习/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "代码记录",
          "collapsable": true,
          "children": [
-            [
-               "/Java学习/代码记录/",
-               "README"
-            ],
             [
                "/Java学习/代码记录/1.Double运算比较问题.md",
                "1.Double运算比较问题"
@@ -197,6 +193,10 @@ module.exports = {
             [
                "/Java学习/代码记录/9.毫秒转换为秒.md",
                "9.毫秒转换为秒"
+            ],
+            [
+               "/Java学习/代码记录/",
+               "README"
             ]
          ]
       },
@@ -205,12 +205,12 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/其他/",
-               "README"
-            ],
-            [
                "/Java学习/其他/Lombok 的使用.md",
                "Lombok 的使用"
+            ],
+            [
+               "/Java学习/其他/",
+               "README"
             ]
          ]
       },
@@ -226,14 +226,6 @@ module.exports = {
       }
    ],
    "/Linux/": [
-      [
-         "/Linux/",
-         "README"
-      ],
-      [
-         "/Linux/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "Arthas 基础教程",
          "collapsable": true,
@@ -260,18 +252,10 @@ module.exports = {
          "title": "ELK",
          "collapsable": true,
          "children": [
-            [
-               "/Linux/ELK/",
-               "README"
-            ],
             {
                "title": "ES",
                "collapsable": true,
                "children": [
-                  [
-                     "/Linux/ELK/ES/",
-                     "README"
-                  ],
                   [
                      "/Linux/ELK/ES/1.认识.md",
                      "1.认识"
@@ -287,6 +271,10 @@ module.exports = {
                   [
                      "/Linux/ELK/ES/4.安装.md",
                      "4.安装"
+                  ],
+                  [
+                     "/Linux/ELK/ES/",
+                     "README"
                   ]
                ]
             },
@@ -305,15 +293,19 @@ module.exports = {
                "collapsable": true,
                "children": [
                   [
-                     "/Linux/ELK/metricbeat/",
-                     "README"
-                  ],
-                  [
                      "/Linux/ELK/metricbeat/metricbeat.md",
                      "metricbeat"
+                  ],
+                  [
+                     "/Linux/ELK/metricbeat/",
+                     "README"
                   ]
                ]
-            }
+            },
+            [
+               "/Linux/ELK/",
+               "README"
+            ]
          ]
       },
       {
@@ -396,6 +388,10 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Linux/",
+         "README"
+      ],
       {
          "title": "Shell",
          "collapsable": true,
@@ -406,6 +402,10 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Linux/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "zookeeper",
          "collapsable": true,
@@ -442,25 +442,17 @@ module.exports = {
       }
    ],
    "/Markdown入门到放弃/": [
-      [
-         "/Markdown入门到放弃/",
-         "README"
-      ],
-      [
-         "/Markdown入门到放弃/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "1.node.js介绍",
          "collapsable": true,
          "children": [
             [
-               "/Markdown入门到放弃/1.node.js介绍/",
-               "README"
-            ],
-            [
                "/Markdown入门到放弃/1.node.js介绍/npm常用命令.md",
                "npm常用命令"
+            ],
+            [
+               "/Markdown入门到放弃/1.node.js介绍/",
+               "README"
             ]
          ]
       },
@@ -474,14 +466,18 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Markdown入门到放弃/",
+         "README"
+      ],
+      [
+         "/Markdown入门到放弃/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "vuepress搭建博客",
          "collapsable": true,
          "children": [
-            [
-               "/Markdown入门到放弃/vuepress搭建博客/",
-               "README"
-            ],
             [
                "/Markdown入门到放弃/vuepress搭建博客/1.环境搭建.md",
                "1.环境搭建"
@@ -489,6 +485,14 @@ module.exports = {
             [
                "/Markdown入门到放弃/vuepress搭建博客/2.主题配置.md",
                "2.主题配置"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/3.部署.md",
+               "3.部署"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/",
+               "README"
             ]
          ]
       },
@@ -508,10 +512,6 @@ module.exports = {
          "/mysql/",
          "README"
       ],
-      [
-         "/mysql/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "sql面试题",
          "collapsable": true,
@@ -530,6 +530,10 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/mysql/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "优化",
          "collapsable": true,
@@ -599,12 +603,12 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/mysql/基础知识/",
-               "README"
-            ],
-            [
                "/mysql/基础知识/mysql中myisam与innodb的区别.md",
                "mysql中myisam与innodb的区别"
+            ],
+            [
+               "/mysql/基础知识/",
+               "README"
             ],
             [
                "/mysql/基础知识/sql模式.md",
@@ -621,10 +625,6 @@ module.exports = {
       [
          "/Spring/",
          "README"
-      ],
-      [
-         "/Spring/SUMMARY.md",
-         "SUMMARY"
       ],
       {
          "title": "spring技术点",
@@ -651,16 +651,16 @@ module.exports = {
                "Spring容器工厂"
             ]
          ]
-      }
+      },
+      [
+         "/Spring/SUMMARY.md",
+         "SUMMARY"
+      ]
    ],
    "/Spring-boot/": [
       [
          "/Spring-boot/",
          "README"
-      ],
-      [
-         "/Spring-boot/SUMMARY.md",
-         "SUMMARY"
       ],
       {
          "title": "spring-boot-aop",
@@ -777,12 +777,12 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/spring-boot部署/",
-               "README"
-            ],
-            [
                "/Spring-boot/spring-boot部署/maven插件部署到远端linux机器.md",
                "maven插件部署到远端linux机器"
+            ],
+            [
+               "/Spring-boot/spring-boot部署/",
+               "README"
             ],
             [
                "/Spring-boot/spring-boot部署/tomcat部署到tomcat.md",
@@ -790,14 +790,14 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Spring-boot/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "代码生成",
          "collapsable": true,
          "children": [
-            [
-               "/Spring-boot/代码生成/",
-               "README"
-            ],
             [
                "/Spring-boot/代码生成/Mybatis-Genelator.md",
                "Mybatis-Genelator"
@@ -805,6 +805,10 @@ module.exports = {
             [
                "/Spring-boot/代码生成/MyBatis-Plus.md",
                "MyBatis-Plus"
+            ],
+            [
+               "/Spring-boot/代码生成/",
+               "README"
             ]
          ]
       },
@@ -946,14 +950,6 @@ module.exports = {
       }
    ],
    "/设计模式/": [
-      [
-         "/设计模式/",
-         "README"
-      ],
-      [
-         "/设计模式/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "1.策略模式",
          "collapsable": true,
@@ -1007,6 +1003,14 @@ module.exports = {
                "饿汉式"
             ]
          ]
-      }
+      },
+      [
+         "/设计模式/",
+         "README"
+      ],
+      [
+         "/设计模式/SUMMARY.md",
+         "SUMMARY"
+      ]
    ]
 }
