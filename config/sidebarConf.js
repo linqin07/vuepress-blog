@@ -4,6 +4,10 @@ module.exports = {
          "/Java学习/",
          "README"
       ],
+      [
+         "/Java学习/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "git的使用",
          "collapsable": true,
@@ -138,10 +142,6 @@ module.exports = {
             ]
          ]
       },
-      [
-         "/Java学习/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "代码记录",
          "collapsable": true,
@@ -229,6 +229,10 @@ module.exports = {
       [
          "/Linux/",
          "README"
+      ],
+      [
+         "/Linux/SUMMARY.md",
+         "SUMMARY"
       ],
       {
          "title": "Arthas 基础教程",
@@ -402,10 +406,6 @@ module.exports = {
             ]
          ]
       },
-      [
-         "/Linux/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "zookeeper",
          "collapsable": true,
@@ -446,6 +446,10 @@ module.exports = {
          "/Markdown入门到放弃/",
          "README"
       ],
+      [
+         "/Markdown入门到放弃/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "1.node.js介绍",
          "collapsable": true,
@@ -470,10 +474,6 @@ module.exports = {
             ]
          ]
       },
-      [
-         "/Markdown入门到放弃/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "vuepress搭建博客",
          "collapsable": true,
@@ -489,6 +489,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/vuepress搭建博客/2.主题配置.md",
                "2.主题配置"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/3.部署.md",
+               "3.部署"
             ]
          ]
       },
@@ -508,6 +512,10 @@ module.exports = {
          "/mysql/",
          "README"
       ],
+      [
+         "/mysql/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "sql面试题",
          "collapsable": true,
@@ -526,10 +534,6 @@ module.exports = {
             ]
          ]
       },
-      [
-         "/mysql/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "优化",
          "collapsable": true,
@@ -622,6 +626,10 @@ module.exports = {
          "/Spring/",
          "README"
       ],
+      [
+         "/Spring/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "spring技术点",
          "collapsable": true,
@@ -647,16 +655,16 @@ module.exports = {
                "Spring容器工厂"
             ]
          ]
-      },
-      [
-         "/Spring/SUMMARY.md",
-         "SUMMARY"
-      ]
+      }
    ],
    "/Spring-boot/": [
       [
          "/Spring-boot/",
          "README"
+      ],
+      [
+         "/Spring-boot/SUMMARY.md",
+         "SUMMARY"
       ],
       {
          "title": "spring-boot-aop",
@@ -696,6 +704,10 @@ module.exports = {
          "title": "spring-boot-interceptor",
          "collapsable": true,
          "children": [
+            [
+               "/Spring-boot/spring-boot-interceptor/",
+               "README"
+            ],
             [
                "/Spring-boot/spring-boot-interceptor/拦截器.md",
                "拦截器"
@@ -786,10 +798,6 @@ module.exports = {
             ]
          ]
       },
-      [
-         "/Spring-boot/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "代码生成",
          "collapsable": true,
@@ -950,6 +958,10 @@ module.exports = {
          "/设计模式/",
          "README"
       ],
+      [
+         "/设计模式/SUMMARY.md",
+         "SUMMARY"
+      ],
       {
          "title": "1.策略模式",
          "collapsable": true,
@@ -1003,10 +1015,6 @@ module.exports = {
                "饿汉式"
             ]
          ]
-      },
-      [
-         "/设计模式/SUMMARY.md",
-         "SUMMARY"
-      ]
+      }
    ]
 }
