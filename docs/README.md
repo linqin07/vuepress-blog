@@ -15,4 +15,7 @@ features:
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
+[![Build Status](https://travis-ci.org/woshilinqin/vuepress-blog.svg?branch=master)](https://travis-ci.org/woshilinqin/vuepress-blog)
+
 test travis 自动化构建 123456更新时间
+
