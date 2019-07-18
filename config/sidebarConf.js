@@ -1,4 +1,6 @@
 module.exports = {
+   "/assets/": [
+   ],
    "/Java学习/": [
       [
          "/Java学习/",
@@ -411,12 +413,16 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Linux/zookeeper/下载安装zk.md",
-               "下载安装zk"
+               "/Linux/zookeeper/1.简介.md",
+               "1.简介"
             ],
             [
-               "/Linux/zookeeper/简介.md",
-               "简介"
+               "/Linux/zookeeper/2.下载安装zk.md",
+               "2.下载安装zk"
+            ],
+            [
+               "/Linux/zookeeper/3.zk命令.md",
+               "3.zk命令"
             ]
          ]
       },
