@@ -21,8 +21,16 @@ module.exports = {
 				message: "有内容更新",
 				buttonText: "Refresh"
 			}
+		},
+		algolia: {
+			appId: '2N2KUO47NA',
+			apiKey: '4bcaa65c573c73713ebea518b254046c',
+			indexName: 'vuepress-blog',
+			algoliaOptions: {
+				hitsPerPage: 10,
+				facetFilters: ""
+			}
 		}
-
 	}
 
 }
