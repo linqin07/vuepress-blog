@@ -499,6 +499,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/vuepress搭建博客/3.部署.md",
                "3.部署"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/4.全文检索.md",
+               "4.全文检索"
             ]
          ]
       },
