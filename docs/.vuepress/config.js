@@ -1,8 +1,6 @@
 // .vuepress/config.js
 const navConf = require('../../config/navConf.js');
 const sidebarConf = require('../../config/sidebarConf.js');
-// 引入密码常量文件变量
-const secreKeyConf = require('../../config/secretKeyConf.js')
 
 module.exports = {
 	base: '/vuepress-blog/',
@@ -25,10 +23,9 @@ module.exports = {
 				buttonText: "Refresh"
 			}
 		},
-
 		algolia: {
-			appId: secreKeyConf.appId,
-			apiKey: secreKeyConf.apiKey,
+			appId: '2N2KUO47NA',
+			apiKey: '4bcaa65c573c73713ebea518b254046c',
 			indexName: 'vuepress-blog',
 			algoliaOptions: {
 				hitsPerPage: 10,
