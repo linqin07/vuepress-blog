@@ -3,10 +3,6 @@
 # 终止一个错误
 set -e
 
-#从trival加载密钥到加密文件中
-echo "module.exports = {	appId: ${algolia-appId},	apiKey: ${algolia-apiKey}}" > config/secretKeyConf.js
-cat config/secretKeyConf.js
-
 # 构建
 npm run docs:build
 

@@ -1,4 +1,4 @@
 module.exports = {
-	appId: ${algolia-appId},
-	apiKey: ${algolia-apiKey}
+	appId: '2N2KUO47NA',
+	apiKey: '4bcaa65c573c73713ebea518b254046c'
 }
