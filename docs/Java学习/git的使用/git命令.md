@@ -75,3 +75,11 @@ git reset --hard
 git reset --soft
 ```
 
+###### git忽略
+
+忽略不提交git中已修改入库的文件。
+
+```sh
+git update-index --assume-unchanged config/secretKeyConf.js
+```
+
