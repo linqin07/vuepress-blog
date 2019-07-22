@@ -37,7 +37,11 @@ Git add
 git remote -v
 ```
 
+###### 测试git连接
 
+```sh
+ ssh -T git@github.com
+```
 
 ###### 清空远程仓库
 
