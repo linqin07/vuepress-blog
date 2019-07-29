@@ -405,6 +405,10 @@ module.exports = {
             [
                "/Linux/Shell/1.入门参数认识.md",
                "1.入门参数认识"
+            ],
+            [
+               "/Linux/Shell/2.awk字符串操作.md",
+               "2.awk字符串操作"
             ]
          ]
       },
@@ -513,6 +517,24 @@ module.exports = {
             [
                "/Markdown入门到放弃/Wiki/通用接口文档 Markdown.md",
                "通用接口文档 Markdown"
+            ]
+         ]
+      },
+      {
+         "title": "windows",
+         "collapsable": true,
+         "children": [
+            [
+               "/Markdown入门到放弃/windows/1.移除快捷方式小箭头.md",
+               "1.移除快捷方式小箭头"
+            ],
+            [
+               "/Markdown入门到放弃/windows/2.更改电脑桌面路径.md",
+               "2.更改电脑桌面路径"
+            ],
+            [
+               "/Markdown入门到放弃/windows/2.解除宽带限速.md",
+               "2.解除宽带限速"
             ]
          ]
       }
@@ -787,6 +809,20 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-typmeleaf/typmeleaf.md",
                "typmeleaf"
+            ]
+         ]
+      },
+      {
+         "title": "spring-boot-websocket",
+         "collapsable": true,
+         "children": [
+            [
+               "/Spring-boot/spring-boot-websocket/",
+               "README"
+            ],
+            [
+               "/Spring-boot/spring-boot-websocket/websocket.md",
+               "websocket"
             ]
          ]
       },
