@@ -9,6 +9,6 @@
 		"deploy" : "bash deploy.sh",
 		"create" : "bash createCatalog.sh"
 	},
-	"author" : "",
+	"author" : "LinQin",
 	"license" : "ISC"
 }

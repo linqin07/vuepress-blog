@@ -353,6 +353,10 @@ module.exports = {
                "README"
             ],
             [
+               "/Linux/linux常用操作/ssh免密.md",
+               "ssh免密"
+            ],
+            [
                "/Linux/linux常用操作/vim.md",
                "vim"
             ],
@@ -775,16 +779,20 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/spring-boot-mybatis/mybatis-typehandle.md",
-               "mybatis-typehandle"
+               "/Spring-boot/spring-boot-mybatis/1.整合mybatis.md",
+               "1.整合mybatis"
             ],
             [
-               "/Spring-boot/spring-boot-mybatis/常见问题.md",
-               "常见问题"
+               "/Spring-boot/spring-boot-mybatis/2.mybatis-typehandle.md",
+               "2.mybatis-typehandle"
             ],
             [
-               "/Spring-boot/spring-boot-mybatis/整合mybatis.md",
-               "整合mybatis"
+               "/Spring-boot/spring-boot-mybatis/3.常见问题.md",
+               "3.常见问题"
+            ],
+            [
+               "/Spring-boot/spring-boot-mybatis/4.单元测试.md",
+               "4.单元测试"
             ]
          ]
       },
