@@ -7,10 +7,10 @@ const pluginConf = require('../../config/pluginConf.js');
 const secreKeyConf = require('../../config/secretKeyConf.js')
 
 module.exports = {
-    base: '/vuepress-blog/',
+    base: '/',
     locales: {
-        '/vuepress-blog/': {
-            lang: 'zh'
+        '/': {
+            lang: 'zh-CN'
         }
     },
     serviceWorker: true,

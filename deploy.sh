@@ -9,6 +9,9 @@ npm run docs:build
 # 进入生成的构建文件夹
 cd docs/.vuepress/dist
 
+# 如果是发布到自定义域名
+echo 'www.linqin.site' > CNAME
+
 # 如果你是要部署到自定义域名
 # echo 'www.example.com' > CNAME
 
