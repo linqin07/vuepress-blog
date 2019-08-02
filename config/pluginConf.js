@@ -1,10 +1,11 @@
-module.exports = [{
+module.exports = {
+    '@vuepress/back-to-top': true,
+    // '@vuepress/medium-zoom': true,
     '@vuepress/pwa': {
         serviceWorker: true,
         updatePopup: {
-            message: "发现新内容可用.",
-            buttonText: "刷新"
+            message: "啦啦啦,一大波内容已更新!",
+            buttonText: "朕知道了"
         }
-    },
-    '@vuepress/back-to-top': true
-}]
+    }
+}

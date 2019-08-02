@@ -2,7 +2,7 @@
 const navConf = require('../../config/navConf.js');
 const sidebarConf = require('../../config/sidebarConf.js');
 const pluginConf = require('../../config/pluginConf.js');
-// const headConf = require('../../config/headConf.js');
+const headConf = require('../../config/headConf.js');
 // 引入密码常量文件变量
 const secreKeyConf = require('../../config/secretKeyConf.js')
 
@@ -45,6 +45,6 @@ module.exports = {
         }
     },
     plugins: pluginConf,
-    // head: headConf
+    head: headConf
 
 }
