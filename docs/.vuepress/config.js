@@ -13,6 +13,7 @@ module.exports = {
             lang: 'zh'
         }
     },
+    serviceWorker: true,
     themeConfig: {
         repo: 'https://github.com/woshilinqin/vuepress-blog',
         title: '个人主页',
@@ -25,7 +26,7 @@ module.exports = {
         lastUpdated: '上次更新时间',
         // 刷新内容的弹窗，方便编写内容调试
         serviceWorker: {
-            //updatePopup: true, // Boolean | Object, 默认值是 undefined.
+            updatePopup: true,// Boolean | Object, 默认值是 undefined.
             // 如果设置为 true, 默认的文本配置将是:
             updatePopup: {
                 message: "有内容更新",

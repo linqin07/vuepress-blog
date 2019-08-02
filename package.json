@@ -1,14 +1,19 @@
 {
-	"name" : "com",
-	"version" : "1.0.0",
-	"description" : "",
-	"main" : "index.js",
-	"scripts" : {
-		"docs:dev" : "vuepress dev docs",
-		"docs:build" : "vuepress build docs",
-		"deploy" : "bash deploy.sh",
-		"create" : "bash createCatalog.sh"
+	"name": "com",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs",
+		"deploy": "bash deploy.sh",
+		"create": "bash createCatalog.sh"
 	},
-	"author" : "LinQin",
-	"license" : "ISC"
+	"author": "LinQin",
+	"license": "ISC",
+	"devDependencies": {
+		"@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+		"@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
+		"@vuepress/plugin-pwa": "^1.0.0-rc.1"
+	}
 }
