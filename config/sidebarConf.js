@@ -511,6 +511,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/vuepress搭建博客/4.全文检索.md",
                "4.全文检索"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/5.插件.md",
+               "5.插件"
             ]
          ]
       },
@@ -755,12 +759,12 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/spring-boot-json/spring-boot-json.md",
-               "spring-boot-json"
+               "/Spring-boot/spring-boot-json/1.spring-boot-json.md",
+               "1.spring-boot-json"
             ],
             [
-               "/Spring-boot/spring-boot-json/处理时间格式LocalDateTime.md",
-               "处理时间格式LocalDateTime"
+               "/Spring-boot/spring-boot-json/2.处理时间格式LocalDateTime.md",
+               "2.处理时间格式LocalDateTime"
             ]
          ]
       },
@@ -793,6 +797,10 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-mybatis/4.单元测试.md",
                "4.单元测试"
+            ],
+            [
+               "/Spring-boot/spring-boot-mybatis/5.文件上传进度条.md",
+               "5.文件上传进度条"
             ]
          ]
       },
@@ -835,6 +843,24 @@ module.exports = {
          ]
       },
       {
+         "title": "spring-boot-代码生成",
+         "collapsable": true,
+         "children": [
+            [
+               "/Spring-boot/spring-boot-代码生成/",
+               "README"
+            ],
+            [
+               "/Spring-boot/spring-boot-代码生成/Mybatis-Genelator.md",
+               "Mybatis-Genelator"
+            ],
+            [
+               "/Spring-boot/spring-boot-代码生成/MyBatis-Plus.md",
+               "MyBatis-Plus"
+            ]
+         ]
+      },
+      {
          "title": "spring-boot部署",
          "collapsable": true,
          "children": [
@@ -849,24 +875,6 @@ module.exports = {
             [
                "/Spring-boot/spring-boot部署/tomcat部署到tomcat.md",
                "tomcat部署到tomcat"
-            ]
-         ]
-      },
-      {
-         "title": "代码生成",
-         "collapsable": true,
-         "children": [
-            [
-               "/Spring-boot/代码生成/",
-               "README"
-            ],
-            [
-               "/Spring-boot/代码生成/Mybatis-Genelator.md",
-               "Mybatis-Genelator"
-            ],
-            [
-               "/Spring-boot/代码生成/MyBatis-Plus.md",
-               "MyBatis-Plus"
             ]
          ]
       },
