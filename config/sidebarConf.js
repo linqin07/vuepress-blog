@@ -473,8 +473,12 @@ module.exports = {
                "README"
             ],
             [
-               "/Markdown入门到放弃/1.node.js介绍/npm常用命令.md",
-               "npm常用命令"
+               "/Markdown入门到放弃/1.node.js介绍/1.npm常用命令.md",
+               "1.npm常用命令"
+            ],
+            [
+               "/Markdown入门到放弃/1.node.js介绍/2.yarn.md",
+               "2.yarn"
             ]
          ]
       },

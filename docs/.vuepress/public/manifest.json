@@ -1,49 +1,49 @@
 {
-  "name": "LinQin`s文档",
-  "short_name": "vuepress-blog",
-  "description": "记录学习生活",
-  "theme_color": "#da2009",
-  "background_color": "#ffffff",
+  "name": "用心记,放心阅,方便查",
+  "short_name": "记阅查",
+  "description": "echoxu.cn是一个IT知识点记录并整合的文档生成器.IT知识,文档管理,文档记录,文档生成器",
+  "theme_color": "#3eaf7c",
+  "background_color": "#3eaf7c",
   "display": "standalone",
   "start_url": "index.html",
   "icons": [
     {
-      "src": "/icons/icon-72x72.png",
+      "src": "https://image.xujianhui.cn/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-96x96.png",
+      "src": "https://image.xujianhui.cn/icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-128x128.png",
+      "src": "https://image.xujianhui.cn/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-144x144.png",
+      "src": "https://image.xujianhui.cn/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-152x152.png",
+      "src": "https://image.xujianhui.cn/icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "https://image.xujianhui.cn/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-384x384.png",
+      "src": "https://image.xujianhui.cn/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "https://image.xujianhui.cn/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
