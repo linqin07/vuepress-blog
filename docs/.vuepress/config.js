@@ -13,7 +13,7 @@ module.exports = {
             lang: 'zh-CN'
         }
     },
-    // serviceWorker: true,
+    serviceWorker: true,
     plugins: pluginConf,
     head: headConf,
     themeConfig: {
