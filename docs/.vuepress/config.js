@@ -13,16 +13,9 @@ module.exports = {
             lang: 'zh-CN'
         }
     },
-    serviceWorker: true,
+    // serviceWorker: true,
     plugins: pluginConf,
-    head: [
-        ['link', {rel: 'apple-touch-icon', href: 'https://image.xujianhui.cn/apple-touch-icon.png'}],
-        ['link', {rel: 'icon', href: 'https://image.xujianhui.cn/favicon-32x32.png'}],
-        ['link', {rel: 'manifest', href: '/manifest.json'}],
-        ['link', {rel: 'mask-icon', href: 'https://image.xujianhui.cn/safari-pinned-tab.svg'}],
-        ['meta', {name: 'theme-color', content: '#3eaf7c'}],
-        ['meta', {name: 'msapplication-TileColor', content: '#3eaf7c'}],
-    ],
+    head: headConf,
     themeConfig: {
         repo: 'https://github.com/woshilinqin/vuepress-blog',
         title: '个人主页',
