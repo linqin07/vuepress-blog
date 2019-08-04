@@ -9,9 +9,10 @@ cache:
 
 # 初始化环境
 install:
-  - npm install -g vuepress
-  - npm install -D @vuepress/plugin-pwa@next
-  - npm install -D @vuepress/plugin-back-to-top@next
+  - npm install
+#  - npm install -g vuepress
+#  - npm install -D @vuepress/plugin-pwa@next
+#  - npm install -D @vuepress/plugin-back-to-top@next
 before_script: chmod a+x deploy.sh
 script:
 - bash ./deploy.sh
