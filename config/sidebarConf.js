@@ -519,6 +519,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/vuepress搭建博客/5.插件.md",
                "5.插件"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/6.支持Markdown语法.md",
+               "6.支持Markdown语法"
             ]
          ]
       },
