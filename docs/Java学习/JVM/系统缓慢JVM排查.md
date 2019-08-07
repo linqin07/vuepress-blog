@@ -20,7 +20,7 @@ df -h
 
 ###### 2.得到负载最高的进程`PID`
 
-使用命令查看子线程负载情况
+使用命令查看子线程负载情况，查看进程数 `ps -eLf | grep PID | wc -l`
 
 ```shell
 top -Hp PID
