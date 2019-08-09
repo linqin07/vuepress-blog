@@ -182,3 +182,18 @@ Predicate predicate = new Predicate() {
   图解：
 
 ![1558192452641](https://i.loli.net/2019/06/15/5d046f45d36b519497.jpg)
+
+- 9.IntStream 封闭范围
+
+  ```java
+    		//封闭范围 区间 [0,1]
+          IntStream.rangeClosed(0,1).forEach(item ->{
+              System.out.println(item);
+          });
+          
+          //封闭范围 区间 [0,5)
+          IntStream.range(0,5).forEach(System.out::println);
+  ```
+
+  
+
