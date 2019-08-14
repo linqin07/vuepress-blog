@@ -211,6 +211,10 @@ module.exports = {
                "README"
             ],
             [
+               "/Java学习/其他/1.保存密码首选char[].md",
+               "1.保存密码首选char[]"
+            ],
+            [
                "/Java学习/其他/Lombok 的使用.md",
                "Lombok 的使用"
             ]
@@ -413,6 +417,10 @@ module.exports = {
             [
                "/Linux/Shell/2.awk字符串操作.md",
                "2.awk字符串操作"
+            ],
+            [
+               "/Linux/Shell/3.if条件判断数字字符串.md",
+               "3.if条件判断数字字符串"
             ]
          ]
       },
@@ -549,8 +557,8 @@ module.exports = {
                "2.更改电脑桌面路径"
             ],
             [
-               "/Markdown入门到放弃/windows/2.解除宽带限速.md",
-               "2.解除宽带限速"
+               "/Markdown入门到放弃/windows/3.解除宽带限速.md",
+               "3.解除宽带限速"
             ]
          ]
       }
