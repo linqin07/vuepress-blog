@@ -439,6 +439,18 @@ module.exports = {
             [
                "/Linux/zookeeper/3.zk命令.md",
                "3.zk命令"
+            ],
+            [
+               "/Linux/zookeeper/4.原生API.md",
+               "4.原生API"
+            ],
+            [
+               "/Linux/zookeeper/5.应用场景.md",
+               "5.应用场景"
+            ],
+            [
+               "/Linux/zookeeper/6..Apache Curator客户端API.md",
+               "6..Apache Curator客户端API"
             ]
          ]
       },
