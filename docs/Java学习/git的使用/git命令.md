@@ -8,7 +8,7 @@
 
 `git clone [url]`
 
-Git的工作流程
+### Git的工作流程
 
 ![图片来源网络](https://i.loli.net/2019/06/15/5d046ed9363b121722.jpg)
 
@@ -31,19 +31,19 @@ Git add
 
  日常工作中了解前三个命令已足够能满足我们的使用需求了，但是了解一下这个交互式拣选操作也是不错的。这个命令它也是作用于版本库中已被跟踪的文件中的执行过修改与删除操作的文件。
 
-###### 查看git远程仓库
+### 查看git远程仓库
 
 ```shell
 git remote -v
 ```
 
-###### 测试git连接
+### 测试git连接
 
 ```sh
  ssh -T git@github.com
 ```
 
-###### 清空远程仓库
+### 清空远程仓库
 
 ```
 git rm -r --cached .
@@ -63,7 +63,7 @@ git commit -m ".gitignore is now working"
 git push -u origin master
 ```
 
-###### 还原
+### 还原
 
 ```
 //git撤销本地所有未提交的更改
@@ -75,11 +75,38 @@ git reset --hard
 git reset --soft
 ```
 
-###### git忽略
+### git暂时忽略
 
 忽略不提交git中已修改入库的文件。
 
 ```sh
 git update-index --assume-unchanged config/secretKeyConf.js
+```
+
+取消忽略
+
+```sh
+git update-index --no-assume-unchanged config/secretKeyConf.js
+```
+
+查看：当文件比较多时，还可以借助 grep 命令来筛选，例如：
+
+```
+git ls-files -v| grep '^h'
+```
+
+git 既然支持 alias，可以通过配置 alias 来简化操作，编辑 .git/config 文件，把下述配置加入到 alias 段即可
+
+```sh
+[alias]
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchange
+	ignored = !git ls-files -v | grep "^h"
+```
+
+**语法**
+
+```sh
+git [ignore|unignore|ignored] filename
 ```
 

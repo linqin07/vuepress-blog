@@ -33,5 +33,10 @@
    proxy_set_header Connection "upgrade";
    ```
 
-   
+
+3. ###### SpringBoot项目中增加了WebSocket功能无法运行测试
+
+```
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+```
 
