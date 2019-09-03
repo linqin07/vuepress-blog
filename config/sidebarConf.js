@@ -465,12 +465,16 @@ module.exports = {
          ]
       },
       {
-         "title": "防火墙",
+         "title": "系统操作",
          "collapsable": true,
          "children": [
             [
-               "/Linux/防火墙/防火墙.md",
-               "防火墙"
+               "/Linux/系统操作/1.crontab定时器.md",
+               "1.crontab定时器"
+            ],
+            [
+               "/Linux/系统操作/2.防火墙.md",
+               "2.防火墙"
             ]
          ]
       }
@@ -1103,6 +1107,16 @@ module.exports = {
             [
                "/设计模式/3.单例模式/饿汉式.md",
                "饿汉式"
+            ]
+         ]
+      },
+      {
+         "title": "4.装饰者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/4.装饰者模式/",
+               "README"
             ]
          ]
       }
