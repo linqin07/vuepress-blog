@@ -27,8 +27,8 @@ module.exports = {
                "git标签操作"
             ],
             [
-               "/Java学习/git的使用/idea gitstash.md",
-               "idea gitstash"
+               "/Java学习/git的使用/idea操作git.md",
+               "idea操作git"
             ],
             {
                "title": "linux安装git服务器",
@@ -73,8 +73,8 @@ module.exports = {
                "README"
             ],
             [
-               "/Java学习/Guava 学习/常.md",
-               "常"
+               "/Java学习/Guava 学习/常用方法.md",
+               "常用方法"
             ]
          ]
       },
@@ -1007,6 +1007,10 @@ module.exports = {
             [
                "/复习题/进程多线程/多线程.md",
                "多线程"
+            ],
+            [
+               "/复习题/进程多线程/线程优雅关闭.md",
+               "线程优雅关闭"
             ]
          ]
       },

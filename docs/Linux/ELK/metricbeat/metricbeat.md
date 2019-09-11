@@ -22,5 +22,3 @@ tar xzvf metricbeat-6.6.2-linux-x86_64.tar.gz
 
 
 
-###### 配置
-

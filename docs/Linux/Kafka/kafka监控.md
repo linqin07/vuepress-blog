@@ -25,7 +25,7 @@ tar -zxfv 1.3.3.18.tar.gz
 ./sbt clean dist
 ```
 
-如果提示没有安装sbt，安装一下。`yum install sbt` 再次编译。开启漫长等待。
+如果提示没有安装 sbt，安装一下。`yum install sbt` 再次编译。开启漫长等待。
 
 编译好的文件`kafka-manager-1.3.3.22.zip`在生成在目录`target/universal`里。
 
@@ -33,7 +33,7 @@ tar -zxfv 1.3.3.18.tar.gz
 
 #### 3.解压目标文件
 
-修改一下conf的zk地址即可
+修改一下 conf 的 zk 地址即可
 
 ```shell
 Skafka-manager.zkhosts="127.0.0.1:2181"

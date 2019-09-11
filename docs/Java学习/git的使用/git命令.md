@@ -65,14 +65,19 @@ git push -u origin master
 
 ### 还原
 
-```
+```sh
 //git撤销本地所有未提交的更改
 git reset --hard
 ```
 
-```
+```sh
 //git撤销本地所有已经提交的更改，仅仅是撤回commit操作，您写的代码仍然保留
 git reset --soft
+```
+
+```sh
+// HEAD^的意思是上一个版本，也可以写成HEAD~1,2次commit，想都撤回，可以使用HEAD~2
+git reset --soft HEAD~1
 ```
 
 ### git暂时忽略
