@@ -36,7 +36,7 @@
 
 3. ###### SpringBoot项目中增加了WebSocket功能无法运行测试
 
-```
+```java
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 ```
 

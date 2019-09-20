@@ -1,0 +1,81 @@
+# 建造者模式
+
+> 小明想组装一个台式电脑，小明对电脑配置一窍不通，就直接跑到电脑城给装机老板说我要一台打游戏非常爽的电脑，麻烦你给装一下「配置什么的你给我推荐一下吧」，于是老板就让它的员工「小美」按小明的要求装了一个性能灰常牛 B 的电脑，1 个小时后电脑装好了，小明交钱拿电脑走人。不一会儿小张又来了，要一个满足平时写文章就可以的电脑，老板针对小张的要求给不同的装机配置。不同的人有不同的配置方案「但是装机流程是一样的」，这就是一个典型的建造者模式
+>
+> 作者：TigerChain
+>
+> 链接：https://juejin.im/post/5a23bdd36fb9a045272568a6
+>
+> 来源：掘金
+
+##### 例子：
+
+1. 构建内部静态类 `Builder`，属性和外部的类一致。
+2. 为其添加`setter`方法，返回类型为`Builder`
+3. 构建 `build()` 方法，对外提供构建方法。
+
+```java
+/**
+ * @Description:
+ * @author: LinQin
+ * @date: 2019/09/18
+ */
+public class Computer {
+    private String cpu; // cpu
+    private String hardDisk; //硬盘
+    private String mainBoard; // 主板
+    private String memory; // 内存
+
+    public Computer() {
+    }
+
+    public Computer(Builder builder) {
+        this.cpu = builder.cpu;
+        this.hardDisk = builder.hardDisk;
+        this.mainBoard = builder.mainBoard;
+        this.memory = builder.memory;
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "cpu='" + cpu + '\'' +
+                ", hardDisk='" + hardDisk + '\'' +
+                ", mainBoard='" + mainBoard + '\'' +
+                ", memory='" + memory + '\'' +
+                '}';
+    }
+
+    public static class Builder {
+        private String cpu; // cpu
+        private String hardDisk; //硬盘
+        private String mainBoard; // 主板
+        private String memory; // 内存
+
+        public Builder setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+
+        public Builder setHardDisk(String hardDisk) {
+            this.hardDisk = hardDisk;
+            return this;
+        }
+
+        public Builder setMainBoard(String mainBoard) {
+            this.mainBoard = mainBoard;
+            return this;
+        }
+
+        public Builder setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+
+        public Computer build() {
+            return new Computer(this);
+        }
+    }
+}
+```
+

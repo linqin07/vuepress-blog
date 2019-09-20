@@ -451,6 +451,10 @@ module.exports = {
             [
                "/Linux/zookeeper/6..Apache Curator客户端API.md",
                "6..Apache Curator客户端API"
+            ],
+            [
+               "/Linux/zookeeper/6.Apache Curator客户端API.md",
+               "6.Apache Curator客户端API"
             ]
          ]
       },
@@ -1120,6 +1124,16 @@ module.exports = {
          "children": [
             [
                "/设计模式/4.装饰者模式/",
+               "README"
+            ]
+         ]
+      },
+      {
+         "title": "5.建造者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/5.建造者模式/",
                "README"
             ]
          ]
