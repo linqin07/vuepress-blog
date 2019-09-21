@@ -407,6 +407,24 @@ module.exports = {
          ]
       },
       {
+         "title": "Nginx",
+         "collapsable": true,
+         "children": [
+            [
+               "/Linux/Nginx/",
+               "README"
+            ],
+            [
+               "/Linux/Nginx/1.安装.md",
+               "1.安装"
+            ],
+            [
+               "/Linux/Nginx/2.配置.md",
+               "2.配置"
+            ]
+         ]
+      },
+      {
          "title": "Shell",
          "collapsable": true,
          "children": [
@@ -447,10 +465,6 @@ module.exports = {
             [
                "/Linux/zookeeper/5.应用场景.md",
                "5.应用场景"
-            ],
-            [
-               "/Linux/zookeeper/6..Apache Curator客户端API.md",
-               "6..Apache Curator客户端API"
             ],
             [
                "/Linux/zookeeper/6.Apache Curator客户端API.md",
