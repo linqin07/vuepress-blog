@@ -225,6 +225,10 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
+               "/Java学习/基础知识/正则表达式学习.md",
+               "正则表达式学习"
+            ],
+            [
                "/Java学习/基础知识/泛型中占位符T和有什么区别.md",
                "泛型中占位符T和有什么区别"
             ]
@@ -493,6 +497,10 @@ module.exports = {
             [
                "/Linux/系统操作/2.防火墙.md",
                "2.防火墙"
+            ],
+            [
+               "/Linux/系统操作/3.添加系统服务开机启动.md",
+               "3.添加系统服务开机启动"
             ]
          ]
       }
@@ -971,11 +979,15 @@ module.exports = {
          ]
       },
       {
-         "title": "读取文件",
+         "title": "通用",
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/读取文件/读取jar包内的配置.md",
+               "/Spring-boot/通用/Springboot多环境配置.md",
+               "Springboot多环境配置"
+            ],
+            [
+               "/Spring-boot/通用/读取jar包内的配置.md",
                "读取jar包内的配置"
             ]
          ]
@@ -1022,6 +1034,18 @@ module.exports = {
          "title": "进程多线程",
          "collapsable": true,
          "children": [
+            [
+               "/复习题/进程多线程/JMM.md",
+               "JMM"
+            ],
+            [
+               "/复习题/进程多线程/JUC锁.md",
+               "JUC锁"
+            ],
+            [
+               "/复习题/进程多线程/原子类.md",
+               "原子类"
+            ],
             [
                "/复习题/进程多线程/多线程.md",
                "多线程"
@@ -1149,6 +1173,28 @@ module.exports = {
             [
                "/设计模式/5.建造者模式/",
                "README"
+            ]
+         ]
+      },
+      {
+         "title": "6.代理模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/6.代理模式/",
+               "README"
+            ],
+            [
+               "/设计模式/6.代理模式/CGLIB动态的代理.md",
+               "CGLIB动态的代理"
+            ],
+            [
+               "/设计模式/6.代理模式/JDK动态代理.md",
+               "JDK动态代理"
+            ],
+            [
+               "/设计模式/6.代理模式/静态代理.md",
+               "静态代理"
             ]
          ]
       }

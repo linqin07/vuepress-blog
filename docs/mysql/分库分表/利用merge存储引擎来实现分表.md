@@ -6,7 +6,7 @@
 
 mysql>show engines;
 
-的时候你会发现mrg_myisam其实就是merge
+的时候你会发现 mrg_myisam 其实就是merge
 
 
 

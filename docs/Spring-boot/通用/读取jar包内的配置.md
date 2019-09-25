@@ -1,8 +1,8 @@
-项目结构
+#### 项目结构
 
 ![项目结构](https://i.loli.net/2019/06/15/5d0488e47284583691.jpg)
 
-`ResourceUtils`读取的方式只能读到jar包的目录充当classpath。
+`ResourceUtils`读取的方式只能读到 jar 包的目录充当classpath。
 
 ```java
 ResourceUtils.getURL("classpath").getPath()；
