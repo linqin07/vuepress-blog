@@ -5,12 +5,10 @@ node_js:
 # 缓存目录，加速编译
 cache:
   directories:
-  - node_modules
+#  - node_modules
 
 # 初始化环境
 install:
-  - rm -rf node_modules
-  - rm -rf package-lock.json
   - npm install
 #  - npm install -g vuepress
 #  - npm install -D @vuepress/plugin-pwa@next
