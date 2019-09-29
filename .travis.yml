@@ -9,6 +9,8 @@ cache:
 
 # 初始化环境
 install:
+  - rm -rf node_modules
+  - rm -rf package-lock.json
   - npm install
 #  - npm install -g vuepress
 #  - npm install -D @vuepress/plugin-pwa@next
