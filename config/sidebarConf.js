@@ -225,10 +225,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/基础知识/正则表达式学习.md",
-               "正则表达式学习"
-            ],
-            [
                "/Java学习/基础知识/泛型中占位符T和有什么区别.md",
                "泛型中占位符T和有什么区别"
             ]
