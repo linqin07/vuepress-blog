@@ -84,6 +84,8 @@ public class AsyncConfig {
 
 实现该接口可以实现定时任务动态修改。可以把cron表达式保存到数据库中。动态修改可以热加载定时器任务。
 
+ps: 修改后不会马上生效，需要等待下个周期才会更新 cron，意味下次还是原来时间触发。下下次才生效修改的。
+
 ```java
 @Configuration
 @EnableScheduling
@@ -98,7 +100,7 @@ public class CompleteScheduleConfig implements SchedulingConfigurer {
                 () -> System.out.println("执行定时任务2: " + LocalDateTime.now().toLocalTime()),
                 //2.设置执行周期(Trigger)
                 triggerContext -> {
-                    //2.1 从数据库获取执行周期。修改数据库cron表达式即可。多个定时任务可以添加id字段区分重复一下代码即可。
+                    //2.1 从数据库获取执行周期。修改数据库cron表达式即可(修改过后，下一次执行任务更新cron)。多个定时任务可以添加id字段区分重复一下代码即可。
                     String cron = cronMapper.getCron();
 
                     //2.2 合法性校验.

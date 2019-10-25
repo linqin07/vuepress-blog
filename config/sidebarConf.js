@@ -293,6 +293,10 @@ module.exports = {
                   [
                      "/Linux/ELK/ES/4.安装.md",
                      "4.安装"
+                  ],
+                  [
+                     "/Linux/ELK/ES/5.ES数据冷热分离.md",
+                     "5.ES数据冷热分离"
                   ]
                ]
             },
@@ -923,6 +927,10 @@ module.exports = {
                "README"
             ],
             [
+               "/Spring-boot/spring-boot部署/deploy依赖到私服排除jar.md",
+               "deploy依赖到私服排除jar"
+            ],
+            [
                "/Spring-boot/spring-boot部署/maven插件部署到远端linux机器.md",
                "maven插件部署到远端linux机器"
             ],
@@ -981,6 +989,10 @@ module.exports = {
             [
                "/Spring-boot/通用/Springboot多环境配置.md",
                "Springboot多环境配置"
+            ],
+            [
+               "/Spring-boot/通用/常用注解.md",
+               "常用注解"
             ],
             [
                "/Spring-boot/通用/读取jar包内的配置.md",
@@ -1191,6 +1203,20 @@ module.exports = {
             [
                "/设计模式/6.代理模式/静态代理.md",
                "静态代理"
+            ]
+         ]
+      },
+      {
+         "title": "7.模板模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/7.模板模式/",
+               "README"
+            ],
+            [
+               "/设计模式/7.模板模式/模版模式.md",
+               "模版模式"
             ]
          ]
       }

@@ -15,11 +15,11 @@ features:
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
-[![Build Status](https://travis-ci.org/woshilinqin/vuepress-blog.svg?branch=master)](https://travis-ci.org/woshilinqin/vuepress-blog)
+[![Gitter](assets/community.svg)](https://gitter.im/linqin-site/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![Build Status](https://travis-ci.org/woshilinqin/vuepress-blog.svg?branch=master)](https://travis-ci.org/woshilinqin/vuepress-blog)
 
-::: warning
+::: tips
 
- test travis 自动化构建 123456更新时间
+ travis 自动化构建，如有疑问可以在[![Gitter](assets/community-1570536051067.svg)](https://gitter.im/linqin-site/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)提问或者新建 issue 留言！
 
 :::
 

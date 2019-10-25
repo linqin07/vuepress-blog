@@ -58,6 +58,11 @@ localDateTime.minusWeeks(1);
    LocalDate localDate2 = LocalDate.now();
    // 2019-04-01
    localDate2.with(TemporalAdjusters.firstInMonth(DayOfWeek.SATURDAY));
+    //本月的第一天
+    LocalDate firstday = LocalDate.of(today.getYear(),today.getMonth(),1);
+    //本月的最后一天
+    LocalDate lastDay =today.with(TemporalAdjusters.lastDayOfMonth());
+
 ```
 
 - 自定义时间较正器

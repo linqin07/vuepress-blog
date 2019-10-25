@@ -10,7 +10,9 @@
 
    - 使用全局 `ApplicationContext`进行获取对应的 `service` 实例。
 
-   - 修改 service 变量为 `static`，使其属于类，在初始化是就是全局变量，多个实例公用。（我校验未通过，可能环境不同导致）
+   - 修改 service 变量为 `static`，使其属于类，在初始化是就是全局变量，多个实例公用。需要注意的是：set 方法不能是 static 的。
+
+     > You cannot autowire or manually wire static fields in Spring
 
      ```java
      private static ChatService chatService;
@@ -40,3 +42,9 @@
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 ```
 
+4. ###### 全局监听发送
+
+   - websocket 中声明用来存放每个客户端对应的 MyWebSocket 对象，标记为`static`状态。
+   - 声明启动线程，定时拉去`kafka`队列数据判断处理后进行推送，直接使用全局对象 MyWebSocket 调用 客户端对应发送的方法。
+
+   
