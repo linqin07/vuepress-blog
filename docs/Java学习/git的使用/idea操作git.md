@@ -35,3 +35,43 @@ unstash changes把修改的同步到代码里。
 3. unshelve，在面板里选择你需要unshelve的条目即可
 
 ![1568120353610](https://i.loli.net/2019/09/21/i4Ufak6KSmB5Ngv.png)
+
+### 变基操作
+
+#### 普通变基
+
+选择分支执行变基操作。这里需要注意当前分支为补丁分支，选中的分支为基底分支。也就是说当前分支提交会添加在选中分支提交之后。
+
+![img](https://static.oschina.net/uploads/space/2018/0404/135118_gwV0_3452433.png)
+
+
+
+
+
+#### 合并提交（交互式变基）
+
+在代码没有pull前我们可以在本地分支进行提交的合并。这样会使得远程分支不去关心本地开发过程日志，而使得远程日志干净整洁。
+
+变基前log
+
+![img](https://static.oschina.net/uploads/space/2018/0404/105049_W10i_3452433.png)
+
+找到要合并的第一条log，然后右键选择Interactively Rebase from Here...进行交互式变基
+
+（此选项低版本IDEA可能没有请更新到2018版以上）
+
+![img](https://static.oschina.net/uploads/space/2018/0404/105200_dATH_3452433.png)
+
+除题一条外其他全部选择squash随前面的提交一并提交
+
+![img](https://static.oschina.net/uploads/space/2018/0404/105609_0H5M_3452433.png)
+
+编辑交互式变基提交说明。默认显示合并的所有提交的内容，我们也可以添加和修改内容。
+
+![img](https://static.oschina.net/uploads/space/2018/0404/105817_wcsG_3452433.png)
+
+变基后日志
+
+![img](https://static.oschina.net/uploads/space/2018/0404/105836_LYFU_3452433.png)
+
+ 
