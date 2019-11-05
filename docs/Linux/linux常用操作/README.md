@@ -13,7 +13,12 @@ wget [url] -P [下载目录]
 
 -o 下载，需要指定下载文件名
 
--i 显示全部信息（头信息，返回内容）
+-i  显示全部信息（头信息，返回内容）
+
+-s 去掉所有状态信息的输出（如一些连接不上等额外信息）
+
+-k 发送https请求的时候，不做认证
+（当用https请求出错的时候，可以试下加-k）
 
 ```shell
 curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.6.2-linux-x86_64.tar.gz
