@@ -2,6 +2,25 @@
 
 [github](https://github.com/alibaba/arthas)
 
+### 查找类和方法
+
+```sh
+sc *ServiceInstallService
+// 子方法
+sm com.shsnc.base.ivory.service.serviceinstall.ServiceInstallService saveAndSend*
+```
+
+```sh
+[arthas@19572]$ sc *ServiceInstallService
+com.shsnc.base.ivory.service.serviceinstall.ServiceInstallService
+com.shsnc.base.ivory.service.serviceinstall.ServiceInstallService$$EnhancerBySpringCGLIB$$8de8d2d6
+Affect(row-cnt:2) cost in 158 ms.
+[arthas@19572]$ sm com.shsnc.base.ivory.service.serviceinstall.ServiceInstallService saveAndSend*
+com.shsnc.base.ivory.service.serviceinstall.ServiceInstallService saveAndSendConfig(Ljava/util/Map;Ljava/util/ArrayList;I)V
+Affect(row-cnt:1) cost in 27 ms.
+[arthas@19572]$ watch com.shsnc.base.ivory.service.serviceinstall.ServiceInstallService saveAndSendConfig "{params}" -x 3
+```
+
 ### 观察方法出参和返回值
 
 ```shell

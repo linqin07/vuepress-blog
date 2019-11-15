@@ -330,6 +330,9 @@ public class JobService {
 public class Task1 implements Job {
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+        // 使用 JobDetail 来传输数据
+        JobDataMap jobDataMap = jobExecutionContext.getJobDetail().getJobDataMap();
+        Object jobVo = jobDataMap.get("jobVo");
         for (int i = 0; i < 10; i++) {
             System.out.println(i+" run ################## " + new Date());
         }
@@ -339,6 +342,8 @@ public class Task1 implements Job {
 ```
 
 这里可以根据业务多个。
+
+
 
 
 

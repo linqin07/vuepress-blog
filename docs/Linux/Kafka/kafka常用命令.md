@@ -51,7 +51,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 ###### 创建topic：或者直接查看，其他参数就默认。也会新建
 
 ```shell
-.bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 ```
 
 
@@ -59,7 +59,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 ###### 查看topic
 
 ```shell
-bin/kafka-topics.sh --list --zookeeper localhost:2181
+./bin/kafka-topics.sh --list --zookeeper localhost:2181
 ```
 
 
