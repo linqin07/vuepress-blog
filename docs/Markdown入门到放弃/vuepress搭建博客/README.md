@@ -32,5 +32,5 @@ F:\HEXO\VUEPRESS\DOCS\设计模式
         饿汉式.md
 ```
 
-
+社区：https://github.com/vuepressjs/awesome-vuepress#external-resources
 

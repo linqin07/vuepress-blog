@@ -23,5 +23,5 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 :::
 
-<Vssue title="Vssue Demo" />
+<Vssue title="Vssue" />
 
