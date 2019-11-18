@@ -19,7 +19,9 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 ::: tip
 
- travis 自动化构建，如有疑问可以在[![Gitter](https://badges.gitter.im/linqin-site/community.svg)](https://gitter.im/linqin-site/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)提问或者新建 issue 留言！
+ travis 自动化构建，如有疑问可以在下方留言或者新建 issue 提问！
 
 :::
+
+<Vssue title="Vssue Demo" />
 
