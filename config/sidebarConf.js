@@ -317,6 +317,14 @@ module.exports = {
             [
                "/Linux/Kafka/删除topic数据.md",
                "删除topic数据"
+            ],
+            [
+               "/Linux/Kafka/消费者.md",
+               "消费者"
+            ],
+            [
+               "/Linux/Kafka/生产者.md",
+               "生产者"
             ]
          ]
       },
@@ -411,6 +419,10 @@ module.exports = {
             [
                "/Linux/Shell/3.if条件判断数字字符串.md",
                "3.if条件判断数字字符串"
+            ],
+            [
+               "/Linux/Shell/4.sed用法实例.md",
+               "4.sed用法实例"
             ]
          ]
       },
@@ -541,6 +553,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/vuepress搭建博客/6.支持Markdown语法.md",
                "6.支持Markdown语法"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/7.画时序图.md",
+               "7.画时序图"
             ]
          ]
       },
@@ -1189,6 +1205,24 @@ module.exports = {
             [
                "/设计模式/7.模板模式/模版模式.md",
                "模版模式"
+            ]
+         ]
+      },
+      {
+         "title": "8.观察者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/8.观察者模式/",
+               "README"
+            ],
+            [
+               "/设计模式/8.观察者模式/1.接口实现.md",
+               "1.接口实现"
+            ],
+            [
+               "/设计模式/8.观察者模式/2.Guava EventBus实现.md",
+               "2.Guava EventBus实现"
             ]
          ]
       }
