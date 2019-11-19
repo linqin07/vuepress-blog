@@ -2,7 +2,7 @@
 home: true
 heroImage: /1.jpg
 heroText: LinQin`s Blog
-tagline: 记录工作与 学习
+tagline: 记录工作 与 学习
 actionText: 快速上手 →
 actionLink: /Markdown入门到放弃/vuepress搭建博客/
 features:
