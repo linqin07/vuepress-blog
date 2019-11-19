@@ -29,7 +29,7 @@ module.exports = {
         platform: 'github',
 
         // all other options of Vssue are allowed
-        owner: 'woshilinqin',
+        owner: 'linqin07',
         repo: 'vuepress-blog',
         clientId: 'b791378efa6f3df53c05',
         clientSecret: '26b883fd1426668aedf928ba741e2f55b9f6fbbb',
