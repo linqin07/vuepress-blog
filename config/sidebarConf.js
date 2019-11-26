@@ -1107,10 +1107,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/设计模式/1.策略模式/",
-               "README"
-            ],
-            [
                "/设计模式/1.策略模式/利用策略模式优化过多 if else 代码.md",
                "利用策略模式优化过多 if else 代码"
             ],
@@ -1161,8 +1157,8 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/设计模式/4.装饰者模式/",
-               "README"
+               "/设计模式/4.装饰者模式/装饰者模式.md",
+               "装饰者模式"
             ]
          ]
       },
@@ -1171,8 +1167,8 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/设计模式/5.建造者模式/",
-               "README"
+               "/设计模式/5.建造者模式/建造者模式.md",
+               "建造者模式"
             ]
          ]
       },
@@ -1216,10 +1212,6 @@ module.exports = {
          "title": "8.观察者模式",
          "collapsable": true,
          "children": [
-            [
-               "/设计模式/8.观察者模式/",
-               "README"
-            ],
             [
                "/设计模式/8.观察者模式/1.接口实现.md",
                "1.接口实现"
