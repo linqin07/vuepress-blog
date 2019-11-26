@@ -15,7 +15,7 @@ features:
 footer: MIT Licensed | Copyright © 2018-present LinQin
 ---
 
-[![Gitter](https://badges.gitter.im/linqin-site/community.svg)](https://gitter.im/linqin-site/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![Build Status](https://travis-ci.org/woshilinqin/vuepress-blog.svg?branch=master)](https://travis-ci.org/woshilinqin/vuepress-blog)
+[![Build Status](https://travis-ci.org/linqin07/vuepress-blog.svg?branch=master)](https://travis-ci.org/linqin07/vuepress-blog)[![Gitter](https://badges.gitter.im/linqin-site/community.svg)](https://gitter.im/linqin-site/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ::: tip
 
