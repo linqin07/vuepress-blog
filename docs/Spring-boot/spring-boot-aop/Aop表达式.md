@@ -34,4 +34,13 @@ public interface JoinPoint {
 
 2.获取目标对象(cast Object)
 
+```java
 RequestHandle handle = (RequestHandle)joinPoint.getTarget();
+```
+
+3.获取注解
+
+```java
+// 获取注解
+AccessLimit annotation = ((MethodSignature) joinPoint.getSignature()).getMethod().getAnnotation(AccessLimit.class);
+```

@@ -911,23 +911,23 @@ module.exports = {
          ]
       },
       {
-         "title": "spring-boot部署",
+         "title": "spring-boot打包部署",
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/spring-boot部署/",
+               "/Spring-boot/spring-boot打包部署/",
                "README"
             ],
             [
-               "/Spring-boot/spring-boot部署/deploy依赖到私服排除jar.md",
+               "/Spring-boot/spring-boot打包部署/deploy依赖到私服排除jar.md",
                "deploy依赖到私服排除jar"
             ],
             [
-               "/Spring-boot/spring-boot部署/maven插件部署到远端linux机器.md",
-               "maven插件部署到远端linux机器"
+               "/Spring-boot/spring-boot打包部署/maven插件打包.md",
+               "maven插件打包"
             ],
             [
-               "/Spring-boot/spring-boot部署/tomcat部署到tomcat.md",
+               "/Spring-boot/spring-boot打包部署/tomcat部署到tomcat.md",
                "tomcat部署到tomcat"
             ]
          ]
