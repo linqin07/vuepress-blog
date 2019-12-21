@@ -11,6 +11,9 @@ module.exports = [{
 			}, {
 				text: 'Spring-boot',
 				link: '/Spring-boot/'
+			}, {
+				text: 'SpringCloud',
+				link: '/SpringCloud/'
 			}]
 		}, {
 			text: '数据库',

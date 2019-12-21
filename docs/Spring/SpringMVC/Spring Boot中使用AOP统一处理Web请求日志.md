@@ -1,4 +1,4 @@
-### Spring Boot中使用AOP统一处理Web请求日志
+## Spring Boot 中使用 AOP 统一处理 Web 请求日志
 
 AOP：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是Spring框架中的一个重要内容，它通过对既有程序定义一个切入点，然后在其前后切入不同的执行内容，比如常见的有：打开数据库连接/关闭数据库连接、打开事务/关闭事务、记录日志等。基于AOP不会破坏原来程序逻辑，因此它可以很好的对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
 
@@ -94,3 +94,52 @@ public class WebLogAspect {
 - 在切入点后的操作，按order的值由大到小执行
 
 由于多个请求存在并发问题。需要把时间设置为`ThreadLocal`，避免并发时间参数多线程冲突。
+
+
+
+## 切入点指示符
+
+参考：https://blog.csdn.net/qq_23167527/article/details/78623639
+
+@target(com.service.interface)
+表示实现了括号里面的接口或者是继承了对应的类都会被匹配的到
+
+@annotation(com.xxx.RequestMapper)
+表示匹配@RequestMapper这个注解
+
+execution(public * com.controller.*.*(..))
+匹配路径
+
+within：使用“within(类型表达式)”匹配指定类型内的方法执行
+
+
+
+1) JoinPoint：提供访问当前被通知方法的目标对象、代理对象、方法参数等数据
+
+```java
+public interface JoinPoint {  
+    String toString();         //连接点所在位置的相关信息  
+    String toShortString();     //连接点所在位置的简短相关信息  
+    String toLongString();     //连接点所在位置的全部相关信息  
+    Object getThis();         //返回AOP代理对象  
+    Object getTarget();       //返回目标对象  
+    Object[] getArgs();       //返回被通知方法参数列表  
+    Signature getSignature();  //返回当前连接点签名  
+    SourceLocation getSourceLocation();//返回连接点方法所在类文件中的位置  
+    String getKind();        //连接点类型  
+    StaticPart getStaticPart(); //返回连接点静态部分  
+}
+```
+
+2.获取目标对象(cast Object)
+
+```java
+RequestHandle handle = (RequestHandle)joinPoint.getTarget();
+```
+
+3.获取注解
+
+```java
+// 获取注解
+AccessLimit annotation = ((MethodSignature) joinPoint.getSignature()).getMethod().getAnnotation(AccessLimit.class);
+```
