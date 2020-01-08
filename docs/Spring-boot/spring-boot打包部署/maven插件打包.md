@@ -1,4 +1,4 @@
-###### maven 配置分离
+## maven 配置分离
 
 一般打包 jar 不是默认打包，默认打包会把所有的 lib 和配置打进去，但是一般只打源码即可。下面这个配置可以分离打包。`manifest`标签标注资源路径关联。
 
@@ -143,7 +143,7 @@
 
 
 
-###### 插件上传部署
+## 插件上传部署
 
 设置 install 命令为触发事件。
 
@@ -182,5 +182,31 @@
 
         </plugins>
     </build>
+```
+
+## 构建源码包
+
+pom 配置：
+
+deploy 时也会把源码上传
+
+```xml
+            <!--配置生成源码包-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/${project.artifactId}</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 ```
 

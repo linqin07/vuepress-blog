@@ -3,7 +3,7 @@
 ###### 查看日志组列表
 
 ```shell
-bin/kafka-consumer-groups.sh --new-consumer --bootstrap-server 127.0.0.1:9092 --list
+./bin/kafka-consumer-groups.sh --new-consumer --bootstrap-server 127.0.0.1:9092 --list
 ```
 
 ###### 查看堆积
@@ -27,15 +27,15 @@ bin/kafka-consumer-groups.sh --new-consumer --bootstrap-server 127.0.0.1:9092 --
 ###### producer:
 
 ```shell
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ```
 
 
 
 ###### comsumer:
 
-```
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+```sh
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
 
 

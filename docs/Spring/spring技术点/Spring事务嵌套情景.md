@@ -46,3 +46,45 @@
 
 > @Transactional(isolation = Isolation.READ_UNCOMMITTED)
 
+## Spring事务失效的常见原因
+
+1. **数据库引擎不支持事务**
+
+   这里以 MySQL 为例，其 MyISAM 引擎是不支持事务操作的，InnoDB 才是支持事务的引擎，一般要支持事务都会使用 InnoDB。
+
+2. **没有被 Spring 管理**
+
+   说吧了就是没注册到 Spring 容器当中，例如使用了注解 @Component、@Service 等。
+
+3. **方法不是 public 的**
+
+   `@Transactional` 只能用于 public 的方法上，否则事务不会失效，如果要用在非 public 方法上，可以开启 `AspectJ` 代理模式。
+
+4. **自身调用问题**
+
+5.  **数据源没有配置事务管理器**
+
+   ```java
+   @Bean
+   public PlatformTransactionManager transactionManager(DataSource dataSource) {
+       return new DataSourceTransactionManager(dataSource);
+   }
+   ```
+
+6. **事务的传播级别不支持事务**
+
+   ```java
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
+   public void updateOrder(Order order) {
+       // update order
+   }
+   ```
+
+7. **抛出异常类型错误**
+
+   默认回滚的是：RuntimeException，如果你想触发其他异常的回滚，需要在注解上配置一下。`@Transactional(rollbackFor = Exception.class)`
+
+8. **手动 try catch 处理的异常导致不能回滚**
+
+
+
