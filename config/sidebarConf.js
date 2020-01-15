@@ -999,8 +999,8 @@ module.exports = {
          "2.SpringCloud-cli"
       ],
       [
-         "/SpringCloud/3.服务网关SpringGateWay.md",
-         "3.服务网关SpringGateWay"
+         "/SpringCloud/3.服务网关SpringCloudGateWay.md",
+         "3.服务网关SpringCloudGateWay"
       ]
    ],
    "/复习题/": [
