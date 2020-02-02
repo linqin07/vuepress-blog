@@ -123,6 +123,10 @@ module.exports = {
             [
                "/Java学习/JDK8/Stream流.md",
                "Stream流"
+            ],
+            [
+               "/Java学习/JDK8/函数式接口.md",
+               "函数式接口"
             ]
          ]
       },
@@ -843,6 +847,20 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-mybatis/5.文件上传进度条.md",
                "5.文件上传进度条"
+            ]
+         ]
+      },
+      {
+         "title": "spring-boot-security",
+         "collapsable": true,
+         "children": [
+            [
+               "/Spring-boot/spring-boot-security/",
+               "README"
+            ],
+            [
+               "/Spring-boot/spring-boot-security/1.整合SS.md",
+               "1.整合SS"
             ]
          ]
       },
