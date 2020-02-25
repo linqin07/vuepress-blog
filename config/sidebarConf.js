@@ -269,6 +269,10 @@ module.exports = {
                   [
                      "/Linux/ELK/ES/7.常用命令.md",
                      "7.常用命令"
+                  ],
+                  [
+                     "/Linux/ELK/ES/8.快照和恢复.md",
+                     "8.快照和恢复"
                   ]
                ]
             },
@@ -470,6 +474,10 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Linux/梯子.md",
+         "梯子"
+      ],
       {
          "title": "系统操作",
          "collapsable": true,
@@ -485,6 +493,10 @@ module.exports = {
             [
                "/Linux/系统操作/3.添加系统服务开机启动.md",
                "3.添加系统服务开机启动"
+            ],
+            [
+               "/Linux/系统操作/4.盘挂载.md",
+               "4.盘挂载"
             ]
          ]
       }
@@ -602,6 +614,10 @@ module.exports = {
          "/mysql/SUMMARY.md",
          "SUMMARY"
       ],
+      [
+         "/mysql/MYSQL安装.md",
+         "MYSQL安装"
+      ],
       {
          "title": "sql面试题",
          "collapsable": true,
@@ -703,6 +719,10 @@ module.exports = {
             [
                "/mysql/基础知识/mysql中myisam与innodb的区别.md",
                "mysql中myisam与innodb的区别"
+            ],
+            [
+               "/mysql/基础知识/Mysql技术内幕.md",
+               "Mysql技术内幕"
             ],
             [
                "/mysql/基础知识/sql模式.md",
@@ -1031,20 +1051,6 @@ module.exports = {
          "SUMMARY"
       ],
       {
-         "title": "tcp三次握手",
-         "collapsable": true,
-         "children": [
-            [
-               "/复习题/tcp三次握手/tcp通讯.md",
-               "tcp通讯"
-            ],
-            [
-               "/复习题/tcp三次握手/滑动窗口机制.md",
-               "滑动窗口机制"
-            ]
-         ]
-      },
-      {
          "title": "基础",
          "collapsable": true,
          "children": [
@@ -1055,6 +1061,24 @@ module.exports = {
             [
                "/复习题/基础/基础.md",
                "基础"
+            ]
+         ]
+      },
+      {
+         "title": "计算机网络",
+         "collapsable": true,
+         "children": [
+            [
+               "/复习题/计算机网络/IP.md",
+               "IP"
+            ],
+            [
+               "/复习题/计算机网络/tcp通讯.md",
+               "tcp通讯"
+            ],
+            [
+               "/复习题/计算机网络/滑动窗口机制.md",
+               "滑动窗口机制"
             ]
          ]
       },
