@@ -105,7 +105,7 @@ Kafka 通常根据时间来决定数据可以保留多久。默认使用 log.ret
 
 - **log.retention.bytes**
 
-另一种保留消息的方式是判断消息是否过期。它的值通过参数 `log.retention.bytes` 来指定，作用在每一个分区上。也就是说，如果有一个包含 8 个分区的主题，并且 log.retention.bytes 被设置为 1GB，那么这个主题最多可以保留 8GB 数据。所以，当主题的分区个数增加时，整个主题可以保留的数据也随之增加。
+另一种保留消息的方式是判断消息是否过期。它的值通过参数 `log.retention.bytes` 来指定，作用在每一个分区上。也就是说，如果有一个包含 8 个分区的主题，并且 log.retention.bytes 被设置为 1GB，那么这个主题最多可以保留 8GB 数据。所以，当主题的分区个数增加时，整个主题可以保留的数据也随之增加。你可以同时指定log.retention.bytes 和 log.retention.hours 来混合指定保留规则。一旦日志的大小超过了 log.retention.bytes 就清除老的 segment，一旦某个 segment 的保留时间超过了规定的值同样将其清除
 
 - log.segment.bytes
 

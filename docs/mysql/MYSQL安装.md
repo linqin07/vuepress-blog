@@ -63,10 +63,16 @@
      set global validate_password_length=6;
      ```
 
-     修改密码
+     修改密码，为了提高安全性 mysql5.7 中 user 表的 password 字段已被取消，取而代之的事 authentication_string 字段
 
      ```sql
      ALTER USER USER() IDENTIFIED BY '123456';
+     // 或则
+     ALTER USER 'root'@'localhost' IDENTIFIED by '123456';
+     // 或则
+     set password for 'root'@'localhost'=password('123456');
+     // 或则
+     update  mysql.user set authentication_string = password('123456') where User='root' and Host = '%';
      ```
 
      
@@ -94,5 +100,7 @@
 
 ```sql
     update user set host = '%' where user = 'root';
+    // 刷新权限
     flush privileges;
 ```
+
