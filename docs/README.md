@@ -19,7 +19,7 @@ footer: MIT Licensed | Copyright © 2020-present LinQin
 
 ::: tip README
 
- 使用 travis 自动化构建，如有疑问可以在下方留言或者新建 issue 提问！ 
+ 使用 travis 自动化构建，如有疑问可以在下方留言或者新建 issue 提问！
 
 :::
 

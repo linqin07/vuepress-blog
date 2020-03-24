@@ -73,8 +73,9 @@ Pending flushes (fsync) log: 0; buffer pool: 0
 252 OS file reads, 53 OS file writes, 7 OS fsyncs
 0.00 reads/s, 0 avg bytes/read, 0.00 writes/s, 0.00 fsyncs/s
 -------------------------------------
-INSERT BUFFER AND ADAPTIVE HASH INDEX
+INSERT BUFFER AND ADAPTIVE HASH INDEX  // 插入缓存
 -------------------------------------
+合并记录页数量   
 Ibuf: size 1, free list len 0, seg size 2, 0 merges
 merged operations:
  insert 0, delete mark 0, delete 0

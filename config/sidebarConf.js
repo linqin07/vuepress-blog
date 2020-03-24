@@ -641,40 +641,16 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/mysql/优化/case when.md",
-               "case when"
-            ],
-            [
-               "/mysql/优化/concat.md",
-               "concat"
-            ],
-            [
                "/mysql/优化/join性能问题.md",
                "join性能问题"
             ],
             [
-               "/mysql/优化/linux备份sql.md",
-               "linux备份sql"
-            ],
-            [
-               "/mysql/优化/sum的用法.md",
-               "sum的用法"
-            ],
-            [
-               "/mysql/优化/不等的坑.md",
-               "不等的坑"
-            ],
-            [
-               "/mysql/优化/常用 SQL 函数.md",
-               "常用 SQL 函数"
+               "/mysql/优化/常用语句记录.md",
+               "常用语句记录"
             ],
             [
                "/mysql/优化/开启日志慢查询记录.md",
                "开启日志慢查询记录"
-            ],
-            [
-               "/mysql/优化/日期内置函数.md",
-               "日期内置函数"
             ],
             [
                "/mysql/优化/查看mysql优化后运行的sql.md",
