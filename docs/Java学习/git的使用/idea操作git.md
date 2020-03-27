@@ -38,13 +38,13 @@ unstash changes把修改的同步到代码里。
 
 ### 变基操作
 
-#### 普通变基   
+#### 普通变基
 
-选择分支执行变基操作。这里需要注意当前分支为补丁分支，选中的分支为基底分支。也就是说当前分支提交会添加在选中分支提交之后。
+![Rebase 操作](https://i.loli.net/2020/03/27/6WvMVGQ1iKhzHOq.png)
 
-![img](https://static.oschina.net/uploads/space/2018/0404/135118_gwV0_3452433.png)
+Checkout and Rebase onto Current  合并当前分支(dev)的修改 提交到 master 并且检出到 master
 
-
+Rebase Current onto Selected         将所选分支提交加入到当前分支
 
 
 
