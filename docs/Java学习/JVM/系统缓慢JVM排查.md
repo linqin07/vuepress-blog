@@ -1,3 +1,5 @@
+### **jstack 指令**
+
 ###### 1.线上linux性能排查
 
 查内存
@@ -47,5 +49,69 @@ jstack -l pid | grep '00xx' -A 20 >> dump
 
 ```shell
 ps -eLf|grep pid
+```
+
+
+
+### jmap 命令
+
+```sh
+[root@ivory-81 ivory]# jmap
+Usage:
+    jmap [option] <pid>
+        (to connect to running process)
+    jmap [option] <executable <core>
+        (to connect to a core file)
+    jmap [option] [server_id@]<remote server IP or hostname>
+        (to connect to remote debug server)
+
+where <option> is one of:
+    <none>               to print same info as Solaris pmap
+    -heap                to print java heap summary
+    -histo[:live]        to print histogram of java object heap; if the "live"
+                         suboption is specified, only count live objects
+    -clstats             to print class loader statistics
+    -finalizerinfo       to print information on objects awaiting finalization
+    -dump:<dump-options> to dump java heap in hprof binary format
+                         dump-options:
+                           live         dump only live objects; if not specified,
+                                        all objects in the heap are dumped.
+                           format=b     binary format
+                           file=<file>  dump heap to <file>
+                         Example: jmap -dump:live,format=b,file=heap.bin <pid>
+    -F                   force. Use with -dump:<dump-options> <pid> or -histo
+                         to force a heap dump or histogram when <pid> does not
+                         respond. The "live" suboption is not supported
+                         in this mode.
+    -h | -help           to print this help message
+    -J<flag>             to pass <flag> directly to the runtime system
+```
+
+导出 dump 文件：
+
+```sh
+jmap -dump:live,file=dump.bin,format=b  9667
+```
+
+查看堆 heap 的情况
+
+```sh
+jmap -heap 9667
+```
+
+打印 jvm heap 的直方图。其输出信息包括类名，对象数量，对象占用大小。
+
+```sh
+[root@ivory-81 data2]# jmap -histo:live 9667 |head -n 10
+
+ num     #instances         #bytes  class name
+----------------------------------------------
+   1:          8924      175292816  [B
+   2:        144536       20573344  [C
+   3:        420675       13461600  com.shsnc.elasticsearch.analyzer.cnsegmet.PreFixTree$TreeNode
+   4:        420676        9094392  [Lcom.shsnc.elasticsearch.analyzer.cnsegmet.PreFixTree$TreeNode;
+   5:         35315        5387808  [Ljava.lang.Object;
+   6:         49435        4350280  java.lang.reflect.Method
+   7:        110358        3531456  java.util.concurrent.ConcurrentHashMap$Node
 ```
 

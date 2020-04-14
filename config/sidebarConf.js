@@ -99,6 +99,10 @@ module.exports = {
                "IDEA远程debug-jar"
             ],
             [
+               "/Java学习/IDEA学习/Lombok 的使用.md",
+               "Lombok 的使用"
+            ],
+            [
                "/Java学习/IDEA学习/发布应用到 tomcat.md",
                "发布应用到 tomcat"
             ]
@@ -139,6 +143,10 @@ module.exports = {
                "README"
             ],
             [
+               "/Java学习/JVM/Java虚拟机.md",
+               "Java虚拟机"
+            ],
+            [
                "/Java学习/JVM/JVM 参数.md",
                "JVM 参数"
             ],
@@ -149,45 +157,25 @@ module.exports = {
          ]
       },
       {
-         "title": "代码记录",
-         "collapsable": true,
-         "children": [
-            [
-               "/Java学习/代码记录/",
-               "README"
-            ],
-            [
-               "/Java学习/代码记录/1.常用代码.md",
-               "1.常用代码"
-            ],
-            [
-               "/Java学习/代码记录/2.数组集合类型转换.md",
-               "2.数组集合类型转换"
-            ]
-         ]
-      },
-      {
-         "title": "其他",
-         "collapsable": true,
-         "children": [
-            [
-               "/Java学习/其他/",
-               "README"
-            ],
-            [
-               "/Java学习/其他/1.保存密码首选char[].md",
-               "1.保存密码首选char[]"
-            ],
-            [
-               "/Java学习/其他/Lombok 的使用.md",
-               "Lombok 的使用"
-            ]
-         ]
-      },
-      {
          "title": "基础知识",
          "collapsable": true,
          "children": [
+            [
+               "/Java学习/基础知识/",
+               "README"
+            ],
+            [
+               "/Java学习/基础知识/1.保存密码首选char[].md",
+               "1.保存密码首选char[]"
+            ],
+            [
+               "/Java学习/基础知识/1.常用代码.md",
+               "1.常用代码"
+            ],
+            [
+               "/Java学习/基础知识/2.数组集合类型转换.md",
+               "2.数组集合类型转换"
+            ],
             [
                "/Java学习/基础知识/泛型中占位符T和有什么区别.md",
                "泛型中占位符T和有什么区别"
@@ -1085,20 +1073,6 @@ module.exports = {
             [
                "/复习题/进程多线程/线程优雅关闭.md",
                "线程优雅关闭"
-            ]
-         ]
-      },
-      {
-         "title": "集合操作",
-         "collapsable": true,
-         "children": [
-            [
-               "/复习题/集合操作/",
-               "README"
-            ],
-            [
-               "/复习题/集合操作/集合.md",
-               "集合"
             ]
          ]
       },

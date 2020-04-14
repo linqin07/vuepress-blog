@@ -14,3 +14,12 @@
  [L =任何非-primitives（Object）
 ```
 
+
+
+#### 多个三目运算
+
+```java
+int i = 0;
+int gg = i == 0 ? 0 : i == 1 ? 1 : 2;
+```
+

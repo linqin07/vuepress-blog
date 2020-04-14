@@ -38,6 +38,14 @@
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
 
+###### 重置偏移量：
+
+停止消费者，将消费组所有分区的位移调整为为最新位移
+
+```sh
+./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.100.81:9092,192.168.100.82:9092 --group ivory --reset-offsets --all-topics --to-latest --execute
+```
+
 
 
 ###### 删除topic

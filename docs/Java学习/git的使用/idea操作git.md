@@ -42,9 +42,11 @@ unstash changes把修改的同步到代码里。
 
 ![Rebase 操作](https://i.loli.net/2020/03/27/6WvMVGQ1iKhzHOq.png)
 
-Checkout and Rebase onto Current  合并当前分支(dev)的修改 提交到 master 并且检出到 master
+Checkout and Rebase onto Current  合并当前分支 (dev) 的修改 提交到 master 并且检出到 master
 
 Rebase Current onto Selected         将所选分支提交加入到当前分支
+
+Merge into Current                         将所选分支提交合并到当前分支
 
 
 
