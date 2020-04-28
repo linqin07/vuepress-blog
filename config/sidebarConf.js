@@ -857,10 +857,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/spring-boot-swapper/",
-               "README"
-            ],
-            [
                "/Spring-boot/spring-boot-swapper/Swagger.md",
                "Swagger"
             ]
@@ -895,10 +891,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/spring-boot-代码生成/",
-               "README"
-            ],
-            [
                "/Spring-boot/spring-boot-代码生成/Mybatis-Genelator.md",
                "Mybatis-Genelator"
             ],
@@ -912,10 +904,6 @@ module.exports = {
          "title": "spring-boot打包部署",
          "collapsable": true,
          "children": [
-            [
-               "/Spring-boot/spring-boot打包部署/",
-               "README"
-            ],
             [
                "/Spring-boot/spring-boot打包部署/deploy依赖到私服排除jar.md",
                "deploy依赖到私服排除jar"

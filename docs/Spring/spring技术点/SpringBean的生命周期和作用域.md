@@ -1,8 +1,21 @@
 ### SpringBean的生命周期
 
-Spring Bean 生命周期比较复杂，可以分为创建和销毁两个过程。其中，注解`@Bean`加载的自定义 bean 也会实现BeanPostProcessor 的前后置方法。
+![bean的生命周期](assets/1587807340663.png)
 
-**创建**
+> 1.  Spring对Bean进行实例化（相当于程序中的new Xx())
+> 2. 设置对象属性（IOC 依赖注入）
+> 3. 如果这个 Bean 实现了 **BeanNameAware** 接口，会调用它实现的 setBeanName(String beanId) 方法，此处传递的是 Spring 配置文件中 Bean 的 ID
+> 4. 如果这个 Bean 实现了 **BeanFactoryAware** 接口，会调用它实现的 setBeanFactory()，传递的是Spring工厂本身（可以用这个方法获取到其他 Bean）
+> 5. 如果这个 Bean 实现了 **ApplicationContextAware** 接口，会调用setApplicationContext(ApplicationContext) 方法，传入 Spring 上下文
+> 6. 如果Bean实现了BeanPostProcess接口，Spring将调用它们的postProcessBeforeInitialization 前置
+> 7. 如果Bean实现了InitializingBean接口，Spring将调用它们的afterPropertiesSet方法
+> 8. 如果Bean实现了BeanPostProcess接口，Spring将调用它们的 postProcessBeforeInitialization 后置
+> 9. 具体业务调用
+> 10. 生命周期结束，调用 destroy 方法。
+
+
+
+Spring Bean 生命周期比较复杂，可以分为创建和销毁两个过程。其中，注解`@Bean`加载的自定义 bean 也会实现BeanPostProcessor 的前后置方法。
 
 - 实现`InitializingBean`接口会在初始化时执行一次。
 - 实现`BeanFactoryPostProcessor`接口会在初始化后执行一次。
