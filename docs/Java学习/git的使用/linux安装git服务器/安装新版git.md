@@ -7,15 +7,18 @@
 
 ###### 2.从github上下载最新的源码编译后安装git
 
-https://github.com/git/git/release
+https://github.com/git/git/releases
 
 wget https://github.com/git/git/archive/v2.19.1.tar.gz
 
 解压，进入目录：
+
 安装编译所需要的依赖
 yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+
 编译
 make prefix=/usr/local/git all
+
 安装到指定目录
 make prefix=/usr/local/git install
 

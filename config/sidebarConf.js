@@ -1069,10 +1069,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/复习题/面试题/",
-               "README"
-            ],
-            [
                "/复习题/面试题/为什么接口要实现Impl.md",
                "为什么接口要实现Impl"
             ],
