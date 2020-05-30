@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /1.jpg
-heroText: LinQin`s Blog
-tagline: 记录工作 与 学习
+heroText: null
+tagline: LinQin`s Blog
 actionText: 快速上手 →
 actionLink: /Markdown入门到放弃/vuepress搭建博客/
 features:
@@ -14,6 +14,20 @@ features:
   details: 领域先驱
 footer: MIT Licensed | Copyright © 2020-present LinQin
 ---
+
+# About Me<Badge text="Updating" type="tip" vertical="top"/> 
+
+```
+{
+    "Name": "LinQin",
+    "Hobbies": ["运动", "游戏" , "学习"],
+    "Location": "Guangzhou-TianHe",
+    "Contacts": {
+        "Email": "woshilinqin163@163.com",
+        "QQ": 625424841
+    }
+}
+```
 
 [![Build Status](https://travis-ci.org/linqin07/vuepress-blog.svg?branch=master)](https://travis-ci.org/linqin07/vuepress-blog)[![Gitter](https://badges.gitter.im/linqin-site/community.svg)](https://gitter.im/linqin-site/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 

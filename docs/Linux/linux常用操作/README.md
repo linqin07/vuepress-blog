@@ -20,6 +20,8 @@ wget [url] -P [下载目录]
 -k 发送https请求的时候，不做认证
 （当用https请求出错的时候，可以试下加-k）
 
+-c：继续执行上次终端的任务(断点续传)
+
 ```shell
 curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.6.2-linux-x86_64.tar.gz
 ```

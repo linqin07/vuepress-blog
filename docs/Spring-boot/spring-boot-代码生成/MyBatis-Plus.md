@@ -68,7 +68,7 @@ TIP
         <optional>true</optional>
     </dependency>
     
-    <!-- 引入了这个依赖，不再需要mybatis-spring、MyBatis 依赖 -->
+    <!-- 引入了这个依赖，不再需要mybatis-spring-starter、MyBatis 依赖（如pageHelper里面的要exclude -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -171,9 +171,10 @@ public class CodeGenerator {
         gc.setOutputDir(System.getProperty("user.dir")  + "/spring-boot-mybatis-typehandler/src/main/java");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
+        gc.setDateType(DateType.ONLY_DATE); // jdbc datetime 对应java Date类型，LocalDatetime需要druid和mp高版本
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
-        gc.setBaseColumnList(true);// XML columList
+        gc.setBaseColumnList(true);// XML columLlist
         gc.setAuthor("linqin");
         gc.setMapperName("%sMapper");
         gc.setXmlName("%sMapper");

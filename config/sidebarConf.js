@@ -401,6 +401,16 @@ module.exports = {
          ]
       },
       {
+         "title": "Redis",
+         "collapsable": true,
+         "children": [
+            [
+               "/Linux/Redis/Untitled.md",
+               "Untitled"
+            ]
+         ]
+      },
+      {
          "title": "Shell",
          "collapsable": true,
          "children": [

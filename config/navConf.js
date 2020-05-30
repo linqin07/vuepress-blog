@@ -2,7 +2,7 @@ module.exports = [{
 	text: 'Home',
 	link: '/'
 }, {
-	text: 'Category',
+	text: '目录',
 	items: [{
 			text: 'Spring技术',
 			items: [{

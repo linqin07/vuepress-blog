@@ -161,6 +161,10 @@ Predicate predicate = new Predicate() {
 
   ```java
   stringCollection.stream().sorted().reduce((s1, s2) -> s1 + "#" + s2).ifPresent(System.out::println);
+  
+  // 2组参数,返回第一个参数的类型
+  List<String> list = ImmutableList.of("1", "2", "3", "4", "5", "6");
+  String s = list.stream().reduce("a232rrr",(i1, i2) -> i1 += i2); //a232rrr123456
   ```
 
 - 7.collect
