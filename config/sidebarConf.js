@@ -405,8 +405,8 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Linux/Redis/Untitled.md",
-               "Untitled"
+               "/Linux/Redis/Redis 知识汇总.md",
+               "Redis 知识汇总"
             ]
          ]
       },
@@ -1092,6 +1092,16 @@ module.exports = {
             ]
          ]
       }
+   ],
+   "/数据结构/": [
+      [
+         "/数据结构/",
+         "README"
+      ],
+      [
+         "/数据结构/BitMap.md",
+         "BitMap"
+      ]
    ],
    "/设计模式/": [
       [
