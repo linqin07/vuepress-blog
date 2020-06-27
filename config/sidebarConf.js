@@ -845,6 +845,10 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-mybatis/5.文件上传进度条.md",
                "5.文件上传进度条"
+            ],
+            [
+               "/Spring-boot/spring-boot-mybatis/6.@Result生成.md",
+               "6.@Result生成"
             ]
          ]
       },
@@ -1101,6 +1105,10 @@ module.exports = {
       [
          "/数据结构/BitMap.md",
          "BitMap"
+      ],
+      [
+         "/数据结构/二叉树遍历.md",
+         "二叉树遍历"
       ]
    ],
    "/设计模式/": [

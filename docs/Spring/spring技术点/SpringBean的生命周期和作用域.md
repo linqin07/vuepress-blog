@@ -1,6 +1,6 @@
 ### SpringBean的生命周期
 
-![bean的生命周期](assets/1587807340663.png)
+![bean的生命周期](https://i.loli.net/2020/06/27/ck7aH3UyWhCpYMA.png)
 
 > 1.  Spring对Bean进行实例化（相当于程序中的new Xx())
 > 2. 设置对象属性（IOC 依赖注入）

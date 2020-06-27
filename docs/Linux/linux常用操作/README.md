@@ -54,6 +54,10 @@ curl -i -X POST -H 'Content-type':'application/json' -d '{json}' http://wx.sp-hi
 
 ```shell
 scp -P 22 -r tomcat7 root@192.168.1.110:/home
+// 多个文件推出去
+scp /localfold1/file1 /localfold2/file2  remoteuser@remotehost:/remotefold/ 
+// 多个文件拉过来
+scp remoteuser@remotehost:"/remotefold1/file1 /remotefold2/file2" /localfold/
 ```
 
 两个机器都要支持scp命令
@@ -62,7 +66,7 @@ scp -P 22 -r tomcat7 root@192.168.1.110:/home
 root对方用户@ip:/目录
 其实不管文件或者目录加 -r 都可以
 
-###### md5sum 
+###### md5sum file1 [file2]
 
 生成md5字符串，比较内容的
 
