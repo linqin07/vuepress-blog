@@ -12,6 +12,12 @@
 ./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.13.25:9092 --group ivory --describe
 ```
 
+###### 查看 topic 内消息数目
+
+```sh
+./bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list 192.168.13.33:9092  --topic lin --time -1 --offsets 1 | awk -F  ":" '{sum += $3} END {print sum}'
+```
+
 
 
 ###### 动态修改队列数据保存时间ms（不用重启）默认7天 604800000

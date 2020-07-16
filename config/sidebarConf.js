@@ -621,6 +621,10 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
+               "/mysql/sql面试题/Leetcode-Database.md",
+               "Leetcode-Database"
+            ],
+            [
                "/mysql/sql面试题/查询成绩.md",
                "查询成绩"
             ],
@@ -629,8 +633,8 @@ module.exports = {
                "统计胜负"
             ],
             [
-               "/mysql/sql面试题/重复数据问题.md",
-               "重复数据问题"
+               "/mysql/sql面试题/表连接查询的使用.md",
+               "表连接查询的使用"
             ]
          ]
       },
@@ -661,10 +665,6 @@ module.exports = {
             [
                "/mysql/优化/索引优化不生效.md",
                "索引优化不生效"
-            ],
-            [
-               "/mysql/优化/表连接查询的使用.md",
-               "表连接查询的使用"
             ]
          ]
       },
@@ -847,8 +847,8 @@ module.exports = {
                "5.文件上传进度条"
             ],
             [
-               "/Spring-boot/spring-boot-mybatis/6.@Result生成.md",
-               "6.@Result生成"
+               "/Spring-boot/spring-boot-mybatis/6.mybatis 部分代码生成.md",
+               "6.mybatis 部分代码生成"
             ]
          ]
       },

@@ -88,8 +88,12 @@ top
 
 ###### 查看机器几核
 
+理论上认为 平均负载 除以 总核心数 <= 0.7 认为正常
+
 ```shell
 cat /proc/cpuinfo |grep "cores"|uniq
+// 查看CPU的总核心数
+grep -c 'model name' /proc/cpuinfo 
 ```
 
 ###### 查看内存

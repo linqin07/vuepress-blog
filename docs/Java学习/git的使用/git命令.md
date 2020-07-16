@@ -33,8 +33,14 @@ Git add
 
 ### 查看git远程仓库
 
+到根目录下，关联/修改远程仓库
+
 ```shell
 git remote -v
+git remote rm origin
+git remote add origin https://github.com/wuyihao1992/SingTel.git
+// push不上去报错Push to origin/master was rejected，由于服务器上面有不相干的历史，执行下面命令
+git pull origin master --allow-unrelated-histories
 ```
 
 ### 测试git连接
