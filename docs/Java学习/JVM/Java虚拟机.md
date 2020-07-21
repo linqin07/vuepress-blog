@@ -1,6 +1,6 @@
-### Java 虚拟机
+# Java 虚拟机
 
-#### 1.基本结构
+### 1.基本结构
 
 ![JVM基本结构](https://i.loli.net/2020/06/27/7FzcspyS5OHbLXM.png)
 
@@ -22,7 +22,7 @@
 
 - 垃圾回收系统
 
-  垃圾回收系统是 jvm 的重要组成部分，垃圾回收器 可以直接对方法区 ，java 堆和直接内存进行回收，在其中 java堆则是垃圾回收器的 重点工作区域，对于不在使用的垃圾对象，垃圾回收系统会在后台，查找 标识，并且释放这些不用的垃圾对象
+  垃圾回收系统是 jvm 的重要组成部分，垃圾回收器 可以直接对方法区 ，java 堆和直接内存进行回收，在其中 `java堆`则是垃圾回收器的 重点工作区域。
 
 - java 栈
 
@@ -47,3 +47,170 @@
 ![堆概念图](https://i.loli.net/2020/06/27/HTn3QLj2kwvIYy5.png)
 
 新生代为堆（heap）的 3/8 ，持久代一般固定 64M，最大非堆内存为 128M。
+
+
+
+# 二、垃圾收集
+
+垃圾收集主要是针对堆和方法区进行。程序计数器、虚拟机栈和本地方法栈这三个区域属于线程私有的，只存在于线程的生命周期内，线程结束之后就会消失，因此不需要对这三个区域进行垃圾回收。
+
+## 判断一个对象是否可被回收
+
+### 1. 引用计数算法
+
+为对象添加一个引用计数器，当对象增加一个引用时计数器加 1，引用失效时计数器减 1。引用计数为 0 的对象可被回收。
+
+在两个对象出现循环引用的情况下，此时引用计数器永远不为 0，导致无法对它们进行回收。正是因为循环引用的存在，因此 Java 虚拟机不使用引用计数算法。
+
+```java
+public class Test {
+
+    public Object instance = null;
+
+    public static void main(String[] args) {
+        Test a = new Test();
+        Test b = new Test();
+        a.instance = b;
+        b.instance = a;
+        a = null;
+        b = null;
+        doSomething();
+    }
+}
+```
+
+在上述代码中，a 与 b 引用的对象实例互相持有了对象的引用，因此当我们把对 a 对象与 b 对象的引用去除之后，由于两个对象还存在互相之间的引用，导致两个 Test 对象无法被回收。
+
+### 2. 可达性分析算法
+
+以 GC Roots 为起始点进行搜索，可达的对象都是存活的，不可达的对象可被回收。
+
+Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般包含以下内容：
+
+- 虚拟机栈中局部变量表中引用的对象
+- 本地方法栈中 JNI 中引用的对象
+- 方法区中类静态属性引用的对象
+- 方法区中的常量引用的对象
+
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/83d909d2-3858-4fe1-8ff4-16471db0b180.png" width="350px"> </div><br>
+
+
+### 3. 方法区的回收
+
+因为方法区主要存放永久代对象，而永久代对象的回收率比新生代低很多，所以在方法区上进行回收性价比不高。
+
+主要是对常量池的回收和对类的卸载。
+
+为了避免内存溢出，在大量使用反射和动态代理的场景都需要虚拟机具备类卸载功能。
+
+类的卸载条件很多，需要满足以下三个条件，并且满足了条件也不一定会被卸载：
+
+- 该类所有的实例都已经被回收，此时堆中不存在该类的任何实例。
+- 加载该类的 ClassLoader 已经被回收。
+- 该类对应的 Class 对象没有在任何地方被引用，也就无法在任何地方通过反射访问该类方法。
+
+### 4. finalize()
+
+类似 C++ 的析构函数，用于关闭外部资源。但是 try-finally 等方式可以做得更好，并且该方法运行代价很高，不确定性大，无法保证各个对象的调用顺序，因此最好不要使用。
+
+当一个对象可被回收时，如果需要执行该对象的 finalize() 方法，那么就有可能在该方法中让对象重新被引用，从而实现自救。自救只能进行一次，如果回收的对象之前调用了 finalize() 方法自救，后面回收时不会再调用该方法。
+
+
+
+## 引用类型
+
+无论是通过引用计数算法判断对象的引用数量，还是通过可达性分析算法判断对象是否可达，判定对象是否可被回收都与引用有关。
+
+Java 提供了四种强度不同的引用类型。
+
+### 1. 强引用
+
+被强引用关联的对象不会被回收。
+
+使用 new 一个新对象的方式来创建强引用。
+
+```java
+Object obj = new Object();
+```
+
+### 2. 软引用
+
+被软引用关联的对象只有在内存不够的情况下才会被回收。
+
+使用 SoftReference 类来创建软引用。
+
+```java
+Object obj = new Object();
+SoftReference<Object> sf = new SoftReference<Object>(obj);
+obj = null;  // 使对象只被软引用关联
+```
+
+### 3. 弱引用
+
+被弱引用关联的对象一定会被回收，也就是说它只能存活到下一次垃圾回收发生之前。
+
+使用 WeakReference 类来创建弱引用。
+
+```java
+Object obj = new Object();
+WeakReference<Object> wf = new WeakReference<Object>(obj);
+obj = null;
+```
+
+### 4. 虚引用
+
+又称为幽灵引用或者幻影引用，一个对象是否有虚引用的存在，不会对其生存时间造成影响，也无法通过虚引用得到一个对象。
+
+为一个对象设置虚引用的唯一目的是能在这个对象被回收时收到一个系统通知。
+
+使用 PhantomReference 来创建虚引用。
+
+```java
+Object obj = new Object();
+PhantomReference<Object> pf = new PhantomReference<Object>(obj, null);
+obj = null;
+```
+
+
+
+## 类与类加载器
+
+两个类相等，需要类本身相等，并且使用同一个类加载器进行加载。这是因为每一个类加载器都拥有一个独立的类名称空间。
+
+这里的相等，包括类的 Class 对象的 equals() 方法、isAssignableFrom() 方法、isInstance() 方法的返回结果为 true，也包括使用 instanceof 关键字做对象所属关系判定结果为 true。
+
+## 类加载器分类
+
+从 Java 虚拟机的角度来讲，只存在以下两种不同的类加载器：
+
+- 启动类加载器（Bootstrap ClassLoader），使用 C++ 实现，是虚拟机自身的一部分；
+
+- 所有其它类的加载器，使用 Java 实现，独立于虚拟机，继承自抽象类 java.lang.ClassLoader。
+
+从 Java 开发人员的角度看，类加载器可以划分得更细致一些：
+
+- 启动类加载器（Bootstrap ClassLoader）此类加载器负责将存放在 &lt;JRE_HOME>\lib 目录中的，或者被 -Xbootclasspath 参数所指定的路径中的，并且是虚拟机识别的（仅按照文件名识别，如 rt.jar，名字不符合的类库即使放在 lib 目录中也不会被加载）类库加载到虚拟机内存中。启动类加载器无法被 Java 程序直接引用，用户在编写自定义类加载器时，如果需要把加载请求委派给启动类加载器，直接使用 null 代替即可。
+
+- 扩展类加载器（Extension ClassLoader）这个类加载器是由 ExtClassLoader（sun.misc.Launcher$ExtClassLoader）实现的。它负责将 &lt;JAVA_HOME>/lib/ext 或者被 java.ext.dir 系统变量所指定路径中的所有类库加载到内存中，开发者可以直接使用扩展类加载器。
+
+- 应用程序类加载器（Application ClassLoader）这个类加载器是由 AppClassLoader（sun.misc.Launcher$AppClassLoader）实现的。由于这个类加载器是 ClassLoader 中的 getSystemClassLoader() 方法的返回值，因此一般称为系统类加载器。它负责加载用户类路径（ClassPath）上所指定的类库，开发者可以直接使用这个类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。
+
+<div data="modify <--"></div>
+## 双亲委派模型
+
+应用程序是由三种类加载器互相配合从而实现类加载，除此之外还可以加入自己定义的类加载器。
+
+下图展示了类加载器之间的层次关系，称为双亲委派模型（Parents Delegation Model）。该模型要求除了顶层的启动类加载器外，其它的类加载器都要有自己的父类加载器。这里的父子关系一般通过组合关系（Composition）来实现，而不是继承关系（Inheritance）。
+
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/0dd2d40a-5b2b-4d45-b176-e75a4cd4bdbf.png" width="500px"> </div><br>
+
+### 1. 工作过程
+
+一个类加载器首先将类加载请求转发到父类加载器，只有当父类加载器无法完成时才尝试自己加载。
+
+### 2. 好处
+
+使得 Java 类随着它的类加载器一起具有一种带有优先级的层次关系，从而使得基础类得到统一。
+
+例如 java.lang.Object 存放在 rt.jar 中，如果编写另外一个 java.lang.Object 并放到 ClassPath 中，程序可以编译通过。由于双亲委派模型的存在，所以在 rt.jar 中的 Object 比在 ClassPath 中的 Object 优先级更高，这是因为 rt.jar 中的 Object 使用的是启动类加载器，而 ClassPath 中的 Object 使用的是应用程序类加载器。rt.jar 中的 Object 优先级更高，那么程序中所有的 Object 都是这个 Object。
+

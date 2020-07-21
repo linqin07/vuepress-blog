@@ -108,8 +108,8 @@ jmap -heap 9667
 ----------------------------------------------
    1:          8924      175292816  [B
    2:        144536       20573344  [C
-   3:        420675       13461600  com.shsnc.elasticsearch.analyzer.cnsegmet.PreFixTree$TreeNode
-   4:        420676        9094392  [Lcom.shsnc.elasticsearch.analyzer.cnsegmet.PreFixTree$TreeNode;
+   3:        420675       13461600  com.elasticsearch.analyzer.cnsegmet.PreFixTree$TreeNode
+   4:        420676        9094392  [Lcom.elasticsearch.analyzer.cnsegmet.PreFixTree$TreeNode;
    5:         35315        5387808  [Ljava.lang.Object;
    6:         49435        4350280  java.lang.reflect.Method
    7:        110358        3531456  java.util.concurrent.ConcurrentHashMap$Node
