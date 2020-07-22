@@ -56,7 +56,7 @@ ps -eLf|grep pid
 ### jmap 命令
 
 ```sh
-[root@ivory-81 ivory]# jmap
+[root@-81]# jmap
 Usage:
     jmap [option] <pid>
         (to connect to running process)
@@ -102,7 +102,7 @@ jmap -heap 9667
 打印 jvm heap 的直方图。其输出信息包括类名，对象数量，对象占用大小。
 
 ```sh
-[root@ivory-81 data2]# jmap -histo:live 9667 |head -n 10
+[root@-81 data2]# jmap -histo:live 9667 |head -n 10
 
  num     #instances         #bytes  class name
 ----------------------------------------------

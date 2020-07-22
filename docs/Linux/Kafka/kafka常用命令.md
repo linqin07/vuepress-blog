@@ -9,7 +9,7 @@
 ###### 查看堆积
 
 ```shell
-./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.13.25:9092 --group ivory --describe
+./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.13.25:9092 --group mygroup --describe
 ```
 
 ###### 查看 topic 内消息数目
@@ -49,7 +49,7 @@
 停止消费者，将消费组所有分区的位移调整为为最新位移
 
 ```sh
-./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.100.81:9092,192.168.100.82:9092 --group ivory --reset-offsets --all-topics --to-latest --execute
+./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.100.81:9092,192.168.100.82:9092 --group mygroup --reset-offsets --all-topics --to-latest --execute
 ```
 
 

@@ -7,18 +7,18 @@
 ```sh
 sc *ServiceInstallService
 // 子方法
-sm com.base.ivory.service.serviceinstall.ServiceInstallService saveAndSend*
+sm com.base.service.serviceinstall.ServiceInstallService saveAndSend*
 ```
 
 ```sh
 [arthas@19572]$ sc *ServiceInstallService
-com.base.ivory.service.serviceinstall.ServiceInstallService
-com.base.ivory.service.serviceinstall.ServiceInstallService$$EnhancerBySpringCGLIB$$8de8d2d6
+com.base.service.serviceinstall.ServiceInstallService
+com.base.service.serviceinstall.ServiceInstallService$$EnhancerBySpringCGLIB$$8de8d2d6
 Affect(row-cnt:2) cost in 158 ms.
-[arthas@19572]$ sm com.base.ivory.service.serviceinstall.ServiceInstallService saveAndSend*
-com.base.ivory.service.serviceinstall.ServiceInstallService saveAndSendConfig(Ljava/util/Map;Ljava/util/ArrayList;I)V
+[arthas@19572]$ sm com.base.service.serviceinstall.ServiceInstallService saveAndSend*
+com.base.service.serviceinstall.ServiceInstallService saveAndSendConfig(Ljava/util/Map;Ljava/util/ArrayList;I)V
 Affect(row-cnt:1) cost in 27 ms.
-[arthas@19572]$ watch com.base.ivory.service.serviceinstall.ServiceInstallService saveAndSendConfig "{params}" -x 3
+[arthas@19572]$ watch com.base.service.serviceinstall.ServiceInstallService saveAndSendConfig "{params}" -x 3
 ```
 
 ### 观察方法出参和返回值
