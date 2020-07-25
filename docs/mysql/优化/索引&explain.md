@@ -13,7 +13,17 @@
 ###### 5.针对索引字段使用 >, >=, =, <, <=, IF NULL和BETWEEN 将会使用索引， 如果对某个索引字段进行 LIKE 查询，使用 LIKE ‘%abc%’不能使用索引，使用 LIKE ‘abc%’ 将能够使用索引。
 
 ###### 6.查询条件左边不要用任何的函数，数学运算，尽可能用UNION ALL 取代UNION 。组合索引最左边的值要在条件中有用到才有用。
-最左原则。数据更新频繁的列不宜建立索引；
+
+::: tip
+
+最左匹配原则: 
+
+理解下MySQL的索引最左匹配原则：
+如联合索引（a，b，c），where 条件里面有 a, ab, ba, abc, bac..等都行，与顺序无关。
+
+::: 
+
+数据更新频繁的列不宜建立索引；
 
 查看索引：`show index from table`
 删除：`ALTER table user DROP INDEX  UK_d2ia11oqhsynodbsi46m80vfc`
