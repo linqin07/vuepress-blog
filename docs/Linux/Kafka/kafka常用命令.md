@@ -76,9 +76,13 @@
 ./bin/kafka-topics.sh --list --zookeeper localhost:2181
 ```
 
+###### 删除topic
 
+```sh
+./kafka-topics.sh --zookeeper node1:2181 --delete --topic test
+```
 
-###### 启动：
+###### 启动
 
 ```shell
 ./bin/kafka-server-start.sh config/server.properties

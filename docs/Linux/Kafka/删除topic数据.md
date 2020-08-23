@@ -7,6 +7,9 @@
 #### 1.命令删除topic
 
 ```shell
+// 查看所有topic
+./kafka-topics.sh --list --zookeeper 【zookeeper server】
+// 删除
 ./bin/kafka-topics  --delete --zookeeper 【zookeeper server】  --topic 【topic name】
 ```
 
@@ -30,6 +33,10 @@
 
 直接清空这个目录。
 
-ps:要注意 zk 对应的节点信息也要清空。
+::: warning 
+
+要注意 zk 对应的节点信息也要清空。除了`/zookeeper`和自己的业务相关节点，其他的都删除掉。
+
+:::
 
 **缺点：**会删除全部的topic。

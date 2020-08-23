@@ -911,6 +911,10 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-代码生成/MyBatis-Plus.md",
                "MyBatis-Plus"
+            ],
+            [
+               "/Spring-boot/spring-boot-代码生成/WebService.md",
+               "WebService"
             ]
          ]
       },

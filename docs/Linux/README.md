@@ -10,9 +10,15 @@
 
 #### Windows 常用命令
 
-tasklist | findstr `pid` 等价于 ps -ef | grep pid
+- tasklist | findstr `pid` 等价于 ps -ef | grep pid
 
-taskkill /f /pid `pid` 等价于 kill -9 pid
 
-ping 192.168.100.81 `-n` 5 -w 1000  等价于 ping 127.0.0.1 `-c` 5 -w 1000
+- taskkill /f /pid `pid` 等价于 kill -9 pid
+
+
+- 
+  ping 192.168.100.81 `-n` 5 -w 1000  等价于 ping 127.0.0.1 `-c` 5 -w 1000
+- 获取全部目录及文件  tree /F
+
+
 

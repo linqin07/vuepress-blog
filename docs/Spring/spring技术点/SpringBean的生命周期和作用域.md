@@ -82,7 +82,7 @@ public void test1() throws IOException {
 ### Spring Bean 有五个作用域
 
 - `Singleton`，这是 Spring 的默认作用域，也就是为每个 IOC 容器创建唯一的一个 Bean 实
-  例。
+  例。controller 默认 `@Scope(“Singleton”)`，不要使用非静态的成员变量，否则会发生数据逻辑混乱。正因为单例所以不是线程安全的。
 
 - `Prototype`，针对每个 getBean 请求，容器都会单独创建一个 Bean 实例。
 
