@@ -103,3 +103,4 @@ npm config set registry=http://registry.npm.taobao.org
 ```shell
 npm set global=true
 ```
+

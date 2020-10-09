@@ -20,6 +20,14 @@
 - ArrayList底层是数组结构。LinkedList底层是链表。
 - 数组的特性查询快，增删慢。链表的特性是增删快，查询慢。
 
+> LinkedList 属于队列：
+>
+> |          | *抛出异常*  | *返回特殊值* |
+> | -------- | ----------- | ------------ |
+> | **插入** | `add(e)`    | `offer(e)`   |
+> | **移除** | `remove()`  | `poll()`     |
+> | **检查** | `element()` | `peek()`     |
+
 ###### 4.ArrayList 与 Vector 区别
 
 - Vector是线程安全的。ArrayList不是线程安全的。所以性能上面ArrayList比Vector快。

@@ -71,6 +71,11 @@ git push -u origin master
 
 ### 还原
 
+```shell
+// 未add到版本里面的
+git checkout xxxfileName
+```
+
 ```sh
 //git撤销本地所有未提交的更改
 git reset --hard

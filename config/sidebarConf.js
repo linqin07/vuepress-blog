@@ -181,6 +181,20 @@ module.exports = {
                "泛型中占位符T和有什么区别"
             ]
          ]
+      },
+      {
+         "title": "构建工具",
+         "collapsable": true,
+         "children": [
+            [
+               "/Java学习/构建工具/Jenkins安装.md",
+               "Jenkins安装"
+            ],
+            [
+               "/Java学习/构建工具/Maven.md",
+               "Maven"
+            ]
+         ]
       }
    ],
    "/Linux/": [
@@ -495,6 +509,10 @@ module.exports = {
             [
                "/Linux/系统操作/4.盘挂载.md",
                "4.盘挂载"
+            ],
+            [
+               "/Linux/系统操作/5.SNMP协议.md",
+               "5.SNMP协议"
             ]
          ]
       }
@@ -523,6 +541,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/1.node.js介绍/2.yarn.md",
                "2.yarn"
+            ],
+            [
+               "/Markdown入门到放弃/1.node.js介绍/Linux安装.md",
+               "Linux安装"
             ]
          ]
       },

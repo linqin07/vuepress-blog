@@ -102,6 +102,8 @@ free -m
 
 free -g
 
+ps -aux | sort -k4,4nr | head -5 倒排序使用内存数目
+
 ###### 查看文件大小
 
 > du -sh *
@@ -111,6 +113,7 @@ free -g
 ###### 同步系统时间
 
 > yum install ntpdate
+>
 > ntpdate -u ntp.api.bz  上海时间
 
 ###### yum
