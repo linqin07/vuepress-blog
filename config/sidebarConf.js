@@ -638,6 +638,14 @@ module.exports = {
          "/mysql/MYSQL安装.md",
          "MYSQL安装"
       ],
+      [
+         "/mysql/Mysql技术内幕.md",
+         "Mysql技术内幕"
+      ],
+      [
+         "/mysql/Oracle试题.md",
+         "Oracle试题"
+      ],
       {
          "title": "sql面试题",
          "collapsable": true,
@@ -719,10 +727,6 @@ module.exports = {
             [
                "/mysql/基础知识/mysql中myisam与innodb的区别.md",
                "mysql中myisam与innodb的区别"
-            ],
-            [
-               "/mysql/基础知识/Mysql技术内幕.md",
-               "Mysql技术内幕"
             ],
             [
                "/mysql/基础知识/sql模式.md",
@@ -1121,7 +1125,11 @@ module.exports = {
                "防止表单重复提交方案"
             ]
          ]
-      }
+      },
+      [
+         "/复习题/项目集成工程师考证.md",
+         "项目集成工程师考证"
+      ]
    ],
    "/数据结构/": [
       [

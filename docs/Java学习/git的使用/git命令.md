@@ -73,7 +73,7 @@ git push -u origin master
 
 ```shell
 // 未add到版本里面的
-git checkout xxxfileName
+git checkout -f xxxfileName
 ```
 
 ```sh

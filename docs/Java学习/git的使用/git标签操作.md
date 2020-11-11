@@ -2,11 +2,11 @@
 
 ###### 1.查看当前库标签
 
-git tags
+git tag
 
 ###### 2.查看git提交简要信息
 
-git log --oneline
+`git log --oneline`
 
 ![gittag](https://i.loli.net/2019/06/15/5d046ed9cdeb856886.jpg)
 
@@ -19,7 +19,7 @@ git tab xxx
 
 ###### 4.提交标签信息
 
-git push --tag
+`git push --tag`
 
 ![push](https://i.loli.net/2019/06/15/5d046eda0f4d597601.jpg)
 

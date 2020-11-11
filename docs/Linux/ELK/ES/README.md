@@ -10,3 +10,9 @@ https://www.infoq.cn/article/analysis-of-elasticsearch-cluster-part01?utm_campai
 curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
 ```
 
+2.清空索引
+
+```sh
+POST quality_control/my_type/_delete_by_query?refresh&slices=5&pretty { "query": { "match_all": {} } }
+```
+

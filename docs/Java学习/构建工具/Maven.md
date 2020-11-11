@@ -31,6 +31,8 @@
 
 ### 2.使用命令上传jar包
 
+maven 的 setting 文件要配置好对应的私服地址
+
 ```sh
 mvn deploy:deploy-file 
 -DgroupId=com.shsnc 

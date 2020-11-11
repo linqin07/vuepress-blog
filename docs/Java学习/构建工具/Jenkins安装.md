@@ -31,3 +31,13 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 ##### 3.修改Jenkins修改默认工作空间路径workspace
 
 对应是`/root/.jenkins/config.xml`修改里面的 workspaceDir 为具体路径即可，修改完成重启 
+
+##### 4.离线安装插件
+
+[点击搜索下载插件](https://plugins.jenkins.io/)
+
+![下载插件](https://i.loli.net/2020/11/11/TVwFN4AQnDjf3YO.png)
+
+导入，最后安装完成的插件会在 `~.jenkins/plugins` 里面，离线安装可以复制这个新增的文件到内网即可。
+
+![导入](https://i.loli.net/2020/11/11/sb6IiUuQlJ2zXMR.png)
