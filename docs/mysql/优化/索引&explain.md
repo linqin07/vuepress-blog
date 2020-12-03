@@ -31,6 +31,8 @@
 
 创建索引：`create INDEX age_password on user(age,password)` 
 
+唯一索引： `ALTER table xxx add unique ('a', 'b')`
+
 ### explain
 
 - **select_type:**	 

@@ -37,7 +37,7 @@ printf "%x\n" pid
 
 ###### 3.使用`jstack`查看堆栈信息
 
-打印对应堆栈信息关键字后20行，`-l`表示打印额外的锁信息。
+打印对应堆栈信息关键字后20行，`-l`表示打印额外的锁信息。`BLOCKED` 死锁关键字。
 
 ```shell
 jstack -l pid | grep '00xx' -A 20 >> dump

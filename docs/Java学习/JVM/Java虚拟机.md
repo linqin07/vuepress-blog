@@ -8,12 +8,12 @@
 
   主要负责负责加载 Class 信息，加载的类信息都存放在方法区的类存空间中。 当 JVM 使用类加载器装载某个类时，它首先要定位对应的 class 文件，然后读入这个 class 文件，最后，JVM 提取该文件的内容信息，并将这些信息存储到方法区，最后返回一个 class 实例
 
-- 方法区
+- 方法区（线程共享
 
   方法区主要存储的是方法，静态成员，常量。方法区中给每个类都规定了空间并且持有 this 和 super 的引用。当运行到哪个对象的时候，通过 this 动态指向该对象，引用该对象的成员变量，然后和方法以及局部变量一起在栈中进行运算。 
   方法区的大小不必是固定的，默认最小值为 16 MB，最大值为 64 MB，JVM 可根据应用需要动态调整。同时，方法区也不一定是连续的，方法区可以在一个堆(甚至是 JVM 自己的堆)中自由分配。 
 
-- java 堆
+- java 堆（线程共享）
 
   java 堆实在 jvm 启动的时候就建立的，这块内存区域 存放了对象实例及数组(所有 new 的对象)也就是 Object object = new Object(); 这里 objec t只是一个引用是放在栈里面的，new Object() 被放在了堆内存里面， 
   由于现在收集器都是采用分代收集算法，堆被划分为`新生代`和`老年代`。新生代主要存储新创建的对象和尚未进入老年代的对象。老年代存储经过多次新生代GC(Minor GC)任然存活的对象。其中：刚创建的对象放在eden区（伊甸园），S0 和 S1 大小相当，可以相互转化。
@@ -28,7 +28,7 @@
 
   每一个线程中都有私有的 java 栈，一个线程的 java 栈 在线程被创建的时候就会被创建，java 栈中保存着，局部变量，方法参数，并且对象的引用也存在栈中
 
-- 本地方法栈
+- 本地方法栈（线程私有）
 
   本地方法栈用于本地方法调用
 
@@ -60,7 +60,7 @@
 
 为对象添加一个引用计数器，当对象增加一个引用时计数器加 1，引用失效时计数器减 1。引用计数为 0 的对象可被回收。
 
-在两个对象出现循环引用的情况下，此时引用计数器永远不为 0，导致无法对它们进行回收。正是因为循环引用的存在，因此 Java 虚拟机不使用引用计数算法。
+在两个对象出现循环引用的情况下，此时引用计数器永远不为 0，导致无法对它们进行回收。正是因为循环引用的存在，因此 Java 虚拟机不使用引用计数算法。`很难解决对象之间的循环引用问题。`
 
 ```java
 public class Test {
@@ -94,7 +94,6 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 
 <div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/83d909d2-3858-4fe1-8ff4-16471db0b180.png" width="350px"> </div><br>
 
-
 ### 3. 方法区的回收
 
 因为方法区主要存放永久代对象，而永久代对象的回收率比新生代低很多，所以在方法区上进行回收性价比不高。
@@ -114,6 +113,53 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 类似 C++ 的析构函数，用于关闭外部资源。但是 try-finally 等方式可以做得更好，并且该方法运行代价很高，不确定性大，无法保证各个对象的调用顺序，因此最好不要使用。
 
 当一个对象可被回收时，如果需要执行该对象的 finalize() 方法，那么就有可能在该方法中让对象重新被引用，从而实现自救。自救只能进行一次，如果回收的对象之前调用了 finalize() 方法自救，后面回收时不会再调用该方法。
+
+### 垃圾收集算法
+
+#### 标记-清除算法（Mark-Sweep）
+
+分为标记和清除两个阶段。首先标记出所有需要回收的对象，在标记完成后统一回收被标记的对象。
+
+**缺点:**
+
+效率问题：标记和清除过程的效率都不高。
+
+空间问题：标记清除之后会`产生大量不连续的内存碎片`，空间碎片太多可能导致，程序分配较大对象时无法找到足够的连续内存，不得不提前出发另一次垃圾收集动作。
+
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/9pYbGqawogONS9ggZDBr8P5c4Eb8LGwP3e1OhmOfoUPDhlQd60vfia3lA8M2Y24pgIFIyicLdGaIcJpzeth2209Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+#### 复制算法（Copying）- 新生代
+
+将可用内存按容量划分为大小相等的两块，每次只使用其中一块。当这一块的内存用完了，就将存活着的对象复制到另一块上面，然后再把已经使用过的内存空间一次清理掉。
+
+**优点**
+
+复制算法使得每次都是针对其中的一块进行内存回收，内存分配时也不用考虑内存碎片等复杂情况，只要移动堆顶指针，按顺序分配内存即可，实现简单，运行高效。
+
+**缺点**
+
+将内存缩小为原来的一半。在对象存活率较高时，需要执行较多的复制操作，效率会变低。
+
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/9pYbGqawogONS9ggZDBr8P5c4Eb8LGwPOCGLKq3JsXs0M77FKrjWmCiaFLkVpswEC7et6gUrOxSYRSrtlbDA8EA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+**应用**
+
+商业的虚拟机都采用复制算法来回收新生代。因为新生代中的对象容易死亡，所以并不需要按照1:1的比例划分内存空间，而是将内存分为一块较大的 Eden 空间和两块较小的 Survivor 空间。每次使用 Eden 和其中的一块 Survivor。
+
+当回收时，将 Eden 和 Survivor 中还存活的对象一次性拷贝到另外一块 Survivor 空间上，最后清理掉 Eden 和刚才用过的 Survivor 空间。Hotspot 虚拟机默认 Eden 和 Survivor 的大小比例是8:1，也就是每次新生代中可用内存空间为整个新生代容量的90%（80% + 10%），只有10%的内存是会被“浪费”的。
+
+#### 标记-整理算法（Mark-Compact）-老年代
+
+标记过程仍然与“标记-清除”算法一样，但不是直接对可回收对象进行清理，而是让所有存活的对象向一端移动，然后直接清理掉边界以外的内存。
+
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/9pYbGqawogONS9ggZDBr8P5c4Eb8LGwPY7c6icenN2R2VBEyYYfhibK4OhfcVCV4VLbRmqS6iaDh6f5nia91X3ZImg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+#### 分代收集算法
+
+根据对象的存活周期，将内存划分为几块。一般是把 Java 堆分为新生代和老年代，这样就可以根据各个年代的特点，采用最适当的收集算法。
+
+- 新生代：每次垃圾收集时会有大批对象死去，只有少量存活，所以选择复制算法，只需要少量存活对象的复制成本就可以完成收集。
+- 老年代：对象存活率高、没有额外空间对它进行分配担保，必须使用“标记-清理”或“标记-整理”算法进行回收。
 
 
 
@@ -179,7 +225,7 @@ obj = null;
 
 这里的相等，包括类的 Class 对象的 equals() 方法、isAssignableFrom() 方法、isInstance() 方法的返回结果为 true，也包括使用 instanceof 关键字做对象所属关系判定结果为 true。
 
-## 类加载器分类
+### 类加载器分类
 
 从 Java 虚拟机的角度来讲，只存在以下两种不同的类加载器：
 
@@ -196,7 +242,7 @@ obj = null;
 - 应用程序类加载器（Application ClassLoader）这个类加载器是由 AppClassLoader（sun.misc.Launcher$AppClassLoader）实现的。由于这个类加载器是 ClassLoader 中的 getSystemClassLoader() 方法的返回值，因此一般称为系统类加载器。它负责加载用户类路径（ClassPath）上所指定的类库，开发者可以直接使用这个类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。
 
 <div data="modify <--"></div>
-## 双亲委派模型
+### 双亲委派模型
 
 应用程序是由三种类加载器互相配合从而实现类加载，除此之外还可以加入自己定义的类加载器。
 
@@ -213,4 +259,107 @@ obj = null;
 使得 Java 类随着它的类加载器一起具有一种带有优先级的层次关系，从而使得基础类得到统一。
 
 例如 java.lang.Object 存放在 rt.jar 中，如果编写另外一个 java.lang.Object 并放到 ClassPath 中，程序可以编译通过。由于双亲委派模型的存在，所以在 rt.jar 中的 Object 比在 ClassPath 中的 Object 优先级更高，这是因为 rt.jar 中的 Object 使用的是启动类加载器，而 ClassPath 中的 Object 使用的是应用程序类加载器。rt.jar 中的 Object 优先级更高，那么程序中所有的 Object 都是这个 Object。
+
+### 3.源码解析
+
+```java
+ protected Class<?> loadClass(String name, boolean resolve)
+        throws ClassNotFoundException
+    {
+        synchronized (getClassLoadingLock(name)) {
+            // First, check if the class has already been loaded
+            Class<?> c = findLoadedClass(name);
+            if (c == null) {
+                long t0 = System.nanoTime();
+                try {
+                    if (parent != null) {
+                        c = parent.loadClass(name, false);
+                    } else {
+                        c = findBootstrapClassOrNull(name);
+                    }
+                } catch (ClassNotFoundException e) {
+                    // ClassNotFoundException thrown if class not found
+                    // from the non-null parent class loader
+                }
+
+                if (c == null) {
+                    // If still not found, then invoke findClass in order
+                    // to find the class.
+                    long t1 = System.nanoTime();
+                    c = findClass(name);
+
+                    // this is the defining class loader; record the stats
+                    sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
+                    sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
+                    sun.misc.PerfCounter.getFindClasses().increment();
+                }
+            }
+            if (resolve) {
+                resolveClass(c);
+            }
+            return c;
+        }
+    }
+```
+
+加载每个类路径，首先判断类是否被加载过，然后如果还有父类加载器，转交给父加载器直接，否则自己加载。如果加载结果为空，使用自定义加载器。`findClass`就是提供出来可以修改的方法。
+
+双亲委派：加载类的顺序肯定是按照 `bootstrap(<JRE_HOME>\lib) > extend(<JAVA_HOME>/lib/ext) > application(ClassPath)` 如果都找不到类，才会使用自定义的类加载器去加载
+
+场景：比如同时要加载两个es版本，同时引入会报错。只能先引入一个，另一个换个lib文件夹放jar包并使用自定义类加载器加载使用。
+
+### 4.自定义类加载
+
+```java
+public class FileSystemClassLoader extends ClassLoader {
+
+    private String rootDir;
+
+    public FileSystemClassLoader(String rootDir) {
+        this.rootDir = rootDir;
+    }
+
+    protected Class<?> findClass(String name) throws ClassNotFoundException {
+        byte[] classData = getClassData(name);
+        if (classData == null) {
+            throw new ClassNotFoundException();
+        } else {
+            return defineClass(name, classData, 0, classData.length);
+        }
+    }
+
+    private byte[] getClassData(String className) {
+        String path = classNameToPath(className);
+        try {
+            InputStream ins = new FileInputStream(path);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            int bufferSize = 4096;
+            byte[] buffer = new byte[bufferSize];
+            int bytesNumRead;
+            while ((bytesNumRead = ins.read(buffer)) != -1) {
+                baos.write(buffer, 0, bytesNumRead);
+            }
+            return baos.toByteArray();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private String classNameToPath(String className) {
+        return rootDir + File.separatorChar
+                + className.replace('.', File.separatorChar) + ".class";
+    }
+}
+```
+
+测试类
+
+```java
+FileSystemClassLoader fileSystemClassLoader = new FileSystemClassLoader("D:\\IDEAWorkspace\\Java基础知识\\SPI\\src\\main\\java");
+        Class<?> person = fileSystemClassLoader.loadClass("org.example.bean.Person");
+        Object o1 = person.newInstance();
+        System.out.println(o1);
+        System.out.println(o1.getClass().getClassLoader());
+```
 
