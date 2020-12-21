@@ -15,7 +15,7 @@ features:
 footer: MIT Licensed | Copyright © 2020-present LinQin
 ---
 
-# About Me<Badge text="Updating" type="tip" vertical="top"/> 
+# About Me<Badge text="Updating" type="tip" vertical="top"/>
 
 ```
 {

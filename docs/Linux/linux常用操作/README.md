@@ -104,6 +104,12 @@ free -g
 
 ps -aux | sort -k4,4nr | head -5 倒排序使用内存数目
 
+###### sort
+
+sort -k 4 -r ：k指定那列 -r倒序
+
+sort -k 1,1 -n :第一列开始到第一列结束，排序 -n 去重
+
 ###### 查看文件大小
 
 > du -sh *

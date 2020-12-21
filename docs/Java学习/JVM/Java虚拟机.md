@@ -140,7 +140,7 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 
 将内存缩小为原来的一半。在对象存活率较高时，需要执行较多的复制操作，效率会变低。
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/9pYbGqawogONS9ggZDBr8P5c4Eb8LGwPOCGLKq3JsXs0M77FKrjWmCiaFLkVpswEC7et6gUrOxSYRSrtlbDA8EA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![1607565268068](https://i.loli.net/2020/12/21/y41bXDk7nVifUGY.png)
 
 **应用**
 
@@ -152,7 +152,7 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 
 标记过程仍然与“标记-清除”算法一样，但不是直接对可回收对象进行清理，而是让所有存活的对象向一端移动，然后直接清理掉边界以外的内存。
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/9pYbGqawogONS9ggZDBr8P5c4Eb8LGwPY7c6icenN2R2VBEyYYfhibK4OhfcVCV4VLbRmqS6iaDh6f5nia91X3ZImg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![1607565282129](https://i.loli.net/2020/12/21/yTx5bXioIQPN2HF.png)
 
 #### 分代收集算法
 
@@ -362,4 +362,3 @@ FileSystemClassLoader fileSystemClassLoader = new FileSystemClassLoader("D:\\IDE
         System.out.println(o1);
         System.out.println(o1.getClass().getClassLoader());
 ```
-

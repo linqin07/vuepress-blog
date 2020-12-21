@@ -67,13 +67,25 @@ requirepass <设置密码>
 bind 127.0.0.1 
 ```
 
-### 命令
+### 常用命令
 
   [知识点](https://www.cnblogs.com/Jtianlin/p/10259062.html)
+
+登陆使用密码
 
 ```sh
 ./redis-cli
 auth "123456"
+或者
+./redis-cli -h 127.0.0.1 -p 6379 -a myPassword
+选择数据库
+select 10
+```
+
+展现列表，可以使用通配符：
+
+```sh
+keys mykey*
 ```
 
 - 字符串类型：
@@ -85,18 +97,8 @@ auth "123456"
  // 单个get、set
  set key value ex 60
  get key
- // 多个
- mset k1 v1 k2 v2
- mget k1 k2
- // 删除多个
- del runoobkey k2 k1
- // 追加，没有key就新建
- append key value
- // 替换指定位置字符，替换key 值第四位为e
- SETRANGE key 4 e
+ 
 ```
-
-- 链表 link
 
 - [bitmap](https://www.jianshu.com/p/305e65de1b13)
 
