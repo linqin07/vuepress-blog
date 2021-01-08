@@ -181,6 +181,10 @@ module.exports = {
                "3.SPI接口动态加载"
             ],
             [
+               "/Java学习/基础知识/4.synchronized.md",
+               "4.synchronized"
+            ],
+            [
                "/Java学习/基础知识/泛型中占位符T和有什么区别.md",
                "泛型中占位符T和有什么区别"
             ]
@@ -323,6 +327,10 @@ module.exports = {
             [
                "/Linux/Kafka/kafka知识.md",
                "kafka知识"
+            ],
+            [
+               "/Linux/Kafka/Kafka零拷贝.md",
+               "Kafka零拷贝"
             ],
             [
                "/Linux/Kafka/linux安装kafka.md",
@@ -517,6 +525,10 @@ module.exports = {
             [
                "/Linux/系统操作/5.SNMP协议.md",
                "5.SNMP协议"
+            ],
+            [
+               "/Linux/系统操作/6.常用命令.md",
+               "6.常用命令"
             ]
          ]
       }
@@ -945,6 +957,16 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-代码生成/WebService.md",
                "WebService"
+            ]
+         ]
+      },
+      {
+         "title": "spring-boot-源码解析",
+         "collapsable": true,
+         "children": [
+            [
+               "/Spring-boot/spring-boot-源码解析/自动装配.md",
+               "自动装配"
             ]
          ]
       },

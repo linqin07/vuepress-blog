@@ -22,6 +22,12 @@
 
 #### 添加临时环境变量
 
+查看环境变量: `echo $PATH`
+
+export JAVA_HOME = /data/java
+
+追加 PATH：`export PATH=APath:$PATH`
+
 
 
 

@@ -37,7 +37,7 @@ printf "%x\n" pid
 
 ###### 3.使用`jstack`查看堆栈信息
 
-打印对应堆栈信息关键字后20行，`-l`表示打印额外的锁信息。`BLOCKED` 死锁关键字。
+打印对应堆栈信息关键字后20行，`-l`表示打印额外的锁信息。`BLOCKED` 死锁关键字。
 
 ```shell
 jstack -l pid | grep '00xx' -A 20 >> dump
@@ -51,7 +51,9 @@ jstack -l pid | grep '00xx' -A 20 >> dump
 ps -eLf|grep pid
 ```
 
+###### 5.查看内存信息
 
+ps p PID -L -o pcpu,pmem,pid,tid,time,tname,cmd
 
 ### jmap 命令
 

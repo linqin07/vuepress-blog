@@ -359,6 +359,7 @@ https://leetcode.com/problems/delete-duplicate-emails/description/
 连接查询：
 
 ```sql
+表与表关联，删除冗余表，对应的记录就是重复的了。
 DELETE p1
 FROM
     Person p1,
