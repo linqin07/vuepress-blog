@@ -110,4 +110,4 @@ public class TestController {
 
 访问地址 http://localhost:8080/swagger-ui.html 
 
-![swagger页面](https://i.loli.net/2019/06/15/5d0488d01bd2553415.jpg)
+![swagger页面](https://i.loli.net/2021/02/13/mglU5t6yhsu1HPX.png)

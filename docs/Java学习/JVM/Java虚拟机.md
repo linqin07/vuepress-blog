@@ -2,7 +2,7 @@
 
 ### 1.基本结构
 
-![JVM基本结构](https://i.loli.net/2020/06/27/7FzcspyS5OHbLXM.png)
+![JVM基本结构](https://i.loli.net/2021/02/13/pwOJYFQdvziBu7C.png)
 
 - 类加载子系统:
 
@@ -18,7 +18,7 @@
   java 堆实在 jvm 启动的时候就建立的，这块内存区域 存放了对象实例及数组(所有 new 的对象)也就是 Object object = new Object(); 这里 objec t只是一个引用是放在栈里面的，new Object() 被放在了堆内存里面， 
   由于现在收集器都是采用分代收集算法，堆被划分为`新生代`和`老年代`。新生代主要存储新创建的对象和尚未进入老年代的对象。老年代存储经过多次新生代GC(Minor GC)任然存活的对象。其中：刚创建的对象放在eden区（伊甸园），S0 和 S1 大小相当，可以相互转化。
 
-  ![堆划分](https://i.loli.net/2020/06/27/ijXPBaYQMUwN7Kn.png)
+  ![堆划分](https://i.loli.net/2021/02/13/ME5aLxBhJS3nvY4.png)
 
 - 垃圾回收系统
 

@@ -9,7 +9,7 @@ Debug方式启动程序，Shift+F9
 跳出函数 `Shift+F8`	
 resume（重新开始，继续），F9。会跳转到下一个断点，如果没有断点了，直接结束程序运行
 
-![debug列表参数](https://i.loli.net/2019/06/15/5d046ef74316845767.jpg)
+![debug列表参数](https://i.loli.net/2021/02/13/cBhXNl4ICdyO7gs.png)
 
 ###### 断点处右键菜单
 
@@ -31,7 +31,7 @@ resume（重新开始，继续），F9。会跳转到下一个断点，如果没
 
 所谓的断点回退，其实就是回退到上一个方法调用的开始处，在[IDEA](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==&mid=2247488006&idx=1&sn=d5c66d84724b1deebac6604749d04bf5&chksm=ebd62d2adca1a43cb136b5740621e25854537054b9b3cac7451fd21ea55c0fc247e07a49d8cd&scene=21#wechat_redirect)里测试无法一行一行地回退或回到到上一个断点处，而是回到上一个方法。Drop Frame 
 
-![Drop Frame](https://i.loli.net/2019/06/15/5d046ef90a7d484403.jpg)
+![Drop Frame](https://i.loli.net/2021/02/13/3iraDpUJ4oR71BC.png)
 
 
 
@@ -47,4 +47,4 @@ resume（重新开始，继续），F9。会跳转到下一个断点，如果没
 
 那是因为IDEA在Debug时默认阻塞级别是ALL，会阻塞其它线程，只有在当前调试线程走完时才会走其它线程。可以在View Breakpoints里选择Thread，然后点击Make Default设置为默认选项。
 
-![多线程调试](https://i.loli.net/2019/06/15/5d046ef9daa6132297.jpg)
+![多线程调试](https://i.loli.net/2021/02/13/veA2PMb3g4xFfio.gif)

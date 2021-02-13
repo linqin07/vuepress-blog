@@ -4,7 +4,7 @@ WebService 其实就是大家经常说的**接口**的一种实现方式。通�
 
 ### 1.IDEA构建WebService服务
 
-![webService](https://i.loli.net/2020/08/22/p6bUsD1MQt4OeYd.png)
+![webService](https://i.loli.net/2021/02/13/Sjpzs6tbIeiBa4H.png)
 
 完成后默认有一个 HelloWorld.java，启动访问 http://localhost:9000/HelloWorld`?wsdl` 可以看到 xml
 

@@ -42,7 +42,7 @@ curl -X POST -H 'Content-type:application/xml' -d @/tmp/data.xml https://apitest
 -X :指定什么类型请求get/post/put。。。
 -H :--hearder增加头信息 
 
-![xml信息](https://i.loli.net/2019/06/13/5d0235295e4fe33478.jpg)
+![xml信息](https://i.loli.net/2021/02/13/DXT4BaHMuZvsgKi.png)
 
 ###### post发送json
 
@@ -121,39 +121,3 @@ sort -k 1,1 -n :第一列开始到第一列结束，排序 -n 去重
 > yum install ntpdate
 >
 > ntpdate -u ntp.api.bz  上海时间
-
-###### yum
-
-`-y`表示免确认
-
-```shell
-yum install -y zip unzip
-```
-
-###### rpm
-
-搜索 jdk 的安装包。
-
-```shell
-rpm -qa | grep jdk
-```
-
-卸载原来的jdk， rpm -e --nodeps +名称（`--nodeps`强制 `-e`卸载）
-
-```shell
-rpm -e --nodeps java-1.7.0-openjdk-1.7.0.99-2.6.5.1.el6.i686
-```
-
-安装，注意版本位数。
-
-```shell
-rpm -ivh /home/jdk-8u144-linux-x64.rpm
-```
-
-```shell
-rpm -ivh xxxxx --nodeps --force              不检查依赖关系，强制安装
-```
-
-```shell
-rpm --force -ivh your-package.rpm  		     强制安装：安装出现...conflict with ... 有冲突可以加上
-```

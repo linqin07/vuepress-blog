@@ -28,7 +28,7 @@ sql 查询: `select version();`
 mysql --help|grep my.cnf
 ```
 
-![mysql配置加载顺序](https://i.loli.net/2020/02/25/qionUVumYPQvLzD.png)
+![mysql配置加载顺序](https://i.loli.net/2021/02/13/tDTqNabKUs41zWd.png)
 
 
 
@@ -213,6 +213,5 @@ from 后面加上 FORCE INDEX(indexName) 指定使用某个索引
 ```sql
 SELECT * FROM picc_old_ops FORCE INDEX(PRIMARY) WHERE class_id = '402880ea4313da4c014313da4cf70000'
 ```
-
 
 

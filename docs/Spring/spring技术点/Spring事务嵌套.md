@@ -195,7 +195,7 @@ public class Test {
 <aop:config expose-proxy="true"><!—xml风格支持-->   
 ```
  配置约束要加上以下配置， 同时加入aop类的jar。
- ![这里写图片描述](https://i.loli.net/2019/06/15/5d0487824ad3174997.jpg)
+ ![这里写图片描述](https://i.loli.net/2021/02/13/YAZqWIMDeJ71Fav.png)
 使用代理对象调用B方法。
 
 ```java

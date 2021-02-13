@@ -19,7 +19,7 @@
      yum -y install mysql57-community-release-el7-10.noarch.rpm
      ```
 
-     ![1581351596328](https://i.loli.net/2020/02/25/kfTJyGu618LAZFq.png)
+     <img src="https://i.loli.net/2020/02/25/kfTJyGu618LAZFq.png" alt="1581351596328"  />
 
 4. 安装 Mysql（这一步需要几分钟，静等安装）
 
@@ -53,7 +53,7 @@
      SHOW VARIABLES LIKE 'validate_password%'; 
      ```
 
-     ![1581413220671](https://i.loli.net/2020/02/25/hcKAFsg8DI5HOtl.png)
+     ![1581413220671](https://i.loli.net/2021/02/13/J7DtfjQVpvA9L8P.png)
 
       修改安全级别，密码长度
      	
@@ -103,4 +103,3 @@
     // 刷新权限
     flush privileges;
 ```
-
