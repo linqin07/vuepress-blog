@@ -47,24 +47,26 @@
 
   7. 修改密码
 
-     查看 mysql 初始的密码策略
+     如果忘记原始密码可以设置 /etc/my.cnf 文件，增加配置`skip-grant-tables`，再重启无需密码登陆，后面改好再把配置改回来即可。
 
+     查看 mysql 初始的密码策略
+     
      ```sql
-     SHOW VARIABLES LIKE 'validate_password%'; 
+SHOW VARIABLES LIKE 'validate_password%'; 
      ```
 
      ![1581413220671](https://i.loli.net/2021/02/13/J7DtfjQVpvA9L8P.png)
-
-      修改安全级别，密码长度
+     
+ 修改安全级别，密码长度
      	
-
+     
      ```sql
      set global validate_password_policy=LOW;
-     set global validate_password_length=6;
+set global validate_password_length=6;
      ```
 
      修改密码，为了提高安全性 mysql5.7 中 user 表的 password 字段已被取消，取而代之的事 authentication_string 字段
-
+     
      ```sql
      ALTER USER USER() IDENTIFIED BY '123456';
      // 或则
@@ -72,9 +74,9 @@
      // 或则
      set password for 'root'@'localhost'=password('123456');
      // 或则
-     update  mysql.user set authentication_string = password('123456') where User='root' and Host = '%';
+update  mysql.user set authentication_string = password('123456') where User='root' and Host = '%';
      ```
-
+     
      
 
 

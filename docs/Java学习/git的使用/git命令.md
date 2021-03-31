@@ -53,7 +53,7 @@ git pull origin master --allow-unrelated-histories
 
 ```
 git rm -r --cached .
-// 删除远程的某个文件夹
+// 删除add的某个文件夹
 git rm -r --cached target
 ```
 
@@ -124,5 +124,34 @@ git 既然支持 alias，可以通过配置 alias 来简化操作，编辑 .git/
 
 ```sh
 git [ignore|unignore|ignored] filename
+```
+
+
+
+### .gitignore
+
+git 目录创建文件 
+
+```
+touch .gitignore
+```
+
+常用配置
+
+```
+.idea
+**/target/*
+xxxfile
+xxxfloder
+*.log
+```
+
+.gitignore规则不生效，或者删除服务器上已经存在的忽略文件
+
+```
+git rm -r --cached .
+git add .
+git commit -m '忽略文件'
+git push
 ```
 

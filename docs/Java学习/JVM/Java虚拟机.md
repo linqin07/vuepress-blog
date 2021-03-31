@@ -1,3 +1,5 @@
+
+
 # Java 虚拟机
 
 ### 1.基本结构
@@ -362,3 +364,20 @@ FileSystemClassLoader fileSystemClassLoader = new FileSystemClassLoader("D:\\IDE
         System.out.println(o1);
         System.out.println(o1.getClass().getClassLoader());
 ```
+
+
+
+### 5.项目中使用类加载
+
+使用情景：引入多个es客户端，引入多个kafka客户端。下面举例子使用自定义类加载引入es多个版本。
+
+定义一个 common 模块最高层的接口，接口要实现es要做的所有事情集合，定义获取接口的工厂类，根据相应的参数判断选择加载不同模块的代码。
+
+定义模块 es6 去实现这个common的接口，maven 内引入直接实现即可，包括所有需要的es依赖都可以引入进来。该模块提供工厂提供对外使用的 EsClient，并且这个 EsClient 不能使用 spring 注入，外部使用也不能依赖引入es6模块，否则便是 AppClassLoader 加载的。
+
+web 模块里面使用 es 工厂类进行获取es操作。这样每个模块就解耦了。
+
+最后打包 es6 后，包含 lib 同时排除依赖的 common 模块(不然反射由于参数非此类加载器加载的类，即使同名也不是一个东西)。这些 lib 放到指定路径下面由类加载进行加载（不同命名空间）
+
+
+

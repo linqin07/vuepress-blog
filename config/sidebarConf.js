@@ -161,8 +161,18 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/Netty/网络编程.md",
-               "网络编程"
+               "/Java学习/Netty/Netty实战.md",
+               "Netty实战"
+            ]
+         ]
+      },
+      {
+         "title": "SkyWalking",
+         "collapsable": true,
+         "children": [
+            [
+               "/Java学习/SkyWalking/源码调试.md",
+               "源码调试"
             ]
          ]
       },
@@ -307,6 +317,10 @@ module.exports = {
                   [
                      "/Linux/ELK/ES/8.快照和恢复.md",
                      "8.快照和恢复"
+                  ],
+                  [
+                     "/Linux/ELK/ES/9.x-pack插件.md",
+                     "9.x-pack插件"
                   ]
                ]
             },
@@ -1132,6 +1146,10 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/复习题/软件工程师考证.md",
+         "软件工程师考证"
+      ],
       {
          "title": "进程多线程",
          "collapsable": true,
