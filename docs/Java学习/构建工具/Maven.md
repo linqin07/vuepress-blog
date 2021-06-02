@@ -43,3 +43,14 @@ mvn deploy:deploy-file
 -DrepositoryId=ivory_snapshot
 ```
 
+### 3.maven 指定配置文件
+
+`-s,--settings`
+
+`-gs,--global-settings`
+
+```sh
+mvn -gs /data/maven/setting.xml clean
+mvn gs /data/maven/setting.xml clean
+```
+

@@ -12,7 +12,9 @@ curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_setti
 
 2.清空索引
 
+数据大就很删除要很慢
+
 ```sh
-POST quality_control/my_type/_delete_by_query?refresh&slices=5&pretty { "query": { "match_all": {} } }
+curl -XPOST  -H "Content-Type: application/json"  192.168.32.188:9201/south_mgr_20210531/_doc/_delete_by_query -d  '{ "query": { "match_all": {} } }'
 ```
 

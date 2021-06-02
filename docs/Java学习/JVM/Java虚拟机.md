@@ -381,3 +381,8 @@ web 模块里面使用 es 工厂类进行获取es操作。这样每个模块就�
 
 
 
+项目结构：
+
+![image-20210507162905684](https://i.loli.net/2021/06/02/BmqnxGQXPel2cOy.png)
+
+项目地址

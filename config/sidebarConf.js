@@ -1,6 +1,4 @@
 module.exports = {
-   "/assets/": [
-   ],
    "/Java学习/": [
       [
          "/Java学习/",
@@ -348,6 +346,16 @@ module.exports = {
                   ]
                ]
             }
+         ]
+      },
+      {
+         "title": "Ftp",
+         "collapsable": true,
+         "children": [
+            [
+               "/Linux/Ftp/1.安装vsftp服务.md",
+               "1.安装vsftp服务"
+            ]
          ]
       },
       {

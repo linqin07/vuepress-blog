@@ -121,3 +121,7 @@ sort -k 1,1 -n :第一列开始到第一列结束，排序 -n 去重
 > yum install ntpdate
 >
 > ntpdate -u ntp.api.bz  上海时间
+>
+> 手动修改时间
+>
+> date -s "2007/04/14 13:58:00"
