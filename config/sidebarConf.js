@@ -669,20 +669,12 @@ module.exports = {
          ]
       },
       {
-         "title": "windows",
+         "title": "常用操作",
          "collapsable": true,
          "children": [
             [
-               "/Markdown入门到放弃/windows/1.移除快捷方式小箭头.md",
-               "1.移除快捷方式小箭头"
-            ],
-            [
-               "/Markdown入门到放弃/windows/2.更改电脑桌面路径.md",
-               "2.更改电脑桌面路径"
-            ],
-            [
-               "/Markdown入门到放弃/windows/3.解除宽带限速.md",
-               "3.解除宽带限速"
+               "/Markdown入门到放弃/常用操作/1.excel宏定义.md",
+               "1.excel宏定义"
             ]
          ]
       }
@@ -1039,10 +1031,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Spring-boot/定时任务/",
-               "README"
-            ],
-            [
                "/Spring-boot/定时任务/springboot定时任务的几种方式.md",
                "springboot定时任务的几种方式"
             ],
@@ -1231,6 +1219,28 @@ module.exports = {
          "SUMMARY"
       ],
       {
+         "title": "1.单例模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/1.单例模式/",
+               "README"
+            ],
+            [
+               "/设计模式/1.单例模式/双重校验锁.md",
+               "双重校验锁"
+            ],
+            [
+               "/设计模式/1.单例模式/懒汉式.md",
+               "懒汉式"
+            ],
+            [
+               "/设计模式/1.单例模式/饿汉式.md",
+               "饿汉式"
+            ]
+         ]
+      },
+      {
          "title": "1.策略模式",
          "collapsable": true,
          "children": [
@@ -1241,6 +1251,26 @@ module.exports = {
             [
                "/设计模式/1.策略模式/计算机USB例子.md",
                "计算机USB例子"
+            ]
+         ]
+      },
+      {
+         "title": "10.桥接模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/10.桥接模式/1.桥接模式.md",
+               "1.桥接模式"
+            ]
+         ]
+      },
+      {
+         "title": "2.抽象工厂模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/2.抽象工厂模式/1.抽象工厂.md",
+               "1.抽象工厂"
             ]
          ]
       },
@@ -1259,66 +1289,42 @@ module.exports = {
          ]
       },
       {
-         "title": "3.单例模式",
+         "title": "3.工厂模式",
          "collapsable": true,
          "children": [
             [
-               "/设计模式/3.单例模式/",
-               "README"
-            ],
-            [
-               "/设计模式/3.单例模式/双重校验锁.md",
-               "双重校验锁"
-            ],
-            [
-               "/设计模式/3.单例模式/懒汉式.md",
-               "懒汉式"
-            ],
-            [
-               "/设计模式/3.单例模式/饿汉式.md",
-               "饿汉式"
+               "/设计模式/3.工厂模式/1.工厂模式.md",
+               "1.工厂模式"
             ]
          ]
       },
       {
-         "title": "4.装饰者模式",
+         "title": "4.建造者模式",
          "collapsable": true,
          "children": [
             [
-               "/设计模式/4.装饰者模式/装饰者模式.md",
-               "装饰者模式"
-            ]
-         ]
-      },
-      {
-         "title": "5.建造者模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/5.建造者模式/建造者模式.md",
+               "/设计模式/4.建造者模式/建造者模式.md",
                "建造者模式"
             ]
          ]
       },
       {
-         "title": "6.代理模式",
+         "title": "5.原型模式",
          "collapsable": true,
          "children": [
             [
-               "/设计模式/6.代理模式/",
-               "README"
-            ],
+               "/设计模式/5.原型模式/1.原型模式.md",
+               "1.原型模式"
+            ]
+         ]
+      },
+      {
+         "title": "6.适配器模式",
+         "collapsable": true,
+         "children": [
             [
-               "/设计模式/6.代理模式/CGLIB动态的代理.md",
-               "CGLIB动态的代理"
-            ],
-            [
-               "/设计模式/6.代理模式/JDK动态代理.md",
-               "JDK动态代理"
-            ],
-            [
-               "/设计模式/6.代理模式/静态代理.md",
-               "静态代理"
+               "/设计模式/6.适配器模式/1.适配器模式.md",
+               "1.适配器模式"
             ]
          ]
       },
@@ -1337,6 +1343,26 @@ module.exports = {
          ]
       },
       {
+         "title": "7.装饰者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/7.装饰者模式/装饰者模式.md",
+               "装饰者模式"
+            ]
+         ]
+      },
+      {
+         "title": "8.外观模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/8.外观模式/1.外观模式.md",
+               "1.外观模式"
+            ]
+         ]
+      },
+      {
          "title": "8.观察者模式",
          "collapsable": true,
          "children": [
@@ -1347,6 +1373,28 @@ module.exports = {
             [
                "/设计模式/8.观察者模式/2.Guava EventBus实现.md",
                "2.Guava EventBus实现"
+            ]
+         ]
+      },
+      {
+         "title": "9.代理模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/9.代理模式/",
+               "README"
+            ],
+            [
+               "/设计模式/9.代理模式/CGLIB动态的代理.md",
+               "CGLIB动态的代理"
+            ],
+            [
+               "/设计模式/9.代理模式/JDK动态代理.md",
+               "JDK动态代理"
+            ],
+            [
+               "/设计模式/9.代理模式/静态代理.md",
+               "静态代理"
             ]
          ]
       }

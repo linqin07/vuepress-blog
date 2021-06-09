@@ -17,7 +17,7 @@ footer: MIT Licensed | Copyright © 2020-present LinQin
 
 # About Me<Badge text="Updating" type="tip" vertical="top"/>
 
-```
+```json
 {
     "Name": "LinQin",
     "Hobbies": ["运动", "游戏" , "学习"],
