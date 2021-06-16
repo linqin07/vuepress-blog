@@ -117,12 +117,12 @@ jdbc.driverLocation=F:/.m2/repository/mysql-connector-java/mysql-connector-java/
 ###### 4.生成
 
 - 直接 maven 插件生成。
-  ![mybatis-generator](https://i.loli.net/2019/06/15/5d0488d0631e077517.jpg)
+  ![mybatis-generator](F:\hexo\vuepress\docs\.vuepress\picBak\1557975447856.png)
 
 - 建立 maven 运行模式
   直接执行 maven 命令 mybatis-generator:generate -e
   或则生成一个可执行配置
-  ![Run/Debug](https://i.loli.net/2021/02/13/4g8y6zOnPQhmwYU.png)
+  ![Run/Debug](F:\hexo\vuepress\docs\.vuepress\picBak\1557975716580.png)
 
 
 

@@ -4,7 +4,7 @@
 
 kafka-manager[github地址](https://github.com/yahoo/kafka-manager/releases/tag/1.3.3.22)，找到对应的releases版本。
 
-![github版本](https://i.loli.net/2019/06/13/5d0235286488d28839.jpg)
+![github版本](F:\hexo\vuepress\docs\.vuepress\picBak\1551164365553.png)
 
 
 ```shell
@@ -65,4 +65,4 @@ kill -9 %1
 
 页面访问默认9000端口 [http://193.112.10.38:9000/](http://193.112.10.38:9000/)
 
-![kafka-manager](https://i.loli.net/2019/06/13/5d023528a8af351676.jpg)
+![kafka-manager](F:\hexo\vuepress\docs\.vuepress\picBak\1551168572056.png)

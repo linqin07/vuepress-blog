@@ -13,7 +13,7 @@
 
 下载**左边**的即可。
 
-![下载地址](https://i.loli.net/2019/06/10/5cfe1b270896085298.jpg)
+![下载地址](F:\hexo\vuepress\docs\.vuepress\picBak\1550052930676.png)
 
 #### 3.安装
 
@@ -47,7 +47,7 @@ npm -v
 
 **打开安装目录列表**
 
-![nodejs安装目录](https://i.loli.net/2019/06/10/5cfe1b277f52263878.jpg)
+![nodejs安装目录](F:\hexo\vuepress\docs\.vuepress\picBak\1550053690454.png)
 
 新增文件夹：`node_global` 及 `node_cache`，分别对应 prefix 和 cache 目录。
 
@@ -62,11 +62,11 @@ npm config set cache "D:\Program Files\nodejs\node_cache"
 
 > npm config ls
 
-![查看配置](https://i.loli.net/2019/06/10/5cfe1b27b6d4794206.jpg)
+![查看配置](F:\hexo\vuepress\docs\.vuepress\picBak\1550053905127.png)
 
 **修改环境变量 `node_global**`
 
-![修改环境变量](https://i.loli.net/2019/06/10/5cfe1b27f386866125.jpg)
+![修改环境变量](F:\hexo\vuepress\docs\.vuepress\picBak\1550054130507.png)
 
 查看是否修改环境变量成功：
 
@@ -76,7 +76,7 @@ npm config set cache "D:\Program Files\nodejs\node_cache"
 
 同时修改用户的环境变量，安装 nodejs 默认会生成用户的 npm 环境变量，并且顺序要自己修改的 node_global 在默认的 `C:\Users\用户名\AppData\Roaming\npm`之前。
 
-![1560742502250](https://i.loli.net/2019/06/17/5d070fa05593455324.jpg)
+![1560742502250](F:\hexo\vuepress\docs\.vuepress\picBak\1560742502250.png)
 
 ##### 修改方式二：
 
@@ -103,4 +103,3 @@ npm config set registry=http://registry.npm.taobao.org
 ```shell
 npm set global=true
 ```
-

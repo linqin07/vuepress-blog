@@ -9,7 +9,7 @@ Socket 创建一个新的 Thread。
 
 使用上了选择器，进行选择空闲的 socket 连接。
 
-![使用了选择器的非阻塞IO](https://i.loli.net/2021/03/31/EQor69SdpWsy2u5.png)
+![image-20210610185755023](assets/image-20210610185755023.png)
 
 ### 1.3 Netty 核心组件
 
@@ -203,7 +203,7 @@ public class EchoClient {
 图 3-1
 在高层次上说明了 Channel、EventLoop、Thread 以及 EventLoopGroup 之间的关系
 
-![netty模型处理关系](https://i.loli.net/2021/03/31/1hpDKGbzCMmtfqj.png)
+![image-20210610185745766](assets/image-20210610185745766.png)
 
 - 一个 EventLoopGroup 包含一个或者多个 EventLoop
 - 一个 EventLoop 在它的生命周期内只和一个 Thread 绑定
@@ -227,7 +227,7 @@ ChannelPipeline 为 ChannelHandler 链提供了容器。
 
 一个 ChannelPipeline 装着多个 ChannelHandler
 
-![image-20210220124610746](https://i.loli.net/2021/03/31/SelfMmTrw8tVoAp.png)
+![image-20210610185734660](assets/image-20210610185734660.png)
 
 经常使用到的适配器类
 
@@ -263,7 +263,7 @@ ByteBuf 维护了两个不同的索引：一个用于读取，一个用于写入
 writerIndex 也会被递增。名称以 read 或者 write 开头的 ByteBuf 方法，将会推进其对应的索引，而名称以 set 或
 者 get 开头的操作则不会。
 
-![ByteBuf数据结构](https://i.loli.net/2021/03/31/GWSqEs2Z9lFYtcI.png)
+![image-20210610185725190](assets/image-20210610185725190.png)
 
 ### 5.2 ByteBuf的使用模式
 
@@ -301,7 +301,7 @@ writerIndex 也会被递增。名称以 read 或者 write 开头的 ByteBuf 方�
   Netty 通过一个 ByteBuf 子类——CompositeByteBuf ——实现了这个模式，它提供了一
   个将多个缓冲区表示为单个合并缓冲区的虚拟表示。
 
-  ![image-20210226125517009](https://i.loli.net/2021/03/31/bVrDpBvzgNqAesj.png)
+  ![image-20210610185717582](assets/image-20210610185717582.png)
 
   
 
@@ -355,7 +355,7 @@ writerIndex 也会被递增。名称以 read 或者 write 开头的 ByteBuf 方�
 如果你认为ChannelPipeline是一个拦截流经Channel的入站和出站事件的Channel-
 Handler 实例链
 
-![image-20210226171149682](https://i.loli.net/2021/03/31/KH6I8ithfrTS5cA.png)
+![image-20210610185708024](assets/image-20210610185708024.png)
 
 通过调用 ChannePipeline 上的相关方法， ChannelHandler 可以添加、删除或者替换其他
 的 ChannelHandler，从而实时地修改 ChannelPipeline 的布局。（它也可以将它自己从

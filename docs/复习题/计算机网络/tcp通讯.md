@@ -1,6 +1,6 @@
 #### 1.三次握手
 
-![三次握手](https://i.loli.net/2019/06/15/5d048e58181cf29786.jpg)
+![三次握手](F:\hexo\vuepress\docs\.vuepress\picBak\1551336200138.png)
 
 1):建立连接后的ACK必须等于1
 2):SYN表示建立连接的同步序号。
@@ -23,7 +23,7 @@
 
 #### 2.四次挥手
 
-![四次挥手](https://i.loli.net/2019/06/15/5d048e58590ff80224.jpg)
+![四次挥手](F:\hexo\vuepress\docs\.vuepress\picBak\1551336573070.png)
 
 1):客户端请求时可能服务端数据没传完，所以先回复一个确认收到关闭请求的报文
 

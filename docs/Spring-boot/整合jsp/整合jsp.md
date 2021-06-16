@@ -38,7 +38,7 @@ spring.mvc.view.suffix:.jsp
 
 ##### 3.新建文件夹
 
-![1549090961408](https://i.loli.net/2019/06/15/5d0488e2a92af10547.jpg)
+![1549090961408](F:\hexo\vuepress\docs\.vuepress\picBak\1549090961408.png)
 
 
 
@@ -71,23 +71,23 @@ public class Index {
 
 
 
-![1549093333322](https://i.loli.net/2019/06/15/5d0488e2e110742481.jpg)
+![1549093333322](F:\hexo\vuepress\docs\.vuepress\picBak\1549093333322.png)
 
 
 
 异常情况：有时我们创建项目是使用model创建的。正常启动还是无法访问到jsp页面。如果main方法所在的项目是maven的子模块项目（如 Main-Parent项目中，包含maven-A子模块，正好main方法就在maven-A 模块中）则main方法运行，无法访问jsp。
 
-![1549093522934](https://i.loli.net/2019/06/15/5d0488e32840e79057.jpg)
+![1549093522934](F:\hexo\vuepress\docs\.vuepress\picBak\1549093522934.png)
 
 解决方法：
 
 1. 设置idea的工作路径。
 
-   ![1549093884246](https://i.loli.net/2019/06/15/5d0488e39281237886.jpg)
+   ![1549093884246](F:\hexo\vuepress\docs\.vuepress\picBak\1549093884246.png)
 
 2. 使用maven的插件启动
 
-![1549093962474](https://i.loli.net/2019/06/15/5d0488e408abc60075.jpg)
+![1549093962474](F:\hexo\vuepress\docs\.vuepress\picBak\1549093962474.png)
 
 
 

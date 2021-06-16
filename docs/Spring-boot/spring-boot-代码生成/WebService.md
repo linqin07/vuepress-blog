@@ -4,7 +4,7 @@ WebService 其实就是大家经常说的**接口**的一种实现方式。通�
 
 ### 1.IDEA构建WebService服务
 
-![webService](https://i.loli.net/2021/02/13/Sjpzs6tbIeiBa4H.png)
+![webService](F:\hexo\vuepress\docs\.vuepress\picBak\1597728150753.png)
 
 完成后默认有一个 HelloWorld.java，启动访问 http://localhost:9000/HelloWorld`?wsdl` 可以看到 xml
 

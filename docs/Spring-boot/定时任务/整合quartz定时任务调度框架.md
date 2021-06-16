@@ -351,7 +351,7 @@ public class Task1 implements Job {
 
 根据对应的业务在业务service里面调用quartz管理类
 
-![业务service](https://i.loli.net/2019/06/15/5d0488d189da250996.jpg)
+![业务service](F:\hexo\vuepress\docs\.vuepress\picBak\1550226366608.png)
 
 
 

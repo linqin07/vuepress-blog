@@ -19,7 +19,7 @@
      yum -y install mysql57-community-release-el7-10.noarch.rpm
      ```
 
-     <img src="https://i.loli.net/2020/02/25/kfTJyGu618LAZFq.png" alt="1581351596328"  />
+     ![image-20210610214141823](assets/image-20210610214141823.png)
 
 4. 安装 Mysql（这一步需要几分钟，静等安装）
 
@@ -43,7 +43,7 @@
      grep 'password' /var/log/mysqld.log
      ```
 
-     ![1581351778874](https://i.loli.net/2020/02/25/DLh2O8YoJHTQf3y.png)
+     ![1581351778874](F:\hexo\vuepress\docs\.vuepress\picBak\1581351778874.png)
 
   7. 修改密码
 
@@ -55,14 +55,18 @@
 SHOW VARIABLES LIKE 'validate_password%'; 
      ```
 
-     ![1581413220671](https://i.loli.net/2021/02/13/J7DtfjQVpvA9L8P.png)
+     ![1581413220671](F:\hexo\vuepress\docs\.vuepress\picBak\1581413220671.png)
      
+
  修改安全级别，密码长度
      	
      
      ```sql
      set global validate_password_policy=LOW;
 set global validate_password_length=6;
+
+     ```
+
      ```
 
      修改密码，为了提高安全性 mysql5.7 中 user 表的 password 字段已被取消，取而代之的事 authentication_string 字段
@@ -92,7 +96,7 @@ update  mysql.user set authentication_string = password('123456') where User='ro
       select host, user from user;
       ```
 
-      ![1581493230599](https://i.loli.net/2020/02/25/NriRopsdCkJ25X6.png)
+      ![1581493230599](F:\hexo\vuepress\docs\.vuepress\picBak\1581493230599.png)
 
 ​	
 

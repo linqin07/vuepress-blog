@@ -4,7 +4,7 @@
 
 [下载二进制包](http://kafka.apache.org/downloads)
 
-![下载二进制包](https://i.loli.net/2019/06/13/5d0235292fb1430282.jpg)
+![下载二进制包](F:\hexo\vuepress\docs\.vuepress\picBak\1551084352010.png)
 
 #### 2.解压
 

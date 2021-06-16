@@ -2,7 +2,7 @@
 
 备份当前修改。还原到pull状态。同步后再把修改写入操作。
 
-![stash changes](https://i.loli.net/2021/02/13/yzeLcsHQX9olJbR.png)
+![image-20210610185018697](assets/image-20210610185018697.png)
 
 unstash changes把修改的同步到代码里。
 
@@ -10,7 +10,7 @@ unstash changes把修改的同步到代码里。
 
 还原提交
 
-![1568119600136](https://i.loli.net/2019/09/21/QZLCYScM5uaAreJ.png)
+![image-20210610184859051](assets/image-20210610184859051.png)
 
 --mixed 
 意思是：不删除工作空间改动代码，撤销commit，并且撤销git add . 操作
@@ -34,13 +34,13 @@ unstash changes把修改的同步到代码里。
 2. 查看shelve，打开version control面板，点开shelf
 3. unshelve，在面板里选择你需要unshelve的条目即可
 
-![1568120353610](https://i.loli.net/2019/09/21/i4Ufak6KSmB5Ngv.png)
+![image-20210610184912135](assets/image-20210610184912135.png)
 
 ### 变基操作
 
 #### 普通变基
 
-![Rebase 操作](https://i.loli.net/2020/03/27/6WvMVGQ1iKhzHOq.png)
+![image-20210610184936139](assets/image-20210610184936139.png)
 
 Checkout and Rebase onto Current  合并当前分支 (dev) 的修改 提交到 master 并且检出到 master
 

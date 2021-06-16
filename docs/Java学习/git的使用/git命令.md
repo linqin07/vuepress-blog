@@ -10,7 +10,7 @@
 
 ### Git的工作流程
 
-![图片来源网络](https://i.loli.net/2019/06/15/5d046ed9363b121722.jpg)
+https://gitee.com/linqin07/pic/raw/master/1552467555151.png
 
 Git add
 添加到缓存里面
@@ -154,4 +154,3 @@ git add .
 git commit -m '忽略文件'
 git push
 ```
-

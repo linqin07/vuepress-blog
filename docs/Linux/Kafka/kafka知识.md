@@ -10,7 +10,7 @@ Segment 被译为段，将 Partition 进一步细分为若干个 segment，每�
 
 **生产者(Producers)** 生产者发送到一个特定的Topic的分区上，消息将会按照它们发送的顺序依次加入，也就是说，如果一个消息M1和M2使用相同的producer发送，M1先发送，那么M1将比M2的offset低，并且优先的出现在日志中
 
-![screenshot](https://i.loli.net/2019/06/13/5d023528e574f48050.jpg)
+![screenshot](F:\hexo\vuepress\docs\.vuepress\picBak\KmCudlf7D-OAEjy8AABoxGLnMI4173.png)
 
 **消费者组 （consumer group）**`队列`：包含一个或者多个消费者，按在名称命名。
 
@@ -120,4 +120,3 @@ Kafka 通常根据时间来决定数据可以保留多久。默认使用 log.ret
 broker 通过设置 `message.max.bytes` 参数来限制单个消息的大小，默认是 1000 000， 也就是 1MB，如果生产者尝试发送的消息超过这个大小，不仅消息不会被接收，还会收到 broker 返回的错误消息。跟其他与字节相关的配置参数一样，该参数指的是压缩后的消息大小，也就是说，只要压缩后的消息小于 mesage.max.bytes，那么消息的实际大小可以大于这个值
 
 这个值对性能有显著的影响。值越大，那么负责处理网络连接和请求的线程就需要花越多的时间来处理这些请求。它还会增加磁盘写入块的大小，从而影响 IO 吞吐量。
-
