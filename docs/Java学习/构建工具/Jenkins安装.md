@@ -36,8 +36,8 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 [点击搜索下载插件](https://plugins.jenkins.io/)
 
-![下载插件](F:\hexo\vuepress\docs\.vuepress\picBak\1604631866505.png)
+![1604631866505.png](https://gitee.com/linqin07/pic/raw/master/1604631866505.png)
 
 导入，最后安装完成的插件会在 `~.jenkins/plugins` 里面，离线安装可以复制这个新增的文件到内网即可。
 
-![导入](F:\hexo\vuepress\docs\.vuepress\picBak\1604631978975.png)
+![1604631978975.png](https://gitee.com/linqin07/pic/raw/master/1604631978975.png)

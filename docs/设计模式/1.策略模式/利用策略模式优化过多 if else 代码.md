@@ -8,7 +8,7 @@
 
 在上一个计算机例子中。我们在业务中的使用如下，根据对应页面的输入来选择对应的实现类。
 
-![项目结构](F:\hexo\vuepress\docs\.vuepress\picBak\1549871155469.png)
+![1549871155469.png](https://gitee.com/linqin07/pic/raw/master/1549871155469.png)
 
 ```java
 @RestController
@@ -48,7 +48,7 @@ public class TestController {
 
 新增三个类：
 
-![新增类](F:\hexo\vuepress\docs\.vuepress\picBak\1549874918628.png)
+![1549874918628.png](https://gitee.com/linqin07/pic/raw/master/1549874918628.png)
 
 
 

@@ -2,7 +2,7 @@
 
 1、在IntelliJ IDEA的run/debug configuration中增加一个remote类型的配置
 
-![](F:\hexo\vuepress\docs\.vuepress\picBak\remote-debug.gif)
+![remote-debug.gif](https://gitee.com/linqin07/pic/raw/master/remote-debug.gif)
 
 
 
@@ -22,7 +22,7 @@ Listening for transport dt_socket at address: 5005
 
 （ps：启动应用是卡着，点击debug后才能启动应用完成！）
 
-![1554988102257](F:\hexo\vuepress\docs\.vuepress\picBak\1554988102257.png)
+![1554988102257.png](https://gitee.com/linqin07/pic/raw/master/1554988102257.png)
 
 
 

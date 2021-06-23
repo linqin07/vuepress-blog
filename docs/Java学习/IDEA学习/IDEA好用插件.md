@@ -12,9 +12,9 @@
 
 自定义日志颜色，idea控制台可以彩色显示各种级别的log，安装完成后，在console中右键就能打开。
 
-![1556379112030](F:\hexo\vuepress\docs\.vuepress\picBak\1556379112030.png)
+![1556379112030.png](https://gitee.com/linqin07/pic/raw/master/1556379112030.png)
 
-![1556379130150](F:\hexo\vuepress\docs\.vuepress\picBak\1556379130150.png)
+![1556379130150.png](https://gitee.com/linqin07/pic/raw/master/1556379130150.png)
 
 ### 6.GenerateAllSetter
 
@@ -26,7 +26,7 @@ idea背景修改插件，让你的idea与众不同，可以设置自己喜欢的
 
 安装成功之后重启，菜单栏的VIew标签>点击Set Background Image(没安装插件是没有这个标签的)，在弹框中路由选择到本地图片，点击OK即可。
 
-![1556379188546](F:\hexo\vuepress\docs\.vuepress\picBak\1556379188546.png)
+![1556379188546.png](https://gitee.com/linqin07/pic/raw/master/1556379188546.png)
 
 ### 9.Alibaba Java Coding Guidelines
 
@@ -34,7 +34,7 @@ idea背景修改插件，让你的idea与众不同，可以设置自己喜欢的
 
 根据Atom的插件activate-power-mode的效果移植到IDEA上
 
-![img](F:\hexo\vuepress\docs\.vuepress\picBak\640.gif)
+![640.gif](https://gitee.com/linqin07/pic/raw/master/640.gif)
 
 写代码是整个屏幕都在抖动，activate-power-mode是白的的，Power mode II色彩更酷炫点。
 

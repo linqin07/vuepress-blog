@@ -231,4 +231,4 @@ WebSocket 使得客户端和服务器之间的数据交换变得更加简单，�
 
 ##### 效果图
 
-![1564376616998](F:\hexo\vuepress\docs\.vuepress\picBak\1564376616998.png)
+![1564376616998.png](https://gitee.com/linqin07/pic/raw/master/1564376616998.png)

@@ -4,7 +4,7 @@
 
 [下载二进制包](http://kafka.apache.org/downloads)
 
-![下载二进制包](F:\hexo\vuepress\docs\.vuepress\picBak\1551084352010.png)
+![1551084352010.png](https://gitee.com/linqin07/pic/raw/master/1551084352010.png)
 
 #### 2.解压
 

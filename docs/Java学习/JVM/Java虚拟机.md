@@ -4,7 +4,7 @@
 
 ### 1.基本结构
 
-![JVM基本结构](F:\hexo\vuepress\docs\.vuepress\picBak\1586420423350.png)
+![1586420423350.png](https://gitee.com/linqin07/pic/raw/master/1586420423350.png)
 
 - 类加载子系统:
 
@@ -20,7 +20,7 @@
   java 堆实在 jvm 启动的时候就建立的，这块内存区域 存放了对象实例及数组(所有 new 的对象)也就是 Object object = new Object(); 这里 objec t只是一个引用是放在栈里面的，new Object() 被放在了堆内存里面， 
   由于现在收集器都是采用分代收集算法，堆被划分为`新生代`和`老年代`。新生代主要存储新创建的对象和尚未进入老年代的对象。老年代存储经过多次新生代GC(Minor GC)任然存活的对象。其中：刚创建的对象放在eden区（伊甸园），S0 和 S1 大小相当，可以相互转化。
 
-  ![堆划分](F:\hexo\vuepress\docs\.vuepress\picBak\1586420581769.png)
+![1586420581769.png](https://gitee.com/linqin07/pic/raw/master/1586420581769.png)
 
 - 垃圾回收系统
 
@@ -46,7 +46,7 @@
 
 
 
-![堆概念图](F:\hexo\vuepress\docs\.vuepress\picBak\1586428096983.png)
+![1586428096983.png](https://gitee.com/linqin07/pic/raw/master/1586428096983.png)
 
 新生代为堆（heap）的 3/8 ，持久代一般固定 64M，最大非堆内存为 128M。
 
@@ -94,7 +94,7 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 - 方法区中类静态属性引用的对象
 - 方法区中的常量引用的对象
 
-![image-20210616124512778](assets/image-20210616124512778.png)
+![image-20210616124512778.png](https://gitee.com/linqin07/pic/raw/master/image-20210616124512778.png)
 
 ### 3. 方法区的回收
 
@@ -128,7 +128,7 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 
 空间问题：标记清除之后会`产生大量不连续的内存碎片`，空间碎片太多可能导致，程序分配较大对象时无法找到足够的连续内存，不得不提前出发另一次垃圾收集动作。
 
-![image-20210616124530223](assets/image-20210616124530223.png)
+![image-20210616124530223.png](https://gitee.com/linqin07/pic/raw/master/image-20210616124530223.png)
 
 #### 复制算法（Copying）- 新生代
 
@@ -142,7 +142,7 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 
 将内存缩小为原来的一半。在对象存活率较高时，需要执行较多的复制操作，效率会变低。
 
-![image-20210610185436515](assets/image-20210610185436515.png)
+![image-20210610185436515.png](https://gitee.com/linqin07/pic/raw/master/image-20210610185436515.png)
 
 **应用**
 
@@ -154,7 +154,7 @@ Java 虚拟机使用该算法来判断对象是否可被回收，GC Roots 一般
 
 标记过程仍然与“标记-清除”算法一样，但不是直接对可回收对象进行清理，而是让所有存活的对象向一端移动，然后直接清理掉边界以外的内存。
 
-![image-20210610185450582](assets/image-20210610185450582.png)
+![image-20210610185450582.png](https://gitee.com/linqin07/pic/raw/master/image-20210610185450582.png)
 
 #### 分代收集算法
 
@@ -250,7 +250,7 @@ obj = null;
 
 下图展示了类加载器之间的层次关系，称为双亲委派模型（Parents Delegation Model）。该模型要求除了顶层的启动类加载器外，其它的类加载器都要有自己的父类加载器。这里的父子关系一般通过组合关系（Composition）来实现，而不是继承关系（Inheritance）。
 
-![image-20210616124551204](assets/image-20210616124551204.png)
+![image-20210616124551204.png](https://gitee.com/linqin07/pic/raw/master/image-20210616124551204.png)
 
 ### 1. 工作过程
 
@@ -383,6 +383,6 @@ web 模块里面使用 es 工厂类进行获取es操作。这样每个模块就�
 
 项目结构：
 
-![image-20210610185617847](assets/image-20210610185617847.png)
+![image-20210610185617847.png](https://gitee.com/linqin07/pic/raw/master/image-20210610185617847.png)
 
 项目地址

@@ -2,7 +2,7 @@
 
 ## 读取文件数据操作
 
-![image-20210610213620832](assets/image-20210610213620832.png)
+![image-20210610213620832.png](https://gitee.com/linqin07/pic/raw/master/image-20210610213620832.png)
 
 传统的读取文件数据并发送到网络的步骤如下：
 

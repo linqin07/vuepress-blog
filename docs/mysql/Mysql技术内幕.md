@@ -28,7 +28,7 @@ sql 查询: `select version();`
 mysql --help|grep my.cnf
 ```
 
-![mysql配置加载顺序](F:\hexo\vuepress\docs\.vuepress\picBak\1582180000844.png)
+![1582180000844.png](https://gitee.com/linqin07/pic/raw/master/1582180000844.png)
 
 
 
@@ -42,7 +42,7 @@ mysql --help|grep my.cnf
 
 ##### 2.1 InnoDB 存储引擎
 
-![1583743587944](F:\hexo\vuepress\docs\.vuepress\picBak\1583743587944.png)
+![1583743587944.png](https://gitee.com/linqin07/pic/raw/master/1583743587944.png)
 
 后台线程负责刷新内存池中的数据。此外将修改的数据刷新到磁盘文件，同时保证数据库发生异常 InnoDB 能恢复到正常的运行状态。
 
@@ -79,7 +79,7 @@ mysql --help|grep my.cnf
    info)、数据字典信息(data dictionary) 等。不能简单地认为，缓冲池只是缓存索引页和
    数据页，它们只是占缓冲池很大的一部分而已。
 
-   ![内存数据对象](F:\hexo\vuepress\docs\.vuepress\picBak\1583745883087.png)
+![1583745883087.png](https://gitee.com/linqin07/pic/raw/master/1583745883087.png)
 
 2. **LRU list、Free List、Flush List**
 
@@ -159,7 +159,7 @@ mysql --help|grep my.cnf
   左子树的键值总是小于根的键值，右子树的键值总是大于根的
   键值。因此可以通过中序遍历得到键值的排序输出 2、3、5、6、7、8。
 
-  ![1592044713668](F:\hexo\vuepress\docs\.vuepress\picBak\1592044713668.png)
+![1592044713668.png](https://gitee.com/linqin07/pic/raw/master/1592044713668.png)
 
 ##### B+ 树：
 
@@ -169,7 +169,7 @@ mysql --help|grep my.cnf
 
 下面是一棵高度为 2 的 B+ 树，每页存放 4 条记录。上面一层叫 `leaf page`叶子页，下面的是`index page`索引页，插入删除操作都有可能对 leaf page 和 index page 进行拆分。[ B+树的插入与删除](https://www.cnblogs.com/xibuhaohao/p/10910947.html)
 
-![B+树](F:\hexo\vuepress\docs\.vuepress\picBak\1598076649896.png)
+![1598076649896.png](https://gitee.com/linqin07/pic/raw/master/1598076649896.png)
 
 ##### B+树索引
 

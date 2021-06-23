@@ -1,6 +1,6 @@
 #### 项目结构
 
-![项目结构](F:\hexo\vuepress\docs\.vuepress\picBak\1554094154356.png)
+![1554094154356.png](https://gitee.com/linqin07/pic/raw/master/1554094154356.png)
 
 `ResourceUtils`读取的方式只能读到 jar 包的目录充当classpath。
 

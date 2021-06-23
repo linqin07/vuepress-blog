@@ -57,7 +57,7 @@ B有异常，都不能添加。
 
 ### 动态代理的特性[^参考]
 首先我们看一下一个简单的动态代理实现方式：
-![这里写图片描述](F:\hexo\vuepress\docs\.vuepress\picBak\20180316154717803.png)
+![20180316154717803.png](https://gitee.com/linqin07/pic/raw/master/20180316154717803.png)
 
 `接口`
 
@@ -195,7 +195,7 @@ public class Test {
 <aop:config expose-proxy="true"><!—xml风格支持-->   
 ```
  配置约束要加上以下配置， 同时加入aop类的jar。
- ![这里写图片描述](F:\hexo\vuepress\docs\.vuepress\picBak\20180316162207780.png)
+![20180316162207780.png](https://gitee.com/linqin07/pic/raw/master/20180316162207780.png)
 使用代理对象调用B方法。
 
 ```java
@@ -232,9 +232,9 @@ public class Test {
 </dependency>
 ```
 添加注解：
-![这里写图片描述](F:\hexo\vuepress\docs\.vuepress\picBak\20180316160757898.png)
+![20180316160757898.png](https://gitee.com/linqin07/pic/raw/master/20180316160757898.png)
 修改原有代码的执行方式为：
-![这里写图片描述](F:\hexo\vuepress\docs\.vuepress\picBak\20180316160742624.png)
+![20180316160742624.png](https://gitee.com/linqin07/pic/raw/master/20180316160742624.png)
 
  - 通过ApplicationContext上下文进行解决
 
