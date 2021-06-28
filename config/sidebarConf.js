@@ -870,6 +870,10 @@ module.exports = {
          "/Spring-boot/SUMMARY.md",
          "SUMMARY"
       ],
+      [
+         "/Spring-boot/Graphql.md",
+         "Graphql"
+      ],
       {
          "title": "spring-boot-druid",
          "collapsable": true,

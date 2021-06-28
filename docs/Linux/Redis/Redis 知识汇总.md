@@ -87,6 +87,7 @@ select 10
 ```sh
 keys mykey*
 ```
+删除  del key1 key2
 
 - 字符串类型：
 
