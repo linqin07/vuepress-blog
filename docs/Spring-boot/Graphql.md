@@ -320,7 +320,7 @@ query alias($paramList: [UserCondition]) {
 
 - 目录结构
 
-  <img src="../assets/image-20210625174530553.png" alt="graphql目录" style="zoom:67%;" />
+![image-20210701164845652.png](https://gitee.com/linqin07/pic/raw/master/image-20210701164845652.png)
 
 ### 自定义标量类型
 
@@ -434,4 +434,3 @@ input UserCondition {
     nickname: String!
 }
 ```
-

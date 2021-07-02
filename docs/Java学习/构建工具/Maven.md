@@ -35,12 +35,12 @@ maven 的 setting 文件要配置好对应的私服地址
 
 ```sh
 mvn deploy:deploy-file 
--DgroupId=com.shsnc 
+-DgroupId=com.xxx
 -DartifactId=base-common 
 -Dversion=1.0.0-SNAPSHOT 
 -Dpackaging=jar -Dfile=D:/base-common-1.0.0-SNAPSHOT.Jar 
--Durl=http://192.168.13.51:8081/repository/ivory_snapshot 
--DrepositoryId=ivory_snapshot
+-Durl=http://192.168.13.51:8081/repository/my_snapshot 
+-DrepositoryId=my_snapshot
 ```
 
 ### 3.maven 指定配置文件
