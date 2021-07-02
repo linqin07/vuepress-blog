@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress</title>
+    <meta name="description" content="">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon-32x32.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/assets/css/0.styles.a4dc7dfb.css" as="style"><link rel="preload" href="/assets/js/app.e68c5893.js" as="script"><link rel="preload" href="/assets/js/3.fa14571d.js" as="script"><link rel="preload" href="/assets/js/186.666a0dcd.js" as="script"><link rel="preload" href="/assets/js/4.9adf2657.js" as="script"><link rel="prefetch" href="/assets/js/10.2549b7d5.js"><link rel="prefetch" href="/assets/js/100.273e50c5.js"><link rel="prefetch" href="/assets/js/101.098e5446.js"><link rel="prefetch" href="/assets/js/102.dcf48d5e.js"><link rel="prefetch" href="/assets/js/103.bf127002.js"><link rel="prefetch" href="/assets/js/104.bf7de545.js"><link rel="prefetch" href="/assets/js/105.e9892759.js"><link rel="prefetch" href="/assets/js/106.f012ffc9.js"><link rel="prefetch" href="/assets/js/107.9a9f4a28.js"><link rel="prefetch" href="/assets/js/108.ad59e3d4.js"><link rel="prefetch" href="/assets/js/109.7c146a04.js"><link rel="prefetch" href="/assets/js/11.6ecf51ec.js"><link rel="prefetch" href="/assets/js/110.c2cfeb7c.js"><link rel="prefetch" href="/assets/js/111.d23003ff.js"><link rel="prefetch" href="/assets/js/112.b44785e2.js"><link rel="prefetch" href="/assets/js/113.c142847b.js"><link rel="prefetch" href="/assets/js/114.5a80a3fc.js"><link rel="prefetch" href="/assets/js/115.814f801b.js"><link rel="prefetch" href="/assets/js/116.c6def441.js"><link rel="prefetch" href="/assets/js/117.4a374fa7.js"><link rel="prefetch" href="/assets/js/118.cb29f406.js"><link rel="prefetch" href="/assets/js/119.a8f06beb.js"><link rel="prefetch" href="/assets/js/12.36b0b04b.js"><link rel="prefetch" href="/assets/js/120.885c1100.js"><link rel="prefetch" href="/assets/js/121.704bd9ee.js"><link rel="prefetch" href="/assets/js/122.8d696938.js"><link rel="prefetch" href="/assets/js/123.74559f4e.js"><link rel="prefetch" href="/assets/js/124.219d5153.js"><link rel="prefetch" href="/assets/js/125.fa3f1cac.js"><link rel="prefetch" href="/assets/js/126.6132655d.js"><link rel="prefetch" href="/assets/js/127.0747483a.js"><link rel="prefetch" href="/assets/js/128.89b135e5.js"><link rel="prefetch" href="/assets/js/129.0ee595f8.js"><link rel="prefetch" href="/assets/js/13.cc931575.js"><link rel="prefetch" href="/assets/js/130.121ee09f.js"><link rel="prefetch" href="/assets/js/131.bf2d5032.js"><link rel="prefetch" href="/assets/js/132.692b6b61.js"><link rel="prefetch" href="/assets/js/133.28525b42.js"><link rel="prefetch" href="/assets/js/134.39d56e62.js"><link rel="prefetch" href="/assets/js/135.9d324525.js"><link rel="prefetch" href="/assets/js/136.ccf96810.js"><link rel="prefetch" href="/assets/js/137.ad5ee51a.js"><link rel="prefetch" href="/assets/js/138.e866de42.js"><link rel="prefetch" href="/assets/js/139.1afc7c92.js"><link rel="prefetch" href="/assets/js/14.44f05df9.js"><link rel="prefetch" href="/assets/js/140.823ce49c.js"><link rel="prefetch" href="/assets/js/141.19bc2acc.js"><link rel="prefetch" href="/assets/js/142.f1a374cd.js"><link rel="prefetch" href="/assets/js/143.2b7ed1cd.js"><link rel="prefetch" href="/assets/js/144.c8756706.js"><link rel="prefetch" href="/assets/js/145.c2a663c8.js"><link rel="prefetch" href="/assets/js/146.ba7fe160.js"><link rel="prefetch" href="/assets/js/147.5e5c5abe.js"><link rel="prefetch" href="/assets/js/148.accf55c9.js"><link rel="prefetch" href="/assets/js/149.a7ad4955.js"><link rel="prefetch" href="/assets/js/15.8c7e0c4c.js"><link rel="prefetch" href="/assets/js/150.6addcac2.js"><link rel="prefetch" href="/assets/js/151.62fc11b4.js"><link rel="prefetch" href="/assets/js/152.b01edfef.js"><link rel="prefetch" href="/assets/js/153.ddd5b516.js"><link rel="prefetch" href="/assets/js/154.0587242a.js"><link rel="prefetch" href="/assets/js/155.def073dd.js"><link rel="prefetch" href="/assets/js/156.4994d563.js"><link rel="prefetch" href="/assets/js/157.55835a6e.js"><link rel="prefetch" href="/assets/js/158.f083016b.js"><link rel="prefetch" href="/assets/js/159.6b5b5832.js"><link rel="prefetch" href="/assets/js/16.56527244.js"><link rel="prefetch" href="/assets/js/160.e69919e7.js"><link rel="prefetch" href="/assets/js/161.58247358.js"><link rel="prefetch" href="/assets/js/162.3a667ed0.js"><link rel="prefetch" href="/assets/js/163.e3da06fc.js"><link rel="prefetch" href="/assets/js/164.cd58269c.js"><link rel="prefetch" href="/assets/js/165.bae40757.js"><link rel="prefetch" href="/assets/js/166.8e49fd0a.js"><link rel="prefetch" href="/assets/js/167.da802cdb.js"><link rel="prefetch" href="/assets/js/168.2f4c9944.js"><link rel="prefetch" href="/assets/js/169.5e985b4d.js"><link rel="prefetch" href="/assets/js/17.1a0d3fa3.js"><link rel="prefetch" href="/assets/js/170.869a415d.js"><link rel="prefetch" href="/assets/js/171.2eb0a8bf.js"><link rel="prefetch" href="/assets/js/172.387916e8.js"><link rel="prefetch" href="/assets/js/173.56d8b878.js"><link rel="prefetch" href="/assets/js/174.8bbf1db9.js"><link rel="prefetch" href="/assets/js/175.ad1e867c.js"><link rel="prefetch" href="/assets/js/176.de2ec2da.js"><link rel="prefetch" href="/assets/js/177.6212db1a.js"><link rel="prefetch" href="/assets/js/178.a495780c.js"><link rel="prefetch" href="/assets/js/179.54f83612.js"><link rel="prefetch" href="/assets/js/18.03912ddc.js"><link rel="prefetch" href="/assets/js/180.8710ff7c.js"><link rel="prefetch" href="/assets/js/181.f4ef4702.js"><link rel="prefetch" href="/assets/js/182.d90cab54.js"><link rel="prefetch" href="/assets/js/183.505f6cea.js"><link rel="prefetch" href="/assets/js/184.e1957967.js"><link rel="prefetch" href="/assets/js/185.9d5202dd.js"><link rel="prefetch" href="/assets/js/187.b24be6d1.js"><link rel="prefetch" href="/assets/js/188.9f3f394a.js"><link rel="prefetch" href="/assets/js/189.cb8a8eb4.js"><link rel="prefetch" href="/assets/js/19.fa3e6759.js"><link rel="prefetch" href="/assets/js/190.d8de05f9.js"><link rel="prefetch" href="/assets/js/191.a0184f5a.js"><link rel="prefetch" href="/assets/js/192.6d42b445.js"><link rel="prefetch" href="/assets/js/193.9f738533.js"><link rel="prefetch" href="/assets/js/194.9bc806fe.js"><link rel="prefetch" href="/assets/js/195.f15ba892.js"><link rel="prefetch" href="/assets/js/196.f2a3e1ae.js"><link rel="prefetch" href="/assets/js/197.5007fd79.js"><link rel="prefetch" href="/assets/js/198.7bef16a1.js"><link rel="prefetch" href="/assets/js/199.20350c0b.js"><link rel="prefetch" href="/assets/js/20.361ce2f7.js"><link rel="prefetch" href="/assets/js/200.4bf2e018.js"><link rel="prefetch" href="/assets/js/201.e48891ef.js"><link rel="prefetch" href="/assets/js/202.b48c5906.js"><link rel="prefetch" href="/assets/js/203.341b1ebe.js"><link rel="prefetch" href="/assets/js/204.c0bdc36f.js"><link rel="prefetch" href="/assets/js/205.1b5b9df0.js"><link rel="prefetch" href="/assets/js/206.630eb7eb.js"><link rel="prefetch" href="/assets/js/207.9025e3fb.js"><link rel="prefetch" href="/assets/js/208.e8027b8b.js"><link rel="prefetch" href="/assets/js/209.652a0b8d.js"><link rel="prefetch" href="/assets/js/21.70f0b79f.js"><link rel="prefetch" href="/assets/js/210.2a0bccbe.js"><link rel="prefetch" href="/assets/js/211.c167d1f6.js"><link rel="prefetch" href="/assets/js/212.397108b4.js"><link rel="prefetch" href="/assets/js/213.bad35501.js"><link rel="prefetch" href="/assets/js/214.cf5a2551.js"><link rel="prefetch" href="/assets/js/215.89bc9bc4.js"><link rel="prefetch" href="/assets/js/216.0a28e22c.js"><link rel="prefetch" href="/assets/js/217.302d8062.js"><link rel="prefetch" href="/assets/js/218.41327fa2.js"><link rel="prefetch" href="/assets/js/219.fea30933.js"><link rel="prefetch" href="/assets/js/22.98248b77.js"><link rel="prefetch" href="/assets/js/220.c74ff341.js"><link rel="prefetch" href="/assets/js/221.b3fa48b0.js"><link rel="prefetch" href="/assets/js/222.4a202872.js"><link rel="prefetch" href="/assets/js/223.ef5ebded.js"><link rel="prefetch" href="/assets/js/224.3b66e1c3.js"><link rel="prefetch" href="/assets/js/225.d6bccbe4.js"><link rel="prefetch" href="/assets/js/226.158339e3.js"><link rel="prefetch" href="/assets/js/227.719c30c6.js"><link rel="prefetch" href="/assets/js/228.142e5f9f.js"><link rel="prefetch" href="/assets/js/229.3b2eba62.js"><link rel="prefetch" href="/assets/js/23.2076de4d.js"><link rel="prefetch" href="/assets/js/230.343afffe.js"><link rel="prefetch" href="/assets/js/231.d34f352e.js"><link rel="prefetch" href="/assets/js/232.082d44d9.js"><link rel="prefetch" href="/assets/js/233.a72f275a.js"><link rel="prefetch" href="/assets/js/234.47178c60.js"><link rel="prefetch" href="/assets/js/235.d715f581.js"><link rel="prefetch" href="/assets/js/236.b41288ed.js"><link rel="prefetch" href="/assets/js/237.4de8903a.js"><link rel="prefetch" href="/assets/js/238.6cd4a45c.js"><link rel="prefetch" href="/assets/js/239.358d6938.js"><link rel="prefetch" href="/assets/js/24.d5bb13e4.js"><link rel="prefetch" href="/assets/js/240.5bd8e145.js"><link rel="prefetch" href="/assets/js/241.1b99e234.js"><link rel="prefetch" href="/assets/js/242.2f5d4738.js"><link rel="prefetch" href="/assets/js/243.e0a55746.js"><link rel="prefetch" href="/assets/js/244.46477b6d.js"><link rel="prefetch" href="/assets/js/245.abe78cff.js"><link rel="prefetch" href="/assets/js/246.84ceffa1.js"><link rel="prefetch" href="/assets/js/247.44e787ad.js"><link rel="prefetch" href="/assets/js/248.3be7095b.js"><link rel="prefetch" href="/assets/js/249.b6a281f5.js"><link rel="prefetch" href="/assets/js/25.304fcf5e.js"><link rel="prefetch" href="/assets/js/26.d375a837.js"><link rel="prefetch" href="/assets/js/27.94df59c8.js"><link rel="prefetch" href="/assets/js/28.b23ec6b1.js"><link rel="prefetch" href="/assets/js/29.6f141192.js"><link rel="prefetch" href="/assets/js/30.fee57d9c.js"><link rel="prefetch" href="/assets/js/31.a95a197a.js"><link rel="prefetch" href="/assets/js/32.0f184060.js"><link rel="prefetch" href="/assets/js/33.62618a15.js"><link rel="prefetch" href="/assets/js/34.38b17ba3.js"><link rel="prefetch" href="/assets/js/35.b1409e4f.js"><link rel="prefetch" href="/assets/js/36.a3d064b4.js"><link rel="prefetch" href="/assets/js/37.c55be3d9.js"><link rel="prefetch" href="/assets/js/38.233b1392.js"><link rel="prefetch" href="/assets/js/39.13bc0264.js"><link rel="prefetch" href="/assets/js/40.46b15027.js"><link rel="prefetch" href="/assets/js/41.969aef87.js"><link rel="prefetch" href="/assets/js/42.ae6d19cd.js"><link rel="prefetch" href="/assets/js/43.5efec059.js"><link rel="prefetch" href="/assets/js/44.9f935657.js"><link rel="prefetch" href="/assets/js/45.74466bcf.js"><link rel="prefetch" href="/assets/js/46.1fde9d49.js"><link rel="prefetch" href="/assets/js/47.fd439b0f.js"><link rel="prefetch" href="/assets/js/48.c55d81a2.js"><link rel="prefetch" href="/assets/js/49.41c4ca7a.js"><link rel="prefetch" href="/assets/js/5.6ab12e93.js"><link rel="prefetch" href="/assets/js/50.8ee1a489.js"><link rel="prefetch" href="/assets/js/51.f922cb28.js"><link rel="prefetch" href="/assets/js/52.35ade0ad.js"><link rel="prefetch" href="/assets/js/53.fb3b72a6.js"><link rel="prefetch" href="/assets/js/54.38c2d2a3.js"><link rel="prefetch" href="/assets/js/55.687537d7.js"><link rel="prefetch" href="/assets/js/56.000e426c.js"><link rel="prefetch" href="/assets/js/57.23a9aef6.js"><link rel="prefetch" href="/assets/js/58.78ee4bea.js"><link rel="prefetch" href="/assets/js/59.e1763b0c.js"><link rel="prefetch" href="/assets/js/6.0fca53e0.js"><link rel="prefetch" href="/assets/js/60.2ddab75e.js"><link rel="prefetch" href="/assets/js/61.8e0eb7c0.js"><link rel="prefetch" href="/assets/js/62.3efc45d7.js"><link rel="prefetch" href="/assets/js/63.9ac6950f.js"><link rel="prefetch" href="/assets/js/64.454b891c.js"><link rel="prefetch" href="/assets/js/65.d80ec373.js"><link rel="prefetch" href="/assets/js/66.04e3a6ad.js"><link rel="prefetch" href="/assets/js/67.aecea5a2.js"><link rel="prefetch" href="/assets/js/68.881612e8.js"><link rel="prefetch" href="/assets/js/69.1eb3af2f.js"><link rel="prefetch" href="/assets/js/7.d906a144.js"><link rel="prefetch" href="/assets/js/70.eb4eeaeb.js"><link rel="prefetch" href="/assets/js/71.b5084071.js"><link rel="prefetch" href="/assets/js/72.de96185e.js"><link rel="prefetch" href="/assets/js/73.b88da07b.js"><link rel="prefetch" href="/assets/js/74.c4a13769.js"><link rel="prefetch" href="/assets/js/75.632a9950.js"><link rel="prefetch" href="/assets/js/76.e7e44556.js"><link rel="prefetch" href="/assets/js/77.cf9e48e2.js"><link rel="prefetch" href="/assets/js/78.75c42b68.js"><link rel="prefetch" href="/assets/js/79.361d0bf3.js"><link rel="prefetch" href="/assets/js/8.10c8fa8a.js"><link rel="prefetch" href="/assets/js/80.1b524d54.js"><link rel="prefetch" href="/assets/js/81.a51c4ecc.js"><link rel="prefetch" href="/assets/js/82.88ec70dc.js"><link rel="prefetch" href="/assets/js/83.3b1f57b6.js"><link rel="prefetch" href="/assets/js/84.bc603b88.js"><link rel="prefetch" href="/assets/js/85.79503d6b.js"><link rel="prefetch" href="/assets/js/86.9e94d1e1.js"><link rel="prefetch" href="/assets/js/87.f70fd32d.js"><link rel="prefetch" href="/assets/js/88.3973e77f.js"><link rel="prefetch" href="/assets/js/89.65f03bd4.js"><link rel="prefetch" href="/assets/js/9.3ec1480d.js"><link rel="prefetch" href="/assets/js/90.903757d0.js"><link rel="prefetch" href="/assets/js/91.d3976bc2.js"><link rel="prefetch" href="/assets/js/92.aab4dc65.js"><link rel="prefetch" href="/assets/js/93.691224a6.js"><link rel="prefetch" href="/assets/js/94.15986500.js"><link rel="prefetch" href="/assets/js/95.e93d2bc3.js"><link rel="prefetch" href="/assets/js/96.293265d2.js"><link rel="prefetch" href="/assets/js/97.01737f58.js"><link rel="prefetch" href="/assets/js/98.8782364b.js"><link rel="prefetch" href="/assets/js/99.ce99b703.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0ad53bd7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a4dc7dfb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="" class="logo"> <!----></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Spring技术</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Spring/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/Spring-boot/" class="nav-link">Spring-boot</a></li><li class="dropdown-subitem"><a href="/SpringCloud/" class="nav-link">SpringCloud</a></li></ul></li><li class="dropdown-item"><h4>数据库</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link router-link-active">mysql</a></li></ul></li><li class="dropdown-item"><h4>Linux</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Linux/" class="nav-link">Linux</a></li></ul></li><li class="dropdown-item"><h4>Other</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java学习/" class="nav-link">Java学习</a></li><li class="dropdown-subitem"><a href="/Markdown入门到放弃/" class="nav-link">Markdown入门到放弃</a></li><li class="dropdown-subitem"><a href="/复习题/" class="nav-link">复习题</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/设计模式/" class="nav-link">设计模式</a></div> <a href="https://github.com/woshilinqin/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Spring技术</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Spring/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/Spring-boot/" class="nav-link">Spring-boot</a></li><li class="dropdown-subitem"><a href="/SpringCloud/" class="nav-link">SpringCloud</a></li></ul></li><li class="dropdown-item"><h4>数据库</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link router-link-active">mysql</a></li></ul></li><li class="dropdown-item"><h4>Linux</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Linux/" class="nav-link">Linux</a></li></ul></li><li class="dropdown-item"><h4>Other</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java学习/" class="nav-link">Java学习</a></li><li class="dropdown-subitem"><a href="/Markdown入门到放弃/" class="nav-link">Markdown入门到放弃</a></li><li class="dropdown-subitem"><a href="/复习题/" class="nav-link">复习题</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/设计模式/" class="nav-link">设计模式</a></div> <a href="https://github.com/woshilinqin/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/mysql/" class="sidebar-link">README</a></li><li><a href="/mysql/SUMMARY.html" class="sidebar-link">SUMMARY</a></li><li><a href="/mysql/MYSQL安装.html" class="sidebar-link">MYSQL安装</a></li><li><a href="/mysql/Mysql技术内幕.html" class="sidebar-link">Mysql技术内幕</a></li><li><a href="/mysql/Oracle试题.html" class="sidebar-link">Oracle试题</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>sql面试题</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mysql/sql面试题/Leetcode-Database.html" class="active sidebar-link">Leetcode-Database</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-2" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-2" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-2" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-3" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-3" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-3" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-4" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-4" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-4" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-5" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-5" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-5" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-6" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-6" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-6" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-7" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-7" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-7" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-8" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-8" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-8" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-9" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-9" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-9" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-10" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-10" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-10" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-11" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-11" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-11" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-12" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-12" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-12" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-13" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-13" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-13" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-14" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-14" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-14" class="sidebar-link">SQL Schema</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#description-15" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#solution-15" class="sidebar-link">Solution</a></li><li class="sidebar-sub-header"><a href="/mysql/sql面试题/Leetcode-Database.html#sql-schema-15" class="sidebar-link">SQL Schema</a></li></ul></li><li><a href="/mysql/sql面试题/查询成绩.html" class="sidebar-link">查询成绩</a></li><li><a href="/mysql/sql面试题/统计胜负.html" class="sidebar-link">统计胜负</a></li><li><a href="/mysql/sql面试题/表连接查询的使用.html" class="sidebar-link">表连接查询的使用</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>分库分表</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础知识</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><ul><li><a href="#595-big-countries">595. Big Countries</a></li> <li><a href="#627-swap-salary">627. Swap Salary</a></li> <li><a href="#620-not-boring-movies">620. Not Boring Movies</a></li> <li><a href="#596-classes-more-than-5-students">596. Classes More Than 5 Students</a></li> <li><a href="#182-duplicate-emails">182. Duplicate Emails</a></li> <li><a href="#196-delete-duplicate-emails">196. Delete Duplicate Emails</a></li> <li><a href="#175-combine-two-tables">175. Combine Two Tables</a></li> <li><a href="#181-employees-earning-more-than-their-managers">181. Employees Earning More Than Their Managers</a></li> <li><a href="#183-customers-who-never-order">183. Customers Who Never Order</a></li> <li><a href="#184-department-highest-salary">184. Department Highest Salary</a></li> <li><a href="#176-second-highest-salary">176. Second Highest Salary</a></li> <li><a href="#177-nth-highest-salary">177. Nth Highest Salary</a></li> <li><a href="#178-rank-scores">178. Rank Scores</a></li> <li><a href="#180-consecutive-numbers">180. Consecutive Numbers</a></li> <li><a href="#626-exchange-seats">626. Exchange Seats</a></li></ul> <h1 id="_595-big-countries"><a href="#_595-big-countries" aria-hidden="true" class="header-anchor">#</a> 595. Big Countries</h1> <p>https://leetcode.com/problems/big-countries/description/</p> <h2 id="description"><a href="#description" aria-hidden="true" class="header-anchor">#</a> Description</h2> <div class="language-html extra-class"><pre class="language-html"><code>+-----------------+------------+------------+--------------+---------------+
+| name            | continent  | area       | population   | gdp           |
++-----------------+------------+------------+--------------+---------------+
+| Afghanistan     | Asia       | 652230     | 25500100     | 20343000      |
+| Albania         | Europe     | 28748      | 2831741      | 12960000      |
+| Algeria         | Africa     | 2381741    | 37100000     | 188681000     |
+| Andorra         | Europe     | 468        | 78115        | 3712000       |
+| Angola          | Africa     | 1246700    | 20609294     | 100990000     |
++-----------------+------------+------------+--------------+---------------+
+</code></pre></div><p>查找面积超过 3,000,000 或者人口数超过 25,000,000 的国家。</p> <div class="language-html extra-class"><pre class="language-html"><code>+--------------+-------------+--------------+
+| name         | population  | area         |
++--------------+-------------+--------------+
+| Afghanistan  | 25500100    | 652230       |
+| Algeria      | 37100000    | 2381741      |
++--------------+-------------+--------------+
+</code></pre></div><h2 id="solution"><a href="#solution" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span> name<span class="token punctuation">,</span>
+    population<span class="token punctuation">,</span>
+    area
+<span class="token keyword">FROM</span>
+    World
+<span class="token keyword">WHERE</span>
+    area <span class="token operator">&gt;</span> <span class="token number">3000000</span>
+    <span class="token operator">OR</span> population <span class="token operator">&gt;</span> <span class="token number">25000000</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema"><a href="#sql-schema" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <p>SQL Schema 用于在本地环境下创建表结构并导入数据，从而方便在本地环境调试。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> World<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> World <span class="token punctuation">(</span> NAME <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> continent <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> area <span class="token keyword">INT</span><span class="token punctuation">,</span> population <span class="token keyword">INT</span><span class="token punctuation">,</span> gdp <span class="token keyword">INT</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> World <span class="token punctuation">(</span> NAME<span class="token punctuation">,</span> continent<span class="token punctuation">,</span> area<span class="token punctuation">,</span> population<span class="token punctuation">,</span> gdp <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token string">'Afghanistan'</span><span class="token punctuation">,</span> <span class="token string">'Asia'</span><span class="token punctuation">,</span> <span class="token string">'652230'</span><span class="token punctuation">,</span> <span class="token string">'25500100'</span><span class="token punctuation">,</span> <span class="token string">'203430000'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'Albania'</span><span class="token punctuation">,</span> <span class="token string">'Europe'</span><span class="token punctuation">,</span> <span class="token string">'28748'</span><span class="token punctuation">,</span> <span class="token string">'2831741'</span><span class="token punctuation">,</span> <span class="token string">'129600000'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'Algeria'</span><span class="token punctuation">,</span> <span class="token string">'Africa'</span><span class="token punctuation">,</span> <span class="token string">'2381741'</span><span class="token punctuation">,</span> <span class="token string">'37100000'</span><span class="token punctuation">,</span> <span class="token string">'1886810000'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'Andorra'</span><span class="token punctuation">,</span> <span class="token string">'Europe'</span><span class="token punctuation">,</span> <span class="token string">'468'</span><span class="token punctuation">,</span> <span class="token string">'78115'</span><span class="token punctuation">,</span> <span class="token string">'37120000'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'Angola'</span><span class="token punctuation">,</span> <span class="token string">'Africa'</span><span class="token punctuation">,</span> <span class="token string">'1246700'</span><span class="token punctuation">,</span> <span class="token string">'20609294'</span><span class="token punctuation">,</span> <span class="token string">'1009900000'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_627-swap-salary"><a href="#_627-swap-salary" aria-hidden="true" class="header-anchor">#</a> 627. Swap Salary</h1> <p>https://leetcode.com/problems/swap-salary/description/</p> <h2 id="description-2"><a href="#description-2" aria-hidden="true" class="header-anchor">#</a> Description</h2> <div class="language-html extra-class"><pre class="language-html"><code>| id | name | sex | salary |
+|----|------|-----|--------|
+| 1  | A    | m   | 2500   |
+| 2  | B    | f   | 1500   |
+| 3  | C    | m   | 5500   |
+| 4  | D    | f   | 500    |
+</code></pre></div><p>只用一个 SQL 查询，将 sex 字段反转。</p> <div class="language-html extra-class"><pre class="language-html"><code>| id | name | sex | salary |
+|----|------|-----|--------|
+| 1  | A    | f   | 2500   |
+| 2  | B    | m   | 1500   |
+| 3  | C    | f   | 5500   |
+| 4  | D    | m   | 500    |
+</code></pre></div><h2 id="solution-2"><a href="#solution-2" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>两个相等的数<code>异或</code>的结果为 0，而 0 与任何一个数<code>异或</code>的结果为这个数。</p> <p>针对字符串，CHAR() 可以把 ASCII 码转换为字符</p> <p>sex  字段只有两个取值：'f' 和 'm'，并且有以下规律：</p> <div class="language- extra-class"><pre class="language-text"><code>'f' ^ ('m' ^ 'f') = 'm' ^ ('f' ^ 'f') = 'm'
+'m' ^ ('m' ^ 'f') = 'f' ^ ('m' ^ 'm') = 'f'
+</code></pre></div><p>因此将 sex 字段和 'm' ^ 'f' 进行异或操作，最后就能反转 sex 字段。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">UPDATE</span> salary
+<span class="token keyword">SET</span> sex <span class="token operator">=</span> <span class="token keyword">CHAR</span> <span class="token punctuation">(</span> ASCII<span class="token punctuation">(</span>sex<span class="token punctuation">)</span> <span class="token operator">^</span> ASCII<span class="token punctuation">(</span> <span class="token string">'m'</span> <span class="token punctuation">)</span> <span class="token operator">^</span> ASCII<span class="token punctuation">(</span> <span class="token string">'f'</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-2"><a href="#sql-schema-2" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> salary<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> salary <span class="token punctuation">(</span> id <span class="token keyword">INT</span><span class="token punctuation">,</span> NAME <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">100</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> sex <span class="token keyword">CHAR</span> <span class="token punctuation">(</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> salary <span class="token keyword">INT</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> salary <span class="token punctuation">(</span> id<span class="token punctuation">,</span> NAME<span class="token punctuation">,</span> sex<span class="token punctuation">,</span> salary <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'m'</span><span class="token punctuation">,</span> <span class="token string">'2500'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'f'</span><span class="token punctuation">,</span> <span class="token string">'1500'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'3'</span><span class="token punctuation">,</span> <span class="token string">'C'</span><span class="token punctuation">,</span> <span class="token string">'m'</span><span class="token punctuation">,</span> <span class="token string">'5500'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'4'</span><span class="token punctuation">,</span> <span class="token string">'D'</span><span class="token punctuation">,</span> <span class="token string">'f'</span><span class="token punctuation">,</span> <span class="token string">'500'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_620-not-boring-movies"><a href="#_620-not-boring-movies" aria-hidden="true" class="header-anchor">#</a> 620. Not Boring Movies</h1> <p>https://leetcode.com/problems/not-boring-movies/description/</p> <h2 id="description-3"><a href="#description-3" aria-hidden="true" class="header-anchor">#</a> Description</h2> <div class="language-html extra-class"><pre class="language-html"><code>+---------+-----------+--------------+-----------+
+|   id    | movie     |  description |  rating   |
++---------+-----------+--------------+-----------+
+|   1     | War       |   great 3D   |   8.9     |
+|   2     | Science   |   fiction    |   8.5     |
+|   3     | irish     |   boring     |   6.2     |
+|   4     | Ice song  |   Fantacy    |   8.6     |
+|   5     | House card|   Interesting|   9.1     |
++---------+-----------+--------------+-----------+
+</code></pre></div><p>查找 id 为奇数，并且 description 不是 boring 的电影，按 rating 降序。</p> <div class="language-html extra-class"><pre class="language-html"><code>+---------+-----------+--------------+-----------+
+|   id    | movie     |  description |  rating   |
++---------+-----------+--------------+-----------+
+|   5     | House card|   Interesting|   9.1     |
+|   1     | War       |   great 3D   |   8.9     |
++---------+-----------+--------------+-----------+
+</code></pre></div><h2 id="solution-3"><a href="#solution-3" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    <span class="token operator">*</span>
+<span class="token keyword">FROM</span>
+    cinema
+<span class="token keyword">WHERE</span>
+    id <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token operator">AND</span> description <span class="token operator">!=</span> <span class="token string">'boring'</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span>
+    rating <span class="token keyword">DESC</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-3"><a href="#sql-schema-3" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> cinema<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> cinema <span class="token punctuation">(</span> id <span class="token keyword">INT</span><span class="token punctuation">,</span> movie <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> description <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> rating <span class="token keyword">FLOAT</span> <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> cinema <span class="token punctuation">(</span> id<span class="token punctuation">,</span> movie<span class="token punctuation">,</span> description<span class="token punctuation">,</span> rating <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'War'</span><span class="token punctuation">,</span> <span class="token string">'great 3D'</span><span class="token punctuation">,</span> <span class="token number">8.9</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'Science'</span><span class="token punctuation">,</span> <span class="token string">'fiction'</span><span class="token punctuation">,</span> <span class="token number">8.5</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'irish'</span><span class="token punctuation">,</span> <span class="token string">'boring'</span><span class="token punctuation">,</span> <span class="token number">6.2</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'Ice song'</span><span class="token punctuation">,</span> <span class="token string">'Fantacy'</span><span class="token punctuation">,</span> <span class="token number">8.6</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">'House card'</span><span class="token punctuation">,</span> <span class="token string">'Interesting'</span><span class="token punctuation">,</span> <span class="token number">9.1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_596-classes-more-than-5-students"><a href="#_596-classes-more-than-5-students" aria-hidden="true" class="header-anchor">#</a> 596. Classes More Than 5 Students</h1> <p>https://leetcode.com/problems/classes-more-than-5-students/description/</p> <h2 id="description-4"><a href="#description-4" aria-hidden="true" class="header-anchor">#</a> Description</h2> <div class="language-html extra-class"><pre class="language-html"><code>+---------+------------+
+| student | class      |
++---------+------------+
+| A       | Math       |
+| B       | English    |
+| C       | Math       |
+| D       | Biology    |
+| E       | Math       |
+| F       | Computer   |
+| G       | Math       |
+| H       | Math       |
+| I       | Math       |
++---------+------------+
+</code></pre></div><p>查找有五名及以上 student 的 class。</p> <div class="language-html extra-class"><pre class="language-html"><code>+---------+
+| class   |
++---------+
+| Math    |
++---------+
+</code></pre></div><h2 id="solution-4"><a href="#solution-4" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>对 class 列进行分组之后，再使用 count 汇总函数统计每个分组的记录个数，之后使用 HAVING 进行筛选。HAVING  针对分组进行筛选，而 WHERE 针对每个记录（行）进行筛选。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    class
+<span class="token keyword">FROM</span>
+    courses
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span>
+    class
+<span class="token keyword">HAVING</span>
+    <span class="token function">count</span><span class="token punctuation">(</span> <span class="token keyword">DISTINCT</span> student <span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-4"><a href="#sql-schema-4" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> courses<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> courses <span class="token punctuation">(</span> student <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> class <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> courses <span class="token punctuation">(</span> student<span class="token punctuation">,</span> class <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'Math'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'English'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'C'</span><span class="token punctuation">,</span> <span class="token string">'Math'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'D'</span><span class="token punctuation">,</span> <span class="token string">'Biology'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'E'</span><span class="token punctuation">,</span> <span class="token string">'Math'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'F'</span><span class="token punctuation">,</span> <span class="token string">'Computer'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'G'</span><span class="token punctuation">,</span> <span class="token string">'Math'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'H'</span><span class="token punctuation">,</span> <span class="token string">'Math'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'I'</span><span class="token punctuation">,</span> <span class="token string">'Math'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_182-duplicate-emails"><a href="#_182-duplicate-emails" aria-hidden="true" class="header-anchor">#</a> 182. Duplicate Emails</h1> <p>https://leetcode.com/problems/duplicate-emails/description/</p> <h2 id="description-5"><a href="#description-5" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>邮件地址表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+---------+
+| Id | Email   |
++----+---------+
+| 1  | a@b.com |
+| 2  | c@d.com |
+| 3  | a@b.com |
++----+---------+
+</code></pre></div><p>查找重复的邮件地址：</p> <div class="language-html extra-class"><pre class="language-html"><code>+---------+
+| Email   |
++---------+
+| a@b.com |
++---------+
+</code></pre></div><h2 id="solution-5"><a href="#solution-5" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>对 Email 进行分组，如果并使用 COUNT 进行计数统计，结果大于等于 2 的表示 Email  重复。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    Email
+<span class="token keyword">FROM</span>
+    Person
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span>
+    Email
+<span class="token keyword">HAVING</span>
+    <span class="token function">COUNT</span><span class="token punctuation">(</span> <span class="token operator">*</span> <span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-5"><a href="#sql-schema-5" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Person<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Person <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> Email <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Person <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> Email <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'a@b.com'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'c@d.com'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'a@b.com'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_196-delete-duplicate-emails"><a href="#_196-delete-duplicate-emails" aria-hidden="true" class="header-anchor">#</a> 196. Delete Duplicate Emails</h1> <p>https://leetcode.com/problems/delete-duplicate-emails/description/</p> <h2 id="description-6"><a href="#description-6" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>邮件地址表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+---------+
+| Id | Email   |
++----+---------+
+| 1  | john@example.com |
+| 2  | bob@example.com |
+| 3  | john@example.com |
++----+---------+
+</code></pre></div><p>删除重复的邮件地址：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+------------------+
+| Id | Email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
++----+------------------+
+</code></pre></div><h2 id="solution-6"><a href="#solution-6" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>只保留相同 Email 中 Id 最小的那一个，然后删除其它的。</p> <p>连接查询：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>表与表关联，删除冗余表，对应的记录就是重复的了。
+<span class="token keyword">DELETE</span> p1
+<span class="token keyword">FROM</span>
+    Person p1<span class="token punctuation">,</span>
+    Person p2
+<span class="token keyword">WHERE</span>
+    p1<span class="token punctuation">.</span>Email <span class="token operator">=</span> p2<span class="token punctuation">.</span>Email
+    <span class="token operator">AND</span> p1<span class="token punctuation">.</span>Id <span class="token operator">&gt;</span> p2<span class="token punctuation">.</span>Id
+</code></pre></div><p>子查询：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DELETE</span>
+<span class="token keyword">FROM</span>
+    Person
+<span class="token keyword">WHERE</span>
+    id <span class="token operator">NOT</span> <span class="token operator">IN</span> <span class="token punctuation">(</span>
+        <span class="token keyword">SELECT</span> id 
+        <span class="token keyword">FROM</span> <span class="token punctuation">(</span> 
+            <span class="token keyword">SELECT</span> <span class="token function">min</span><span class="token punctuation">(</span> id <span class="token punctuation">)</span> <span class="token keyword">AS</span> id 
+            <span class="token keyword">FROM</span> Person
+            <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> email
+        <span class="token punctuation">)</span> <span class="token keyword">AS</span> m
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>应该注意的是上述解法额外嵌套了一个 SELECT 语句，如果不这么做，会出现错误：You can't specify target table 'Person' for update in FROM clause。以下演示了这种错误解法。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DELETE</span>
+<span class="token keyword">FROM</span>
+    Person
+<span class="token keyword">WHERE</span>
+    id <span class="token operator">NOT</span> <span class="token operator">IN</span> <span class="token punctuation">(</span> 
+        <span class="token keyword">SELECT</span> <span class="token function">min</span><span class="token punctuation">(</span> id <span class="token punctuation">)</span> <span class="token keyword">AS</span> id 
+        <span class="token keyword">FROM</span> Person 
+        <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> email 
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>参考：<a href="https://stackoverflow.com/questions/45494/mysql-error-1093-cant-specify-target-table-for-update-in-from-clause" target="_blank" rel="noopener noreferrer">pMySQL Error 1093 - Can't specify target table for update in FROM clause<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="sql-schema-6"><a href="#sql-schema-6" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <p>与 182 相同。</p> <h1 id="_175-combine-two-tables"><a href="#_175-combine-two-tables" aria-hidden="true" class="header-anchor">#</a> 175. Combine Two Tables</h1> <p>https://leetcode.com/problems/combine-two-tables/description/</p> <h2 id="description-7"><a href="#description-7" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>Person 表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| PersonId    | int     |
+| FirstName   | varchar |
+| LastName    | varchar |
++-------------+---------+
+PersonId is the primary key column for this table.
+</code></pre></div><p>Address 表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| AddressId   | int     |
+| PersonId    | int     |
+| City        | varchar |
+| State       | varchar |
++-------------+---------+
+AddressId is the primary key column for this table.
+</code></pre></div><p>查找 FirstName, LastName, City, State 数据，而不管一个用户有没有填地址信息。</p> <h2 id="solution-7"><a href="#solution-7" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>涉及到 Person 和 Address 两个表，在对这两个表执行连接操作时，因为要保留 Person 表中的信息，即使在 Address 表中没有关联的信息也要保留。此时可以用左外连接，将 Person 表放在 LEFT JOIN 的左边。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    FirstName<span class="token punctuation">,</span>
+    LastName<span class="token punctuation">,</span>
+    City<span class="token punctuation">,</span>
+    State
+<span class="token keyword">FROM</span>
+    Person P
+    <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> Address A
+    <span class="token keyword">ON</span> P<span class="token punctuation">.</span>PersonId <span class="token operator">=</span> A<span class="token punctuation">.</span>PersonId<span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-7"><a href="#sql-schema-7" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Person<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Person <span class="token punctuation">(</span> PersonId <span class="token keyword">INT</span><span class="token punctuation">,</span> FirstName <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> LastName <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Address<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Address <span class="token punctuation">(</span> AddressId <span class="token keyword">INT</span><span class="token punctuation">,</span> PersonId <span class="token keyword">INT</span><span class="token punctuation">,</span> City <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> State <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Person <span class="token punctuation">(</span> PersonId<span class="token punctuation">,</span> LastName<span class="token punctuation">,</span> FirstName <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'Wang'</span><span class="token punctuation">,</span> <span class="token string">'Allen'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Address <span class="token punctuation">(</span> AddressId<span class="token punctuation">,</span> PersonId<span class="token punctuation">,</span> City<span class="token punctuation">,</span> State <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'New York City'</span><span class="token punctuation">,</span> <span class="token string">'New York'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_181-employees-earning-more-than-their-managers"><a href="#_181-employees-earning-more-than-their-managers" aria-hidden="true" class="header-anchor">#</a> 181. Employees Earning More Than Their Managers</h1> <p>https://leetcode.com/problems/employees-earning-more-than-their-managers/description/</p> <h2 id="description-8"><a href="#description-8" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>Employee 表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+-------+--------+-----------+
+| Id | Name  | Salary | ManagerId |
++----+-------+--------+-----------+
+| 1  | Joe   | 70000  | 3         |
+| 2  | Henry | 80000  | 4         |
+| 3  | Sam   | 60000  | NULL      |
+| 4  | Max   | 90000  | NULL      |
++----+-------+--------+-----------+
+</code></pre></div><p>查找薪资大于其经理薪资的员工信息。</p> <h2 id="solution-8"><a href="#solution-8" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    E1<span class="token punctuation">.</span>NAME <span class="token keyword">AS</span> Employee
+<span class="token keyword">FROM</span>
+    Employee E1
+    <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Employee E2
+    <span class="token keyword">ON</span> E1<span class="token punctuation">.</span>ManagerId <span class="token operator">=</span> E2<span class="token punctuation">.</span>Id
+    <span class="token operator">AND</span> E1<span class="token punctuation">.</span>Salary <span class="token operator">&gt;</span> E2<span class="token punctuation">.</span>Salary<span class="token punctuation">;</span>
+    
+<span class="token comment">// where语法</span>
+<span class="token keyword">SELECT</span> e1<span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">,</span> e2<span class="token punctuation">.</span><span class="token operator">*</span> 
+    <span class="token keyword">FROM</span> Employee e1<span class="token punctuation">,</span> Employee e2 
+    <span class="token keyword">WHERE</span> e1<span class="token punctuation">.</span><span class="token punctuation">`</span>ManagerId<span class="token punctuation">`</span> <span class="token operator">=</span> e2<span class="token punctuation">.</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span> 
+	<span class="token operator">AND</span> e1<span class="token punctuation">.</span><span class="token punctuation">`</span>Salary<span class="token punctuation">`</span><span class="token operator">&gt;</span>e2<span class="token punctuation">.</span><span class="token punctuation">`</span>Salary<span class="token punctuation">`</span>
+</code></pre></div><h2 id="sql-schema-8"><a href="#sql-schema-8" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Employee<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Employee <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> NAME <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> Salary <span class="token keyword">INT</span><span class="token punctuation">,</span> ManagerId <span class="token keyword">INT</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Employee <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> NAME<span class="token punctuation">,</span> Salary<span class="token punctuation">,</span> ManagerId <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'Joe'</span><span class="token punctuation">,</span> <span class="token number">70000</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'Henry'</span><span class="token punctuation">,</span> <span class="token number">80000</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'Sam'</span><span class="token punctuation">,</span> <span class="token number">60000</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'Max'</span><span class="token punctuation">,</span> <span class="token number">90000</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_183-customers-who-never-order"><a href="#_183-customers-who-never-order" aria-hidden="true" class="header-anchor">#</a> 183. Customers Who Never Order</h1> <p>https://leetcode.com/problems/customers-who-never-order/description/</p> <h2 id="description-9"><a href="#description-9" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>Customers 表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+-------+
+| Id | Name  |
++----+-------+
+| 1  | Joe   |
+| 2  | Henry |
+| 3  | Sam   |
+| 4  | Max   |
++----+-------+
+</code></pre></div><p>Orders 表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+------------+
+| Id | CustomerId |
++----+------------+
+| 1  | 3          |
+| 2  | 1          |
++----+------------+
+</code></pre></div><p>查找没有订单的顾客信息：</p> <div class="language-html extra-class"><pre class="language-html"><code>+-----------+
+| Customers |
++-----------+
+| Henry     |
+| Max       |
++-----------+
+</code></pre></div><h2 id="solution-9"><a href="#solution-9" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>左外链接</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    C<span class="token punctuation">.</span>Name <span class="token keyword">AS</span> Customers
+<span class="token keyword">FROM</span>
+    Customers C
+    <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> Orders O
+    <span class="token keyword">ON</span> C<span class="token punctuation">.</span>Id <span class="token operator">=</span> O<span class="token punctuation">.</span>CustomerId
+<span class="token keyword">WHERE</span>
+    O<span class="token punctuation">.</span>CustomerId <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+</code></pre></div><p>子查询</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    Name <span class="token keyword">AS</span> Customers
+<span class="token keyword">FROM</span>
+    Customers
+<span class="token keyword">WHERE</span>
+    Id <span class="token operator">NOT</span> <span class="token operator">IN</span> <span class="token punctuation">(</span> 
+        <span class="token keyword">SELECT</span> CustomerId 
+        <span class="token keyword">FROM</span> Orders 
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-9"><a href="#sql-schema-9" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Customers<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Customers <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> NAME <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Orders<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Orders <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> CustomerId <span class="token keyword">INT</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Customers <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> NAME <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'Joe'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'Henry'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'Sam'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'Max'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Orders <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> CustomerId <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_184-department-highest-salary"><a href="#_184-department-highest-salary" aria-hidden="true" class="header-anchor">#</a> 184. Department Highest Salary</h1> <p>https://leetcode.com/problems/department-highest-salary/description/</p> <h2 id="description-10"><a href="#description-10" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>Employee 表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+-------+--------+--------------+
+| Id | Name  | Salary | DepartmentId |
++----+-------+--------+--------------+
+| 1  | Joe   | 70000  | 1            |
+| 2  | Henry | 80000  | 2            |
+| 3  | Sam   | 60000  | 2            |
+| 4  | Max   | 90000  | 1            |
++----+-------+--------+--------------+
+</code></pre></div><p>Department 表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+----------+
+| Id | Name     |
++----+----------+
+| 1  | IT       |
+| 2  | Sales    |
++----+----------+
+</code></pre></div><p>查找一个 Department 中收入最高者的信息：</p> <div class="language-html extra-class"><pre class="language-html"><code>+------------+----------+--------+
+| Department | Employee | Salary |
++------------+----------+--------+
+| IT         | Max      | 90000  |
+| Sales      | Henry    | 80000  |
++------------+----------+--------+
+</code></pre></div><h2 id="solution-10"><a href="#solution-10" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>创建一个临时表，包含了部门员工的最大薪资。可以对部门进行分组，然后使用 MAX() 汇总函数取得最大薪资。</p> <p>之后使用连接找到一个部门中薪资等于临时表中最大薪资的员工。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    D<span class="token punctuation">.</span>NAME Department<span class="token punctuation">,</span>
+    E<span class="token punctuation">.</span>NAME Employee<span class="token punctuation">,</span>
+    E<span class="token punctuation">.</span>Salary
+<span class="token keyword">FROM</span>
+    Employee E<span class="token punctuation">,</span>
+    Department D<span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token keyword">SELECT</span> DepartmentId<span class="token punctuation">,</span> <span class="token function">MAX</span><span class="token punctuation">(</span> Salary <span class="token punctuation">)</span> Salary 
+     <span class="token keyword">FROM</span> Employee 
+     <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> DepartmentId <span class="token punctuation">)</span> M
+<span class="token keyword">WHERE</span>
+    E<span class="token punctuation">.</span>DepartmentId <span class="token operator">=</span> D<span class="token punctuation">.</span>Id
+    <span class="token operator">AND</span> E<span class="token punctuation">.</span>DepartmentId <span class="token operator">=</span> M<span class="token punctuation">.</span>DepartmentId
+    <span class="token operator">AND</span> E<span class="token punctuation">.</span>Salary <span class="token operator">=</span> M<span class="token punctuation">.</span>Salary<span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-10"><a href="#sql-schema-10" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> Employee<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Employee <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> NAME <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> Salary <span class="token keyword">INT</span><span class="token punctuation">,</span> DepartmentId <span class="token keyword">INT</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> Department<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Department <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> NAME <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Employee <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> NAME<span class="token punctuation">,</span> Salary<span class="token punctuation">,</span> DepartmentId <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'Joe'</span><span class="token punctuation">,</span> <span class="token number">70000</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'Henry'</span><span class="token punctuation">,</span> <span class="token number">80000</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'Sam'</span><span class="token punctuation">,</span> <span class="token number">60000</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'Max'</span><span class="token punctuation">,</span> <span class="token number">90000</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Department <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> NAME <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'IT'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'Sales'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_176-second-highest-salary"><a href="#_176-second-highest-salary" aria-hidden="true" class="header-anchor">#</a> 176. Second Highest Salary</h1> <p>https://leetcode.com/problems/second-highest-salary/description/</p> <h2 id="description-11"><a href="#description-11" aria-hidden="true" class="header-anchor">#</a> Description</h2> <div class="language-html extra-class"><pre class="language-html"><code>+----+--------+
+| Id | Salary |
++----+--------+
+| 1  | 100    |
+| 2  | 200    |
+| 3  | 300    |
++----+--------+
+</code></pre></div><p>查找工资第二高的员工。</p> <div class="language-html extra-class"><pre class="language-html"><code>+---------------------+
+| SecondHighestSalary |
++---------------------+
+| 200                 |
++---------------------+
+</code></pre></div><p>没有找到返回 null 而不是不返回数据。</p> <h2 id="solution-11"><a href="#solution-11" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>为了在没有查找到数据时返回 null，需要在查询结果外面再套一层 SELECT。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    <span class="token punctuation">(</span> <span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> Salary 
+     <span class="token keyword">FROM</span> Employee 
+     <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> Salary <span class="token keyword">DESC</span> 
+     <span class="token keyword">LIMIT</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span> SecondHighestSalary<span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-11"><a href="#sql-schema-11" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Employee<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Employee <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> Salary <span class="token keyword">INT</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Employee <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> Salary <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">200</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">300</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_177-nth-highest-salary"><a href="#_177-nth-highest-salary" aria-hidden="true" class="header-anchor">#</a> 177. Nth Highest Salary</h1> <h2 id="description-12"><a href="#description-12" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>查找工资第 N 高的员工。</p> <h2 id="solution-12"><a href="#solution-12" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">FUNCTION</span> getNthHighestSalary <span class="token punctuation">(</span> N <span class="token keyword">INT</span> <span class="token punctuation">)</span> <span class="token keyword">RETURNS</span> <span class="token keyword">INT</span> <span class="token keyword">BEGIN</span>
+
+<span class="token keyword">SET</span> N <span class="token operator">=</span> N <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">RETURN</span> <span class="token punctuation">(</span> 
+    <span class="token keyword">SELECT</span> <span class="token punctuation">(</span> 
+        <span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> Salary 
+        <span class="token keyword">FROM</span> Employee 
+        <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> Salary <span class="token keyword">DESC</span> 
+        <span class="token keyword">LIMIT</span> N<span class="token punctuation">,</span> <span class="token number">1</span> 
+    <span class="token punctuation">)</span> 
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">END</span>
+</code></pre></div><h2 id="sql-schema-12"><a href="#sql-schema-12" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <p>同 176。</p> <h1 id="_178-rank-scores"><a href="#_178-rank-scores" aria-hidden="true" class="header-anchor">#</a> 178. Rank Scores</h1> <p>https://leetcode.com/problems/rank-scores/description/</p> <h2 id="description-13"><a href="#description-13" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>得分表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+-------+
+| Id | Score |
++----+-------+
+| 1  | 3.50  |
+| 2  | 3.65  |
+| 3  | 4.00  |
+| 4  | 3.85  |
+| 5  | 4.00  |
+| 6  | 3.65  |
++----+-------+
+</code></pre></div><p>将得分排序，并统计排名。</p> <div class="language-html extra-class"><pre class="language-html"><code>+-------+------+
+| Score | Rank |
++-------+------+
+| 4.00  | 1    |
+| 4.00  | 1    |
+| 3.85  | 2    |
+| 3.65  | 3    |
+| 3.65  | 3    |
+| 3.50  | 4    |
++-------+------+
+</code></pre></div><h2 id="solution-13"><a href="#solution-13" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>要统计某个 score 的排名，只要统计大于等于该 score 的 score 数量。</p> <table><thead><tr><th style="text-align:center;">Id</th> <th style="text-align:center;">score</th> <th style="text-align:center;">大于等于该 score 的 score 数量</th> <th style="text-align:center;">排名</th></tr></thead> <tbody><tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td> <td style="text-align:center;">3</td> <td style="text-align:center;">3</td></tr> <tr><td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td> <td style="text-align:center;">2</td> <td style="text-align:center;">2</td></tr> <tr><td style="text-align:center;">3</td> <td style="text-align:center;">4.3</td> <td style="text-align:center;">1</td> <td style="text-align:center;">1</td></tr></tbody></table> <p>使用连接操作找到某个 score 对应的大于等于其值的记录：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+	<span class="token operator">*</span>
+<span class="token keyword">FROM</span>
+    Scores S1
+    <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Scores S2
+    <span class="token keyword">ON</span> S1<span class="token punctuation">.</span>score <span class="token operator">&lt;=</span> S2<span class="token punctuation">.</span>score
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span>
+    S1<span class="token punctuation">.</span>score <span class="token keyword">DESC</span><span class="token punctuation">,</span> S1<span class="token punctuation">.</span>Id<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th style="text-align:center;">S1.Id</th> <th style="text-align:center;">S1.score</th> <th style="text-align:center;">S2.Id</th> <th style="text-align:center;">S2.score</th></tr></thead> <tbody><tr><td style="text-align:center;">3</td> <td style="text-align:center;">4.3</td> <td style="text-align:center;">3</td> <td style="text-align:center;">4.3</td></tr> <tr><td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td> <td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td> <td style="text-align:center;">3</td> <td style="text-align:center;">4.3</td></tr> <tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td> <td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td></tr> <tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td> <td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td> <td style="text-align:center;">3</td> <td style="text-align:center;">4.3</td></tr></tbody></table> <p>可以看到每个 S1.score 都有对应好几条记录，我们再进行分组，并统计每个分组的数量作为 'Rank'</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    S1<span class="token punctuation">.</span>score <span class="token string">'Score'</span><span class="token punctuation">,</span>
+    <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token string">'Rank'</span>
+<span class="token keyword">FROM</span>
+    Scores S1
+    <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Scores S2
+    <span class="token keyword">ON</span> S1<span class="token punctuation">.</span>score <span class="token operator">&lt;=</span> S2<span class="token punctuation">.</span>score
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span>
+    S1<span class="token punctuation">.</span>id<span class="token punctuation">,</span> S1<span class="token punctuation">.</span>score
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span>
+    S1<span class="token punctuation">.</span>score <span class="token keyword">DESC</span><span class="token punctuation">,</span> S1<span class="token punctuation">.</span>Id<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th style="text-align:center;">score</th> <th style="text-align:center;">Rank</th></tr></thead> <tbody><tr><td style="text-align:center;">4.3</td> <td style="text-align:center;">1</td></tr> <tr><td style="text-align:center;">4.2</td> <td style="text-align:center;">2</td></tr> <tr><td style="text-align:center;">4.1</td> <td style="text-align:center;">3</td></tr></tbody></table> <p>上面的解法看似没问题，但是对于以下数据，它却得到了错误的结果：</p> <table><thead><tr><th style="text-align:center;">Id</th> <th style="text-align:center;">score</th></tr></thead> <tbody><tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td></tr> <tr><td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">3</td> <td style="text-align:center;">4.2</td></tr></tbody></table> <table><thead><tr><th style="text-align:center;">score</th> <th style="text-align:center;">Rank</th></tr></thead> <tbody><tr><td style="text-align:center;">4.2</td> <td style="text-align:center;">2</td></tr> <tr><td style="text-align:center;">4.2</td> <td style="text-align:center;">2</td></tr> <tr><td style="text-align:center;">4.1</td> <td style="text-align:center;">3</td></tr></tbody></table> <p>而我们希望的结果为：</p> <table><thead><tr><th style="text-align:center;">score</th> <th style="text-align:center;">Rank</th></tr></thead> <tbody><tr><td style="text-align:center;">4.2</td> <td style="text-align:center;">1</td></tr> <tr><td style="text-align:center;">4.2</td> <td style="text-align:center;">1</td></tr> <tr><td style="text-align:center;">4.1</td> <td style="text-align:center;">2</td></tr></tbody></table> <p>连接情况如下：</p> <table><thead><tr><th style="text-align:center;">S1.Id</th> <th style="text-align:center;">S1.score</th> <th style="text-align:center;">S2.Id</th> <th style="text-align:center;">S2.score</th></tr></thead> <tbody><tr><td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td> <td style="text-align:center;">3</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td> <td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">3</td> <td style="text-align:center;">4.2</td> <td style="text-align:center;">3</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">3</td> <td style="text-align:center;">4.2</td> <td style="text-align:center;">2</td> <td style="text-align:center;">4.1</td></tr> <tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td> <td style="text-align:center;">3</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td> <td style="text-align:center;">2</td> <td style="text-align:center;">4.2</td></tr> <tr><td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td> <td style="text-align:center;">1</td> <td style="text-align:center;">4.1</td></tr></tbody></table> <p>我们想要的结果是，把分数相同的放在同一个排名，并且相同分数只占一个位置，例如上面的分数，Id=2 和 Id=3 的记录都有相同的分数，并且最高，他们并列第一。而 Id=1 的记录应该排第二名，而不是第三名。所以在进行 COUNT 计数统计时，我们需要使用 COUNT( DISTINCT S2.score ) 从而只统计一次相同的分数。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    S1<span class="token punctuation">.</span>score <span class="token string">'Score'</span><span class="token punctuation">,</span>
+    <span class="token function">COUNT</span><span class="token punctuation">(</span> <span class="token keyword">DISTINCT</span> S2<span class="token punctuation">.</span>score <span class="token punctuation">)</span> <span class="token string">'Rank'</span>
+<span class="token keyword">FROM</span>
+    Scores S1
+    <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Scores S2
+    <span class="token keyword">ON</span> S1<span class="token punctuation">.</span>score <span class="token operator">&lt;=</span> S2<span class="token punctuation">.</span>score
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span>
+    S1<span class="token punctuation">.</span>id<span class="token punctuation">,</span> S1<span class="token punctuation">.</span>score
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span>
+    S1<span class="token punctuation">.</span>score <span class="token keyword">DESC</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-13"><a href="#sql-schema-13" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> Scores<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Scores <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> Score <span class="token keyword">DECIMAL</span> <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> Scores <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> Score <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4.1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4.1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4.2</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4.2</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4.3</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">4.3</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_180-consecutive-numbers"><a href="#_180-consecutive-numbers" aria-hidden="true" class="header-anchor">#</a> 180. Consecutive Numbers</h1> <p>https://leetcode.com/problems/consecutive-numbers/description/</p> <h2 id="description-14"><a href="#description-14" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>数字表：</p> <div class="language-html extra-class"><pre class="language-html"><code>+----+-----+
+| Id | Num |
++----+-----+
+| 1  |  1  |
+| 2  |  1  |
+| 3  |  1  |
+| 4  |  2  |
+| 5  |  1  |
+| 6  |  2  |
+| 7  |  2  |
++----+-----+
+</code></pre></div><p>查找连续出现三次的数字。</p> <div class="language-html extra-class"><pre class="language-html"><code>+-----------------+
+| ConsecutiveNums |
++-----------------+
+| 1               |
++-----------------+
+</code></pre></div><h2 id="solution-14"><a href="#solution-14" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span>
+    <span class="token keyword">DISTINCT</span> L1<span class="token punctuation">.</span>num ConsecutiveNums
+<span class="token keyword">FROM</span>
+    Logs L1<span class="token punctuation">,</span>
+    Logs L2<span class="token punctuation">,</span>
+    Logs L3
+<span class="token keyword">WHERE</span> L1<span class="token punctuation">.</span>id <span class="token operator">=</span> l2<span class="token punctuation">.</span>id <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token operator">AND</span> L2<span class="token punctuation">.</span>id <span class="token operator">=</span> L3<span class="token punctuation">.</span>id <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token operator">AND</span> L1<span class="token punctuation">.</span>num <span class="token operator">=</span> L2<span class="token punctuation">.</span>num
+    <span class="token operator">AND</span> l2<span class="token punctuation">.</span>num <span class="token operator">=</span> l3<span class="token punctuation">.</span>num<span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-14"><a href="#sql-schema-14" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> LOGS<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> LOGS <span class="token punctuation">(</span> Id <span class="token keyword">INT</span><span class="token punctuation">,</span> Num <span class="token keyword">INT</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> LOGS <span class="token punctuation">(</span> Id<span class="token punctuation">,</span> Num <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="_626-exchange-seats"><a href="#_626-exchange-seats" aria-hidden="true" class="header-anchor">#</a> 626. Exchange Seats</h1> <p>https://leetcode.com/problems/exchange-seats/description/</p> <h2 id="description-15"><a href="#description-15" aria-hidden="true" class="header-anchor">#</a> Description</h2> <p>seat 表存储着座位对应的学生。</p> <div class="language-html extra-class"><pre class="language-html"><code>+---------+---------+
+|    id   | student |
++---------+---------+
+|    1    | Abbot   |
+|    2    | Doris   |
+|    3    | Emerson |
+|    4    | Green   |
+|    5    | Jeames  |
++---------+---------+
+</code></pre></div><p>要求交换相邻座位的两个学生，如果最后一个座位是奇数，那么不交换这个座位上的学生。</p> <div class="language-html extra-class"><pre class="language-html"><code>+---------+---------+
+|    id   | student |
++---------+---------+
+|    1    | Doris   |
+|    2    | Abbot   |
+|    3    | Green   |
+|    4    | Emerson |
+|    5    | Jeames  |
++---------+---------+
+</code></pre></div><h2 id="solution-15"><a href="#solution-15" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>使用多个 union。</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 处理偶数 id，让 id 减 1</span>
+<span class="token comment"># 例如 2,4,6,... 变成 1,3,5,...</span>
+<span class="token keyword">SELECT</span>
+    s1<span class="token punctuation">.</span>id <span class="token operator">-</span> <span class="token number">1</span> <span class="token keyword">AS</span> id<span class="token punctuation">,</span>
+    s1<span class="token punctuation">.</span>student
+<span class="token keyword">FROM</span>
+    seat s1
+<span class="token keyword">WHERE</span>
+    s1<span class="token punctuation">.</span>id MOD <span class="token number">2</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">UNION</span>
+<span class="token comment"># 处理奇数 id，让 id 加 1。但是如果最大的 id 为奇数，则不做处理</span>
+<span class="token comment"># 例如 1,3,5,... 变成 2,4,6,...</span>
+<span class="token keyword">SELECT</span>
+    s2<span class="token punctuation">.</span>id <span class="token operator">+</span> <span class="token number">1</span> <span class="token keyword">AS</span> id<span class="token punctuation">,</span>
+    s2<span class="token punctuation">.</span>student
+<span class="token keyword">FROM</span>
+    seat s2
+<span class="token keyword">WHERE</span>
+    s2<span class="token punctuation">.</span>id MOD <span class="token number">2</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token operator">AND</span> s2<span class="token punctuation">.</span>id <span class="token operator">!=</span> <span class="token punctuation">(</span> <span class="token keyword">SELECT</span> <span class="token function">max</span><span class="token punctuation">(</span> s3<span class="token punctuation">.</span>id <span class="token punctuation">)</span> <span class="token keyword">FROM</span> seat s3 <span class="token punctuation">)</span> <span class="token keyword">UNION</span>
+<span class="token comment"># 如果最大的 id 为奇数，单独取出这个数</span>
+<span class="token keyword">SELECT</span>
+    s4<span class="token punctuation">.</span>id <span class="token keyword">AS</span> id<span class="token punctuation">,</span>
+    s4<span class="token punctuation">.</span>student
+<span class="token keyword">FROM</span>
+    seat s4
+<span class="token keyword">WHERE</span>
+    s4<span class="token punctuation">.</span>id MOD <span class="token number">2</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token operator">AND</span> s4<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token punctuation">(</span> <span class="token keyword">SELECT</span> <span class="token function">max</span><span class="token punctuation">(</span> s5<span class="token punctuation">.</span>id <span class="token punctuation">)</span> <span class="token keyword">FROM</span> seat s5 <span class="token punctuation">)</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span>
+    id<span class="token punctuation">;</span>
+</code></pre></div><h2 id="sql-schema-15"><a href="#sql-schema-15" aria-hidden="true" class="header-anchor">#</a> SQL Schema</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span>
+<span class="token keyword">IF</span>
+    <span class="token keyword">EXISTS</span> seat<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> seat <span class="token punctuation">(</span> id <span class="token keyword">INT</span><span class="token punctuation">,</span> student <span class="token keyword">VARCHAR</span> <span class="token punctuation">(</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> seat <span class="token punctuation">(</span> id<span class="token punctuation">,</span> student <span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span> <span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'Abbot'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'Doris'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'3'</span><span class="token punctuation">,</span> <span class="token string">'Emerson'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'4'</span><span class="token punctuation">,</span> <span class="token string">'Green'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span> <span class="token string">'5'</span><span class="token punctuation">,</span> <span class="token string">'Jeames'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div align="center"><img width="320px" src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/githubio/公众号二维码-2.png"></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">2021/1/8 上午10:54:22</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mysql/Oracle试题.html" class="prev">Oracle试题</a></span> <span class="next"><a href="/mysql/sql面试题/查询成绩.html">查询成绩</a>→
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2dcanvas" width="135" height="300" class="live2dcanvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div></div></div>
+    <script src="/assets/js/app.e68c5893.js" defer></script><script src="/assets/js/3.fa14571d.js" defer></script><script src="/assets/js/186.666a0dcd.js" defer></script><script src="/assets/js/4.9adf2657.js" defer></script>
+  </body>
+</html>
