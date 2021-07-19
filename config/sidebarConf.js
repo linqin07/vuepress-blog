@@ -1220,10 +1220,6 @@ module.exports = {
          "/设计模式/",
          "README"
       ],
-      [
-         "/设计模式/SUMMARY.md",
-         "SUMMARY"
-      ],
       {
          "title": "1.单例模式",
          "collapsable": true,
@@ -1271,26 +1267,56 @@ module.exports = {
          ]
       },
       {
+         "title": "11.组合模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/11.组合模式/组合模式.md",
+               "组合模式"
+            ]
+         ]
+      },
+      {
+         "title": "12.享元模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/12.享元模式/享元模式.md",
+               "享元模式"
+            ]
+         ]
+      },
+      {
+         "title": "13.责任链模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/13.责任链模式/README .md",
+               "README "
+            ],
+            [
+               "/设计模式/13.责任链模式/报销流程例子.md",
+               "报销流程例子"
+            ]
+         ]
+      },
+      {
+         "title": "14.命令模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/14.命令模式/命令模式.md",
+               "命令模式"
+            ]
+         ]
+      },
+      {
          "title": "2.抽象工厂模式",
          "collapsable": true,
          "children": [
             [
                "/设计模式/2.抽象工厂模式/1.抽象工厂.md",
                "1.抽象工厂"
-            ]
-         ]
-      },
-      {
-         "title": "2.责任链模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/2.责任链模式/README .md",
-               "README "
-            ],
-            [
-               "/设计模式/2.责任链模式/报销流程例子.md",
-               "报销流程例子"
             ]
          ]
       },

@@ -167,7 +167,7 @@
                             <fromDir>target/spring-boot-aplication-config</fromDir>
                             <url>scp://root:1qaz2wsx@192.168.2.149/root</url>
                             <excludes>lib/*</excludes>
-                            <commands>
+                            <commands1921
                                 <!-- 杀死原来的进程 -->
                                 <command>pkill -f pring-boot-application-config-location.jar</command>
                                 <!--<command>chmod a+x restart.sh</command>-->

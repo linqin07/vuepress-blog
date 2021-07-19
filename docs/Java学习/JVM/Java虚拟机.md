@@ -312,6 +312,8 @@ obj = null;
 
 ### 4.自定义类加载
 
+打破双亲委派模型，那么就重写整个 loadClass 方法。不想打破双亲委派模型，那么只需要重写 findClass 方法即可
+
 ```java
 public class FileSystemClassLoader extends ClassLoader {
 
@@ -320,7 +322,7 @@ public class FileSystemClassLoader extends ClassLoader {
     public FileSystemClassLoader(String rootDir) {
         this.rootDir = rootDir;
     }
-
+ //不想打破双亲委派模型，那么只需要重写findClass方法即可
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         byte[] classData = getClassData(name);
         if (classData == null) {
