@@ -31,7 +31,7 @@ footer: MIT Licensed | Copyright © 2020-present LinQin
 
 [![Gitter](https://badges.gitter.im/linqin-site/community.svg)](https://gitter.im/linqin-site/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![Build Status](https://www.travis-ci.com/linqin07/vuepress-blog.svg?branch=master)](https://www.travis-ci.com/linqin07/vuepress-blog)
 
-::: tip README
+::: tip README 
 
  使用 travis 自动化构建，如有疑问可以在下方留言或者新建 issue 提问！  
 
