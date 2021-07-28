@@ -1,6 +1,6 @@
 ## README
 
-1GB=1024MB 、1MB=1024KB 、1KB=1024Byte 、1byte=8bit
+1GB=1024MB 、1MB=1024KB 、1KB=1024Byte 、1byte=8bit=1字节
 
 ​	
 

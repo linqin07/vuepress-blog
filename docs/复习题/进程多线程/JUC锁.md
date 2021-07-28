@@ -1,10 +1,25 @@
 ### 1.ReentrantLock
 
-默认和synchronize一样是非公平锁 🔒。
+默认和 synchronize 一样是非公平锁 🔒。
 
 非公平是一种抢占机制，是随机获得锁，并不是先来的一定能先得到锁，结果就是不公平的。
 
 非公平锁就是跟上锁的顺序无关，随机获得锁对象。公平就是按照加锁的顺序进行分配。非公平锁第一次加锁失败后就入队列，就和公平锁没什么区别了。
+
+> 死锁：产生的4个必要条件：互斥条件、请求保持条件、不可剥夺条件、环路条件。
+>
+> Lock 能响应中断（可以简单理解为死锁线程能接收中断信号，报错释放锁）、支持超时、支持非堵塞获取锁，对应下面方法。
+>
+> ```java
+> // 支持中断的API
+> void lockInterruptibly() throws InterruptedException;
+> // 支持超时的API
+> boolean tryLock(long time, TimeUnit unit) throws InterruptedException;
+> // 支持非阻塞获取锁的API
+> boolean tryLock();
+> ```
+>
+> 能破坏死锁的不可剥夺条件，解决死锁。
 
 ### 2.ReentrantReadWriteLock 读写锁
 

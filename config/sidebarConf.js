@@ -1243,20 +1243,6 @@ module.exports = {
          ]
       },
       {
-         "title": "1.策略模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/1.策略模式/利用策略模式优化过多 if else 代码.md",
-               "利用策略模式优化过多 if else 代码"
-            ],
-            [
-               "/设计模式/1.策略模式/计算机USB例子.md",
-               "计算机USB例子"
-            ]
-         ]
-      },
-      {
          "title": "10.桥接模式",
          "collapsable": true,
          "children": [
@@ -1311,12 +1297,114 @@ module.exports = {
          ]
       },
       {
+         "title": "15.解析器模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/15.解析器模式/解析器模式.md",
+               "解析器模式"
+            ]
+         ]
+      },
+      {
+         "title": "16.迭代器模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/16.迭代器模式/迭代器模式.md",
+               "迭代器模式"
+            ]
+         ]
+      },
+      {
+         "title": "17.中介者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/17.中介者模式/17.中介者模式.md",
+               "17.中介者模式"
+            ]
+         ]
+      },
+      {
+         "title": "18.备忘录模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/18.备忘录模式/备忘录模式.md",
+               "备忘录模式"
+            ]
+         ]
+      },
+      {
+         "title": "19.观察者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/19.观察者模式/1.接口实现.md",
+               "1.接口实现"
+            ],
+            [
+               "/设计模式/19.观察者模式/2.Guava EventBus实现.md",
+               "2.Guava EventBus实现"
+            ]
+         ]
+      },
+      {
          "title": "2.抽象工厂模式",
          "collapsable": true,
          "children": [
             [
                "/设计模式/2.抽象工厂模式/1.抽象工厂.md",
                "1.抽象工厂"
+            ]
+         ]
+      },
+      {
+         "title": "20.状态模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/20.状态模式/状态模式.md",
+               "状态模式"
+            ]
+         ]
+      },
+      {
+         "title": "21.策略模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/21.策略模式/利用策略模式优化过多 if else 代码.md",
+               "利用策略模式优化过多 if else 代码"
+            ],
+            [
+               "/设计模式/21.策略模式/计算机USB例子.md",
+               "计算机USB例子"
+            ]
+         ]
+      },
+      {
+         "title": "22.模板模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/22.模板模式/",
+               "README"
+            ],
+            [
+               "/设计模式/22.模板模式/模版模式.md",
+               "模版模式"
+            ]
+         ]
+      },
+      {
+         "title": "23.访问者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/23.访问者模式/访问者模式.md",
+               "访问者模式"
             ]
          ]
       },
@@ -1361,20 +1449,6 @@ module.exports = {
          ]
       },
       {
-         "title": "7.模板模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/7.模板模式/",
-               "README"
-            ],
-            [
-               "/设计模式/7.模板模式/模版模式.md",
-               "模版模式"
-            ]
-         ]
-      },
-      {
          "title": "7.装饰者模式",
          "collapsable": true,
          "children": [
@@ -1391,20 +1465,6 @@ module.exports = {
             [
                "/设计模式/8.外观模式/1.外观模式.md",
                "1.外观模式"
-            ]
-         ]
-      },
-      {
-         "title": "8.观察者模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/8.观察者模式/1.接口实现.md",
-               "1.接口实现"
-            ],
-            [
-               "/设计模式/8.观察者模式/2.Guava EventBus实现.md",
-               "2.Guava EventBus实现"
             ]
          ]
       },
