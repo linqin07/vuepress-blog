@@ -90,8 +90,10 @@ public void test1() throws IOException {
   另外，使用 Prototype 作用域需要经过仔细思考，毕竟频繁创建和销毁 Bean 是有明显开销
   的。
 
-  如果是 Web 容器，则支持另外三种作用域：
+  `IOC在初始化时，只会将scope= singleton（单例）的对象进行实例化，而不会去实例化 scope=prototype 的对象（多例）。`
 
+  如果是 Web 容器，则支持另外三种作用域：
+  
   - Request，为每个 HTTP 请求创建单独的 Bean 实例。
   - Session，很显然 Bean 实例的作用域是 Session 范围。
   - GlobalSession，用于 Portlet 容器，因为每个 Portlet 有单独的 Session，GlobalSession

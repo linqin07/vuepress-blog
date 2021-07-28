@@ -223,7 +223,7 @@ obj = null;
 
 ## 类与类加载器
 
-两个类相等，需要类本身相等，并且使用同一个类加载器进行加载。这是因为每一个类加载器都拥有一个独立的类名称空间。
+两个类相等，需要类本身相等，并且使用同一个类加载器进行加载。这是因为每一个类加载器都拥有一个独立的类`命名空间`。
 
 这里的相等，包括类的 Class 对象的 equals() 方法、isAssignableFrom() 方法、isInstance() 方法的返回结果为 true，也包括使用 instanceof 关键字做对象所属关系判定结果为 true。
 
@@ -388,3 +388,26 @@ web 模块里面使用 es 工厂类进行获取es操作。这样每个模块就�
 ![image-20210610185617847.png](https://gitee.com/linqin07/pic/raw/master/image-20210610185617847.png)
 
 项目地址
+
+
+
+### Java 类的链接
+
+Java类的链接指的是将Java类的二进制代码合并到JVM的运行状态之中的过程。在链接之前，这个类必须被成功加载。类的链接包括`验证、准备和解析`等几个步骤。验证是用来确保Java类的二进制表示在结构上是完全正确的。如果验证过程出现错误的话，会抛出  java.lang.VerifyError错误。
+
+准备过程则是创建Java类中的静态域，并将这些域的值设为默认值。准备过程并不会执行代码。在一个Java类中会包含对其它类或接口的形式引用，包括它的父类、所实现的接口、方法的形式参数和返回值的Java类等。解析的过程就是确保这些被引用的类能被正确的找到。解析的过程可能会导致其它的 Java类被加载。不同的 JVM  实现可能选择不同的解析策略。
+
+一种做法是在链接的时候，就递归的把所有依赖的形式引用都进行解析。而另外的做法则可能是只在一个形式引用真正需要的时候才进行解析。也就是说如果一个 Java 类只是被引用了，但是并没有被真正用到，那么这个类有可能就不会被解析。考虑下面的代码：
+
+```java
+public class LinkTest {
+ public static void main(String[] args) {
+  ToBeLinked toBeLinked = null;
+  System.out.println("Test link.");
+ }
+}
+```
+
+类LinkTest 引用了类 ToBeLinked，但是并没有真正使用它，只是声明了一个变量，并没有创建该类的实例或是访问其中的静态域。
+
+在  Oracle 的 JDK 6 中，如果把编译好的 ToBeLinked 的 Java 字节代码删除之后，再运行  LinkTest，程序不会抛出错误。这是因为 ToBeLinked 类没有被真正用到，而 Oracle 的 JDK 6  所采用的链接策略使得ToBeLinked 类不会被加载，因此也不会发现 ToBeLinked 的 Java  字节代码实际上是不存在的。如果把代码改成 ToBeLinked toBeLinked = new  ToBeLinked();之后，再按照相同的方法运行，就会抛出异常了。因为这个时候 ToBeLinked 这个类被真正使用到了，会需要加载这个类。

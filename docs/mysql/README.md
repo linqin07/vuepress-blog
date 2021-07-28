@@ -2,12 +2,28 @@
 
 一些 mysql 的总结。
 
-#### 1.ON DUPLICATE KEY  针对 id 和 唯一索引。插入失败则会执行更新。
+#### 1.重复插入sql直接处理
+
+ON DUPLICATE KEY  针对 id 和 唯一索引。插入失败则会执行更新。
 
 ```sql
 INSERT INTO table (a,b,c) VALUES (1,2,3)  
   ON DUPLICATE KEY UPDATE c=c+1;  
 ```
+
+insert ignore  判断的是主键或者索引是否重复，重复着不处理（不会报错）
+
+```sql
+INSERT IGNORE INTO log_domain (id) VALUES(45)
+```
+
+replace into  等同于先删除再插入，所以没一次影响记录为两条。也是针对索引
+
+```sql
+REPLACE INTO log_domain (NAME) VALUES("aaa") 
+```
+
+
 
 #### 2.导出数据字典
 
