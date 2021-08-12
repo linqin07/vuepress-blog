@@ -123,3 +123,55 @@ Kafka 通常根据时间来决定数据可以保留多久。默认使用 log.ret
 broker 通过设置 `message.max.bytes` 参数来限制单个消息的大小，默认是 1000 000， 也就是 1MB，如果生产者尝试发送的消息超过这个大小，不仅消息不会被接收，还会收到 broker 返回的错误消息。跟其他与字节相关的配置参数一样，该参数指的是压缩后的消息大小，也就是说，只要压缩后的消息小于 mesage.max.bytes，那么消息的实际大小可以大于这个值
 
 这个值对性能有显著的影响。值越大，那么负责处理网络连接和请求的线程就需要花越多的时间来处理这些请求。它还会增加磁盘写入块的大小，从而影响 IO 吞吐量。
+
+
+
+
+
+### 维护 kafka 消费者信息
+
+kafka 中有一个队列 __consumer_offsets 默认没有副本，一旦数据有问题就会导致分区消费不平均、消费不下去、分区不消费等各种奇怪问题。下面是给这个 topic 增加副本并 assignment 分配好。kafka-manager 没法直接没有副本的topic。
+
+生成相关 json 信息字符脚本，注意新增 id 这个文件，里面放 brokerId，每个换行。
+
+```sh
+for a in `seq 0 49` # 49表示__consumer_offsets topic的分区数-1
+do
+    while true
+    do
+        NUM1=`expr $RANDOM % 11` #11表示kafka节点数+1
+        if [ $NUM1 != 0 ];then
+       while true
+    do
+                NUM2=`expr $RANDOM % 11` #11表示kafka节点数+1
+                if [ $NUM1 = $NUM2 -o $NUM2 = 0 ];then
+         continue
+     else
+         break
+        fi
+    done
+    break
+        else
+          continue
+      fi
+    done
+  echo '{"topic":"__consumer_offsets","partition":'$a',"replicas":['`sed -n ${NUM1}p id`','`sed -n ${NUM2}p id`']},' #新增id这个文件，文件内容为broker的id
+done
+```
+
+生成后新建文件 increase-replication-factor.json
+
+```json
+{"version":1,
+"partitions":[
+# 粘贴刚才生成的字符串，去掉最后逗号
+]
+}
+```
+
+执行命令
+
+```sh
+/data/kafka/bin/kafka-reassign-partitions.sh --zookeeper 192.168.100.31:2181 --reassignment-json-file increase-replication-factor.json --execute
+```
+

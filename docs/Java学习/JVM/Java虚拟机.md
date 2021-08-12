@@ -411,3 +411,123 @@ public class LinkTest {
 类LinkTest 引用了类 ToBeLinked，但是并没有真正使用它，只是声明了一个变量，并没有创建该类的实例或是访问其中的静态域。
 
 在  Oracle 的 JDK 6 中，如果把编译好的 ToBeLinked 的 Java 字节代码删除之后，再运行  LinkTest，程序不会抛出错误。这是因为 ToBeLinked 类没有被真正用到，而 Oracle 的 JDK 6  所采用的链接策略使得ToBeLinked 类不会被加载，因此也不会发现 ToBeLinked 的 Java  字节代码实际上是不存在的。如果把代码改成 ToBeLinked toBeLinked = new  ToBeLinked();之后，再按照相同的方法运行，就会抛出异常了。因为这个时候 ToBeLinked 这个类被真正使用到了，会需要加载这个类。
+
+
+
+## JVM-逃逸分析
+
+定义
+一个对象在方法中被定义，但却被方法以外的其他代码使用。
+
+Java中的对象不一定是在堆上分配的，因为JVM通过逃逸分析，能够分析出一个新对
+象的使用范围，并以此确定是否要将这个对象分配到堆上。如果JVM发现某些对象没有逃逸出方法，就
+很有可能被优化成在栈上分配。
+
+所以，并不是所有的对象和数组，都是在堆上进行分配的，由于即时编译的存在，如果JVM发现某些对
+象没有逃逸出方法，就很有可能被优化成在栈上分配。
+
+### 逃逸分析具体配置项如下：
+
+- 开启逃逸分析（JDK8中，逃逸分析默认开启。）
+  `-XX:+DoEscapeAnalysis`
+- 关闭逃逸分析
+  `-XX:-DoEscapeAnalysis`
+- 逃逸分析结果展示
+  `-XX:+PrintEscapeAnalysis`
+
+
+
+### 逃逸分析优点
+
+- 对象栈上分配
+
+  JVM通过逃逸分析，分析出新对象的使用范围，就可能将对象在栈上进行分配。栈分配可以快速地在栈
+  帧上创建和销毁对象，不用再将对象分配到堆空间，可以有效地减少 JVM 垃圾回收的压力
+
+- 分离对象标量替换
+
+  把无法逃逸的对象进行拆分为不可拆分的标量（成员变量），使用标量替换整个对象（标量替换）
+
+- 消除同步锁
+
+  锁消除：如果JVM通过逃逸分析，发现一个对象只能从一个线程被访问到，则访问这个对象时，可以不加同步
+  锁。如果程序中使用了synchronized锁，则JVM会将synchronized锁消除
+
+  锁粗化：把一个方法里面多个synchronize代码快粗化为一个。
+
+
+
+### 案例
+
+返回参数导致逃逸
+
+```java
+public class ObjectReturn {
+    public User createUser() {
+        User user = new User();
+        return user;
+    }
+}
+```
+
+方法变量外部使用
+
+```
+public class ObjectEscape {
+    private User user;
+
+    public void init() {
+        user = new User();
+    }
+}
+
+```
+
+测试
+
+```java
+public class Test {
+    public static void main(String[] args) throws IOException {
+        User user = null;
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < 1000000; i++) {
+            // new ObjectEscape().init();
+            user =  new ObjectReturn().createUser();
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("cost: " + (end - start));
+
+        System.out.println("==== APP  STARTED ====");
+        RuntimeMXBean runtime = ManagementFactory.getRuntimeMXBean();
+        String name = runtime.getName();
+        System.out.println(name);
+        System.out.println("Process ID: " + name.substring(0, name.indexOf("@")));
+        System.in.read();
+    }
+}
+```
+
+增加 jvm 配置 -Xmx1G -XX:-DoEscapeAnalysis -XX:+PrintGCDetails -XX:+EliminateAllocations
+
+可以发现不开启逃逸分析 jmap -histo PID 结果
+
+```
+ num     #instances         #bytes  class name
+----------------------------------------------
+   1:       1000000       16000000  ObjectReturn
+   2:       1000000       16000000  User
+```
+
+开启后
+
+```
+ num     #instances         #bytes  class name
+----------------------------------------------
+   1:           695        3325072  [I
+   2:        143359        2293744  ObjectReturn
+   3:        143359        2293744  User
+
+```
+
+可以看到对象变少了，同时 cost 也变快了。

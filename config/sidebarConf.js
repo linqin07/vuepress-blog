@@ -1243,6 +1243,98 @@ module.exports = {
          ]
       },
       {
+         "title": "2.抽象工厂模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/2.抽象工厂模式/1.抽象工厂.md",
+               "1.抽象工厂"
+            ]
+         ]
+      },
+      {
+         "title": "3.工厂模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/3.工厂模式/1.工厂模式.md",
+               "1.工厂模式"
+            ]
+         ]
+      },
+      {
+         "title": "4.建造者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/4.建造者模式/建造者模式.md",
+               "建造者模式"
+            ]
+         ]
+      },
+      {
+         "title": "5.原型模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/5.原型模式/1.原型模式.md",
+               "1.原型模式"
+            ]
+         ]
+      },
+      {
+         "title": "6.适配器模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/6.适配器模式/1.适配器模式.md",
+               "1.适配器模式"
+            ]
+         ]
+      },
+      {
+         "title": "7.装饰者模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/7.装饰者模式/装饰者模式.md",
+               "装饰者模式"
+            ]
+         ]
+      },
+      {
+         "title": "8.外观模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/8.外观模式/1.外观模式.md",
+               "1.外观模式"
+            ]
+         ]
+      },
+      {
+         "title": "9.代理模式",
+         "collapsable": true,
+         "children": [
+            [
+               "/设计模式/9.代理模式/",
+               "README"
+            ],
+            [
+               "/设计模式/9.代理模式/CGLIB动态的代理.md",
+               "CGLIB动态的代理"
+            ],
+            [
+               "/设计模式/9.代理模式/JDK动态代理.md",
+               "JDK动态代理"
+            ],
+            [
+               "/设计模式/9.代理模式/静态代理.md",
+               "静态代理"
+            ]
+         ]
+      },
+      {
          "title": "10.桥接模式",
          "collapsable": true,
          "children": [
@@ -1351,16 +1443,6 @@ module.exports = {
          ]
       },
       {
-         "title": "2.抽象工厂模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/2.抽象工厂模式/1.抽象工厂.md",
-               "1.抽象工厂"
-            ]
-         ]
-      },
-      {
          "title": "20.状态模式",
          "collapsable": true,
          "children": [
@@ -1405,88 +1487,6 @@ module.exports = {
             [
                "/设计模式/23.访问者模式/访问者模式.md",
                "访问者模式"
-            ]
-         ]
-      },
-      {
-         "title": "3.工厂模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/3.工厂模式/1.工厂模式.md",
-               "1.工厂模式"
-            ]
-         ]
-      },
-      {
-         "title": "4.建造者模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/4.建造者模式/建造者模式.md",
-               "建造者模式"
-            ]
-         ]
-      },
-      {
-         "title": "5.原型模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/5.原型模式/1.原型模式.md",
-               "1.原型模式"
-            ]
-         ]
-      },
-      {
-         "title": "6.适配器模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/6.适配器模式/1.适配器模式.md",
-               "1.适配器模式"
-            ]
-         ]
-      },
-      {
-         "title": "7.装饰者模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/7.装饰者模式/装饰者模式.md",
-               "装饰者模式"
-            ]
-         ]
-      },
-      {
-         "title": "8.外观模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/8.外观模式/1.外观模式.md",
-               "1.外观模式"
-            ]
-         ]
-      },
-      {
-         "title": "9.代理模式",
-         "collapsable": true,
-         "children": [
-            [
-               "/设计模式/9.代理模式/",
-               "README"
-            ],
-            [
-               "/设计模式/9.代理模式/CGLIB动态的代理.md",
-               "CGLIB动态的代理"
-            ],
-            [
-               "/设计模式/9.代理模式/JDK动态代理.md",
-               "JDK动态代理"
-            ],
-            [
-               "/设计模式/9.代理模式/静态代理.md",
-               "静态代理"
             ]
          ]
       }
