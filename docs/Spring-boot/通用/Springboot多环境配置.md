@@ -31,3 +31,14 @@ java -cp gitbook.jar com.util.VuePressUtil F:\hexo\vuepress\docs
 ```sh
 java -jar -Dspring.profiles.active=test demo-0.0.1-SNAPSHOT.jar
 ```
+
+-D 参数注入配置到服务，可以在服务中直接获取，也可以再次重命名获取，如下：
+
+使用命令 `-DSW_NAMESPACE=xxx`注入，等价于 `-Delasticsearch.nameSpace=xxx`
+
+```yaml
+elasticsearch:
+  nameSpace: ${SW_NAMESPACE:"datacenter"}
+  clusterNodes: ${SW_STORAGE_ES_CLUSTER_NODES:172.16.6.105:9200}
+```
+
