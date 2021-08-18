@@ -98,3 +98,10 @@ public void test1() throws IOException {
   - Session，很显然 Bean 实例的作用域是 Session 范围。
   - GlobalSession，用于 Portlet 容器，因为每个 Portlet 有单独的 Session，GlobalSession
     提供一个全局性的 HTTP Session。
+
+### 循环依赖
+
+#### 构造器循环依赖
+
+这个Spring解决不了
+
