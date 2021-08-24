@@ -32,7 +32,7 @@ module.exports = {
         owner: 'linqin07',
         repo: 'vuepress-blog',
         clientId: 'b791378efa6f3df53c05',
-        clientSecret: '26b883fd1426668aedf928ba741e2f55b9f6fbbb',
+        clientSecret: '6e912c05d8c900c57ed04e994e9d12e4d96e33f9',
     },
     "vuepress-plugin-code-copy": {
         // selector: String,
