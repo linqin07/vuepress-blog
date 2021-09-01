@@ -8,32 +8,20 @@ module.exports = {
             buttonText: "朕知道了"
         }
     },
-    // 'seo': {
-    //     siteTitle: (_, $site) => $site.title,
-    //     title: $page => $page.title,
-    //     description: $page => $page.frontmatter.description,
-    //     author: (_, $site) => $site.themeConfig.author,
-    //     tags: $page => $page.frontmatter.tags,
-    //     twitterCard: _ => 'summary_large_image',
-    //     type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
-    //     url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-    //     image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
-    //     publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
-    //     modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
-    // },
-    // 'sitemap': {
-    //     hostname: 'https://www.linqin.site'
-    // },
-    '@vssue/vuepress-plugin-vssue': {
-        // set `platform` rather than `api`
-        platform: 'github',
 
-        // all other options of Vssue are allowed
-        owner: 'linqin07',
-        repo: 'vuepress-blog',
-        clientId: 'b791378efa6f3df53c05',
-        clientSecret: '6e912c05d8c900c57ed04e994e9d12e4d96e33f9',
-    },
+    // '@vssue/vuepress-plugin-vssue': {
+    //     // set `platform` rather than `api`
+    //     platform: 'github',
+    //
+    //     // all other options of Vssue are allowed
+    //     owner: 'linqin07',
+    //     repo: 'vuepress-blog',
+    //     clientId: 'b791378efa6f3df53c05',
+    //     clientSecret: '6e912c05d8c900c57ed04e994e9d12e4d96e33f9',
+
+    // <Vssue title="Vssue" />  把这行加到需要的页面下面，
+    // },
+
     "vuepress-plugin-code-copy": {
         // selector: String,
         align: 'top',
