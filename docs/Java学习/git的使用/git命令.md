@@ -51,21 +51,21 @@ git pull origin master --allow-unrelated-histories
 
 ### 清空远程仓库
 
-```
+```sh
 git rm -r --cached .
 // 删除add的某个文件夹
 git rm -r --cached target
 ```
 
-```
+```sh
 git add .
 ```
 
-```
+```sh
 git commit -m ".gitignore is now working"
 ```
 
-```
+```sh
 git push -u origin master
 ```
 

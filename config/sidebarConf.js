@@ -256,6 +256,10 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Linux/Deepin系统安装优化.md",
+         "Deepin系统安装优化"
+      ],
       {
          "title": "docker",
          "collapsable": true,
@@ -474,6 +478,10 @@ module.exports = {
             ]
          ]
       },
+      [
+         "/Linux/Prometheus监控.md",
+         "Prometheus监控"
+      ],
       {
          "title": "Redis",
          "collapsable": true,
@@ -1191,8 +1199,8 @@ module.exports = {
                "常见坑点问题"
             ],
             [
-               "/复习题/面试题/防止表单重复提交方案.md",
-               "防止表单重复提交方案"
+               "/复习题/面试题/面试题目.md",
+               "面试题目"
             ]
          ]
       },

@@ -8,6 +8,16 @@
         <finalName>${project.artifactId}</finalName>
         <!--Maven会从项目的src/main/resources目录下查找资源，加载配置，不能随便改，这个如果不行可以去掉，使用下面的 复制配置插件-->
         <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <targetPath>${project.build.outputDirectory}</targetPath>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <targetPath>${project.build.testOutputDirectory}</targetPath>
+                <filtering>false</filtering>
+            </resource>
             <!--把配置文件放在jar包外面的config文件夹，方便修改-->
             <resource>
                 <directory>src/main/resources</directory>

@@ -105,3 +105,48 @@ public void test1() throws IOException {
 
 这个Spring解决不了
 
+#### setter方式原型
+
+Spring的单例对象的初始化主要分为三步：
+
+1. createBeanInstance：实例化，其实也就是调用对象的`构造方法`实例化对象
+2. populateBean：填充属性，这一步主要是多 bean 的依赖属性进行填充
+3. initializeBean：调用 spring xml 中的 init 方法。
+
+spring内部有三级缓存：
+
+- singletonObjects 一级缓存，用于保存实例化、注入、初始化完成的bean实例
+- earlySingletonObjects 二级缓存，用于保存实例化完成的bean实例
+- singletonFactories 三级缓存，用于保存bean创建工厂，以便于后面扩展有机会创建代理对象。
+
+
+
+```java
+@Service
+public class TestService1 {
+
+    @Autowired
+    private TestService2 testService2;
+
+    public void test1() {
+    }
+}
+
+@Service
+public class TestService2 {
+
+    @Autowired
+    private TestService1 testService1;
+
+    public void test2() {
+    }
+}
+```
+
+TestService1 注入的时候，从一级缓存里面获取不到实例，然后创建实例，并且提前暴露添加到三级缓存中，
+
+其中依赖 TestService2，去一级缓存中获取实例，发现也是没有，就主动创建实例，同时提前暴露加入三级缓存中。
+
+然后发现其依赖 TestService1 ，从三级缓冲中获取到，添加到二级缓存中。TestService2 就注入成功了，TestService2 就添加到一级缓存中。
+
+然后TestService1 获得 TestService2 也可以初始化成功，TestService1 添加到一级缓存。

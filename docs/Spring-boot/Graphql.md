@@ -28,7 +28,7 @@ query 查询，mutation 变更查询。在 graphql 实现中，查询是并行�
 
 内省，查询支持啥接口、参数、类型
 
-```json
+```tex
 # 查询schema里面的query、mutation
 query __schema {
   __schema {
