@@ -412,6 +412,8 @@ web 模块里面使用 es 工厂类进行获取es操作。这样每个模块就�
 
 最后打包 es6 后，包含 lib 同时排除依赖的 common 模块(不然反射由于参数非此类加载器加载的类，即使同名也不是一个东西)。这些 lib 放到指定路径下面由类加载进行加载（不同命名空间）
 
+> tips: web项目中，由控制器进入往往是由继承 AppClassLoader 的 TomcatClassLoader 进行加载的。而网名通过模块去访问的是另外一个类加载器，直接请求会报错大量的 noclassfound、nodefclass。这时，我们往往只要把线程的类加载器主动设置一下就可以了 Thread.currentThread().setContextClassLoader(youclassLoader)
+
 
 
 项目结构：
