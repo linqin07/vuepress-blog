@@ -6,6 +6,25 @@
 `​git init [project-name]`
 下载一个项目和它的整个代码历史
 
+### GIT 中文乱码
+
+`micro .gitconfig` 添加：
+
+```sh
+[gui]
+    encoding = utf-8  
+    # 代码库统一使用utf-8  
+[i18n]
+    commitencoding = utf-8  
+    # log编码  
+[svn]
+    pathnameencoding = utf-8  
+    # 支持中文路径  
+[core]
+	quotepath = false 
+	# status引用路径不再是八进制（反过来说就是允许显示中文）
+```
+
 `git clone [url]`
 
 ### Git的工作流程
