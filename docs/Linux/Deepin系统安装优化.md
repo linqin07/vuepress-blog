@@ -31,6 +31,7 @@ If you use light theme
 If you use dark theme
 ~/.local/share/deepin/themes/deepin/dark/titlebar.ini
 内容如下: 修改25即可 保存后重启电脑
+
 [Active]
 height=25
 
