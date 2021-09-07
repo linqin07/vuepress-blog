@@ -15,10 +15,6 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/git的使用/",
-               "README"
-            ],
-            [
                "/Java学习/git的使用/git命令.md",
                "git命令"
             ],
@@ -44,18 +40,10 @@ module.exports = {
                   ]
                ]
             },
-            [
-               "/Java学习/git的使用/取消右键的菜单.md",
-               "取消右键的菜单"
-            ],
             {
                "title": "安装gitlab",
                "collapsable": true,
                "children": [
-                  [
-                     "/Java学习/git的使用/安装gitlab/",
-                     "README"
-                  ],
                   [
                      "/Java学习/git的使用/安装gitlab/CentOS7安装维护Gitlab.md",
                      "CentOS7安装维护Gitlab"
