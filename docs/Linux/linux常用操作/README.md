@@ -1,11 +1,11 @@
 ### linux常用命令：
 
-###### 远程下载文件：`wget`
+### 远程下载文件：`wget`
 
 ```shell
 wget [url] -P [下载目录]
 ```
-###### curl
+### curl
 
 -L 重定向发送请求
 
@@ -66,11 +66,11 @@ scp remoteuser@remotehost:"/remotefold1/file1 /remotefold2/file2" /localfold/
 root对方用户@ip:/目录
 其实不管文件或者目录加 -r 都可以
 
-###### md5sum file1 [file2]
+### md5sum file1 [file2]
 
 生成md5字符串，比较内容的
 
-###### 查看负载
+### 查看负载
 
 `w`、`uptime`、`top`
 
@@ -85,8 +85,9 @@ top
 - s     改变两次刷新之间的延迟时间（单位为s）
 - k     kill PID
 - u     输入用户名
+- c     显示完整命令
 
-###### 查看机器几核
+### 查看机器几核
 
 理论上认为 平均负载 除以 总核心数 <= 0.7 认为正常
 
@@ -96,7 +97,7 @@ cat /proc/cpuinfo |grep "cores"|uniq
 grep -c 'model name' /proc/cpuinfo 
 ```
 
-###### 查看内存
+### 查看内存
 
 free -m
 
@@ -104,7 +105,7 @@ free -g
 
 ps -aux | sort -k4,4nr | head -5 倒排序使用内存数目
 
-###### sort
+### sort
 
 sort -k 4 -r ：k指定那列 -r倒序
 
@@ -116,7 +117,7 @@ sort -k 1,1 -n :第一列开始到第一列结束，排序 -n 去重
 
 
 
-###### 同步系统时间
+### 同步系统时间
 
 > yum install ntpdate
 >

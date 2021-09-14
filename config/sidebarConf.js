@@ -11,6 +11,28 @@ module.exports = {
          "SUMMARY"
       ],
       {
+         "title": "Arthas 基础教程",
+         "collapsable": true,
+         "children": [
+            [
+               "/Java学习/Arthas 基础教程/Arthas 基础教程.md",
+               "Arthas 基础教程"
+            ],
+            [
+               "/Java学习/Arthas 基础教程/Thread.md",
+               "Thread"
+            ],
+            [
+               "/Java学习/Arthas 基础教程/热部署.md",
+               "热部署"
+            ],
+            [
+               "/Java学习/Arthas 基础教程/编译和反编译.md",
+               "编译和反编译"
+            ]
+         ]
+      },
+      {
          "title": "git的使用",
          "collapsable": true,
          "children": [
@@ -222,28 +244,6 @@ module.exports = {
          "/Linux/SUMMARY.md",
          "SUMMARY"
       ],
-      {
-         "title": "Arthas 基础教程",
-         "collapsable": true,
-         "children": [
-            [
-               "/Linux/Arthas 基础教程/Arthas 基础教程.md",
-               "Arthas 基础教程"
-            ],
-            [
-               "/Linux/Arthas 基础教程/Thread.md",
-               "Thread"
-            ],
-            [
-               "/Linux/Arthas 基础教程/热部署.md",
-               "热部署"
-            ],
-            [
-               "/Linux/Arthas 基础教程/编译和反编译.md",
-               "编译和反编译"
-            ]
-         ]
-      },
       [
          "/Linux/Deepin系统安装优化.md",
          "Deepin系统安装优化"
