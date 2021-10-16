@@ -233,7 +233,11 @@ module.exports = {
                "Maven"
             ]
          ]
-      }
+      },
+      [
+         "/Java学习/正则.md",
+         "正则"
+      ]
    ],
    "/Linux/": [
       [

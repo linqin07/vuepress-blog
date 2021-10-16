@@ -31,7 +31,7 @@
 
 ### 2.使用命令上传jar包
 
-maven 的 setting 文件要配置好对应的私服地址
+maven 的 setting 文件要配置好对应的私服地址，执行命令的目录要在有pom的地方，同时注意文件的路径会相应抓换为相对路径。
 
 ```sh
 mvn deploy:deploy-file 
