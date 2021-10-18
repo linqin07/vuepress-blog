@@ -156,6 +156,28 @@ git config --unset http.proxy
 
 
 
+### 命令行更新合并
+
+```sh
+//查看当前远程的版本
+git remote -v
+git brance -a
+
+//获取最新代码到本地临时分支(本地当前分支为[master]，获取的远端的分支为[origin/mater],拉取到新分支test中)
+git fetch origin master:test
+
+//查看当前和另外一个版本差
+git diff test
+
+//合并最新分支到本地分支
+git merge test
+
+// 删除本地临时分支
+git branch -D test
+```
+
+
+
 ### .gitignore
 
 git 目录创建文件 
