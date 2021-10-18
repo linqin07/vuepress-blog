@@ -182,3 +182,18 @@ git add .
 git commit -m '忽略文件'
 git push
 ```
+
+
+
+### 二.账号密码免登
+
+> 此方法只适用于通过 https 校验登录,适用于每次命令提交都提示输入账户密码，密码还是要token的，恶心的一逼
+
+设置 -> git 编辑本地 .git/config 增加(tortoiseGit可这样修改config，自行找自己喜欢的修改对应项目本地config方式就好)
+
+```ini
+[credential]  
+    helper = store
+```
+
+保存，输入一次账号密码后第二次就会记住账号密码了
