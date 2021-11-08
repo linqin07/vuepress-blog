@@ -62,12 +62,12 @@ Map<String, List<Fruit>> groupMap = fruitList.stream().collect(Collectors.groupi
         list.add(user3);
 ```
 
-tomap 要注意重复数据的处理。否者重复key会报错。
+tomap 要注意重复数据的处理。否者重复key会报错。（ps：注意 toMap 的 value 不能为空，需要提前处理）
 
 ```java
 Map<Integer, String> collect = list.stream().collect(Collectors.toMap(User::getAge, User::getName, (o1, o2) -> o2));
 
-Map<Integer, User> collect = list.stream().collect(Collectors.toMap(User::getAge, a-> a, (o1, o2) -> o2));
+Map<Integer, User> collect = list.stream().filter(i -> i.getAge() != null).collect(Collectors.toMap(User::getAge, a-> a, (o1, o2) -> o2));
 ```
 
 > [12=linqin3, 13=linqin1, 14=linqin2]
