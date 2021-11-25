@@ -54,3 +54,32 @@ mvn -gs /data/maven/setting.xml clean
 mvn gs /data/maven/setting.xml clean
 ```
 
+
+
+### 依赖原则
+
+1. 依赖路径最短优先原则
+
+```html
+A -> B -> C -> X(1.0)
+A -> D -> X(2.0)
+```
+
+由于 X(2.0) 路径最短，所以使用 X(2.0)。
+
+2. 声明顺序优先原则
+
+```html
+A -> B -> X(1.0)
+A -> C -> X(2.0)
+```
+
+在 POM 中最先声明的优先，上面的两个依赖如果先声明 B，那么最后使用 X(1.0)。
+
+3. 覆写优先原则
+
+子 POM 内声明的依赖优先于父 POM 中声明的依赖。
+
+#### 解决依赖冲突
+
+找到 Maven 加载的 Jar 包版本，使用 `mvn dependency:tree` 查看依赖树，根据依赖原则来调整依赖在 POM 文件的声明顺序。

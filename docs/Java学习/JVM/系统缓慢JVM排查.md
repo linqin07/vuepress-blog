@@ -117,3 +117,45 @@ jmap -heap 9667
    7:        110358        3531456  java.util.concurrent.ConcurrentHashMap$Node
 ```
 
+
+
+### jstat 命令
+
+jstat -gcutil PID 1000 表示每隔1s执行一次
+
+```sh
+[ivory@gaivory root]$ jstat -gcutil 3178 2000
+  S0        S1     E           O      M      CCS    YGC     YGCT  FGC FGCT     GCT   
+  4.05   0.00  11.93  31.60  96.07  93.17    146    1.659     6    0.079    1.737
+  4.05   0.00  11.94  31.60  96.07  93.17    146    1.659     6    0.079    1.737
+  4.05   0.00  12.02  31.60  96.07  93.17    146    1.659     6    0.079    1.737
+  4.05   0.00  12.03  31.60  96.07  93.17    146    1.659     6    0.079    1.737
+
+```
+
+- S0   Heap上的 Survivor space 0 区已使用空间的百分比
+- S1   Heap上的 Survivor space 1 区已使用空间的百分比
+- E     Heap上的 Eden space 区已使用空间的百分比
+- O    Heap上的 Old space 区已使用空间的百分比
+- M    元数据区使用比例
+- YGC  从应用程序启动到采样时发生 Young GC 的次数
+- YGCT Young GC 总时间
+- FGC  从应用程序启动到采样时发生 Full GC 的次数
+- FGCT Full GC 总时间
+- GCT   GC总时间
+
+
+
+YGC 理解
+
+新生代内存按照 8:1:1 的比例分为一个 eden 区和两个 survivor(survivor0, survivor1) 区。一个Eden区，两个 Survivor区。新 new 出来的对象会存储在 Eden(伊甸园)中，当这区域满了之后JVM会进行一次垃圾回收，在回收时把有用的对象存储在 S1 区，没用的就销毁此对象的内存空间，这过程即第一次 YoungGC，如果 S1 区空间也满了后，同理会将有用的对象会放到 S2 区中，并释放 S1 空间，以上反复的回收即为 YoungGC。
+
+![image-20211110132125529.png](https://gitee.com/linqin07/pic/raw/master/image-20211110132125529.png)
+
+
+
+#### FULL GC 理解
+
+年轻代空间满了之后，会将满足一定活跃度的对象放到 Old 区中(对象活跃度：每个对象满足JVM默认 count=15 之后就判断是活跃对象，每次 YoungGC 后会将存活对象生命中 +1，直到 =15 就转到 Old 区，这个次数可以通过：-XX:MaxTenuringThreshold 来配置)， 由于 Full GC 需要对整个堆进行回收，导致应用访问变慢，因此应该尽可能减少Full GC 的次数。
+
+![image-20211110132217685.png](https://gitee.com/linqin07/pic/raw/master/image-20211110132217685.png)

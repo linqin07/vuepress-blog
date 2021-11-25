@@ -879,6 +879,10 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
+               "/Spring-boot/spring-boot-druid/多数据源使用.md",
+               "多数据源使用"
+            ],
+            [
                "/Spring-boot/spring-boot-druid/整合 druid 数据源.md",
                "整合 druid 数据源"
             ]
