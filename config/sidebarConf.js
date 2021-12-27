@@ -317,6 +317,10 @@ module.exports = {
                   [
                      "/Linux/ELK/ES/9.x-pack插件.md",
                      "9.x-pack插件"
+                  ],
+                  [
+                     "/Linux/ELK/ES/10.常用api.md",
+                     "10.常用api"
                   ]
                ]
             },

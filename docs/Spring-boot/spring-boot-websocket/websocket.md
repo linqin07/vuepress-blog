@@ -38,7 +38,7 @@ WebSocket 使得客户端和服务器之间的数据交换变得更加简单，�
        /**
         * concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
         */
-       private static CopyOnWriteArraySet<MyWebSocket> webSocketSet = new CopyOnWriteArraySet<MyWebSocket>();
+       public static CopyOnWriteArraySet<MyWebSocket> webSocketSet = new CopyOnWriteArraySet<MyWebSocket>();
    
    
        /**

@@ -128,6 +128,7 @@ spring工厂类：`SpringBeanFactory` 工具类
  * @date: 2019/02/11
  */
 @Component
+@Lazy(false)
 public class SpringBeanFactory implements ApplicationContextAware {
 
     private static ApplicationContext context;
