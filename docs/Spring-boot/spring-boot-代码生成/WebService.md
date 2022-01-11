@@ -6,7 +6,7 @@ WebService 其实就是大家经常说的**接口**的一种实现方式。通�
 
 ![1597728150753.png](https://gitee.com/linqin07/pic/raw/master/1597728150753.png)
 
-完成后默认有一个 HelloWorld.java，启动访问 http://localhost:9000/HelloWorld`?wsdl` 可以看到 xml
+完成后默认有一个 HelloWorld.java，启动访问 http://localhost:9000/HelloWorld`?wsdl` 可以看到 xml
 
 ```java
 @WebService()
@@ -93,3 +93,67 @@ WebService
    
 
 :::
+
+
+
+
+
+## spring-boot-starter-web-services
+
+这个依赖是专门处理 webservice，和请求http方式一样，不需要知道 wsdl，只要 url，参数就可以了，缺点是没法自测。
+
+pom
+
+```xml
+        <!-- web Services -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>3.2.7</version>
+        </dependency>
+
+```
+
+code
+
+```java
+@Service
+public class SmsServiceImpl implements SmsService {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    /**
+     * 动态调用
+     */
+    @Override
+    public void SmsSendMessage(Long msisdn,String msg,Long sysType) {
+        logger.info("id:{},msg:{},,type:{}",msisdn,msg,sysType);
+        // 创建动态客户端
+        JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
+        Client client =null;
+        try {
+        client = dcf.createClient("http://1127.0.0.1:18150/xx/aa/cc?wsdl");
+        // 需要密码的情况需要加上用户名和密码
+        // client.getOutInterceptors().add(new ClientLoginInterceptor(USER_NAME, PASS_WORD));
+        Object[] objects = new Object[0];
+            // invoke("方法名",参数1,参数2,参数3....);
+        objects = client.invoke("insertSms", msisdn,msg,sysType);
+        logger.info("返回数据:" + objects[0]);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(),e);
+        }finally {
+            if (client!=null) {
+                client.destroy();
+            }
+
+        }
+    }
+}
+
+```
+

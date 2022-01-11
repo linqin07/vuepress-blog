@@ -109,9 +109,9 @@ public void test1() throws IOException {
 
 Spring的单例对象的初始化主要分为三步：
 
-1. createBeanInstance：实例化，其实也就是调用对象的`构造方法`实例化对象
-2. populateBean：填充属性，这一步主要是多 bean 的依赖属性进行填充
-3. initializeBean：调用 spring xml 中的 init 方法。
+1. createBeanInstance：`实例化`，其实也就是调用对象的`构造方法`实例化对象
+2. populateBean：`填充属性`，这一步主要是多 bean 的依赖属性进行填充
+3. initializeBean：`调用 spring xml 中的 init` 方法。
 
 spring内部有三级缓存：
 

@@ -71,7 +71,7 @@ bind 127.0.0.1
 
   [知识点](https://www.cnblogs.com/Jtianlin/p/10259062.html)
 
-登陆使用密码
+登陆使用密码， 集群模式不可以选择数据库，默认使用0数据库， 同时登录命令需要加上`-c`参数
 
 ```sh
 ./redis-cli
@@ -80,12 +80,18 @@ auth "123456"
 ./redis-cli -h 127.0.0.1 -p 6379 -a myPassword
 选择数据库
 select 10
+
+集群模式
+./bin/redis-cli -c -h 192.168.33.60 -p 7000 -a pwd123456
 ```
 
 展现列表，可以使用通配符：
 
 ```sh
 keys mykey*
+
+集群模式,不能去掉\;换成你redis集群的一个节点的ip和端口
+./redis-cli -c -a pwd123456 --cluster call 192.168.168.161:7001 keys \*
 ```
 删除  del key1 key2
 
@@ -98,7 +104,6 @@ keys mykey*
  // 单个get、set
  set key value ex 60
  get key
- 
 ```
 
 - [bitmap](https://www.jianshu.com/p/305e65de1b13)

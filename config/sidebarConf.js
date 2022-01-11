@@ -321,6 +321,10 @@ module.exports = {
                   [
                      "/Linux/ELK/ES/10.常用api.md",
                      "10.常用api"
+                  ],
+                  [
+                     "/Linux/ELK/ES/11.优化.md",
+                     "11.优化"
                   ]
                ]
             },
@@ -943,6 +947,10 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-mybatis/6.mybatis 部分代码生成.md",
                "6.mybatis 部分代码生成"
+            ],
+            [
+               "/Spring-boot/spring-boot-mybatis/7.MapStruct映射框架.md",
+               "7.MapStruct映射框架"
             ]
          ]
       },

@@ -13,7 +13,9 @@
    - 修改 service 变量为 `static`，使其属于类，在初始化是就是全局变量，多个实例公用。需要注意的是：set 方法不能是 static 的。
 
      > You cannot autowire or manually wire static fields in Spring
-
+   >
+     > 静态代码块static > 代码块{} > 构造方法 > autowire注入
+     
      ```java
      private static ChatService chatService;
      // 注入的时候，给类的 service 注入
