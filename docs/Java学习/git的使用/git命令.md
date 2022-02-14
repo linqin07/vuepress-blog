@@ -158,10 +158,12 @@ git config --unset http.proxy
 
 ### 命令行更新合并
 
+需要本地没有修改，如有修改请先 stash
+
 ```sh
 //查看当前远程的版本
 git remote -v
-git brance -a
+git branch -a
 
 //获取最新代码到本地临时分支(本地当前分支为[master]，获取的远端的分支为[origin/mater],拉取到新分支test中)
 git fetch origin master:test

@@ -75,20 +75,6 @@ module.exports = {
          ]
       },
       {
-         "title": "Guava 学习",
-         "collapsable": true,
-         "children": [
-            [
-               "/Java学习/Guava 学习/",
-               "README"
-            ],
-            [
-               "/Java学习/Guava 学习/常用方法.md",
-               "常用方法"
-            ]
-         ]
-      },
-      {
          "title": "IDEA学习",
          "collapsable": true,
          "children": [
@@ -217,6 +203,24 @@ module.exports = {
             [
                "/Java学习/基础知识/泛型中占位符T和有什么区别.md",
                "泛型中占位符T和有什么区别"
+            ]
+         ]
+      },
+      {
+         "title": "常用工具类",
+         "collapsable": true,
+         "children": [
+            [
+               "/Java学习/常用工具类/",
+               "README"
+            ],
+            [
+               "/Java学习/常用工具类/Guava常用.md",
+               "Guava常用"
+            ],
+            [
+               "/Java学习/常用工具类/MapStruct.md",
+               "MapStruct"
             ]
          ]
       },
@@ -801,7 +805,11 @@ module.exports = {
                "数据库事务"
             ]
          ]
-      }
+      },
+      [
+         "/mysql/深入了解分布式事物.md",
+         "深入了解分布式事物"
+      ]
    ],
    "/Spring/": [
       [
@@ -951,6 +959,16 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-mybatis/7.MapStruct映射框架.md",
                "7.MapStruct映射框架"
+            ]
+         ]
+      },
+      {
+         "title": "spring-boot-redis",
+         "collapsable": true,
+         "children": [
+            [
+               "/Spring-boot/spring-boot-redis/整合redis.md",
+               "整合redis"
             ]
          ]
       },

@@ -39,10 +39,19 @@ WHERE
 TABLE_SCHEMA = '库名' and table_name = '表名';
 ```
 
-### 3.执行sql命令输出
+#### 3.执行sql命令输出
 
 ```sh
 mysql -uroot -p'root123' tablename > /tmp/my.sql <<EOF
 UPDATE log_es_index_par SET early_data = DATE_SUB(create_time,INTERVAL 1 DAY), late_data=CONCAT(index_time, ' 23:59:59') where early_data is null；   
 EOF
 ```
+
+
+
+#### 4.请求url地址链接时区
+
+```sh
+jdbc:mysql://192.168.32.187:3306/db?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+```
+

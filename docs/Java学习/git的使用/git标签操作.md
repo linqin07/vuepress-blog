@@ -8,8 +8,6 @@ git tag
 
 `git log --oneline`
 
-https://gitee.com/linqin07/pic/raw/master/1552467714894.png
-
 ###### 3.根据简要id新增tab，红色的根据表示推送到指定的commitid后
 
  git tag -a v1.0.1 73c8043 -m "v1.0.1版本说明"
@@ -21,18 +19,12 @@ git tab xxx
 
 `git push --tag`
 
-https://gitee.com/linqin07/pic/raw/master/1552467798509.png
-
 ###### 5.效果
-
-https://gitee.com/linqin07/pic/raw/master/1552467827816.png
 
 ###### 6.删除&修改
 
 本地删除tag
 git tag -d
-
-https://gitee.com/linqin07/pic/raw/master/1552467856500.png
 
 远程 tag 的删除
 git push Dubbo --delete v1.0.0
