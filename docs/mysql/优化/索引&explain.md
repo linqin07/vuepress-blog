@@ -35,11 +35,11 @@
 
 ### explain
 
-- **select_type:**	 
+- select_type:	 
 
   ​	`SIMPLE`:简单SELECT(不使用UNION或子查询)，`UNION`:UNION中的第二个或后面的SELECT语句
 
-- **table**: 对应的表
+- table: 对应的表
 
 - **type**：最重要的一个参数（顺序排，最优到最差）
 
@@ -59,13 +59,13 @@
   >
   > **system**：表只有一条记录（等于系统表），这是const类型的特列，平时不会出现
 
-- **possible_keys**：指出MySQL能使用哪个索引在该表中找到行
+- possible_keys：指出MySQL能使用哪个索引在该表中找到行
 
-- **key_len**：显示MySQL决定使用的键长度。如果键是NULL,则长度为NULL
+- **key_len**：显示MySQL决定使用的键长度。如果键是NULL,则长度为NULL，越大越好，针对联合索引
 
-- **ref**：显示使用哪个列或常数与key一起从表中选择行
+- ref：显示使用哪个列或常数与key一起从表中选择行
 
-- **rows**：显示MySQL认为它执行查询时必须检查的行数。多行之间的数据相乘可以估算要处理的行数
+- **rows**：显示MySQL认为它执行查询时必须检查的行数。多行之间的数据相乘可以估算要处理的行数，越小越好
 
 - **Extra**：Using index 就是代表了优化器使用了覆盖索引（即从辅助索引中
   就可以得到查询的记录,而不需要查询聚集索引中的记录。）

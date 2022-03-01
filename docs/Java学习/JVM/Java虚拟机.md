@@ -6,6 +6,8 @@
 
 ![1586420423350.png](https://gitee.com/linqin07/pic/raw/master/1586420423350.png)
 
+![image-20220225004639547](https://gitee.com/linqin07/pic/raw/master/image-20220225004639547.png)
+
 - 类加载子系统:
 
   主要负责负责加载 Class 信息，加载的类信息都存放在方法区的类存空间中。 当 JVM 使用类加载器装载某个类时，它首先要定位对应的 class 文件，然后读入这个 class 文件，最后，JVM 提取该文件的内容信息，并将这些信息存储到方法区，最后返回一个 class 实例
