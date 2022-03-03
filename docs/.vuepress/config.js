@@ -17,7 +17,7 @@ module.exports = {
     plugins: pluginConf,
     head: headConf,
     themeConfig: {
-        repo: 'https://github.com/woshilinqin/vuepress-blog',
+        repo: 'https://github.com/linqin07/vuepress-blog',
         title: '个人主页',
         description: 'Lin的博客',
         logo: "/logo.png",
