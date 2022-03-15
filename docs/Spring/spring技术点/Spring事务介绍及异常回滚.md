@@ -1,4 +1,4 @@
-## Spring事务[^footnote1] ##
+## Spring事务 ##
 
 [^footnote1]: 参考：http://blog.csdn.net/qq_32331073/article/details/76508147
 
