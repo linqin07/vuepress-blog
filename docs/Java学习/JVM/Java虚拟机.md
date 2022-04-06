@@ -1,5 +1,3 @@
-
-
 # Java 虚拟机
 
 ### 1.基本结构
@@ -413,6 +411,8 @@ FileSystemClassLoader fileSystemClassLoader = new FileSystemClassLoader("D:\\IDE
 
 ### 5.项目中使用类加载
 
+#### 批量加载 lib
+
 使用情景：引入多个es客户端，引入多个kafka客户端。下面举例子使用自定义类加载引入es多个版本。
 
 定义一个 common 模块最高层的接口，接口要实现es要做的所有事情集合，定义获取接口的工厂类，根据相应的参数判断选择加载不同模块的代码。
@@ -433,11 +433,19 @@ web 模块里面使用 es 工厂类进行获取es操作。这样每个模块就�
 
 ![image-20210610185617847.png](https://gitee.com/linqin07/pic/raw/master/image-20210610185617847.png)
 
-项目地址
+项目地址https://gitee.com/linqin07/MyProject
 
+#### 加载驱动场景
 
+通过输入路径类型对应加载 path 下面的驱动文件。采用 URLClassLoader 下面的 addURL 方法动态加载。
 
-### Java 类的链接
+![image-20220331105024565](https://gitee.com/linqin07/pic-bed/raw/master/image-20220331105024565.png)
+
+使用连接 
+
+![image-20220331105236128](https://gitee.com/linqin07/pic-bed/raw/master/image-20220331105236128.png)
+
+### 6.Java 类的链接
 
 Java类的链接指的是将Java类的二进制代码合并到JVM的运行状态之中的过程。在链接之前，这个类必须被成功加载。类的链接包括`验证、准备和解析`等几个步骤。验证是用来确保Java类的二进制表示在结构上是完全正确的。如果验证过程出现错误的话，会抛出  java.lang.VerifyError错误。
 
