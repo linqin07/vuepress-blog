@@ -46,6 +46,32 @@
 
 > @Transactional(isolation = Isolation.READ_UNCOMMITTED)
 
+
+
+## 事务的并发问题
+
+如果实际中使用事务，同时还有并发的情况。如事务过程是一个秒杀卖商品，卖操作需要先减库存再下订单，这个操作执行事务。下面是错误案例，会导致超卖。
+
+执行 unlock 释放锁的同时事务还没提交，其他线程进入到里面获取的值还是没提交前的数据，gg思密达。
+
+```java
+@Service
+public class ServiceOne{
+    // 设置一把可重入的公平锁
+    private Lock lock = new ReentrantLock(true);
+    
+    @Transactional(rollbackFor = Exception.class)
+    public Result  func(long seckillId, long userId) {
+        lock.lock();
+        // 执行数据库操作——查询商品库存数量
+        // 如果 库存数量 满足要求 执行数据库操作——减少库存数量——模拟卖出货物操作
+        lock.unlock();
+    }
+}
+```
+
+正确操作：事务过程中不要使用锁，ReentrantLock 、synchronized 都不行。锁再更上一层进行控制。或则业务运行，直接设置事务基本为串行化。
+
 ## Spring事务失效的常见原因
 
 1. **数据库引擎不支持事务**

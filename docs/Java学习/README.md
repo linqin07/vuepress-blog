@@ -40,3 +40,24 @@ int i = 0;
 int gg = i == 0 ? 0 : i == 1 ? 1 : 2;
 ```
 
+
+
+### cookies
+
+cookies 核心参数设置 path，其中 path 访问子路径时，会包含其父路径的Cookie,而在访问父路径时，不包含子路径的Cookie。比如请求 127.0.0.1:8080/a/b/c/helloword, 可以获取到 /、/a、/a/b、/a/b/c 的 cookies
+
+后端可以获取到这个值,和获取普通 header 字段一样。
+
+```java
+//sso_session_id=245daa107ea1196d59d4f9e836e3d4ed; session_id=0a6c7a4b8bb9fbc6d27703376196eb03;
+String cookie = request.getHeader("cookie");
+
+//设置 cookie
+ // 死编码
+cookie.setPath("/hello/xx");
+   // 活编码
+cookie.setPath(request.getContextPath() + "/");
+```
+
+
+
