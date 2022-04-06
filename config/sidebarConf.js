@@ -329,6 +329,10 @@ module.exports = {
                   [
                      "/Linux/ELK/ES/11.优化.md",
                      "11.优化"
+                  ],
+                  [
+                     "/Linux/ELK/ES/12.es-sql.md",
+                     "12.es-sql"
                   ]
                ]
             },
