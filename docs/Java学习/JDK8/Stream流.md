@@ -185,7 +185,7 @@ Predicate predicate = new Predicate() {
 
   图解：
 
-![1558192452641.png](https://gitee.com/linqin07/pic/raw/master/1558192452641.png)
+![1558192452641.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1558192452641.png)
 
 - 9.IntStream 封闭范围
 

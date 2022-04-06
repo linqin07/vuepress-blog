@@ -1,6 +1,6 @@
 ### SpringBean的生命周期
 
-![1587807340663.png](https://gitee.com/linqin07/pic/raw/master/1587807340663.png)
+![1587807340663.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1587807340663.png)
 
 > 1.  Spring对Bean进行实例化（相当于程序中的new Xx())
 > 2. 设置对象属性（IOC 依赖注入）
@@ -119,7 +119,7 @@ spring内部有三级缓存：
 - earlySingletonObjects 二级缓存，用于保存实例化完成的bean实例，但是还没有填充属性
 - singletonFactories 三级缓存，用于保存bean创建工厂，以便于后面扩展有机会创建`代理对象`，提前暴露的bean
 
-![image-20220318004710462](https://gitee.com/linqin07/pic/raw/master/image-20220318004710462.png)
+![image-20220318004710462](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20220318004710462.png)
 
 
 
@@ -193,4 +193,3 @@ public class BeanInvoker {
     @Autowired
     private List<BeanInterface> list;
 ```
-

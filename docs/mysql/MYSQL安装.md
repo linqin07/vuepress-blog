@@ -19,7 +19,7 @@
      yum -y install mysql57-community-release-el7-10.noarch.rpm
      ```
 
-![image-20210610214141823.png](https://gitee.com/linqin07/pic/raw/master/image-20210610214141823.png)
+![image-20210610214141823.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20210610214141823.png)
 
 4. 安装 Mysql（这一步需要几分钟，静等安装）
 
@@ -43,7 +43,7 @@
      grep 'password' /var/log/mysqld.log
      ```
 
-![1581351778874.png](https://gitee.com/linqin07/pic/raw/master/1581351778874.png)
+![1581351778874.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1581351778874.png)
 
   7. 修改密码
 
@@ -55,7 +55,7 @@
      SHOW VARIABLES LIKE 'validate_password%'; 
      ```
 
-![1581413220671.png](https://gitee.com/linqin07/pic/raw/master/1581413220671.png)
+![1581413220671.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1581413220671.png)
      
 
  修改安全级别，密码长度
@@ -96,7 +96,7 @@ update  mysql.user set authentication_string = password('123456') where User='ro
       select host, user from user;
       ```
 
-![1581493230599.png](https://gitee.com/linqin07/pic/raw/master/1581493230599.png)
+![1581493230599.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1581493230599.png)
 
 ​	
 
@@ -169,4 +169,3 @@ update  mysql.user set authentication_string = password('123456') where User='ro
   - 重新在开一个cmd窗口， 找到bin目录：mysql就进入登陆状态了
     5.7.22修改密码语句：update user set authentication_string=password('123456') where user='root' and host='localhost';
     5.6.修改密码语句：update user set password=password('123456') where user='root' and host='localhost';  (我没有实验过，网上都是这么写的)
-

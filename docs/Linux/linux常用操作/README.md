@@ -42,7 +42,7 @@ curl -X POST -H 'Content-type:application/xml' -d @/tmp/data.xml https://apitest
 -X :指定什么类型请求get/post/put。。。
 -H :--hearder增加头信息 
 
-![1552463476139.png](https://gitee.com/linqin07/pic/raw/master/1552463476139.png)
+![1552463476139.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1552463476139.png)
 
 ###### post发送json
 

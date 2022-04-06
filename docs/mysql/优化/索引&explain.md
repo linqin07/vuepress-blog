@@ -70,6 +70,6 @@
 - **Extra**：Using index 就是代表了优化器使用了覆盖索引（即从辅助索引中
   就可以得到查询的记录,而不需要查询聚集索引中的记录。）
 
-![1551868481422.png](https://gitee.com/linqin07/pic/raw/master/1551868481422.png)
+![1551868481422.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1551868481422.png)
 
  

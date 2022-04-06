@@ -4,7 +4,7 @@
 
 [下载二进制包](http://kafka.apache.org/downloads)
 
-![1551084352010.png](https://gitee.com/linqin07/pic/raw/master/1551084352010.png)
+![1551084352010.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1551084352010.png)
 
 #### 2.解压
 
@@ -174,4 +174,3 @@ done
 ```sh
 /data/kafka/bin/kafka-reassign-partitions.sh --zookeeper 192.168.100.31:2181 --reassignment-json-file increase-replication-factor.json --execute
 ```
-

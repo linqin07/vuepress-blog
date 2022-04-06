@@ -60,7 +60,7 @@ SpringBoot2.0整合Redis 是很容易的，官方依赖里面都有了。
    ```
 
 5. 原因是内置的自动配置里面已经有了配置类可以开箱就用。
-![image-20220201144143566](https://gitee.com/linqin07/pic/raw/master/image-20220201144143566.png)
+![image-20220201144143566](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20220201144143566.png)
 
 
 

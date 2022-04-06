@@ -320,7 +320,7 @@ query alias($paramList: [UserCondition]) {
 
 - 目录结构
 
-![image-20210701164845652.png](https://gitee.com/linqin07/pic/raw/master/image-20210701164845652.png)
+![image-20210701164845652.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20210701164845652.png)
 
 ### 自定义标量类型
 

@@ -351,7 +351,7 @@ public class Task1 implements Job {
 
 根据对应的业务在业务service里面调用quartz管理类
 
-![1550226366608.png](https://gitee.com/linqin07/pic/raw/master/1550226366608.png)
+![1550226366608.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1550226366608.png)
 
 
 

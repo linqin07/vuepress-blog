@@ -1,6 +1,6 @@
 ### 集合直接的对应关系
 
-![1551253158598.png](https://gitee.com/linqin07/pic/raw/master/1551253158598.png)
+![1551253158598.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1551253158598.png)
 
 
 

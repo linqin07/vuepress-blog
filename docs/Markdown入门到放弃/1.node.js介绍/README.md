@@ -13,7 +13,7 @@
 
 下载**左边**的即可。
 
-![1550052930676.png](https://gitee.com/linqin07/pic/raw/master/1550052930676.png)
+![1550052930676.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1550052930676.png)
 
 #### 3.安装
 
@@ -47,7 +47,7 @@ npm -v
 
 **打开安装目录列表**
 
-![1550053690454.png](https://gitee.com/linqin07/pic/raw/master/1550053690454.png)
+![1550053690454.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1550053690454.png)
 
 新增文件夹：`node_global` 及 `node_cache`，分别对应 prefix 和 cache 目录。
 
@@ -62,11 +62,11 @@ npm config set cache "D:\Program Files\nodejs\node_cache"
 
 > npm config ls
 
-![1550053905127.png](https://gitee.com/linqin07/pic/raw/master/1550053905127.png)
+![1550053905127.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1550053905127.png)
 
 **修改环境变量 `node_global**`
 
-![1550054130507.png](https://gitee.com/linqin07/pic/raw/master/1550054130507.png)
+![1550054130507.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1550054130507.png)
 
 查看是否修改环境变量成功：
 
@@ -76,7 +76,7 @@ npm config set cache "D:\Program Files\nodejs\node_cache"
 
 同时修改用户的环境变量，安装 nodejs 默认会生成用户的 npm 环境变量，并且顺序要自己修改的 node_global 在默认的 `C:\Users\用户名\AppData\Roaming\npm`之前。
 
-![1560742502250.png](https://gitee.com/linqin07/pic/raw/master/1560742502250.png)
+![1560742502250.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1560742502250.png)
 
 ##### 修改方式二：
 

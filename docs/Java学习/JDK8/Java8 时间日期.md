@@ -51,7 +51,7 @@ localDateTime.minusWeeks(1);
 
 - 静态类 `TemporalAdjusters`包含很多静态的方法。
 
-![1555659861864.png](https://gitee.com/linqin07/pic/raw/master/1555659861864.png)
+![1555659861864.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1555659861864.png)
 
 ```java
    // 2019-04-21

@@ -42,7 +42,7 @@ public class Task {
 
 这是一种非常简单的实现方式。但是有个缺点。如果多个定时任务一起执行，实际上是一个个任务同一个线程搞定的，如果其中一个出了异常，串行就走不下去了。
 
-![1550219739697.png](https://gitee.com/linqin07/pic/raw/master/1550219739697.png)
+![1550219739697.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/1550219739697.png)
 
 
 

@@ -150,7 +150,7 @@ YGC 理解
 
 新生代内存按照 8:1:1 的比例分为一个 eden 区和两个 survivor(survivor0, survivor1) 区。一个Eden区，两个 Survivor区。新 new 出来的对象会存储在 Eden(伊甸园)中，当这区域满了之后JVM会进行一次垃圾回收，在回收时把有用的对象存储在 S1 区，没用的就销毁此对象的内存空间，这过程即第一次 YoungGC，如果 S1 区空间也满了后，同理会将有用的对象会放到 S2 区中，并释放 S1 空间，以上反复的回收即为 YoungGC。
 
-![image-20211110132125529.png](https://gitee.com/linqin07/pic/raw/master/image-20211110132125529.png)
+![image-20211110132125529.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20211110132125529.png)
 
 
 
@@ -158,4 +158,4 @@ YGC 理解
 
 年轻代空间满了之后，会将满足一定活跃度的对象放到 Old 区中(对象活跃度：每个对象满足JVM默认 count=15 之后就判断是活跃对象，每次 YoungGC 后会将存活对象生命中 +1，直到 =15 就转到 Old 区，这个次数可以通过：-XX:MaxTenuringThreshold 来配置)， 由于 Full GC 需要对整个堆进行回收，导致应用访问变慢，因此应该尽可能减少Full GC 的次数。
 
-![image-20211110132217685.png](https://gitee.com/linqin07/pic/raw/master/image-20211110132217685.png)
+![image-20211110132217685.png](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20211110132217685.png)
