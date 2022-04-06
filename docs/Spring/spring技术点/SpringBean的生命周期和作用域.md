@@ -116,8 +116,10 @@ Spring的单例对象的初始化主要分为三步：
 spring内部有三级缓存：
 
 - singletonObjects 一级缓存，用于保存实例化、注入、初始化完成的bean实例
-- earlySingletonObjects 二级缓存，用于保存实例化完成的bean实例
-- singletonFactories 三级缓存，用于保存bean创建工厂，以便于后面扩展有机会创建代理对象。
+- earlySingletonObjects 二级缓存，用于保存实例化完成的bean实例，但是还没有填充属性
+- singletonFactories 三级缓存，用于保存bean创建工厂，以便于后面扩展有机会创建`代理对象`，提前暴露的bean
+
+![image-20220318004710462](https://gitee.com/linqin07/pic/raw/master/image-20220318004710462.png)
 
 
 
@@ -145,8 +147,50 @@ public class TestService2 {
 
 TestService1 注入的时候，从一级缓存里面获取不到实例，然后创建实例，并且提前暴露添加到三级缓存中，
 
-其中依赖 TestService2，去一级缓存中获取实例，发现也是没有，就主动创建实例，同时提前暴露加入三级缓存中。
+其中依赖 TestService2，去一级缓存中获取实例，发现也是没有，就主动创建实例，同时`提前暴露加入三级缓存`中。
 
-然后发现其依赖 TestService1 ，从三级缓冲中获取到，添加到二级缓存中。TestService2 就注入成功了，TestService2 就添加到一级缓存中。
+然后发现其依赖 TestService1 ，从三级缓冲中获取到，TestService1 `升级添加到二级缓存中`。TestService2 就注入成功了，TestService2 就添加到一级缓存中。
 
 然后TestService1 获得 TestService2 也可以初始化成功，TestService1 添加到一级缓存。
+
+
+
+为啥不用二级缓存：
+
+使用了切面编程中的 AOP 会注入代理对象到三级缓存当中，如果没有二级缓存，会又直接 singletonFactory.getObject() 获取一个新的对象，而不是原来的代理对象。最终注入的应该是这个代理对象才对。
+
+
+
+### 注入 List 集合
+
+可以直接使用注入集合的操作，Order 进行控制顺序，使用其简单实现调用链
+
+```java
+// 接口
+public interface BeanInterface {
+```
+
+```java
+//实现类1
+@Order(1)
+@Component
+public class BeanImplTwo implements BeanInterface {
+
+```
+
+```java
+//实现类2
+@Order(2)
+@Component
+public class BeanImplOne implements BeanInterface {
+
+```
+
+```java
+@Component
+public class BeanInvoker {
+ 	// 直接注入接口的list集合
+    @Autowired
+    private List<BeanInterface> list;
+```
+

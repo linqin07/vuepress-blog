@@ -108,6 +108,23 @@ keys mykey*
 
 - [bitmap](https://www.jianshu.com/p/305e65de1b13)
 
+## Redis键(key)操作
+
+```
+set k1 a` --->`key:k1 ; value:a
+set k2 b
+```
+
+- `keys *` 	查看当前库所有skey
+- `exists key`	 判断某个key是否存在  -->`exists k1`
+- `type key` 		查看你的key是什么类型  -->`type k1` 
+- `del key` 	删除指定的key数据 -->`del k1` 
+- `unlink key`根据value选择非阻塞删除仅将keys从keyspace元数据中删除，真正的删除会在后续异步操作。
+
+- `expire key 10` 	10秒钟：为给定的key设置过期时间 -->`expire k2 10` 
+- `ttl key `		查看还有多少秒过期，-1表示永不过期，-2表示已过期  -->`ttl k2 `	
+- 
+
 
 
 
