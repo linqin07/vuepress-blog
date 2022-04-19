@@ -80,7 +80,7 @@ public class ServiceOne{
 
 2. **没有被 Spring 管理**
 
-   说吧了就是没注册到 Spring 容器当中，例如使用了注解 @Component、@Service 等。
+   说白了就是没注册到 Spring 容器当中，例如使用了注解 @Component、@Service 等。
 
 3. **方法不是 public 的**
 

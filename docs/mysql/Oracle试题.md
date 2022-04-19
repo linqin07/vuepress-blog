@@ -45,3 +45,44 @@
     > Data Block 数据块
 
 12. todo 17
+
+13. ceil() 往上取整
+
+14. floor() 往下取整
+
+15. round() 四舍五入
+
+16. trunc() 截断
+
+17. 分页
+
+    ```sql
+    /*****普通的查询(30数据)****/
+    select * from ENVIRONMENT_APPLY_AUDIT;
+    
+    
+    /*******查询带行号的数据**/
+    select ROWNUM ru,AAA.* from (      select * from ENVIRONMENT_APPLY_AUDIT   ) AAA;
+    
+    /*******查询第一页   每页5条数据***/
+    select * from (select AAA.*,ROWNUM ru from (select * from ENVIRONMENT_APPLY_AUDIT ) AAA where ROWNUM<6);
+    select * from (select ROWNUM ru,AAA.* from (select * from ENVIRONMENT_APPLY_AUDIT ) AAA where ROWNUM<6) where ru>0;
+    
+    
+    /**********查询第二页数据********************/
+    select * from (select ROWNUM ru,AAA.* from (select * from ENVIRONMENT_APPLY_AUDIT ) AAA where ROWNUM<11) where ru>5;
+    
+    
+    /**********查询第三页数据********************/
+    select * from (select ROWNUM ru,AAA.* from (select * from ENVIRONMENT_APPLY_AUDIT ) AAA where ROWNUM<16) where ru>10;
+    ```
+
+    
+
+为什么基于ROWNUM的oracle分页实现，要采用三层嵌套的方式？ 
+
+1. 首先，在没有order by clause的情况下，oracle的查询结果的顺序会是不确定的
+
+2. 其次，在order by 和 ROWNUM同时使用时，oracle默认的策略是先为伪列rownum赋值，再order by。
+
+3. 再次，因为rownum不可使用 >(=) 来判断的原因，所以需要最外围的第三层嵌套 
