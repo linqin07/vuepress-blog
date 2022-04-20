@@ -292,7 +292,7 @@ public class JobService {
             scheduler.triggerJob(jobKey);
         } else {
             // System.out.println("======任务["+jobVo.getJobName()+"]不存在======");
-            // todo
+            // 
 //            addJob(jobVo, AlarmJob.class);
         }
 
@@ -310,7 +310,7 @@ public class JobService {
         TriggerKey triggerKey = TriggerKey.triggerKey(jobVo.getJobId(), jobVo.getJobGroup());
         CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
         if (trigger == null) {
-            // todo
+            // 
 //            addJob(jobVo, AlarmJob.class);
             return;
         }
