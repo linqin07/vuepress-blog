@@ -36,7 +36,7 @@ idea 选择离线安装即可。快捷键 ctrl + F12 查看生成的方法。
 
 - `@AllArgsConstructor`
 
-- `@Builder`
+- `@Builder` idea 也可以在生成的时候有个选项，选择 Bulider 也可以自动生成返回对象的方式。
 
   ```java
   public class User {
