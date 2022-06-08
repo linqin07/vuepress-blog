@@ -8,7 +8,7 @@
 
 ### GIT 中文乱码
 
-`micro .gitconfig` 添加：
+`.gitconfig` 添加：
 
 ```sh
 [gui]
@@ -25,7 +25,13 @@
 	# status引用路径不再是八进制（反过来说就是允许显示中文）
 ```
 
-`git clone [url]`
+也可以通过命令设置
+
+```sh
+git config --global core.quotepath false
+```
+
+
 
 ### Git的工作流程
 

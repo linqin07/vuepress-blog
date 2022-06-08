@@ -149,3 +149,9 @@ config/server-2.properties:
     log.dirs=/tmp/kafka-logs-2
 ```
 
+### 定时打印消费数目
+
+```sh
+for i in `seq 10000`;do bin/kafka-consumer-groups.sh --describe --bootstrap-server 172.29.87.20:9092 --group topic |awk '{print $5}'|egrep -v "-"|egrep -v "LAG"|awk '{sum+=$1}END{print sum}' ;echo ------ ;sleep 10;done
+```
+
