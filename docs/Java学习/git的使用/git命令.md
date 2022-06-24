@@ -227,3 +227,16 @@ git push
 ```
 
 保存，输入一次账号密码后第二次就会记住账号密码了
+
+命令方式也可以设置
+
+```sh
+添加到git 全局配置
+git config --global credential.helper store
+
+查看git配置
+git config --list
+输出内容包含credential.helper=store,就OK了
+可以查看目录文件 ~/.git-credentials
+```
+
