@@ -4,7 +4,7 @@
 
 因为springboot默认使用logback，不用引入什么依赖，这里面我们添加web依赖，方便测试。
 
-###### 2.resources 目录增加 logback.xml 或者 logback-test.xml
+###### 2.resources 目录增加 logback.xml 或者 logback-test.xml 或者 logback-spring.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -78,5 +78,81 @@ public class TestController {
     }
 }
 
+```
+
+
+
+案例一
+
+支持异步打印日志，避免堵塞 IO
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration scan="false" scanPeriod="60 seconds" debug="false">
+    <property name="log.path" value="/logs" />
+
+    <appender name="CONSOLE-LOG" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%thread] %level %logger -%msg%n</pattern>
+        </layout>
+    </appender>
+    <!--获取比info级别高(包括info级别)但除error级别的日志-->
+    <appender name="INFO-LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%thread] %level %logger -%msg%n</pattern>
+        </encoder>
+
+        <!--滚动策略,只需要定义一次-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>${log.path}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+    <appender name="ERROR-LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%thread] %level %logger -%msg%n</pattern>
+        </encoder>
+        <!--滚动策略-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            &lt;!&ndash;路径&ndash;&gt;-->
+<!--            <fileNamePattern>${log.path}.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+<!--            <maxHistory>30</maxHistory>-->
+<!--        </rollingPolicy>-->
+    </appender>
+
+    <!-- 异步输出 -->
+    <appender name="ASYNC-INFO" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>256</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref="INFO-LOG"/>
+    </appender>
+
+    <appender name="ASYNC-ERROR" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>256</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref="ERROR-LOG"/>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE-LOG" />
+        <appender-ref ref="INFO-LOG" />
+        <appender-ref ref="ERROR-LOG" />
+    </root>
+</configuration>
 ```
 
