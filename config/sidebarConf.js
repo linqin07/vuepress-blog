@@ -157,6 +157,10 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
+               "/Java学习/Netty/Akka.md",
+               "Akka"
+            ],
+            [
                "/Java学习/Netty/Netty实战.md",
                "Netty实战"
             ]
@@ -221,6 +225,10 @@ module.exports = {
             [
                "/Java学习/常用工具类/MapStruct.md",
                "MapStruct"
+            ],
+            [
+               "/Java学习/常用工具类/OkHttpUtil.md",
+               "OkHttpUtil"
             ]
          ]
       },
@@ -231,6 +239,10 @@ module.exports = {
             [
                "/Java学习/构建工具/Jenkins安装.md",
                "Jenkins安装"
+            ],
+            [
+               "/Java学习/构建工具/Jhipster.md",
+               "Jhipster"
             ],
             [
                "/Java学习/构建工具/Maven.md",
@@ -465,6 +477,16 @@ module.exports = {
             [
                "/Linux/linux常用操作/12.ssh免密.md",
                "12.ssh免密"
+            ]
+         ]
+      },
+      {
+         "title": "MongoDb",
+         "collapsable": true,
+         "children": [
+            [
+               "/Linux/MongoDb/find.md",
+               "find"
             ]
          ]
       },
@@ -1149,6 +1171,14 @@ module.exports = {
       [
          "/其他/1.安卓刷机.md",
          "1.安卓刷机"
+      ],
+      [
+         "/其他/2.体验win10下面的wsl.md",
+         "2.体验win10下面的wsl"
+      ],
+      [
+         "/其他/3.专业名词.md",
+         "3.专业名词"
       ]
    ],
    "/复习题/": [
