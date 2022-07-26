@@ -39,3 +39,17 @@ token 校验之所以能防御 csrf,因为只有在同源的情况下，页面�
 响应首部中可以携带这个头部表示服务器允许哪些域可以访问该资源
 
 c.Header("Access-Control-Allow-Origin", "*")
+
+
+
+#### 修改匿名用户名称
+
+再把 bean addFilter 里面
+
+```java
+@Bean
+public AnonymousAuthenticationFilter authenticationFilter() {
+    // 重新注册bean修改匿名用户名称
+    return new AnonymousAuthenticationFilter("doesNotMatter", "aiui", AuthorityUtils.createAuthorityList("ROLE_ANONYMOUS"));
+}
+```

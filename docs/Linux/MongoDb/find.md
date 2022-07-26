@@ -38,7 +38,7 @@ db.c.find()
 db.getCollection("c")find()
 ```
 
-匹配一个字符串,多个条件就是 map 多一个属性
+匹配一个字符串,多个条件就是 map 多一个属性，查询嵌套字段是通过 A.B 这样的方式查询
 
 ```sh
 db.c.find({"username" : "joe"})

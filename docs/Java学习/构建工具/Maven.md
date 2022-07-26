@@ -80,6 +80,16 @@ A -> C -> X(2.0)
 
 子 POM 内声明的依赖优先于父 POM 中声明的依赖。
 
+#### 依赖传递
+
+项目之间有依赖引用，可以使用 `<optional>true</optional>`显式说明该依赖不用传递下去，适用于直接依赖关系或者使用 `<dependencies>` 进行依赖管理直接添加使用。
+
+::: warning
+模块关系为继承 parent 时，`<optional>` 设置
+:::
+
+
+
 #### 解决依赖冲突
 
 找到 Maven 加载的 Jar 包版本，使用 `mvn dependency:tree` 查看依赖树，根据依赖原则来调整依赖在 POM 文件的声明顺序。

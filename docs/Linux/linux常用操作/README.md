@@ -22,6 +22,8 @@ wget [url] -P [下载目录]
 
 -c：继续执行上次终端的任务(断点续传)
 
+-g:  --get 无需转义很长参数的get请求，直接 curl -g "xxx&xx&xxx"
+
 ```shell
 curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.6.2-linux-x86_64.tar.gz
 ```
