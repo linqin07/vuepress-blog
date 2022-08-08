@@ -14,9 +14,10 @@ UserDetailsService  连数据库查询用户操作
 
 AuthenticationManager
 
-successHandler 默认实现 AjaxAuthenticationSuccessHandler
-
-failureHandler 默认实现 AjaxAuthenticationFailureHandler
+> successHandler 默认实现 AjaxAuthenticationSuccessHandler 返回 response 编码 200，也可以自定义继承接口实现页面重定向或者设置状态编码
+>
+> failureHandler 默认实现 AjaxAuthenticationFailureHandler 返回 response 编码 401
+>
 
 logout().logoutSuccessHandler 默认实现 AjaxLogoutSuccessHandler
 
