@@ -91,3 +91,72 @@ public class SpringBootMybatisApplicationTests {
 }
 ```
 
+
+
+#### 4.进阶用法
+
+定义统一 Mapper 接口，交由 Spring 管理，统一转换。
+
+- 定义 EntityMapper 泛型接口
+
+  ```java
+  public interface EntityMapper <D, E> {
+  
+      E toEntity(D dto);
+  
+      D toDto(E entity);
+  
+      List<E> toEntity(List<D> dtoList);
+  
+      List <D> toDto(List<E> entityList);
+  }
+  ```
+
+  
+
+- 定义需要转换的实体继承 EntityMapper 接口，指定 DTO 以及转换对象
+
+  ```java
+  @Mapper(componentModel = "spring", uses = {})
+  public interface UserMapper extends EntityMapper<UserDTO, User> {
+  
+  }
+  ```
+
+  
+
+- 测试
+
+  ```java
+  @RunWith(SpringRunner.class)
+  @SpringBootTest
+  public class SpringBootMybatisApplicationTests {
+  
+      @Autowired
+      UserMapper userMapper;
+  
+      @Test
+      public void contextLoads() {
+          User user = new User(1, "12", "name");
+          UserDTO convert = UserConvertMapper.INSTANCE.convert(user);
+  
+          System.out.println(convert);
+      }
+      /**
+       * 测试泛型接口
+       */
+      @Test
+      public void test2() {
+          User user = new User(1, "12", "name");
+          UserDTO userDTO = userMapper.toDto(user);
+          System.out.println(userDTO);
+      }
+  }
+  ```
+
+
+> 这里注意两个问题：
+>
+> 1. 公共的EntityMapper  @Mapper 注解是mapstruct的，不能弄错，并且扫描包的时候要scanBasePackages 或者 ComponentScans 扫描到，不能喝 mybatis 的 mapperScan弄乱了
+> 2. 编译会和 lombok 有冲突，可以参考[知乎方案](https://zhuanlan.zhihu.com/p/389315852)解决
+

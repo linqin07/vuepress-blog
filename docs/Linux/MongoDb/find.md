@@ -72,3 +72,49 @@ db.runoob.getIndexes()
 db.runoob.deleteOne({_id: ObjectId("628f2904f62a000074006abe")})
 ```
 
+
+
+
+
+### mongodb
+
+- [ ]  定义的枚举类可以直接把枚举的值存储到库，可以在enum中使用@JsonValue、@JsonFormat作为前端接口的转换
+- [ ] dbref 验证，局部变量行不行
+- [ ] 
+
+
+
+
+
+### MongoTemplate 实现动态条件查询
+
+使用 JPA 的 Example 构建的查询对象必须不为空，在某些情况下类继承了一些公共的属性有默认值时，需要重新创建查询的参数进行判断。所以在使用动态的查询条件不好实现。使用 MongoTemplate  可以组装条件。
+
+```java
+ Query query = new Query();
+        Criteria criteria = new Criteria();
+        List<Criteria> criterias = Lists.newArrayList();
+
+        if (StringUtils.isNotBlank(skillId)) {
+            criterias.add(Criteria.where("skillId").is(skillId));
+        }
+        if (StringUtils.isNotBlank(skillName)) {
+            // 模糊匹配
+            Pattern pattern = Pattern.compile("^.*" + skillName + ".*$", Pattern.CASE_INSENSITIVE);
+            criterias.add(Criteria.where("skillName").regex(pattern));
+        }
+
+        if (criterias.size() != 0) {
+            criteria.andOperator(criterias.toArray(new Criteria[criterias.size()]));
+        }
+
+        query.addCriteria(criteria);
+        Sort sort = Sort.by(Sort.Direction.fromString(pageLimit.getDirection()), pageLimit.getSort());
+		Pageable pageable = PageRequest.of(pageLimit.getPageNo() - 1, pageLimit.getPageSize(), sort);
+   		query.with(convert);
+
+        List<Skill> skills = template.find(query, Skill.class);
+        long count = template.count(query, Skill.class);
+		// 再封装分页数据回去
+```
+
