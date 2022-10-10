@@ -72,21 +72,26 @@ db.runoob.getIndexes()
 db.runoob.deleteOne({_id: ObjectId("628f2904f62a000074006abe")})
 ```
 
+查询嵌套lsit集合类
 
+```sql
+db.getCollection("skill").find({"id": "63326ef8d89b661678e01dd5", "variables":{"$elemMatch":{"code": "ability2"}}}).pretty()
+```
 
 
 
 ### mongodb
 
 - [ ]  定义的枚举类可以直接把枚举的值存储到库，可以在enum中使用@JsonValue、@JsonFormat作为前端接口的转换
-- [ ] dbref 验证，局部变量行不行
-- [ ] 
+- [ ] [DBRef](https://blog.csdn.net/bokestudy/article/details/103702824) 参考这个
 
 
 
 
 
 ### MongoTemplate 实现动态条件查询
+
+> mongo springboot 里面整合使用 @EnableMongoRepositories 来扫描包，功能等同于 mybatis 的 @MapperScan。在多模块的某个项目中仅仅使用 mongo 也可以不写注解
 
 使用 JPA 的 Example 构建的查询对象必须不为空，在某些情况下类继承了一些公共的属性有默认值时，需要重新创建查询的参数进行判断。所以在使用动态的查询条件不好实现。使用 MongoTemplate  可以组装条件。
 
