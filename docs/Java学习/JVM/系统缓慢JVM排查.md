@@ -49,6 +49,9 @@ jstack -l pid | grep '00xx' -A 20 >> dump
 
 ```shell
 ps -eLf|grep pid
+也可以 其中Threads后面跟的就是线程数
+cat /proc/PID/status
+
 ```
 
 ###### 5.查看内存信息

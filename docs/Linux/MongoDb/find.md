@@ -78,6 +78,12 @@ db.runoob.deleteOne({_id: ObjectId("628f2904f62a000074006abe")})
 db.getCollection("skill").find({"id": "63326ef8d89b661678e01dd5", "variables":{"$elemMatch":{"code": "ability2"}}}).pretty()
 ```
 
+修改数据
+
+```sql
+db.getCollection("skill").update( { _id: ObjectId("634cc98b37130708fa8301bf") }, { $set: { "variables.15.global": true } } )
+```
+
 
 
 ### mongodb
