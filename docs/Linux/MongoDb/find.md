@@ -82,6 +82,8 @@ db.getCollection("skill").find({"id": "63326ef8d89b661678e01dd5", "variables":{"
 
 ```sql
 db.getCollection("skill").update( { _id: ObjectId("634cc98b37130708fa8301bf") }, { $set: { "variables.15.global": true } } )
+
+db.getCollection("flow").update( { _id: ObjectId("6350c53d001bac3d6c2ee3ad") }, { $set: { nodeData: ""}})
 ```
 
 
