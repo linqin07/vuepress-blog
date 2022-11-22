@@ -60,6 +60,10 @@
 
 `additivity`是否往上级传递。true root 级别能打印，false root 无法打印
 
+与此同时，还可以使用 `<springProfile name="dev">` 标签把这些里面的日志打印根据配置区分开
+
+
+
 
 
 ###### 类中使用

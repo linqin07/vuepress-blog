@@ -75,7 +75,19 @@ db.runoob.deleteOne({_id: ObjectId("628f2904f62a000074006abe")})
 查询嵌套lsit集合类
 
 ```sql
-db.getCollection("skill").find({"id": "63326ef8d89b661678e01dd5", "variables":{"$elemMatch":{"code": "ability2"}}}).pretty()
+db.getCollection("flow").find({'chatflowId': '636de32509dd141337edf693', 
+                               'nodes.data.flowId': {'$in': ['637b2a5a0351283a99600d1f', '636de32509dd141337edf694']}})
+```
+
+```java
+//java 代码 mongoTemplate
+Criteria criteria = new Criteria();
+criteria.andOperator(Criteria.where("chatflowId").is(flow.getChatflowId()), Criteria.where("nodes.data.flowId").in(Lists.newArrayList(flow.getId())));
+
+Query query = new Query();
+query.addCriteria(criteria);
+
+long count = mongoTemplate.count(query, Flow.class);
 ```
 
 修改数据
@@ -84,6 +96,20 @@ db.getCollection("skill").find({"id": "63326ef8d89b661678e01dd5", "variables":{"
 db.getCollection("skill").update( { _id: ObjectId("634cc98b37130708fa8301bf") }, { $set: { "variables.15.global": true } } )
 
 db.getCollection("flow").update( { _id: ObjectId("6350c53d001bac3d6c2ee3ad") }, { $set: { nodeData: ""}})
+```
+
+### update 更新
+
+单条记录更新
+
+```sh
+db.getCollection("flow").update( { _id: ObjectId("6343c5997f07362bb547f280") }, { $set: { main: true } } )
+```
+
+多条记录更新，主要 `{multi:true}` 需要加上，否则只能生效一条记录
+
+```sh
+db.getCollection("flow").update({ 'main': false } , { $set: { main: true } },{multi:true} )
 ```
 
 
@@ -122,12 +148,18 @@ db.getCollection("flow").update( { _id: ObjectId("6350c53d001bac3d6c2ee3ad") }, 
         }
 
         query.addCriteria(criteria);
+		long count = mongoTemplate.count(query, Skill.class);
         Sort sort = Sort.by(Sort.Direction.fromString(pageLimit.getDirection()), pageLimit.getSort());
 		Pageable pageable = PageRequest.of(pageLimit.getPageNo() - 1, pageLimit.getPageSize(), sort);
-   		query.with(convert);
+   		query.with(pageable);
 
-        List<Skill> skills = template.find(query, Skill.class);
-        long count = template.count(query, Skill.class);
+        List<Skill> skills = mongoTemplate.find(query, Skill.class);
+        
 		// 再封装分页数据回去
 ```
 
+
+
+### 工具类
+
+https://juejin.cn/post/6909262670990409735
