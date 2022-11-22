@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- lts/*
+- node
 
 # 缓存目录，加速编译
 cache:
