@@ -37,7 +37,7 @@
                 verify: false,
                 path: window.location.pathname,
                 visitor: true,
-                avatar: 'mm',
+                avatar: 'retro',
                 placeholder: 'write here'
             });
         },
