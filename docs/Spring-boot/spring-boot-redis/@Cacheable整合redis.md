@@ -6,9 +6,9 @@
 
 Spring 从 3.1 开始就引入了对 Cache 的支持。定义了 `org.springframework.cache.Cache` 和 `org.springframework.cache.CacheManager` 接口来统一不同的缓存技术。并支持使用 `JCache（JSR-107）`注解简化我们的开发。
 
-
-
 其使用方法和原理都类似于 Spring 对事务管理的支持。Spring Cache 是作用在方法上的，其核心思想是，当我们在调用一个缓存方法时会把该方法参数和返回结果作为一个键值对存在缓存中。
+
+使用场景：一些慢接口的优化查询：如数据库关联查询，或者非常复杂的业务处理流程，但最终结果很少变化。再如接口内有非实时需要的第三方接口请求等。
 
 
 
