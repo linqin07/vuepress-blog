@@ -1,0 +1,215 @@
+# SpringBoot 缓存之 @Cacheable 
+
+### 一、简介
+
+#### 1、缓存介绍
+
+Spring 从 3.1 开始就引入了对 Cache 的支持。定义了 `org.springframework.cache.Cache` 和 `org.springframework.cache.CacheManager` 接口来统一不同的缓存技术。并支持使用 `JCache（JSR-107）`注解简化我们的开发。
+
+
+
+其使用方法和原理都类似于 Spring 对事务管理的支持。Spring Cache 是作用在方法上的，其核心思想是，当我们在调用一个缓存方法时会把该方法参数和返回结果作为一个键值对存在缓存中。
+
+
+
+#### 2、Cache 和 CacheManager 接口说明
+
+
+
+- Cache 接口包含缓存的各种操作集合，你操作缓存就是通过这个接口来操作的。
+- Cache 接口下 Spring 提供了各种 xxxCache 的实现，比如：RedisCache、EhCache、ConcurrentMapCache
+- CacheManager 定义了创建、配置、获取、管理和控制多个唯一命名的 Cache。这些 Cache 存在于 CacheManager 的上下文中。
+
+
+
+**小结：**
+
+每次调用需要缓存功能的方法时，Spring 会检查指定参数的指定目标方法是否已经被调用过，如果有就直接从缓存中获取方法调用后的结果，如果没有就调用方法并缓存结果后返回给用户。下次调用直接从缓存中获取。
+
+
+
+### 二、@Cacheable 注解使用详细介绍
+
+#### 1.开启缓存注解
+
+`@EnableCaching`放到启动类或者配置类上面
+
+#### 2.依赖
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+```
+
+#### 3.配置 RedisCacheConfig 类
+
+```java
+@Configuration
+@EnableCaching
+@Slf4j
+public class RedisCacheConfig extends CachingConfigurerSupport {
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    /**
+     *  自动生成key
+     * @return
+     */
+    @Bean
+    public KeyGenerator keyGenerator() {
+        return (target, method, params) -> {
+            StringBuilder sb = new StringBuilder();
+            sb.append(target.getClass().getName());
+            sb.append(method.getName());
+            for (Object obj : params) {
+                sb.append(obj.toString());
+            }
+            return sb.toString();
+        };
+
+    }
+
+    @Bean
+    public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
+        //初始化一个RedisCacheWriter
+        RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory);
+
+        // key的序列化采用StringRedisSerializer
+        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
+        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
+
+        //初始化一个RedisCacheConfiguration
+        RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig();
+        redisCacheConfiguration = redisCacheConfiguration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer));
+        // redisCacheConfiguration.disableKeyPrefix();
+        redisCacheConfiguration = redisCacheConfiguration.prefixCacheNameWith(GlobalConstant.BUSINESS_REDIS_KEY_PREFIX);
+        //返回一个自定义的CacheManager
+        return new CustomRedisCacheManager(redisCacheWriter, redisCacheConfiguration);
+    }
+}
+```
+
+上面的 ObjectMapper 注入可以参考[jackson配置类](https://linqin.site/Spring-boot/spring-boot-json/2.%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8FLocalDateTime.html)，类 JacksonConfig。同时需要注意配置 redis 前缀以及配置序列化的方式都是如 redisCacheConfiguration = redisCacheConfiguration.prefixCacheNameWith(GlobalConstant.BUSINESS_REDIS_KEY_PREFIX); 需要特别赋值使用。
+
+自定义配置类 CustomRedisCacheManager，通过 value 跟 # 号区分主动设置过期时间
+
+```java
+/**
+ * redis 自定义缓存，用于 @Cacheable(value = "product_aaa#60")
+ * 自定义 #60 表示 60 minute
+ */
+public class CustomRedisCacheManager extends RedisCacheManager {
+
+    public CustomRedisCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration) {
+        super(cacheWriter, defaultCacheConfiguration);
+    }
+
+    public CustomRedisCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration, String... initialCacheNames) {
+        super(cacheWriter, defaultCacheConfiguration, initialCacheNames);
+    }
+
+    public CustomRedisCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration, boolean allowInFlightCacheCreation, String... initialCacheNames) {
+        super(cacheWriter, defaultCacheConfiguration, allowInFlightCacheCreation, initialCacheNames);
+    }
+
+    public CustomRedisCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration, Map<String, RedisCacheConfiguration> initialCacheConfigurations) {
+        super(cacheWriter, defaultCacheConfiguration, initialCacheConfigurations);
+    }
+
+    public CustomRedisCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration, Map<String, RedisCacheConfiguration> initialCacheConfigurations, boolean allowInFlightCacheCreation) {
+        super(cacheWriter, defaultCacheConfiguration, initialCacheConfigurations, allowInFlightCacheCreation);
+    }
+
+    @Override
+    protected RedisCache createRedisCache(String name, RedisCacheConfiguration cacheConfig) {
+        Duration ttl = getTtlByName(name);
+        if (ttl != null) {
+            //证明在cacheName上使用了过期时间，需要修改配置中的ttl
+            cacheConfig = cacheConfig.entryTtl(ttl);
+        }
+        //修改缓存key和value值的序列化方式
+        return super.createRedisCache(name, cacheConfig);
+    }
+
+    /**
+     * 缓存参数的分隔符
+     * 数组元素0=缓存的名称
+     * 数组元素1=缓存过期时间TTL
+     */
+    private static final String DEFAULT_PATH = "#";
+
+    /**
+     * 通过name获取过期时间
+     * @param name
+     * @return
+     */
+    private Duration getTtlByName(String name) {
+        if (name == null) {
+            return null;
+        }
+        //根据分隔符拆分字符串，并进行过期时间ttl的解析
+        String[] cacheParams = name.split(DEFAULT_PATH);
+        if (cacheParams.length > 1) {
+            String ttl = cacheParams[1];
+            if (!StringUtils.isEmpty(ttl)) {
+                try {
+                    return Duration.ofMinutes(Long.parseLong(ttl));
+                } catch (Exception e) {
+                }
+            }
+        }
+        // 默认30秒
+        return Duration.ofMinutes(5);
+    }
+}
+```
+
+#### 4.使用
+
+在方法上面直接使用注解 @Cacheable，其中 value 会和 key 组成 redis 键 value::key, 如果需要前缀可以直接写上或者全局统一配置。其中 key 支持 EL 表达式，针对不同的接口场景进行缓存。
+
+```java
+    @Cacheable(value = "/test", key = "#condition.id")
+```
+
+
+
+### 三、原理
+
+1.自动配置类：CacheAutoConfiguration
+
+![image-20221129202306458](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20221129202306458.png)
+
+
+
+2.给容器中导入缓冲相关的组件
+
+![image-20221129202409971](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20221129202409971.png)
+
+
+
+3.使用redis缓存配置类
+
+![image-20221129203141381](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20221129203141381.png)
+
+
+
+4.具体缓存逻辑抽象类 AbstractCacheManager
+
+![image-20221129203409088](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20221129203409088.png)
+
+
+
+参考资料：
+
+https://blog.csdn.net/baidu_39343397/article/details/112488246
+
+https://blog.csdn.net/qq_29066329/article/details/89081671
+
