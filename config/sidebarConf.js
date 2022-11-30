@@ -157,12 +157,12 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
-               "/Java学习/Netty/Akka.md",
-               "Akka"
-            ],
-            [
                "/Java学习/Netty/Netty实战.md",
                "Netty实战"
+            ],
+            [
+               "/Java学习/Netty/事件驱动框架.md",
+               "事件驱动框架"
             ]
          ]
       },
@@ -173,6 +173,16 @@ module.exports = {
             [
                "/Java学习/SkyWalking/源码调试.md",
                "源码调试"
+            ]
+         ]
+      },
+      {
+         "title": "优化技术",
+         "collapsable": true,
+         "children": [
+            [
+               "/Java学习/优化技术/1.使用连接池.md",
+               "1.使用连接池"
             ]
          ]
       },
@@ -715,6 +725,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/常用操作/1.excel宏定义.md",
                "1.excel宏定义"
+            ],
+            [
+               "/Markdown入门到放弃/常用操作/2.powerdesigner显示vbs.md",
+               "2.powerdesigner显示vbs"
             ]
          ]
       }
@@ -941,6 +955,10 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-json/2.处理时间格式LocalDateTime.md",
                "2.处理时间格式LocalDateTime"
+            ],
+            [
+               "/Spring-boot/spring-boot-json/3.参数校验.md",
+               "3.参数校验"
             ]
          ]
       },
@@ -992,6 +1010,10 @@ module.exports = {
          "title": "spring-boot-redis",
          "collapsable": true,
          "children": [
+            [
+               "/Spring-boot/spring-boot-redis/@Cacheable整合redis.md",
+               "@Cacheable整合redis"
+            ],
             [
                "/Spring-boot/spring-boot-redis/整合redis.md",
                "整合redis"
@@ -1165,6 +1187,10 @@ module.exports = {
       [
          "/SpringCloud/3.服务网关SpringCloudGateWay.md",
          "3.服务网关SpringCloudGateWay"
+      ],
+      [
+         "/SpringCloud/4.接入nacos.md",
+         "4.接入nacos"
       ]
    ],
    "/其他/": [
@@ -1179,6 +1205,10 @@ module.exports = {
       [
          "/其他/3.专业名词.md",
          "3.专业名词"
+      ],
+      [
+         "/其他/4.管理技能.md",
+         "4.管理技能"
       ]
    ],
    "/复习题/": [
