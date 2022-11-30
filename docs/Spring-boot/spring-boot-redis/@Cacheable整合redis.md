@@ -49,6 +49,14 @@ Spring 从 3.1 开始就引入了对 Cache 的支持。定义了 `org.springfram
 
 #### 3.配置 RedisCacheConfig 类
 
+> 序列化问题：
+>
+> springboot 的缓存使用 jackson 来做数据的序列化与反序列化，如果默认使用 Object 作为序列化与反序列化的类型，则其只能识别 java 基本类型，遇到复杂类型时，jackson 就会先序列化成 LinkedHashMap ，然后再尝试强转为所需类别，这样大部分情况下会强转失败。此时就需要指定序列化方式为:
+> GenericJackson2JsonRedisSerializer，
+> 指定后，在序列化时，会将类名存入到序列化后的 json 字符串中，如：
+> {"@class": "com.example.SpecialClass", "id" : 1, .... }
+> 这样在取出缓存时，springboot 就可以自动根据 @class 对应的字段找到对应的类进行反序列化了
+
 ```java
 @Configuration
 @EnableCaching
@@ -82,12 +90,13 @@ public class RedisCacheConfig extends CachingConfigurerSupport {
         RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory);
 
         // key的序列化采用StringRedisSerializer
-        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
-        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
+        //Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
+        //jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
 
         //初始化一个RedisCacheConfiguration
         RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig();
-        redisCacheConfiguration = redisCacheConfiguration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer));
+        // 默认使用的是jdk的序列化方式JdkSerializationRedisSerializer
+        //redisCacheConfiguration = redisCacheConfiguration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer));
         // redisCacheConfiguration.disableKeyPrefix();
         redisCacheConfiguration = redisCacheConfiguration.prefixCacheNameWith(GlobalConstant.BUSINESS_REDIS_KEY_PREFIX);
         //返回一个自定义的CacheManager
@@ -207,9 +216,19 @@ public class CustomRedisCacheManager extends RedisCacheManager {
 
 
 
+总结
+
+| 序列化方式                         | 速度 | 存储大小 | 备注                                                         |
+| ---------------------------------- | ---- | -------- | ------------------------------------------------------------ |
+| JdkSerializationRedisSerializer    | 中   | 最小     | 无需考虑复杂类型、嵌套类型的序列化反序列化，以字节方式存储   |
+| Jackson2JsonRedisSerializer        | 优   | 较大     | 无法针对复杂类型反序列化，能存入不可以去取出                 |
+| GenericJackson2JsonRedisSerializer | 良   | 较大     | 存入带上@class信息，但是需要考虑如DataTIme，Instant这些不同的序列化方式。 |
+
 参考资料：
 
 https://blog.csdn.net/baidu_39343397/article/details/112488246
 
 https://blog.csdn.net/qq_29066329/article/details/89081671
+
+https://blog.csdn.net/Julyraining/article/details/108408639
 
