@@ -55,7 +55,9 @@ Spring 从 3.1 开始就引入了对 Cache 的支持。定义了 `org.springfram
 > GenericJackson2JsonRedisSerializer，
 > 指定后，在序列化时，会将类名存入到序列化后的 json 字符串中，如：
 > {"@class": "com.example.SpecialClass", "id" : 1, .... }
-> 这样在取出缓存时，springboot 就可以自动根据 @class 对应的字段找到对应的类进行反序列化了
+> 这样在取出缓存时，springboot 就可以自动根据 @class 对应的字段找到对应的类进行反序列化了。
+>
+> 
 
 ```java
 @Configuration
@@ -190,6 +192,19 @@ public class CustomRedisCacheManager extends RedisCacheManager {
 
 
 
+> 碰到的问题：
+>
+> 1.有时候需要使用组合key可以这样写 `@Cacheable(key = "#page+'-'+#pageSize")`
+>
+> 2.暂时发现方法里面嵌套子方法也使用缓存注解不生效，仅仅外层生效。解决办法如下
+>
+> ```java
+> //启动类
+> @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
+> // serviceImpl 请求方法不是直接调用使用代理进行调用，针对嵌套方法
+> ((UserService) AopContext.currentProxy()).B();
+> ```
+
 ### 三、原理
 
 1.自动配置类：CacheAutoConfiguration
@@ -220,7 +235,7 @@ public class CustomRedisCacheManager extends RedisCacheManager {
 
 | 序列化方式                         | 速度 | 存储大小 | 备注                                                         |
 | ---------------------------------- | ---- | -------- | ------------------------------------------------------------ |
-| JdkSerializationRedisSerializer    | 中   | 最小     | 无需考虑复杂类型、嵌套类型的序列化反序列化，以字节方式存储   |
+| JdkSerializationRedisSerializer    | 中   | 最小     | 无需考虑复杂类型、嵌套类型的序列化反序列化，以字节方式存储，所有序列化的类需要实现`Serializable`接口 |
 | Jackson2JsonRedisSerializer        | 优   | 较大     | 无法针对复杂类型反序列化，能存入不可以去取出                 |
 | GenericJackson2JsonRedisSerializer | 良   | 较大     | 存入带上@class信息，但是需要考虑如DataTIme，Instant这些不同的序列化方式。 |
 
