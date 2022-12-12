@@ -705,6 +705,10 @@ module.exports = {
             [
                "/Markdown入门到放弃/vuepress搭建博客/7.画时序图.md",
                "7.画时序图"
+            ],
+            [
+               "/Markdown入门到放弃/vuepress搭建博客/8.更换主题.md",
+               "8.更换主题"
             ]
          ]
       },
@@ -959,6 +963,10 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-json/3.参数校验.md",
                "3.参数校验"
+            ],
+            [
+               "/Spring-boot/spring-boot-json/4.枚举类型序列化处理.md",
+               "4.枚举类型序列化处理"
             ]
          ]
       },
