@@ -190,7 +190,10 @@ public class CustomRedisCacheManager extends RedisCacheManager {
     @Cacheable(value = "/test", key = "#condition.id")
 ```
 
+还有其他两个常用属性 unless 和 condition
 
+- 其中 condition 是对入参进行判断，符合条件的缓存，不符合的不缓存。
+- 其中 unless 是对出参进行判断，符合条件的不缓存，不符合的缓存。
 
 > 碰到的问题：
 >
@@ -204,6 +207,7 @@ public class CustomRedisCacheManager extends RedisCacheManager {
 > // serviceImpl 请求方法不是直接调用使用代理进行调用，针对嵌套方法
 > ((UserService) AopContext.currentProxy()).B();
 > ```
+> 3.移除变量使用注解 @CacheEvict(cacheNames = "yourName", allEntries = true)，allEntries 为真表示把 yourName 文件夹下面的都移除掉。
 
 ### 三、原理
 

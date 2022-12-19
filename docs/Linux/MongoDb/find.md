@@ -67,9 +67,10 @@ db.runoob.getIndexes()
 
 删除数据
 
-```sh
+```sql
 //删除deleteMany\deleteOne
 db.runoob.deleteOne({_id: ObjectId("628f2904f62a000074006abe")})
+db.getCollection("flow_copy_2022_1208").deleteMany({'main': false} )
 ```
 
 查询嵌套lsit集合类
