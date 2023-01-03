@@ -275,3 +275,57 @@ SpringBoot2.0整合Redis 是很容易的，官方依赖里面都有了。
          }
      }
      ```
+
+
+
+### 使用 Redisson 客户端
+
+可以更方便使用分布式锁以及发布订阅
+
+初始化客户端：这里是redis sentinel 集群方式
+
+```java
+    @Bean(destroyMethod = "shutdown")
+    public RedissonClient redissonClient() {
+        Config config = new Config();
+        SentinelServersConfig sentinelServersConfig = config.useSentinelServers();
+        properties.getSentinel().getNodes().forEach(m -> {
+            sentinelServersConfig.addSentinelAddress("redis://"+m);
+        });
+        sentinelServersConfig.setPassword(properties.getPassword());
+        sentinelServersConfig.setMasterName("redis_6379").setDatabase(properties.getDatabase());
+        log.info("------------- redisson -----------------------");
+        return Redisson.create(config);
+    }
+```
+
+使用直接注入该 bean 即可
+
+发布订阅的使用
+
+```java
+@Component
+public class RedisMessageListener {
+
+    @Autowired
+    private RedissonClient redissonClient;
+
+    @PostConstruct
+    public void listener() {
+        RTopic topic = redissonClient.getTopic("testMsg", new StringCodec());
+        topic.addListener(String.class, (channel, msg) -> {
+            System.out.println("channel" + channel);
+            System.out.println("msg:" + msg);
+        });
+
+    }
+
+    @Scheduled(cron = "*/5 * * * * ?")
+    public void send() {
+        RTopic topic = redissonClient.getTopic("testMsg", new StringCodec());
+        topic.publish(System.currentTimeMillis());
+    }
+
+}
+```
+

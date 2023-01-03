@@ -207,7 +207,9 @@ public class CustomRedisCacheManager extends RedisCacheManager {
 > // serviceImpl 请求方法不是直接调用使用代理进行调用，针对嵌套方法
 > ((UserService) AopContext.currentProxy()).B();
 > ```
-> 3.移除变量使用注解 @CacheEvict(cacheNames = "yourName", allEntries = true)，allEntries 为真表示把 yourName 文件夹下面的都移除掉。
+> 3.移除变量使用注解 @CacheEvict(cacheNames = "yourName", allEntries = true)，allEntries 为真表示把 yourName 文件夹下面的都移除掉
+>
+> ps：需要注意 redis 服务器上面有没有禁用 keys * 这些命令，否则会报错 ERR unknown command keys redis
 
 ### 三、原理
 

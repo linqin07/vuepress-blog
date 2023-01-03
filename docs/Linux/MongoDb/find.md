@@ -15,6 +15,10 @@ WriteResult({ "nInserted" : 1 })
 
 //删除集合
 db.runoob.drop()
+
+// 直接os执行脚本文件
+C:\windows\system32>mongo 127.0.0.1:27017/test  D:\Desktop\flow.txt
+
 ```
 
 ### 创建删除集合
