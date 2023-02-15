@@ -48,3 +48,11 @@ source /etc/profile
 
 
 
+#### 备份原来的vpa文件夹
+
+```sh
+mv vpa{,`date +%Y-%m-%d_%H:%M`}
+```
+
+
+
