@@ -329,3 +329,36 @@ public class RedisMessageListener {
 }
 ```
 
+
+
+### 使用 Redis 锁
+
+分布式多节点或者并发情况下使用 Redis 锁。
+
+tryLock(long waitTime, long leaseTime, TimeUnit unit)
+
+tryLock（获取锁等待超时返回false时间，锁释放时间，时间单位）
+
+需要注意如果是并发情况，注意操作里面的sleep >= waitTime ，否则会等待获取到锁再次执行。
+
+```java
+    public void task() {
+        RLock lock = redissonClient.getLock(GlobalConstant.SEESKILL_TASKLOCK);
+        try {
+            boolean tryLock = lock.tryLock(200, 10*60*1000, TimeUnit.MILLISECONDS);
+            log.info("task tryLock: {}", tryLock);
+            if (tryLock) {
+                Thread.sleep(200);
+            }
+        } catch (Exception e) {
+            log.error("异常: {}", e.getMessage());
+        } finally {
+            if (lock.isLocked() && lock.isHeldByCurrentThread()){
+                lock.unlock();
+            }
+        }
+
+    }
+```
+
+其次，释放锁，最好加上判断 lock.isHeldByCurrentThread()，就释放本线程的锁。其他节点没获取到锁，释放没有找到会提示报错。也避免给其他线程吧锁给释放了。当然不加不会影响业务逻辑，报个错而已。

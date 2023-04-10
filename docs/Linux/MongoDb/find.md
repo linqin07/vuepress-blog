@@ -18,7 +18,8 @@ db.runoob.drop()
 
 // 直接os执行脚本文件
 C:\windows\system32>mongo 127.0.0.1:27017/test  D:\Desktop\flow.txt
-
+linux mongo集群链接
+mongo 172.21.1.27:30001/db  -u username -p password --authenticationDatabase admin
 ```
 
 ### 创建删除集合

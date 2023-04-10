@@ -54,5 +54,9 @@ source /etc/profile
 mv vpa{,`date +%Y-%m-%d_%H:%M`}
 ```
 
+***\*如何让sh自动输入yes，自动确认？\****
 
+```sh
+echo yes |sudo rm -Ir yourdir
+```
 

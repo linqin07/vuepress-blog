@@ -24,7 +24,7 @@
   请注意，如果引用`artifactId`的目录名称与目录名称不同，则需要使用冒号：
 
   ```sh
-  mvn install -pl :B -am
+  mvn
   ```
 
 

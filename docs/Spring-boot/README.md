@@ -8,4 +8,8 @@ Chrome：同一个浏览器连续多次访问同一个 url 会造成多次访问
 
 Firefox和Safari:连续多次访问同一个 url，并行。
 
+-Dfile.encoding=utf-8 
+
+-Dspring.profiles.active=local
+
 <Valine/>

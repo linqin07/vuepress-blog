@@ -5,7 +5,7 @@
 ```shell
 wget [url] -P [下载目录]
 ```
-### curl
+## curl
 
 -L 重定向发送请求
 
@@ -23,6 +23,8 @@ wget [url] -P [下载目录]
 -c：继续执行上次终端的任务(断点续传)
 
 -g:  --get 无需转义很长参数的get请求，直接 curl -g "xxx&xx&xxx"
+
+-v: 额外信息，包括header，Content-Length请求信息
 
 ```shell
 curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.6.2-linux-x86_64.tar.gz
@@ -52,7 +54,17 @@ curl -X POST -H 'Content-type:application/xml' -d @/tmp/data.xml https://apitest
 curl -i -X POST -H 'Content-type':'application/json' -d '{json}' http://wx.sp-hicard.com/publicCount/menu/messageNotify
 ```
 
-###### 两个主机传输文件(需要密码)scp
+curl查询请求耗时
+
+```sh
+curl -o /dev/null -s -w "time_namelookup: %{time_namelookup}\ntime_connect: %{time_connect}\ntime_appconnect: %{time_appconnect}\ntime_redirect: %{time_redirect}\ntime_pretransfer: %{time_pretransfer}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" "你的url"
+```
+
+![image-20230410163355658](https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20230410163355658.png)
+
+
+
+### 两个主机传输文件(需要密码)scp
 
 ```shell
 scp -P 22 -r tomcat7 root@192.168.1.110:/home
