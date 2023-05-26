@@ -120,6 +120,34 @@ db.getCollection("flow").update({ 'main': false } , { $set: { main: true } },{mu
 
 
 
+### group 分组
+
+单字段
+
+```sql
+db.getCollection("UserSetDetail").aggregate([
+    {
+        $group: {
+            _id: "$setId"
+        }
+    }
+])
+```
+
+多字段 group by a，b
+
+```sql
+db.getCollection("UserSetDetail").aggregate([
+    {
+        $group : {
+            _id : {setId: "$dId", drivesSeqNo: "$drivesSeqNo"}
+        }
+    }
+])
+```
+
+
+
 ### mongodb
 
 - [ ]  定义的枚举类可以直接把枚举的值存储到库，可以在enum中使用@JsonValue、@JsonFormat作为前端接口的转换

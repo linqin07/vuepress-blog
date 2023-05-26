@@ -145,7 +145,7 @@ Sets.SetView difference1 = Sets.difference(Sets.newHashSet(news), Sets.newHashSe
 // 交集
 Sets.SetView and = Sets.intersection(Sets.newHashSet(news), Sets.newHashSet(olds));
 System.out.println(difference1.immutableCopy().asList());
-
+// 并集
 Sets.SetView union = Sets.union(Sets.newHashSet(news), Sets.newHashSet(olds));
 System.out.println(union.immutableCopy().asList());
 

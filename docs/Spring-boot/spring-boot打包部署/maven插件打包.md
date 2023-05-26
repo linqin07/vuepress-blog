@@ -198,7 +198,9 @@
 
 pom 配置：
 
-deploy 时也会把源码上传
+install 或 deploy 时也会把源码上传
+
+注意：在多项目构建中，将 source-plugin 置于顶层或 parent 的 pom 中并不会发挥作用，必须置于具体项目的 pom 中。
 
 ```xml
             <!--配置生成源码包-->
