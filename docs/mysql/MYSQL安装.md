@@ -119,6 +119,8 @@ update  mysql.user set authentication_string = password('123456') where User='ro
 - 1.下载 myql zip 包
   https://dev.mysql.com/downloads/mysql/
 
+  https://downloads.mysql.com/archives/community/
+  
 - 2.解压出来，在解压目录下面新建 my.ini 文件
 
   ```json

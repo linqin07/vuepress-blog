@@ -151,6 +151,36 @@
      </manifestEntries>
 ```
 
+### classpath 文件打包二进制文件损坏问题
+
+比如classpath下面有excel 文件，打jar包后下载会报错。文件打不开。因为下载的是压缩的excel，非原来未压缩的excel。
+
+解决，跳过压缩，使用这个插件
+
+```xml
+<build>
+   <plugins>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-resources-plugin</artifactId>
+         <configuration>
+            <encoding>UTF-8</encoding>
+            <nonFilteredFileExtensions>
+               <nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
+               <nonFilteredFileExtension>xls</nonFilteredFileExtension>
+            </nonFilteredFileExtensions>
+         </configuration>
+      </plugin>
+   </plugins>
+   <resources>
+      <resource>
+         <directory>src/main/resources</directory>
+         <filtering>true</filtering>
+      </resource>
+   </resources>
+</build>
+```
+
 
 
 ## 插件上传部署

@@ -145,6 +145,10 @@ public class CustomRedisCacheManager extends RedisCacheManager {
             //证明在cacheName上使用了过期时间，需要修改配置中的ttl
             cacheConfig = cacheConfig.entryTtl(ttl);
         }
+           //将name中的时间字符清除
+        if(StringUtils.isNotEmpty(name) && name.contains(DEFAULT_PATH)){
+            name = name.split(DEFAULT_PATH)[0];
+        }
         //修改缓存key和value值的序列化方式
         return super.createRedisCache(name, cacheConfig);
     }
