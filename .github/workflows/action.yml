@@ -25,7 +25,12 @@ jobs:
         
       - run: npm run docs:build
       - run: cd docs/.vuepress/dist
-      - run: ll -a
+      - run: ls -a
+      - run: git init
+      - run: git add -A
+      - run: git commit -m 'action deploy'
+      - run: git push -f https://${{secrets.access_token }}@github.com/linqin07/vuepress-blog.git master:gh-pages 
+
 
      
 
