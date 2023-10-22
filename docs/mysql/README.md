@@ -55,3 +55,14 @@ EOF
 jdbc:mysql://192.168.32.187:3306/db?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
 ```
 
+
+
+#### 5.sql 里面的 int(4) 是0填充
+
+**int(11) ZEROFILL**
+
+单单int(4)是没有用的。而且对于0001这种，底层存储的还是1，只是在展示的会补0。并不是显示它的长度。
+
+适合学号这种场景
+
+取消0填充  **int(11) unsign**

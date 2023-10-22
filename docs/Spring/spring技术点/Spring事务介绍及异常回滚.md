@@ -98,3 +98,12 @@ propagation_nested：如果当前存在事务，则在嵌套事务内执行。�
 
 > Spring 默认的事务传播行为是 PROPAGATION_REQUIRED，它适合于绝大多数的情况。假设 ServiveX#methodX() 都工作在事务环境下（即都被 Spring 事务增强了），假设程序中存在如下的调用链：Service1#method1()->Service2#method2()->Service3#method3()，那么这 3 个服务类的 3 个方法通过 Spring 的事务传播机制都工作在同一个事务中。
 
+
+
+
+
+**springboot 默认方法执行完成提交事务。无论是mapper插入还是service都无法直接查询到，事务未提交。**
+
+
+
+**默认可以读自己的事务内的未提交记录。**

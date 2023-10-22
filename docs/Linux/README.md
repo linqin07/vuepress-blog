@@ -54,9 +54,18 @@ source /etc/profile
 mv vpa{,`date +%Y-%m-%d_%H:%M`}
 ```
 
-***\*如何让sh自动输入yes，自动确认？\****
+#### 如何让sh自动输入yes，自动确认？
 
 ```sh
 echo yes |sudo rm -Ir yourdir
+```
+
+
+
+#### shell 获取ip
+
+```sh
+Server_IP=`ip addr | grep 'state UP' -A2 | grep inet | egrep -v '(127.0.0.1|inet6|docker)' | awk '{print $2}' | tr -d "addr:" | head -n 1 | cut -d / -f1`
+Docker_IP=`ip addr | grep docker.* | grep inet | awk '{print $2}' | head -n 1`
 ```
 

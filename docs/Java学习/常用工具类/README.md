@@ -1,13 +1,7 @@
 
 
-#### 1. 基本工具 
+#### java 直接打开下载text文件
 
-- Optional 工具类
+java 直接打开text文件，不弹窗下载。核心就是拿到具体文件的 inputStream 给到 response 的输出流
 
-#### 2.集合
-
-- [不可变集合](http://ifeve.com/google-guava-immutablecollections/): 用不变的集合进行防御性编程和性能提升。
-
-
-
-参考文档：http://ifeve.com/google-guava/
+<img src="https://blog-07.oss-cn-guangzhou.aliyuncs.com/picBak/image-20231022150215836.png" alt="image-20231022150215836" style="zoom: 80%;" />

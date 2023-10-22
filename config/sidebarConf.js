@@ -263,7 +263,21 @@ module.exports = {
       [
          "/Java学习/正则.md",
          "正则"
-      ]
+      ],
+      {
+         "title": "解决方案",
+         "collapsable": true,
+         "children": [
+            [
+               "/Java学习/解决方案/Server-sent events.md",
+               "Server-sent events"
+            ],
+            [
+               "/Java学习/解决方案/附件转图片.md",
+               "附件转图片"
+            ]
+         ]
+      }
    ],
    "/Linux/": [
       [
@@ -497,6 +511,10 @@ module.exports = {
             [
                "/Linux/MongoDb/find.md",
                "find"
+            ],
+            [
+               "/Linux/MongoDb/常用命令.md",
+               "常用命令"
             ]
          ]
       },
@@ -1073,6 +1091,10 @@ module.exports = {
             [
                "/Spring-boot/spring-boot-websocket/websocket.md",
                "websocket"
+            ],
+            [
+               "/Spring-boot/spring-boot-websocket/websocket集群化部署.md",
+               "websocket集群化部署"
             ]
          ]
       },
@@ -1165,6 +1187,10 @@ module.exports = {
          "collapsable": true,
          "children": [
             [
+               "/Spring-boot/通用/spring-retry重试机制.md",
+               "spring-retry重试机制"
+            ],
+            [
                "/Spring-boot/通用/Springboot多环境配置.md",
                "Springboot多环境配置"
             ],
@@ -1199,6 +1225,14 @@ module.exports = {
       [
          "/SpringCloud/4.接入nacos.md",
          "4.接入nacos"
+      ],
+      [
+         "/SpringCloud/5.zuul 网关.md",
+         "5.zuul 网关"
+      ],
+      [
+         "/SpringCloud/6.feign.md",
+         "6.feign"
       ]
    ],
    "/其他/": [
@@ -1555,6 +1589,10 @@ module.exports = {
             [
                "/设计模式/19.观察者模式/2.Guava EventBus实现.md",
                "2.Guava EventBus实现"
+            ],
+            [
+               "/设计模式/19.观察者模式/3.SpringEvent.md",
+               "3.SpringEvent"
             ]
          ]
       },

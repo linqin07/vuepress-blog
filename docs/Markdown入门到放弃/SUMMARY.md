@@ -1,9 +1,22 @@
-# Summary
+typora 软件使用picGo上传图片到阿里云图床
 
-* [Introduction](README.md)
-* [node.js介绍](1.node.js介绍\README.md)
-  * [npm常用命令](1.node.js介绍\npm常用命令.md)
-* [gitbook插件](gitbook插件介绍\gitbook_plugin.md)
-* [其他](README.md)
-  * [通用接口文档](Wiki\通用接口文档 Markdown.md)
+配置脚本如下
+
+```json
+{
+    "picBed": {
+        "uploader": "aliyun",
+        "aliyun": {
+            "accessKeyId": "yourAccessKeyId",
+            "accessKeySecret": "yourAccessKeySecret",
+            "bucket": "blog-07",
+            "area": "oss-cn-guangzhou",
+            "path": "picBak/",
+            "customUrl": "",
+            "options": ""
+        }
+    },
+    "picgoPlugins": {}
+}
+```
 
