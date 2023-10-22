@@ -22,9 +22,10 @@ jobs:
 
       - name: Build project
         run: npm install
-        run: npm run docs:build
-        run: cd docs/.vuepress/dist
-        run: ll -a
+        
+      - run: npm run docs:build
+      - run: cd docs/.vuepress/dist
+      - run: ll -a
 
      
 
