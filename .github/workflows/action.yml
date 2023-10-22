@@ -22,8 +22,8 @@ jobs:
 
       - name: Build project
         run: 
-          npm install
-          sh ./deploy.sh
+          - npm install
+          - sh ./deploy.sh
 
 
 
