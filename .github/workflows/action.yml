@@ -20,16 +20,21 @@ jobs:
         with:
           node-version: "16.x"
 
-      - name: Build project
-        run: npm install
-        
       - run: npm run docs:build
-      - run: cd docs/.vuepress/dist
-      - run: ls -a
-      - run: git init
-      - run: git add -A
-      - run: git commit -m 'action deploy'
-      - run: git push -f https://${{secrets.access_token }}@github.com/linqin07/vuepress-blog.git master:gh-pages 
+      
+      - name: Build project
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{secrets.access_token}}
+          publish_dir: ./docs/.vuepress/dist
+        
+      # - run: npm run docs:build
+      # - run: cd docs/.vuepress/dist
+      # - run: ls -a
+      # - run: git init
+      # - run: git add -A
+      # - run: git commit -m 'action deploy'
+      # - run: git push -f https://${{secrets.access_token}}@github.com/linqin07/vuepress-blog.git master:gh-pages 
 
 
      
