@@ -14,7 +14,7 @@ echo 'linqin.site' > CNAME
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'action deploy'
 
 # 如果你想要部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
@@ -27,6 +27,5 @@ git commit -m 'deploy'
 
 # http推送,travis-ci自动化,
 # git push -f https://${access_token}@github.com/linqin07/document.git master:gh-pages  # document仓库
-  git push -f https://${access_token}@github.com/linqin07/vuepress-blog.git master:gh-pages  # vuepress-blog分支
+  git push -f https://${{secrets.access_token }}@github.com/linqin07/vuepress-blog.git master:gh-pages  # vuepress-blog分支
 
-cd -
