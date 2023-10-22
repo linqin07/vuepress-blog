@@ -22,13 +22,14 @@ jobs:
 
       - run: npm install
       - run: npm run docs:build
+      - run: echo 'linqin.site' > ./docs/.vuepress/dist/CNAME
 
       - name: Build project
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{secrets.access_token}}
           publish_dir: ./docs/.vuepress/dist
-        
+      
       # - run: npm run docs:build
       # - run: cd docs/.vuepress/dist
       # - run: ls -a
