@@ -21,11 +21,12 @@ jobs:
           node-version: "16.x"
 
       - name: Build project
-        run: 
-          npm install
-          npm run docs:build
-          cd docs/.vuepress/dist
-          ls -a
+        run: npm install
+        run: npm run docs:build
+        run: cd docs/.vuepress/dist
+        run: ll -a
+
+     
 
 
 
