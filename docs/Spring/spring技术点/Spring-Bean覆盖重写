@@ -1,0 +1,18 @@
+### 覆盖重写 原有Spring Bean的几种方式
+方法1 直接在自己工程中建同包同类名的类进行替换
+方式简单粗暴，可以直接覆盖掉jar包中的类，spring项目会优先加载自定义的类。包目录需要一样。
+
+方法2 采用@Primary注解
+同一个接口的多个实现类，包括jar包内接口的实现类，都可以添加改注解进行实现覆盖。
+
+方法3 排除需要替换的jar包中的类
+@ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {PersistentTokenServiceImpl.class})})
+单独排除类，然后自己再实现
+
+方法4 @Bean 覆盖
+框架jar包中有 @ConditionalOnMissingBean 注解，这种注解是说明如果你也创建了一个一样的Bean则框架就不自己再次创建这个bean了，这样你可以覆写自己的bean
+
+拓展一个组件功能，可以使用抽象类，然后进行实现。当外部拓展进行实现重写，将新的bean重新注入到执行器里面
+
+方法5 使用BeanDefinitionRegistryPostProcessor
+修改内存中以加载的bean值
