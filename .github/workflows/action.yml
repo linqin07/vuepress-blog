@@ -22,7 +22,7 @@ jobs:
 
       - run: npm install
       - run: npm run docs:build
-      - run: echo 'linqin.site' > ./docs/.vuepress/dist/CNAME
+      - run: echo 'linqin.online' > ./docs/.vuepress/dist/CNAME
 
       - name: Build project
         uses: peaceiris/actions-gh-pages@v3
