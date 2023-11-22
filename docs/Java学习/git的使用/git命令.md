@@ -242,3 +242,7 @@ git config --list
 可以查看目录文件 ~/.git-credentials
 ```
 
+### git合并已提交commit
+场景：开发过程中已经拉一个分支出来各种改改改，多次commit记录，并且已经push。
+方式一： 直接软还原所有该分支的提交，再提交push，强制覆盖。再合并到主分支。
+
