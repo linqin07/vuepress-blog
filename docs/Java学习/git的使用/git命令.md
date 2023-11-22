@@ -243,6 +243,16 @@ git config --list
 ```
 
 ### git合并已提交commit
-场景：开发过程中已经拉一个分支出来各种改改改，多次commit记录，并且已经push。
+场景：开发过程中已经拉一个分支dev_branch出来各种改改改，多次commit记录，并且已经push。
+
 方式一： 直接软还原所有该分支的提交，再提交push，强制覆盖。再合并到主分支。
+```sh
+//查看提交历史
+git relog
+// 直接还原
+git reset 你的commitId
+// 重新提交push
+git add .
+git push -f origin dev_branch
+```
 
