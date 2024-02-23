@@ -56,7 +56,7 @@ setlocal enabledelayedexpansion
 set "pom_path=%~1"
 
 :: 改为自己的maven nexus地址
-set "NEXUS_URL=http://artifacts.gxatek.com/artifactory/auto-mvn-snapshot-private/"
+set "NEXUS_URL=http://ddd.sss.com/artifactory/auto-mvn-ss-private/"
 set "REPOSITORY_ID=mvn-releases"
 
 set "POMS=poms.txt"
