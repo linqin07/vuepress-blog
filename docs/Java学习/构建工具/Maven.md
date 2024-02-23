@@ -43,6 +43,57 @@ mvn deploy:deploy-file
 -DrepositoryId=my_snapshot
 ```
 
+本地jar上传私服，mvn命令可以两种方式，一种是自己填写DgroupId、DartifactId、Dversion，也可以直接不填这3个直接使用-DpomFile，指向本地仓库jar地址的pom文件
+需要注意的是，需要预先复制对应的jar和pom到临时目录，否则直接再仓库目录执行会报错。
+下面有一个bat脚本，新建一个临时文件夹，复制进去，cmd执行 `deploy.bat 仓库要上传的jar的目录` 
+```
+rem 修改utf-8字符集
+chcp 65001
+
+@echo off
+setlocal enabledelayedexpansion
+
+set "pom_path=%~1"
+
+:: 改为自己的maven nexus地址
+set "NEXUS_URL=http://artifacts.gxatek.com/artifactory/auto-mvn-snapshot-private/"
+set "REPOSITORY_ID=mvn-releases"
+
+set "POMS=poms.txt"
+dir /s /b "%pom_path%\*.pom" | sort > %POMS% || exit /b 1
+for /f "tokens=*" %%p in (%POMS%) do (
+    :: 复制pom文件到当前目录\
+    copy "%%p" .
+    echo "复制pom文件%%p到当前目录"
+    for /f "delims=" %%a in ("%%p") do set "pom_file_name=%%~nxa"
+    set "jar=%%p"
+    echo %%p
+    echo Before replacement: !jar!
+    :: 将pom文件后缀换成.jar找到对应的jar文件（此处根据约定pom/jar文件只是后缀不同来进行推测）
+    set "jar=!jar:.pom=.jar!"
+
+    :: 如果jar文件存在，则将其复制到当前目录
+    if exist "!jar!" (
+       echo "复制jar文件!jar!到当前目录"
+        copy "!jar!" .
+        for /f "delims=" %%a in ("!jar!") do set "jar_file_name=%%~nxa"
+        :: 部署jar文件，附带自身提供的pom文件
+        echo         mvn deploy:deploy-file -Dfile=!jar_file_name! -Durl=%NEXUS_URL% -DrepositoryId=%REPOSITORY_ID% -DpomFile=!pom_file_name! -Dpackaging=jar
+        mvn deploy:deploy-file -Dfile=!jar_file_name! -Durl=%NEXUS_URL% -DrepositoryId=%REPOSITORY_ID% -DpomFile=!pom_file_name! -Dpackaging=jar
+
+    ) else (
+        :: 只部署pom文件
+        mvn deploy:deploy-file -Dfile=!pom_file_name! -Durl=%NEXUS_URL% -DrepositoryId=%REPOSITORY_ID% -DpomFile=!pom_file_name! -Dpackaging=pom
+    )
+
+)
+:: 清理POM列表文件
+del /q /f %POMS%
+
+endlocal
+
+```
+
 ### 3.maven 指定配置文件
 
 `-s,--settings`
