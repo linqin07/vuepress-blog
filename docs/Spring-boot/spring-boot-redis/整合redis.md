@@ -300,6 +300,23 @@ SpringBoot2.0整合Redis 是很容易的，官方依赖里面都有了。
 ```
 
 使用直接注入该 bean 即可
+此外，还可以便捷的使用依赖
+```
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.11.6</version>
+        </dependency>
+```
+此依赖内部有自动注入类 `RedissonAutoConfiguration`,可以自动识别 spring 的 redis 配置，自动识别集群模式，集成简单直接注入使用。
+```
+spring.redis.sentinel.nodes=10.xx.26.xx:16379,10.xx.26.xx:16379,10.xx.26.xx:16379
+spring.redis.sentinel.master=redis_6379
+spring.redis.password=nidemima
+spring.redis.database=0
+```
+
+
 
 发布订阅的使用
 
