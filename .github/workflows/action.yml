@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: "16.x"
 
+      - run: npm cache clean --force
       - run: npm install
       - run: npm run docs:build
       - run: echo 'linqin.online' > ./docs/.vuepress/dist/CNAME
