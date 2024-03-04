@@ -44,7 +44,8 @@ mvn deploy:deploy-file
 ```
 
 本地jar上传私服，mvn命令可以两种方式，一种是自己填写DgroupId、DartifactId、Dversion，也可以直接不填这3个直接使用-DpomFile，指向本地仓库jar地址的pom文件
-需要注意的是，需要预先复制对应的jar和pom到临时目录，否则直接再仓库目录执行会报错。
+需要注意的是，需要预先复制对应的jar和pom到`临时目录`，否则直接再仓库目录执行会报错。
+此外还有一个需要注意的点，上传到release只能上传一次，不能覆盖，否则提示409。上传到 SNAPSHOT ，jar包名称必须包含这个SNAPSHOT
 下面有一个bat脚本，新建一个临时文件夹，复制进去，cmd执行 `deploy.bat 仓库要上传的jar的目录` 
 ```
 rem 修改utf-8字符集
