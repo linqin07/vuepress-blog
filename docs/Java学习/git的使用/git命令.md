@@ -256,3 +256,16 @@ git add .
 git push -f origin dev_branch
 ```
 
+### git区分账号使用
+场景： 需要 使用过其他用户的权限进行 clone 代码或者提交代码
+```sh
+// 直接暴露账号密码，密码特殊字符需要url转义
+git clone https://john:password123@example.com/myproject.git
+// 仅使用账号，密码会提示输入。
+git clone https://john@example.com/myproject.git
+```
+
+项目 .git 文件夹里面的config文件会记录项目的ref仓库地址。
+如使用过命令 `git config --global credential.helper store` 表示会存储验证信息
+可以在用户目录下面 .git-credentials 文件有记录用户的详细信息
+
