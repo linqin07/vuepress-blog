@@ -218,7 +218,9 @@ a6a1e1655b315b6dafaead630ef6ecbadc20ac01 192.168.233.128:7004@17004 slave 37b63b
 
   [知识点](https://www.cnblogs.com/Jtianlin/p/10259062.html)
 
-登陆使用密码， 集群模式不可以选择数据库，默认使用0数据库， 同时登录命令需要加上`-c`参数
+#### 登陆客户端
+
+使用密码， 集群模式不可以选择数据库，默认使用0数据库， 同时登录命令需要加上`-c`参数
 
 ```sh
 ./redis-cli
@@ -232,7 +234,9 @@ select 10
 ./bin/redis-cli -c -h 192.168.33.60 -p 7000 -a pwd123456
 ```
 
-展现列表，可以使用通配符：
+#### 列表查询
+
+生产勿用，可以使用通配符：
 
 ```sh
 keys mykey*
@@ -240,6 +244,8 @@ keys mykey*
 集群模式,不能去掉\;换成你redis集群的一个节点的ip和端口，需要在只能分片的槽上面才可以看keys
 ./redis-cli -c -a pwd123456 --cluster call 192.168.168.161:7001 keys \*
 ```
+#### get/set操作
+
 删除  del key1 key2
 
 - 字符串类型：
@@ -254,6 +260,17 @@ keys mykey*
 ```
 
 - [bitmap](https://www.jianshu.com/p/305e65de1b13)
+
+#### 查询连接数
+
+```shell
+// 查询整个客户端的链接数
+redis-cli -h 10.105.x.x -a 'password' info clients
+// 直接查看链接tcp数目，精确到database
+redis-cli -h 10.105.x.x -a 'password'  client list |grep 'db=11'
+```
+
+
 
 ## Redis键(key)操作
 
@@ -309,4 +326,3 @@ set lock:168 1 nx ex 30
   。数据存储层的调用量就会暴增，用不了多长时间，数据库就会被大流量压垮，这种级联式的服务故障，就叫作缓存雪崩。
   
   解决一是保证 redis 集群高可用，二是控制好限流操作。比如 nginx 限流。
-
