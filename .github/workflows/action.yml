@@ -11,36 +11,32 @@ jobs:
 
     steps:
       - name: Checkout master
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  # 更新到最新版本
         with:
           ref: master
 
-      - name: Setup node
-        uses: actions/setup-node@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4  # 更新到最新版本
         with:
-          node-version: "16.x"
+          node-version: "22.x"  # 匹配你的本地Node.js 22版本
+          cache: 'npm'  # 添加npm缓存以提高速度
 
-      - run: npm config set strict-ssl false
-      - run: npm install
-      - run: npm run docs:build
-      - run: echo 'linqin.online' > ./docs/.vuepress/dist/CNAME
+      - name: Configure npm
+        run: |
+          npm config set strict-ssl false
+          npm config set registry https://registry.npmjs.org
+          
+      - name: Install dependencies
+        run: npm ci  # 使用npm ci代替npm install，更适用于CI环境
 
       - name: Build project
+        run: npm run build
+
+      - name: Create CNAME file
+        run: echo 'linqin.online' > ./docs/.vuepress/dist/CNAME
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{secrets.access_token}}
+          github_token: ${{secrets.access_token}}  # 建议使用内置的GITHUB_TOKEN
           publish_dir: ./docs/.vuepress/dist
-      
-      # - run: npm run docs:build
-      # - run: cd docs/.vuepress/dist
-      # - run: ls -a
-      # - run: git init
-      # - run: git add -A
-      # - run: git commit -m 'action deploy'
-      # - run: git push -f https://${{secrets.access_token}}@github.com/linqin07/vuepress-blog.git master:gh-pages 
-
-
-     
-
-
-
