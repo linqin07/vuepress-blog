@@ -27,7 +27,8 @@ jobs:
           npm config set registry https://registry.npmjs.org
           
       - name: Install dependencies
-        run: npm ci  # 使用npm ci代替npm install，更适用于CI环境
+        # run: npm ci  # 使用npm ci代替npm install，更适用于CI环境
+        run: npm install  # 使用npm ci代替npm install，更适用于CI环境
 
       - name: Build project
         run: npm run build
