@@ -5,7 +5,7 @@ module.exports = {
       "SUMMARY"
     ],
     [
-      "/Java学习",
+      "/Java学习/",
       "README"
     ],
     {
@@ -13,7 +13,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Java学习/常用工具类",
+          "/Java学习/常用工具类/",
           "README"
         ],
         [
@@ -53,7 +53,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Java学习/基础知识",
+          "/Java学习/基础知识/",
           "README"
         ],
         [
@@ -175,7 +175,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Java学习/IDEA学习",
+          "/Java学习/IDEA学习/",
           "README"
         ],
         [
@@ -205,7 +205,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Java学习/JDK8",
+          "/Java学习/JDK8/",
           "README"
         ],
         [
@@ -231,7 +231,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Java学习/JVM",
+          "/Java学习/JVM/",
           "README"
         ],
         [
@@ -283,7 +283,7 @@ module.exports = {
       "SUMMARY"
     ],
     [
-      "/Linux",
+      "/Linux/",
       "README"
     ],
     {
@@ -345,7 +345,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Linux/ELK",
+          "/Linux/ELK/",
           "README"
         ],
         {
@@ -353,7 +353,7 @@ module.exports = {
           "collapsable": true,
           "children": [
             [
-              "/Linux/ELK/ES",
+              "/Linux/ELK/ES/",
               "README"
             ],
             [
@@ -411,7 +411,7 @@ module.exports = {
           "collapsable": true,
           "children": [
             [
-              "/Linux/ELK/logstash",
+              "/Linux/ELK/logstash/",
               "README"
             ]
           ]
@@ -421,7 +421,7 @@ module.exports = {
           "collapsable": true,
           "children": [
             [
-              "/Linux/ELK/metricbeat",
+              "/Linux/ELK/metricbeat/",
               "README"
             ],
             [
@@ -485,7 +485,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Linux/linux常用操作",
+          "/Linux/linux常用操作/",
           "README"
         ],
         [
@@ -557,7 +557,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Linux/Nginx",
+          "/Linux/Nginx/",
           "README"
         ],
         [
@@ -651,7 +651,7 @@ module.exports = {
       "SUMMARY"
     ],
     [
-      "/Markdown入门到放弃",
+      "/Markdown入门到放弃/",
       "README"
     ],
     {
@@ -659,7 +659,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Markdown入门到放弃/1.node.js介绍",
+          "/Markdown入门到放弃/1.node.js介绍/",
           "README"
         ],
         [
@@ -705,7 +705,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Markdown入门到放弃/vuepress搭建博客",
+          "/Markdown入门到放弃/vuepress搭建博客/",
           "README"
         ],
         [
@@ -759,7 +759,7 @@ module.exports = {
       "SUMMARY"
     ],
     [
-      "/mysql",
+      "/mysql/",
       "README"
     ],
     {
@@ -767,7 +767,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/mysql/分库分表",
+          "/mysql/分库分表/",
           "README"
         ],
         [
@@ -781,7 +781,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/mysql/基础知识",
+          "/mysql/基础知识/",
           "README"
         ],
         [
@@ -878,7 +878,7 @@ module.exports = {
       "SUMMARY"
     ],
     [
-      "/Spring",
+      "/Spring/",
       "README"
     ],
     {
@@ -912,7 +912,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Spring/SpringMVC",
+          "/Spring/SpringMVC/",
           "README"
         ],
         [
@@ -944,7 +944,7 @@ module.exports = {
       "SUMMARY"
     ],
     [
-      "/Spring-boot",
+      "/Spring-boot/",
       "README"
     ],
     {
@@ -1134,7 +1134,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Spring-boot/spring-boot-security",
+          "/Spring-boot/spring-boot-security/",
           "README"
         ],
         [
@@ -1168,7 +1168,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/Spring-boot/spring-boot-websocket",
+          "/Spring-boot/spring-boot-websocket/",
           "README"
         ],
         [
@@ -1206,7 +1206,7 @@ module.exports = {
   ],
   "/SpringCloud/": [
     [
-      "/SpringCloud",
+      "/SpringCloud/",
       "README"
     ],
     [
@@ -1258,7 +1258,7 @@ module.exports = {
       "SUMMARY"
     ],
     [
-      "/复习题",
+      "/复习题/",
       "README"
     ],
     {
@@ -1362,7 +1362,7 @@ module.exports = {
   ],
   "/数据结构/": [
     [
-      "/数据结构",
+      "/数据结构/",
       "README"
     ],
     [
@@ -1376,7 +1376,7 @@ module.exports = {
   ],
   "/设计模式/": [
     [
-      "/设计模式",
+      "/设计模式/",
       "README"
     ],
     {
@@ -1384,7 +1384,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/设计模式/1.单例模式",
+          "/设计模式/1.单例模式/",
           "README"
         ],
         [
@@ -1476,7 +1476,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/设计模式/9.代理模式",
+          "/设计模式/9.代理模式/",
           "README"
         ],
         [
@@ -1634,7 +1634,7 @@ module.exports = {
       "collapsable": true,
       "children": [
         [
-          "/设计模式/22.模板模式",
+          "/设计模式/22.模板模式/",
           "README"
         ],
         [

@@ -121,7 +121,7 @@ function processMdFile(fullPath, rootPath, fileName) {
 
     if (fileName === README_MD) {
 
-        relative = relative.replace(`/${README_MD}`, ''); // 清理README路径
+        relative = relative.replace(`/${README_MD}`, '/'); // 清理README路径
         title = 'README';
     } else if (fileName === SUMMARY) {
 

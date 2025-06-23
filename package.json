@@ -26,7 +26,7 @@
 		"vuepress-plugin-code-copy": "^1.0.4",
 		"vuepress-plugin-comment": "^0.7.3",
 		"vuepress-plugin-container": "^2.0.2",
-		"vuepress-plugin-helper-live2d": "^1.0.0",
+		"vuepress-plugin-helper-live2d": "^1.0.2",
 		"vuepress-plugin-sitemap": "^2.3.1"
 	}
 }
